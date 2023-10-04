@@ -1,0 +1,47 @@
+# Dossiers spécifiques à Visual Studio
+.vscode/
+/bin/
+/obj/
+/.vs/
+
+# Fichiers de sauvegarde
+*~
+*.swp
+
+# Dossiers de packages NuGet
+/packages/
+/PackageReference/
+
+# Fichiers de build
+*.dll
+*.exe
+*.pdb
+*.log
+*.zip
+*.tar.gz
+*.nupkg
+
+# Dossiers de build de .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Dossiers de fichiers temporaires
+[Tt]emp/
+[Vv]iew/[Rr]endered/[Ll]ayouts/
+
+# Fichiers de publication
+_PublishedWebsites/
+PublishProfiles/
+*.pubxml
+*.publishsettings
+
+# Dossiers de logs et de fichiers d'erreur
+Logs/
+LogFiles/
+
+# Visual Studio Code - dossiers et fichiers de configuration
+.vscode/
+
+# Visual Studio 2019 - dossiers et fichiers de configuration
+.vs2019/
