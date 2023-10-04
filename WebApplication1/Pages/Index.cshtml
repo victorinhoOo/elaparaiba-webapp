@@ -1,0 +1,114 @@
+﻿@page "/index"
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+    Layout = "_Layout";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/index.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
+}
+
+@section Scripts {
+    <script src="~/js/index.js"></script>
+}
+
+
+<div class="slider">
+    <div class="slider-panel active">
+        <div class="slider-content">
+            <h2>Bienvenue chez Elaparaïba</h2>
+            <button class="slider-button">Mes créations</button>
+        </div>
+    </div>
+    <div class="slider-panel">
+        <div class="slider-content">
+            <h2>Les bagues</h2>
+            <button class="slider-button">Découvrir</button>
+        </div>
+    </div>
+    <div class="slider-panel">
+        <div class="slider-content">
+            <h2>Les boucles d'oreilles</h2>
+            <button class="slider-button">Découvrir</button>
+        </div>
+    </div>
+
+    <div class="slider-panel">
+        <div class="slider-content">
+            <h2>Les colliers</h2>
+            <button class="slider-button">Découvrir</button>
+        </div>
+    </div>
+
+    <div class="slider-panel">
+        <div class="slider-content">
+            <h2>Les bracelets</h2>
+            <button class="slider-button">Découvrir</button>
+        </div>
+    </div>
+
+    <div class="slider-controls">
+        <div class="slider-control active"></div>
+        <div class="slider-control"></div>
+        <div class="slider-control"></div>
+        <div class="slider-control"></div>
+        <div class="slider-control"></div>
+    </div>
+</div>
+
+<div>
+    <h1>Elaparaïba</h1>
+    <h3>Elaparaïba est la composition de Léa et de Paraïba, une magnifique tourmaline bleutée venue du Bresil.</h3>
+    <p id="descE">Les bijoux elaparaïba sont des créations uniques ou en très petites séries plaquées or 3 microns.</p>
+</div>
+
+<h2>Nouveautés</h2>
+<div class="slider-news">
+    <div class="slider-news-container">
+        <div class="slider-news-wrapper">
+            <button id="prev-slide" class="slide-button material-symbols-rounded">chevron_left</button>
+            <div class="image-list">
+                <img src="../images/PhotosdescriptifsBagues/Bag64/20230911_104121.jpg" alt="" class="image-item">
+                <img src="../images/PhotosDescriptifsColliers/Col50/20230915_151357.jpg" alt="" class="image-item">
+                <img src="../images/PhotosdescriptifsBagues/Bag65/20230911_103459.jpg" alt="" class="image-item">
+                <img src="../images/PhotosDescriptifsColliers/Col61/20230915_143233.jpg" alt="" class="image-item">
+                <img src="../images/PhotosdescriptifsBagues/Bag64/20230911_104121.jpg" alt="" class="image-item">
+                <img src="../images/PhotosdescriptifsBagues/Bag65/20230911_103459.jpg" alt="" class="image-item">
+                <img src="../images/PhotosdescriptifsBagues/Bag64/20230911_104121.jpg" alt="" class="image-item">
+                <img src="../images/PhotosdescriptifsBagues/Bag64/20230911_104121.jpg" alt="" class="image-item">
+                <img src="../images/PhotosdescriptifsBagues/Bag64/20230911_104121.jpg" alt="" class="image-item">
+                <img src="../images/PhotosdescriptifsBagues/Bag64/20230911_104121.jpg" alt="" class="image-item">
+            </div>
+            <button id="next-slide" class="slide-button material-symbols-rounded">chevron_right</button>
+        </div>
+        <div class="slider-news-scrollbar">
+            <div class="scrollbar-track">
+                <div class="scrollbar-thumb">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="icon-container">
+    <div class="icon-item">
+        <i class="fas fa-lock"></i>
+        <p>Paiement sécurisé<br>CB PayPal SumUp</p>
+    </div>
+    <div class="icon-item">
+        <i class="fas fa-gem"></i>
+        <p>Qualité exceptionnelle</p>
+    </div>
+    <div class="icon-item">
+        <i class="fas fa-hammer"></i>
+        <p>Savoir faire</p>
+    </div>
+</div>
+<hr class="centered-line">
+
+<div id="instagram-feed" class="instagram-row"></div>
+

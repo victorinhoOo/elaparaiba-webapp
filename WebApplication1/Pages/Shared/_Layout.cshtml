@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApplication1</title>
+    <link rel="stylesheet" href="~/css/commun.css"/> 
+    @RenderSection("Styles", required: false)
+    @RenderSection("Scripts", required: false)
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="logoLien" href="index.cshtml">
+                <img class="logo" src="~/images/logo_elaparaïba.png" alt="logo de l'entreprise Elaparaïba">
+            </a>
+            <div class="mainNav">
+                <a class="buttonH" href='/index'>ACCUEIL</a>
+                <a class="buttonH" href='/bijoux'>LES BIJOUX</a>
+                <a class="buttonH" href='/surMesure'>SUR MESURE</a>
+                <a class="buttonH" href='savoirFaire.html'>SAVOIR FAIRE</a>
+                <a class="buttonH" href='/ouMeTrouver'>OÙ ME TROUVER ?</a>
+            </div>
+            <div class="authNav">
+                <a class="buttonH" href=''>PANIER</a>
+                <a class="buttonH" href=''>SE CONNECTER</a>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section1">
+                <h2>À propos</h2>
+                <a href="#" class="buttonF">Me contacter</a>
+                <div class="social-icons">
+                    <a href="instagram.com/" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section2">
+                <h2>Informations légales</h2>
+                <ul>
+                    <li><a href="#" class="buttonF">Conditions générales d'utilisation</a></li>
+                    <li><a href="#" class="buttonF">Politique générale de protection des données</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2023 Elaparaïba</p>
+            <div class="lang-selector">
+                <select>
+                    <option value="fr">Français</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </div>
+    </footer>
+
+
+
+    
+</body>
+</html>

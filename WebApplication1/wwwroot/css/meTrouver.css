@@ -1,0 +1,272 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+
+h1 { /*centrer */
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+    color: #0a304a;
+    position: relative;
+}
+
+h2 {
+    color: #03889f;
+}
+
+.conteneur {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+    .conteneur::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 400px;
+        background-color: rgba(0, 0, 0, 0.3); /* Noir semi-transparent */
+    }
+
+    .conteneur img {
+        display: block;
+        width: 100%;
+        height: 400px;
+        z-index: 1;
+        object-fit: cover;
+    }
+
+.texteConteneur {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* Couleur du texte, ajustez selon vos besoins */
+    font-size: 50px; /* Taille du texte, ajustez selon vos besoins */
+    text-align: center;
+}
+
+#message::placeholder { /*position du message d'indication du message*/
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 18px;
+}
+
+#email::placeholder { /*position du message d'indication du mail*/
+    font-size: 18px;
+}
+
+
+#carte { /*positionnement de la map*/
+    padding-top: 20px;
+    flex: 1;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    #carte iframe { /*carte de localisation*/
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+    }
+
+    #carte small { /*lien de la map */
+        height: 20%;
+        text-align: center;
+    }
+
+#étage_1 { /*style de positionnement du premeier étage*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#coordonnées { /*positionnement des coordonnées*/
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+p { /*Affichage générale des textes*/
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 25px;
+}
+
+#message { /*style de l'intpu text du message*/
+    width: 340px;
+    height: 150px;
+    padding: 5px;
+    padding-bottom: 130px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#email { /*style de l'intpu text du mail*/
+    width: 340px;
+    height: 40px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bouton {
+    background-color: #03889f;
+    color: #ffffff;
+    border-radius: 4px;
+    border: 1px solid #03889f;
+    transition: ease 0.5s;
+    font-size: 125%;
+}
+
+    .bouton:hover {
+        transition: ease 0.5s;
+        background-color: #ffffff;
+        color: #03889f;
+        border-radius: 4px;
+        border: 1px solid #03889f;
+    }
+
+#étage_2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#envoyer { /*affichage du form*/
+    padding-bottom: 50px;
+    padding-top: 30px;
+}
+
+#mail { /*affichage du form*/
+    padding-bottom: 30px;
+    width: 300px;
+    height: 50px;
+}
+
+#question {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 100px;
+}
+
+#horaires {
+    flex: 1;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#email {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #0a304a;
+    margin: 6px 0;
+}
+
+/* Styles du menu de navigation */
+.menu {
+    display: none;
+}
+
+/* Styles pour afficher le menu sur les écrans plus petits */
+@media (max-width: 1200px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    /* .menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: #fff;
+        padding: 10px;
+        border: 1px solid #333;
+    } */
+
+    select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #fff;
+    }
+
+    .menu.show {
+        display: block;
+    }
+}
+
+@media (max-width: 1200px) { /*replace les éléments présent dans l'écran pour */
+    #étage_1, #étage_2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #coordonnées, #horaires, #question {
+        padding-top: 0;
+        padding-right: 0;
+        margin-top: 40px;
+        align-items: center;
+    }
+
+    #carte iframe {
+        width: 300px;
+        height: 300px;
+    }
+
+    #titre2, #vente, #tel, #faxe {
+        text-align: center; /* Centre chaque élément h2 et p à l'intérieur de #coordonnées */
+    }
+
+    h1::after {
+        width: 40%;
+    }
+
+    #carte {
+        margin-right: 0px;
+    }
+
+    /* Styles pour la liste déroulante */
+    .mainNav a {
+        display: none; /* Masquez les liens individuels */
+    }
+
+    /* Affichez la liste déroulante */
+    .mainNav select {
+        display: block;
+        width: 100%; /* Assurez-vous que la liste déroulante prend toute la largeur disponible */
+    }
+}
+
