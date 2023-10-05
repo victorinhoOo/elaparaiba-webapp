@@ -8,23 +8,23 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\mb203509\\.nuget\\packages\\": {},
+    "C:\\Users\\Bigeard\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mb203509\\Desktop\\github\\C2_Elaparaiba_SAE3\\WebApplication1\\Elaparaiba.csproj",
+      "projectUniqueName": "C:\\Users\\Bigeard\\OneDrive - Université de Bourgogne\\BUT2\\SAE1.03\\webApplication\\C2_Elaparaiba_SAE3\\WebApplication1\\Elaparaiba.csproj",
       "projectName": "Elaparaiba",
-      "projectPath": "C:\\Users\\mb203509\\Desktop\\github\\C2_Elaparaiba_SAE3\\WebApplication1\\Elaparaiba.csproj",
-      "packagesPath": "C:\\Users\\mb203509\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mb203509\\Desktop\\github\\C2_Elaparaiba_SAE3\\WebApplication1\\obj\\",
+      "projectPath": "C:\\Users\\Bigeard\\OneDrive - Université de Bourgogne\\BUT2\\SAE1.03\\webApplication\\C2_Elaparaiba_SAE3\\WebApplication1\\Elaparaiba.csproj",
+      "packagesPath": "C:\\Users\\Bigeard\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Bigeard\\OneDrive - Université de Bourgogne\\BUT2\\SAE1.03\\webApplication\\C2_Elaparaiba_SAE3\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\mb203509\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Bigeard\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -34,7 +34,6 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -71,7 +70,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

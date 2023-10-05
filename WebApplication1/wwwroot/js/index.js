@@ -4,6 +4,7 @@ var num_image = 0;
 
 function main() {
     initNewsSlider();
+    fetchInstagramPhotos();
     id = setInterval(nextImage, 5000);
     controls = document.querySelectorAll(".slider-control");
     for (let i = 0; i < controls.length; i++) { //Méthode événementielle directe
@@ -98,5 +99,25 @@ const initNewsSlider = () => {
         updateScrollThumbPosition();
     });
 }
+
+async function fetchInstagramPhotos() {
+    const response = await fetch(`https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink&access_token=IGQWRNeHBPRDNHZAFl6WU1KTlBYX3JrRVZAyZA3dkUXduUDcwUEN2WEh1SnJDTlhsamFkQlZAQSUpIcVJpTU8xazRaUTlpS0VlZAFdjTkhGZAExKaUF1ZAVRhdTNoTjFjTFpQY3VuYWlUWjRGM2pua0xNamNNU24tV0VBUnMZD&limit=5`);   
+    const data = await response.json();
+    const items = data.data;
+    const container = document.getElementById('instagram-feed');
+    items.forEach(item => {
+        const link = document.createElement('a');  // Créez un élément a
+        link.href = item.permalink;  // Définissez l'URL de la publication comme attribut href
+        link.target = '_blank';  // (Optionnel) Ouvre le lien dans un nouvel onglet
+        
+        const image = document.createElement('img');
+        image.src = item.media_url;
+        
+        link.appendChild(image);  // Ajoutez l'image à l'élément a
+        container.appendChild(link);  // Ajoutez l'élément a au conteneur
+    });
+}        
+    
+
 
 window.onload = main;

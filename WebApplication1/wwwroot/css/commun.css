@@ -1,20 +1,21 @@
-﻿/* HEADER */
+/* HEADER */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    color: #555555;
 }
 
 header {
-    background-color: #fff;
-    padding: 10px 20px;
+    background-color: #fff; 
+    padding: 0px 20px;
 }
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     align-items: center;
 }
 
@@ -24,13 +25,13 @@ nav {
 }
 
 .logo {
-    height: 100px;
+    height: 100px; 
     width: auto;
 }
 
 .mainNav {
     display: flex;
-    margin-right: 60px;
+    margin-right: 60px;  
 }
 
 .authNav {
@@ -40,32 +41,30 @@ nav {
 
 .buttonH {
     text-align: center;
-    padding: 10px 10px 10px;
+    padding: 10px 10px 10px; 
     text-decoration: none;
-    color: #000;
-    position: relative;
+    position: relative; 
     margin: 0 3px;
 }
 
-    .buttonH::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 12px;
-        width: 50%;
-        height: 1px;
-        background-color: transparent;
-        transition: background-color 0.3s ease;
-    }
+.buttonH::after {
+    content: ''; 
+    position: absolute;
+    bottom: 0; 
+    left: 12px; 
+    width: 50%; 
+    height: 1px; 
+    background-color: transparent; 
+    transition: background-color 0.3s ease; 
+}
 
-    .buttonH:hover {
-        color: #008098;
-    }
+.buttonH:hover {
+    color: #03889F;
+}
 
-        .buttonH:hover::after {
-            background-color: #008098;
-            /
-        }
+.buttonH:hover::after {
+    background-color: #03889F; /
+}
 
 /* FOOTER */
 
@@ -78,16 +77,20 @@ footer {
     margin-top: 5%;
 }
 
+footer h2{
+    color: #03889F;
+}
+
 
 .footer-content {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
+    flex-wrap: wrap; 
+    margin-bottom: 20px; 
 }
 
 .footer-section1.footer-section2 {
-    width: 45%;
+    width: 45%; 
 }
 
 h2, h3 {
@@ -105,9 +108,9 @@ h2, h3 {
     font-size: 24px;
 }
 
-    .social-icon:hover {
-        color: #008098;
-    }
+.social-icon:hover {
+    color: #03889F;
+}
 
 ul {
     list-style-type: none;
@@ -120,9 +123,9 @@ ul {
     display: block;
 }
 
-    .buttonF:hover {
-        color: #008098;
-    }
+.buttonF:hover {
+    color: #03889F;
+}
 
 .footer-bottom {
     display: flex;
@@ -138,18 +141,23 @@ p {
     padding: 8px 12px;
     font-size: 15px;
     border: none;
-    border-radius: 4px;
+    border-radius: 4px; 
     background-color: #f9f9f9;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; 
 }
 
-    .lang-selector select:hover {
-        background-color: #f0f0f0;
-    }
+.lang-selector select:hover {
+    background-color: #f0f0f0; 
+}
 
-    .lang-selector select:focus {
-        outline: none;
-        box-shadow: 0px 2px 4px #008098;
-    }
+.lang-selector select:focus {
+    outline: none;
+    box-shadow: 0px 2px 4px #008098; 
+}
+
+
+
+
+

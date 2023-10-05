@@ -27,7 +27,8 @@
 }
 
 .slider-panel:nth-child(5n+1) {
-    background-image: url(../images/PhotosFabrication/soudure1.JPG);
+	background-image: url(../images/PhotosFabrication/soudure1.JPG);
+
 } 
 
 .slider-panel:nth-child(5n+2) {
@@ -229,6 +230,7 @@ h1{
     text-align: center;
     margin-top: 20px;
     color: #03889F;
+    margin-bottom: 10px;
 }
 
 h3{
@@ -242,7 +244,8 @@ h2{
     font-size: 25px;
     margin-top: 50px;
     /* color: #075c75; */
-    color: #03889F
+    color: #03889F;
+    margin-bottom: 30px;
 }
 
 #descE{
@@ -272,26 +275,42 @@ h2{
     color: #03889F;
 }
 
+.subtitle{
+    font-weight: bold;
+}
+
 .centered-line {
     width: 25%;  /* Le trait prend 1/3 de la largeur */
     margin: 20px auto;  /* Centré horizontalement et avec un espacement de 40px en haut et en bas */
     border: 0;
     height: 1px;
     background-color: #03889F;  /* Couleur du trait, modifiez selon vos besoins */
+    margin-bottom: 120px;
 }
 
 .instagram-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 30px;
     margin-left: 100px;
     margin-right: 100px;
+    flex-wrap: wrap; /* Ajouté pour permettre le passage à la ligne si nécessaire */
+}
+
+.instagram-row a {
+    width: calc(16.66% - 2px); /* Ajustez la valeur de soustraction ici pour compenser la réduction de la marge */
+    height: 200px; /* Hauteur fixe pour toutes les images */
+    margin: 1px; /* Réduisez la valeur de margin ici pour un tout petit espace */
 }
 
 .instagram-row img {
-    width: calc(16.66% - 10px); /* 100% divisé par 6 images, moins un petit espace */
-    margin: 5px;
+    width: 100%; /* Prend toute la largeur disponible */
+    height: 100%; /* Prend toute la hauteur disponible */
+    object-fit: cover; /* Assure que les images sont redimensionnées correctement */
 }
+
+
 
 /* Responsive */
 @media only screen and (max-width: 1023px) {
