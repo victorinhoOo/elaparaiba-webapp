@@ -1,8 +1,5 @@
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddRazorPages();
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -18,11 +15,13 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseAuthorization();
-
-app.MapRazorPages();
-
-// Configure the default route to point to your "index.cshtml" page.
-app.MapFallbackToPage("/index");
+// Configure the default route to point to your "index.html" file.
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapGet("/", async context =>
+    {
+        await context.Response.SendFileAsync("wwwroot/html/index.html");
+    });
+});
 
 app.Run();

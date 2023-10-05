@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/meTrouver.css">
+    <link rel="stylesheet" href="../css/commun.css">
+    <script src="../ouMeTrouver.js"></script>
+    <title>Où me trouver</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- css de boostrap -->
+
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="logoLien" href="index.html">
+                <img class="logo" src="../images/logo_elaparaïba.png" alt="logo de l'entreprise Elaparaïba">
+            </a>
+            <div class="mainNav">
+                <a class="buttonH" href='/html/index.html'>ACCUEIL</a>
+                <a class="buttonH" href='/html/bijoux.html'>LES BIJOUX</a>
+                <a class="buttonH" href='/html/surMesure.html'>SUR MESURE</a>
+                <a class="buttonH" href='/html/savoirFaire.html'>SAVOIR FAIRE</a>
+                <a class="buttonH" href='/html/ouMeTrouver.html'>OÙ ME TROUVER ?</a>
+            </div>
+            <div class="authNav">
+                <a class="buttonH" href=''>PANIER</a>
+                <a class="buttonH" href=''>SE CONNECTER</a>
+            </div>
+        </nav>
+    </header>
+<div class="conteneur">
+    <img src="../images/test.jpg" alt="Image à assombrir">
+    <div class="texteConteneur">Où me trouver ?</div>
+</div>
+
+    <div id="étage_1">
+<!-- Carte de la page  -->
+        <div id="carte" >
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=5.799732208251953%2C46.42125044572081%2C5.806732892990112%2C46.42661017485891&amp;layer=mapnik&amp;marker=46.4239273%2C5.8032328" ></iframe>
+<small><a href="https://www.openstreetmap.org/?mlat=46.4239273&amp;mlon=5.8032328#map=18/46.4239273/5.8032328">Agrandir la carte</a></small>
+        </div>
+<!-- Carte de la page  -->
+
+        <div id="coordonnées">
+            <h2 id="titre2">Coordonnées</h2>
+            <p id="vente">Point de vente : Atelier des savoirs faire 1 Grande rue 39170 Ravilloles</p>
+            <p id="tel">Téléphone : 06 31 43 03 99</p>
+            <p id="faxe">Courriel : 560 Route du bourg 715000 Saint-Usuge</p>
+        </div>
+    </div>
+
+    <div id="étage_2">
+        <div id="horaires">
+            <h2>Horaires</h2>
+            <p>Lundi-Vendredi : 8:00 - 18:00</p>
+            <p>Samedi : 8:00 - 12:00</p>
+        </div>
+
+        <!-- Question de client en form -->
+        <div id="question">
+            <h2>Avez-vous une question ?</h2>
+            <form onsubmit="return ValidationSubmit()" method="post" action="mailto:ezaic56@gmail.com" >
+                <label for="email" id="label_mail">E-mail :</label>
+                <div id="mail">
+                    <input type="text" id="email" name="email" required placeholder="Entrer votre adresse mail ">
+                </div>
+                    <input type="text" id="message" name="message" placeholder="Veillez saisir votre méssage" value="">
+                <div id="envoyer">
+                    <input id="valid" type="submit" onclick="validateForm()" value="Envoyer" class="bouton">
+                </div>
+            </form>
+        </div>
+ <!-- Question de client  -->
+    </div>
+
+    <!-- affichage generale -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section1">
+                <h2>À propos</h2>
+                <a href="#" class="buttonF">Me contacter</a>
+                <div class="social-icons">
+                    <a href="instagram.com/" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>   
+
+            <div class="footer-section2">
+                <h2>Informations légales</h2>
+                <ul>
+                    <li><a href="#" class="buttonF">Conditions générales d'utilisation</a></li>
+                    <li><a href="#" class="buttonF">Politique générale de protection des données</a></li>
+                </ul>
+            </div>
+        </div> 
+        <div class="footer-bottom">
+            <p>Copyright © 2023 Elaparaïba</p>
+            <div class="lang-selector">
+                <select>
+                    <option value="fr">Français</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </div>
+    </footer>
+    <!-- affichage generale -->
+
+    <!-- js de bootstrap -->
+   
+</body>
+</html>
