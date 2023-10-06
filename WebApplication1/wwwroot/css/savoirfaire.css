@@ -1,0 +1,238 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.conteneur {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.conteneur::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 400px;
+        background-color: rgba(0, 0, 0, 0.3); /* Noir semi-transparent */
+}
+
+.conteneur img {
+        display: block;
+        width: 100%;
+        height: 400px;
+        z-index: 1;
+        object-fit: cover;
+}
+
+.texteConteneur {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* Couleur du texte, ajustez selon vos besoins */
+    font-size: 50px; /* Taille du texte, ajustez selon vos besoins */
+    text-align: center;
+}
+
+/* Styles existants */
+h1 {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+    color: #03889F;
+    margin-bottom: 10px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 50px;
+    color: #03889F;
+    margin-bottom: 30px;
+}
+
+h3 {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+
+}
+
+h4 {
+    text-align: center;
+}
+
+.presentation {
+    display: flex;
+    flex-direction: row; /* Mettre les éléments côte à côte */
+    align-items: center; /* Centrer verticalement les éléments */
+    margin-top: 40px;
+}
+
+.texte {
+    flex: 1; /* Laisser le texte occuper autant d'espace que possible */
+    padding: 20px; /* Espace autour du texte */
+    text-align: left; /* Aligner le texte à gauche */
+}
+
+.texte p {
+    margin: 10px 0; /* Réduire les marges supérieure et inférieure des paragraphes */
+    max-width: 500px; /* Définir une largeur maximale pour les paragraphes */
+    line-height: 1.5;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+    color:#03889F;
+}
+
+.centered-line {
+    width: 25%;  /* Le trait prend 1/3 de la largeur */
+    margin: 50px auto;  /* Centré horizontalement et avec un espacement de 40px en haut et en bas */
+    border: 0;
+    height: 1px;
+    background-color: #03889F;  /* Couleur du trait, modifiez selon vos besoins */
+    margin-bottom: 80px;
+
+}
+
+.lea {
+    max-width: 30%; /* Ajustez la largeur selon vos préférences */
+    height: auto;
+    display: block;
+    margin-left: 400px;
+    float: left; /* Aligner l'image à gauche */
+}
+
+.fabrication p {
+    text-align: center;
+    margin-top: 25px;
+}
+
+
+.subtext{
+    margin-bottom: 50px;
+}
+
+.conteneur-etapes {
+    display: grid;
+    grid-template-columns: 1fr auto auto 1fr; /* Ajout de colonnes automatiques avec des colonnes flexibles sur les côtés */
+    grid-template-rows: auto auto; /* Deux lignes */
+    gap: 20px; /* Espacement entre les éléments */
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#section-dessin, .mise-en-forme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#section-dessin {
+    grid-column: 2; /* Première colonne */
+    grid-row: 1; /* Première ligne */
+    margin-left: 80px;
+    transform: translateX(250px);
+
+}
+
+.mise-en-forme {
+    grid-column: 3; /* Deuxième colonne */
+    grid-row: 1; /* Première ligne */
+    margin-left: 70px;
+    transform: translateX(250px);
+
+}
+
+
+.assemblage,
+#section-polissage,
+#section-plaquage {
+    grid-column: span 2; /* Span sur les deux colonnes centrales */
+    grid-row: 2; /* Deuxième ligne */
+}
+
+#section-dessin .texte, .mise-en-forme .text {
+    max-width: 100%; /* Largeur maximale du texte */
+    text-align: left;
+}
+
+#section-dessin .croquis, .mise-en-forme {
+    width: 400px;
+    height: auto;
+}
+
+/* Styles pour les trois sections restantes */
+
+.texte p{
+    text-align: left;
+}
+
+.assemblage,
+#section-polissage,
+#section-plaquage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.assemblage .soudure,
+#section-polissage .polissage,
+#section-plaquage .plaquage {
+    width: 300px;
+    height: auto;
+}
+
+.sciage {
+    width: 300px;
+    height: auto;
+}
+
+.croquis {
+    width: 300px;
+    height: auto;
+}
+
+.ctexte {
+    margin-right: 50px; /* Ajuster la marge à droite du texte */
+    max-width: 100%;
+}
+
+.conteneur-etapes p {
+    text-align: left;
+    margin-left: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
