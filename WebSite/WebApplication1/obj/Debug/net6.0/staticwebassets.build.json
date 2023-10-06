@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "twtquqV7pOoiWzuZy8SDMWWDZ/wq1JubFTEaPKXHWy4=",
+  "Hash": "gPLlVzV3EFWI1p2KJTOnF6/56z9BOw/GDt4GV+IfLh4=",
   "Source": "Elaparaiba",
   "BasePath": "_content/Elaparaiba",
   "Mode": "Default",
@@ -32,6 +32,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bijoux.css"
+    },
+    {
+      "Identity": "C:\\Users\\oxort\\Desktop\\Cours\\martin\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\css\\bijouxpresentation.css",
+      "SourceId": "Elaparaiba",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\oxort\\Desktop\\Cours\\martin\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/Elaparaiba",
+      "RelativePath": "css/bijouxpresentation.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\bijouxpresentation.css"
     },
     {
       "Identity": "C:\\Users\\oxort\\Desktop\\Cours\\martin\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\css\\commun.css",

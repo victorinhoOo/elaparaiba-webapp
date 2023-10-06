@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\css\\bijoux.css"
     },
     {
+      "Id": "C:\\Users\\oxort\\Desktop\\Cours\\martin\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\css\\bijouxpresentation.css",
+      "PackagePath": "staticwebassets\\css\\bijouxpresentation.css"
+    },
+    {
       "Id": "C:\\Users\\oxort\\Desktop\\Cours\\martin\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\css\\commun.css",
       "PackagePath": "staticwebassets\\css\\commun.css"
     },
