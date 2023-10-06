@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, insitial-scale=1.0">
+    <link rel="stylesheet" href="../css/bijoux.css">
+    <link rel="stylesheet" href="../css/commun.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="../js/bijoux.js"></script>
+    <title>Elaparaiba - Les bijoux</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="logoLien" href="index.html">
+                <img class="logo" src="../images/logo_elaparaïba.png" alt="logo de l'entreprise Elaparaïba">
+            </a>
+            <div class="mainNav">
+                <a class="buttonH" href='/html/index.html'>ACCUEIL</a>
+                <a class="buttonH" href='/html/bijoux.html'>LES BIJOUX</a>
+                <a class="buttonH" href='/html/surMesure.html'>SUR MESURE</a>
+                <a class="buttonH" href='/html/savoirFaire.html'>SAVOIR FAIRE</a>
+                <a class="buttonH" href='/html/ouMeTrouver.html'>OÙ ME TROUVER ?</a>
+            </div>
+            <div class="authNav">
+                <a class="buttonH" href=''>PANIER</a>
+                <a class="buttonH" href=''>SE CONNECTER</a>
+            </div>
+        </nav>
+    </header>
+    <div class="conteneur">
+        <img src="../images/surMesure/bP7.jpg" alt="Image à assombrir">
+        <div class="texteConteneur">Les Bijoux</div>
+    </div>
+    <div class="listes">
+        <select id="categorie-select" onchange="trierBijoux()">
+            <option class="styleoption" value="allbij" selected>Tous les bijoux</option>
+            <option class="styleoption" value="boucle-oreille">Boucle d'oreille</option>
+            <option class="styleoption" value="bracelet">Bracelet</option>
+            <option class="styleoption" value="bague">Bague</option>
+            <option class="styleoption" value="collier">Collier</option>
+        </select>
+        <select id="tri-select" onchange="trierBijoux()">
+            <option value="" disabled selected hidden>Choisissez une option de tri</option>
+            <option value="prix-croissant">Tri par prix croissant</option>
+            <option value="prix-decroissant">Tri par prix décroissant</option>
+            <option value="nouveaute">Tri par nouveauté</option>
+        </select>
+    </div>
+    <div class="listeBijoux" id="listeBijoux"></div>
+    <div id="bouton-conteneur">
+        <button id="voir-plus" onclick="afficherPlus()" hidden>Voir Plus</button>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section1">
+                <h2>À propos</h2>
+                <a href="#" class="buttonF">Me contacter</a>
+                <div class="social-icons">
+                    <a href="instagram.com/" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>   
+
+            <div class="footer-section2">
+                <h2>Informations légales</h2>
+                <ul>
+                    <li><a href="#" class="buttonF">Conditions générales d'utilisation</a></li>
+                    <li><a href="#" class="buttonF">Politique générale de protection des données</a></li>
+                </ul>
+            </div>
+        </div> 
+        <div class="footer-bottom">
+            <p>Copyright © 2023 Elaparaïba</p>
+            <div class="lang-selector">
+                <select>
+                    <option value="fr">Français</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
