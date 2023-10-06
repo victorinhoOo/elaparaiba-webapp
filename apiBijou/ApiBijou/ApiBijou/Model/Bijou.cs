@@ -43,7 +43,7 @@
             set { datepublication = value; }
         }
 
-        public Bijou(int id, string name, string description, int price, int quantity, string datepublication)
+        public Bijou()
         {
             this.id = id;
             this.name = name;

@@ -19,30 +19,31 @@ namespace API_SAE.Model
             }
         }
 
-        private IBijouDAO BijouDAO => BijouFakeDAO.Instance;
+        private IBijouDAO bijouDAO;
 
         private BijouManager()
         {
+            bijouDAO=new BijouDAO();
         }
 
         public Bijou? GetBijouById(int id)
         {
-            return BijouDAO.getById(id);
+            return bijouDAO.getById(id);
         }
 
         public IEnumerable<Bijou> GetAllBijoux()
         {
-            return BijouDAO.GetAllBijoux();
+            return bijouDAO.GetAllBijoux();
         }
 
         public bool AddBijou(Bijou? user)
         {
-            return BijouDAO.AddBijou(user);
+            return bijouDAO.AddBijou(user);
         }
 
         public bool DeleteBijouById(int id)
         {
-            return BijouDAO.DeleteBijouById(id);
+            return bijouDAO.DeleteBijouById(id);
         }
     }
 }

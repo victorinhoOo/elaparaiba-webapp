@@ -104,12 +104,8 @@
     font-size: 20px;
 }
 
-.slider-panel:nth-child(2) .slider-content,
-.slider-panel:nth-child(3) .slider-content,
-.slider-panel:nth-child(4) .slider-content {
-    margin-left: 150px;
-    left: 0;
-    transform: translate(-0%, -50%);
+a{
+    text-decoration: none;
 }
 
 

@@ -7,7 +7,7 @@ namespace API_SAE.Data
 {
     public class BijouDAO : IBijouDAO
     {
-        private string connectionString = "Server=localhost;Port=3306;Database=elaparaiba;Uid=root;Pwd=MATEOdasen12;";
+        private string connectionString = "Server=localhost;Port=3306;Database=elaparaiba;Uid=root;Pwd=rootroot;";
 
         public Bijou getById(int id) // Renommez la méthode pour respecter la convention C# (PascalCase)
         {
@@ -16,7 +16,7 @@ namespace API_SAE.Data
             MySqlCommand command = new MySqlCommand(sqlQuery, conn);
             command.Parameters.AddWithValue("@id", id);
             MySqlDataReader reader = command.ExecuteReader();
-            Bijou bijou = null;
+            Bijou bijou = new Bijou();
 
             if (reader.Read())
             {
@@ -32,7 +32,25 @@ namespace API_SAE.Data
         }
         public IEnumerable<Bijou> GetAllBijoux()
         {
-            throw new NotImplementedException();
+            MySqlConnection conn = OpenConnection();
+            string sqlQuery = "SELECT * FROM bijoux";
+            MySqlCommand command = new MySqlCommand(sqlQuery, conn);
+            MySqlDataReader reader = command.ExecuteReader();
+            List<Bijou> bijoux = new List<Bijou>();
+            while (reader.Read())
+            {
+                Bijou bijou = new Bijou();
+
+                bijou.Id = Convert.ToInt32(reader["idBijou"]);
+                bijou.Name = reader["nomBijou"].ToString();
+                bijou.Description = reader["descriptionBijou"].ToString();
+                bijou.Quantity = Convert.ToInt32(reader["stockBijou"]);
+                bijou.Price = Convert.ToInt32(reader["prixBijou"]);
+
+                bijoux.Add(bijou);
+            }
+            CloseConnection(conn);
+            return bijoux;
         }
 
         public bool AddBijou(Bijou? bijou)

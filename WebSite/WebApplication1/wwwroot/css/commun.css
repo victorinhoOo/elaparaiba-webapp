@@ -10,7 +10,7 @@
 
 header {
     background-color: #fff; 
-    padding: 0px 20px;
+    padding: 20px;
 }
 
 nav {
@@ -21,17 +21,17 @@ nav {
 
 .logoLien {
     display: inline-block;
-    margin-right: 60px;
+    margin-right: 20px;
 }
 
 .logo {
-    height: 100px; 
+    height: 80px; 
     width: auto;
 }
 
 .mainNav {
     display: flex;
-    margin-right: 60px;  
+    margin-right: 20px;
 }
 
 .authNav {
@@ -41,7 +41,7 @@ nav {
 
 .buttonH {
     text-align: center;
-    padding: 10px 10px 10px; 
+    padding: 10px; 
     text-decoration: none;
     position: relative; 
     margin: 0 3px;
@@ -63,9 +63,74 @@ nav {
 }
 
 .buttonH:hover::after {
-    background-color: #03889F; /
+    background-color: #03889F;
 }
 
+.burger-menu {
+    font-size: 30px;
+    cursor: pointer;
+    display: none; /* Masquer le menu burger par défaut */
+}
+
+/* Media Query pour les écrans de taille inférieure à 768 pixels (taille standard pour les tablettes et les téléphones) */
+@media only screen and (max-width: 768px) {
+    .logoLien {
+        margin-right: 10px;
+    }
+
+    .mainNav {
+        display: none; /* Cacher la navigation principale par défaut sur les écrans plus petits */
+        flex-direction: column; /* Afficher les liens de navigation les uns en dessous des autres */
+        position: absolute;
+        top: 60px; /* Ajuster la position du menu déroulant en fonction de la hauteur du header */
+        left: 0;
+        background-color: #fff;
+        width: 100%;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .mainNav a {
+        padding: 10px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .mainNav.show-menu {
+        display: flex;
+        z-index: 1;
+        margin-top: 40px;
+
+    }
+
+    .authNav {
+        display: none; /* Cacher la navigation d'authentification sur les écrans plus petits */
+    }
+
+    /* Afficher le menu burger */
+    nav:before {
+        font-size: 30px;
+        cursor: pointer;
+        display: block;
+    }
+
+    /* Afficher la navigation principale lorsqu'on clique sur le menu burger */
+    nav.clicked .mainNav {
+        display: flex;
+    }
+
+
+    
+    .burger-menu {
+        display: flex; /* Masquer le menu burger par défaut */
+        justify-self: baseline;
+    }
+    .logoLien {
+        display: flex; /* Utilisez Flexbox pour centrer le contenu */
+        align-items: center; /* Alignez le contenu verticalement au centre */
+        margin-right: auto; /* Déplacez le logo vers la gauche autant que possible */
+        margin-left: auto; /* Déplacez le logo vers la droite autant que possible */
+    }
+}
 /* FOOTER */
 
 footer {
