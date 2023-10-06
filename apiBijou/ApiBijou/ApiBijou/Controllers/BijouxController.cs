@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using API_SAE.Model;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Cors;
+using ApiBijou.Model.SurMesure;
 
 namespace API_SAE.Controllers
 {
@@ -43,6 +44,31 @@ namespace API_SAE.Controllers
                 reponse = Ok(users);
             }
             return reponse;
+        }
+
+        [HttpPost("EnvoyerFormulaireSurMesure")]
+        public IActionResult EnvoyerFormulaireSurMesure([FromBody] FormulaireSurMesureModel formulaire)
+        {
+            ActionResult result = BadRequest();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    MailBuilder mailBuilder = new MailBuilder(formulaire);
+                    // Utilisez mailBuilder pour générer et envoyer le mail ici
+
+                    return Ok("Formulaire soumis avec succès !");
+                }
+                catch (Exception ex)
+                {
+                    // Gérez l'exception ici, par exemple, en enregistrant les détails de l'erreur dans un journal.
+                    return StatusCode(500, "Une erreur s'est produite lors de la tentative d'envoi de l'e-mail.");
+                }
+            }
+            else
+            {
+                return BadRequest(ModelState);
+            }
         }
 
     }
