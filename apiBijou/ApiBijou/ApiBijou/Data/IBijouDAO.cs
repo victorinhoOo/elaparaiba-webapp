@@ -2,6 +2,9 @@
 
 namespace API_SAE.Data
 {
+    /// <summary>
+    /// Interface des DAOS
+    /// </summary>
     public interface IBijouDAO
     {
         public Bijou? getById(int id);

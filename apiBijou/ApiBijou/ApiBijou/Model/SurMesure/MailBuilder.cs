@@ -1,6 +1,7 @@
 ﻿using System.Net;
 using System.Net.Mail;
 using System.Text;
+using ApiBijou.Model.formModel;
 
 namespace ApiBijou.Model.SurMesure
 {
@@ -15,9 +16,10 @@ namespace ApiBijou.Model.SurMesure
         private readonly StringBuilder body;
 
         /// <summary>
-        /// Constructeur pour faire un formulaire Sur mesure
+        /// Constructeur pour créer un e-mail à partir d'un modèle de formulaire "Où me trouver".
         /// </summary>
-        /// <param name="formulaireSurMesureModel"></param>
+        /// <param name="formulaireOuMeTrouver">Le modèle de formulaire "Où me trouver".</param>
+        /// <returns>Une instance de la classe <see cref="MailBuilder"/>.</returns>
         public MailBuilder(FormulaireSurMesureModel formulaireSurMesureModel)
         {
             body = new StringBuilder();
@@ -28,7 +30,6 @@ namespace ApiBijou.Model.SurMesure
         /// <summary>
         /// Constructeur pour faire un formulaire ou me trouver
         /// </summary>
-        /// <param name="FormulaireOuMeTrouver"></param>
         public MailBuilder(FormulaireOuMeTrouver formulaireOuMeTrouver)
         {
             body = new StringBuilder();
@@ -37,9 +38,10 @@ namespace ApiBijou.Model.SurMesure
         }
 
         /// <summary>
-        /// Ecrit le corps
+        /// Génère le corps de l'e-mail à partir des données du formulaire "Où me trouver".
         /// </summary>
-        /// <param name="formulaireSurMesureModel">Champs entré par le client</param>
+        /// <param name="formulaireOuMeTrouver">Les champs saisis par le client.</param>
+        /// <returns>Le corps de l'e-mail sous forme de chaîne de caractères.</returns>
         public void GenerateBody(FormulaireSurMesureModel formulaireSurMesureModel)
         {
             body.AppendLine($"Nom du client: {formulaireSurMesureModel.Nom}");
@@ -52,6 +54,11 @@ namespace ApiBijou.Model.SurMesure
         }
 
 
+        /// <summary>
+        /// Génère le corps de l'e-mail à partir des données du formulaire "Où me trouver".
+        /// </summary>
+        /// <param name="formulaireOuMeTrouver">Les champs saisis par le client.</param>
+        /// <returns>Le corps de l'e-mail sous forme de chaîne de caractères.</returns>
         public void GenerateBody(FormulaireOuMeTrouver formulaireOuMeTrouver)
         {
             body.AppendLine($"Nom du client: {formulaireOuMeTrouver.Email}");
@@ -60,8 +67,9 @@ namespace ApiBijou.Model.SurMesure
 
 
         /// <summary>
-        /// Envoie le mail à la cliente
+        /// Envoie l'e-mail au destinataire spécifié.
         /// </summary>
+        /// <returns>Une valeur indiquant si l'e-mail a été envoyé avec succès.</returns>
         public void SendMail()
         {
             ///Configuration des destinataires 

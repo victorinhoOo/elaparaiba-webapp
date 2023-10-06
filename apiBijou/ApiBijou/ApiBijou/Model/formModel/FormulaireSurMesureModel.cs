@@ -1,4 +1,4 @@
-﻿namespace ApiBijou.Model.SurMesure
+﻿namespace ApiBijou.Model.formModel
 {
     /// <summary>
     /// Cette classe définit le modèle du questionnaire Sur Mesure
