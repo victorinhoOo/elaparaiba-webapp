@@ -45,35 +45,5 @@ namespace API_SAE.Controllers
             return reponse;
         }
 
-        [HttpPost("AddBijou")]
-
-        public ActionResult AddUser([FromBody] Bijou? bijou)
-        {
-            ActionResult result = BadRequest();
-
-            if (BijouManager.Instance.AddBijou(bijou))
-            {
-                result = Ok();
-            }
-            return result;
-        }
-
-        [HttpGet("DeleteBijouById")]
-
-        public IActionResult DeleteUserById(int? id)
-        {
-            IActionResult result = BadRequest("No id specified");
-
-            if (id.HasValue)
-            {
-                result = NotFound();
-                if (BijouManager.Instance.DeleteBijouById(id.Value))
-                {
-                    result = Ok();
-                }
-            }
-            return result;
-        }
-
     }
 }
