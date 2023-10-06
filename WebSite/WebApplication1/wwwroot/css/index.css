@@ -32,11 +32,11 @@
 } 
 
 .slider-panel:nth-child(5n+2) {
-	background-image: url(../images/PhotosdescriptifsBagues/Bag64/Bag64.jpg);
+	background-image: url('../images/PhotosdescriptifsBagues/Bague 64/5.jpg');
 }
 
 .slider-panel:nth-child(5n+3) {
-	background-image: url(../images/PhotosdescriptifBo/Bo24/bo24_grey.jpg);
+	background-image: url('../images/PhotosdescriptifBo/Bo24/bo24_grey.jpg');
 }
 
 .slider-panel:nth-child(5n+4) {
@@ -107,6 +107,8 @@
 a{
     text-decoration: none;
 }
+
+
 
 
 /* Slider des nouveautés */
