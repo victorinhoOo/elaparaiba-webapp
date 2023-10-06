@@ -3,8 +3,14 @@ using API_SAE.Data;
 
 namespace API_SAE.Model
 {
+    /// <summary>
+    /// Classe bijoux manager qui communique directement avec le DAO
+    /// </summary>
     public class BijouManager
     {
+        /// <summary>
+        /// Singleton bijou manager
+        /// </summary>
         private static BijouManager instance;
 
         public static BijouManager Instance
@@ -18,19 +24,32 @@ namespace API_SAE.Model
                 return instance;
             }
         }
-
+        /// <summary>
+        /// DAO utilisé par bijou manager
+        /// </summary>
         private IBijouDAO bijouDAO;
 
+        /// <summary>
+        /// Constructeur (privé car singleton)
+        /// </summary>
         private BijouManager()
         {
             bijouDAO=new BijouDAO();
         }
-
+        /// <summary>
+        /// Envoi une demande GetBijouxById au DAO
+        /// </summary>
+        /// <param name="id">Id du bijoux à é</param>
+        /// <returns></returns>
         public Bijou? GetBijouById(int id)
         {
             return bijouDAO.getById(id);
         }
 
+        /// <summary>
+        /// Envoi une demande GetAllBijoux au DAO
+        /// </summary>
+        /// <returns>IEnumerable<Bijou></returns>
         public IEnumerable<Bijou> GetAllBijoux()
         {
             return bijouDAO.GetAllBijoux();

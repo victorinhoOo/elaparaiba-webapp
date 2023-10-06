@@ -1,5 +1,8 @@
 ﻿namespace API_SAE.Model
 {
+    /// <summary>
+    /// Classe des bijoux 
+    /// </summary>
     public class Bijou
     {
         private int id;
