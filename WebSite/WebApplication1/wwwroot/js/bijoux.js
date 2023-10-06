@@ -219,6 +219,7 @@ function redirectToBijouPresentation(bijouId) {
 
 
 
+///Fonctionnement avec connexion à la bdd
 
 
 /* const bijouxConteneur = document.getElementById("bijoux-conteneur");
