@@ -8,23 +8,23 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\vd577076\\.nuget\\packages\\": {},
+    "C:\\Users\\ec430573\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vd577076\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\Elaparaiba.csproj",
+      "projectUniqueName": "C:\\Users\\ec430573\\Desktop\\fin\\WebSite\\WebApplication1\\Elaparaiba.csproj",
       "projectName": "Elaparaiba",
-      "projectPath": "C:\\Users\\vd577076\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\Elaparaiba.csproj",
-      "packagesPath": "C:\\Users\\vd577076\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vd577076\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\obj\\",
+      "projectPath": "C:\\Users\\ec430573\\Desktop\\fin\\WebSite\\WebApplication1\\Elaparaiba.csproj",
+      "packagesPath": "C:\\Users\\ec430573\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ec430573\\Desktop\\fin\\WebSite\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\vd577076\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ec430573\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
