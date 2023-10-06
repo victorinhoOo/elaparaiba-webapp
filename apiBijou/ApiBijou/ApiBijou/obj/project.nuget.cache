@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cq/EJAY8tqO9ZO2NYIvmzCzVU5gL55mjMyOofRZn9Cb2+gmKcko2fdf6nNfbhEHW/UnkgJA31/9NjwFE8k8ySA==",
+  "dgSpecHash": "SiUe1+Vc7hL0wzRRMWqSGmO6AijP+S6Q9RTydAQtpQi/mZO4dXCYNONTdvoaoCHCC1v/tJ0F0I4cfXb0s8dY3g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mb203509\\Desktop\\apiBijou\\ApiBijou\\ApiBijou\\ApiBijou.csproj",
+  "projectFilePath": "C:\\Users\\mb203509\\Desktop\\newVersion\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\ApiBijou.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mb203509\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
     "C:\\Users\\mb203509\\.nuget\\packages\\k4os.compression.lz4\\1.3.5\\k4os.compression.lz4.1.3.5.nupkg.sha512",
