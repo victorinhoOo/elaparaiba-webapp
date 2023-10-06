@@ -1,9 +1,8 @@
-# Dossiers sp�cifiques � Visual Studio
+# Dossiers spécifiques à Visual Studio
 .vscode/
 /bin/
 /obj/
 /.vs/
-
 # Fichiers de sauvegarde
 *~
 *.swp

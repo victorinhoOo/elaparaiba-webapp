@@ -2,10 +2,14 @@ using Microsoft.AspNetCore.Mvc;
 using API_SAE.Model;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Cors;
+using ApiBijou.Model.formModel;
 using ApiBijou.Model.SurMesure;
 
 namespace API_SAE.Controllers
 {
+    /// <summary>
+    /// Controller de l'api
+    /// </summary>
     [ApiController]
     [Route("Bijoux")]
     public class BijouxController : ControllerBase
