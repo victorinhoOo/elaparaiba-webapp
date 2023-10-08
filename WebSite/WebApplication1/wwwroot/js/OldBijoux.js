@@ -28,9 +28,6 @@ function afficherPlus() {
 
 
 
-window.onload = initialiserBijoux;
-
-
 //// Fake DAO pour les bijoux
 //class BijouDAO {
 //    constructor() {
@@ -125,8 +122,8 @@ window.onload = initialiserBijoux;
 ///Fonction qui communique avec l'API pour aller chercher les bijoux
 ///Pour l'insant on va aller chercher les bijoux un par un
 
-    class Bijou {
-    constructor(idBijou, nomBijou, descriptionBijou, prixBijou, stockBijou,type,dossierPhoto) {
+class Bijou {
+    constructor(idBijou, nomBijou, descriptionBijou, prixBijou, stockBijou, type, dossierPhoto) {
         this.idBijou = idBijou;
         this.nomBijou = nomBijou;
         this.descriptionBijou = descriptionBijou;
@@ -292,10 +289,10 @@ function sortAndDisplayBijoux() {
             if (bijoux[keys].type === selectedCategorie) { //La catégorie du bijou est celle recherchée par l'utilisateur
                 bijouxAafficher[keys] = bijoux[keys];
             }
-        });   
+        });
     }
     else {
-         bijouxAafficher = bijoux;
+        bijouxAafficher = bijoux;
     }
     if (selectedTri === "prix-croissant") {
         // On récupère les valeurs du dictionnaire sous forme de tableau pour les trier 
@@ -388,12 +385,12 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 // Fonction d'initialisation appelée au chargement de la page
 function initialiserBijoux() {
-  tousLesBijoux = document.querySelectorAll(".produit");
+    tousLesBijoux = document.querySelectorAll(".produit");
 }
 
 
 function redirectToBijouPresentation(bijouId) {
-  window.location.href = "bijouxpresentation.html?bijouId=" + bijouId;
+    window.location.href = "bijouxpresentation.html?bijouId=" + bijouId;
 }
 
 

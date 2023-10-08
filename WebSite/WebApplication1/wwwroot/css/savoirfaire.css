@@ -36,8 +36,8 @@ body, html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white; /* Couleur du texte, ajustez selon vos besoins */
-    font-size: 50px; /* Taille du texte, ajustez selon vos besoins */
+    color: white; 
+    font-size: 50px; 
     text-align: center;
 }
 

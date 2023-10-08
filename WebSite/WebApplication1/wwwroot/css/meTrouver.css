@@ -4,14 +4,6 @@ body, html {
     padding: 0;
 }
 
-/* 
-h1 { 
-    text-align: center;
-    margin: 0 auto;
-    padding: 10px;
-    color: #0a304a;
-    position: relative;
-} */
 
 h2 {
     color: #03889f;
@@ -34,7 +26,7 @@ h2 {
         left: 0;
         width: 100%;
         height: 400px;
-        background-color: rgba(0, 0, 0, 0.3); /* Noir semi-transparent */
+        background-color: rgba(0, 0, 0, 0.3); 
     }
 
     .conteneur img {
@@ -55,7 +47,7 @@ h2 {
     text-align: center;
 }
 
-#message::placeholder { /*position du message d'indication du message*/
+#message::placeholder { 
     position: absolute;
     top: 5px;
     left: 5px;

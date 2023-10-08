@@ -27,24 +27,24 @@
 }
 
 .slider-panel:nth-child(5n+1) {
-	background-image: url(../images/PhotosFabrication/soudure1.JPG);
+	background-image: url('../images/PhotosFabrication/soudure1.JPG');
 
 } 
 
 .slider-panel:nth-child(5n+2) {
-	background-image: url('../images/PhotosdescriptifsBagues/Bague 64/5.jpg');
+	background-image: url('../images/PhotosdescriptifBagues/Bague64/5.jpg');
 }
 
 .slider-panel:nth-child(5n+3) {
-	background-image: url('../images/PhotosdescriptifBo/Bo24/bo24_grey.jpg');
+    background-image: url('../images/PhotosdescriptifBo/Bo24/bo24_grey.jpg');
 }
 
 .slider-panel:nth-child(5n+4) {
-	background-image: url(../images/PhotosDescriptifsColliers/Col66/col66.jpg);
+	background-image: url(../images/PhotosDescriptifColliers/Col66/7.jpg);
 }
 
 .slider-panel:nth-child(5n+5){
-    background-image: url(../images/PhotosDescriptifBracelets/Bra73/braceletBra73grey.jpg);
+    background-image: url(../images/PhotosDescriptifBracelets/Bra73/5.jpg);
 }
 .slider-panel.active{    
     opacity:1;

@@ -1,5 +1,5 @@
 #bijouImage{
-    object-fit: cover; /* Ajuste l'image pour couvrir tout le conteneur tout en conservant son rapport hauteur/largeur */
+    object-fit: cover; 
     width: 900px; /* Largeur fixe pour chaque produit */
     height: 900px; /* Hauteur fixe pour chaque produit */
     align-self: flex-end;
@@ -25,7 +25,7 @@
     grid-column: 2;
     grid-row: 1;
     align-self: start;
-    overflow: auto; /* ou overflow: hidden; selon vos besoins */
+    overflow: auto; 
 }
 
 
