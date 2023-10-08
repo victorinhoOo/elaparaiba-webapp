@@ -75,8 +75,6 @@ var bijoux = {};
 window.onload = initialiserBijoux;
 
 
-
-//Fonction de tri des bijoux 
 function sortAndDisplayBijoux() {
     const categorieSelect = document.getElementById("categorie-select");
     const triSelect = document.getElementById("tri-select");
@@ -89,7 +87,7 @@ function sortAndDisplayBijoux() {
 
     if (selectedCategorie !== "allbij") {
         ///On récupère les clées du dictionnaire
-        
+
 
         bijouxKeys.forEach(keys => {
             if (bijoux[keys].type === selectedCategorie) { //La catégorie du bijou est celle recherchée par l'utilisateur
@@ -99,9 +97,9 @@ function sortAndDisplayBijoux() {
     }
     else {
         bijouxKeys.forEach(keys => {
-            
+
             bijouxAafficher[keys] = bijoux[keys];
-            
+
         });
     }
     if (selectedTri === "prix-croissant") {
@@ -117,8 +115,7 @@ function sortAndDisplayBijoux() {
             i += 1;
         });
     }
-    else if (selectedTri === "prix-decroissant")
-    {
+    else if (selectedTri === "prix-decroissant") {
         const bijouxArray = Object.values(bijouxAafficher);
         bijouxArray.sort((a, b) => b.prixBijou - a.prixBijou);
         // Recréez un nouvel objet avec les valeurs triées
@@ -189,6 +186,13 @@ function displayBijoux(bijoux) {
 }
 //Fonction lancer au chargement des élèments html
 document.addEventListener("DOMContentLoaded", async function () {
+    //Ajout d'évènement pour lancer la fonction de tri
+    const categorieSelect = document.getElementById("categorie-select");
+    const triSelect = document.getElementById("tri-select");
+
+    categorieSelect.addEventListener("change", sortAndDisplayBijoux);
+    triSelect.addEventListener("change", sortAndDisplayBijoux);
+
     // Récupération de 10 bijoux
     for (let i = 0; i < bijouAffiches; i++) {
         await fetchBijou(i);
