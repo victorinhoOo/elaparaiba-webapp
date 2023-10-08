@@ -34,12 +34,12 @@ namespace API_SAE.Model
         /// </summary>
         private BijouManager()
         {
-            bijouDAO=new BijouDAO();
+            bijouDAO = BijouFakeDAO.Instance;
         }
         /// <summary>
         /// Envoi une demande GetBijouxById au DAO
         /// </summary>
-        /// <param name="id">Id du bijoux à é</param>
+        /// <param name="id">Id du bijoux à retourner</param>
         /// <returns></returns>
         public Bijou? GetBijouById(int id)
         {

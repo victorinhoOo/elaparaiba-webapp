@@ -11,6 +11,8 @@
         private int price;
         private int quantity;
         private string datepublication;
+        private string type;
+        private string dossierPhoto;
 
         public int Id
         {
@@ -46,14 +48,17 @@
             set { datepublication = value; }
         }
 
-        public Bijou()
+        public String Type
         {
-            this.id = id;
-            this.name = name;
-            this.description = description;
-            this.price = price;
-            this.quantity = quantity;
-            this.datepublication = datepublication;
+            get { return type; }
+            set { type = value; }
         }
+
+        public String DossierPhoto
+        {
+            get { return dossierPhoto; }
+            set { dossierPhoto = value; }
+        }
+
     }
 }
