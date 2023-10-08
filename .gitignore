@@ -2,7 +2,7 @@
 .vscode/
 /bin/
 /obj/
-/.vs/
+.vs/
 # Fichiers de sauvegarde
 *~
 *.swp
