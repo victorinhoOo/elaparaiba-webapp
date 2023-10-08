@@ -44,10 +44,5 @@ LogFiles/
 
 # Visual Studio 2019 - dossiers et fichiers de configuration
 .vs2019/
-WebSite/.vs/Elaparaiba/FileContentIndex/4a70525c-0d52-423e-8857-1efcf3c18a39.vsidx
-apiBijou/ApiBijou/.vs/ApiBijou/v17/TestStore/0/000.testlog
-WebSite/.vs/Elaparaiba/FileContentIndex/4a70525c-0d52-423e-8857-1efcf3c18a39.vsidx
-WebSite/.vs/Elaparaiba/FileContentIndex/6a0c2481-a637-42e1-9421-2d8d79e19c70.vsidx
-apiBijou/ApiBijou/.vs/ApiBijou/FileContentIndex/175d284b-bfd2-46ab-bc6a-98f223961907.vsidx
-apiBijou/ApiBijou/.vs/ApiBijou/FileContentIndex/9113ba3f-ccb9-4f47-942e-f0a8f6c11854.vsidx
-apiBijou/ApiBijou/.vs/ApiBijou/FileContentIndex/d4cfba54-a5de-49f6-9ccf-b5d55596a380.vsidx
+WebSite/.vs/
+apiBijou/ApiBijou/.vs/
