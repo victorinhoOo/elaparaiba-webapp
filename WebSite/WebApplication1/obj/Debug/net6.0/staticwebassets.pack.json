@@ -573,6 +573,10 @@
       "PackagePath": "staticwebassets\\images\\PhotosFabrication\\soudure2.JPG"
     },
     {
+      "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosFabrication\\tableau.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosFabrication\\tableau.jpg"
+    },
+    {
       "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague61\\1.jpg",
       "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague61\\1.jpg"
     },
