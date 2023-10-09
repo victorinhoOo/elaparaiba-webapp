@@ -1,147 +1,141 @@
-﻿body, html {
-    margin: 0;
-    padding: 0;
+﻿body,
+html {
+  margin: 0;
+  padding: 0;
 }
 
 .conteneur {
-    position: relative;
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-image: url("../images/PhotosDescriptifBracelets/Bra71/2.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-    .conteneur::before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 400px;
-        background-color: rgba(0, 0, 0, 0.3); /* Noir semi-transparent */
-    }
-
-    .conteneur img {
-        display: block;
-        width: 100%;
-        height: 400px;
-        z-index: 1;
-        object-fit: cover;
-    }
+.conteneur::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 
 .texteConteneur {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white; 
-    font-size: 50px; 
-    text-align: center;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  position: absolute;
 }
 
 .listes {
-    display: flex;
-    justify-content: center;
-    padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
 }
 
-    .listes select {
-        padding: 10px; /* Espace intérieur pour le contenu */
-        font-size: 16px; 
-        border: 2px solid #ccc; /* Bordure */
-        background-color: #f4f4f4; /* Couleur de fond */
-        width: 300px;
-        margin-left: 50px;
-        margin-right: 50px;
-    }
+.listes select {
+  padding: 10px; /* Espace intérieur pour le contenu */
+  font-size: 16px;
+  border: 2px solid #ccc; /* Bordure */
+  background-color: #f4f4f4; /* Couleur de fond */
+  width: 300px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
 
-        /* Style au survol d'une option */
-        .listes select:hover {
-            border-color: black; /* Bordure plus foncée au survol */
-            cursor: pointer;
-        }
+/* Style au survol d'une option */
+.listes select:hover {
+  border-color: black; /* Bordure plus foncée au survol */
+  cursor: pointer;
+}
 
-        /* Style au focus (lorsque la liste déroulante est sélectionnée) */
-        .listes select:focus {
-            outline: none; 
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Ombre légère au focus */
-        }
+/* Style au focus (lorsque la liste déroulante est sélectionnée) */
+.listes select:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Ombre légère au focus */
+}
 
 .listeBijoux {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding-top: 100px;
-    padding-left: 200px;
-    padding-right: 200px;
-    grid-gap: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 100px;
+  padding-left: 200px;
+  padding-right: 200px;
+  grid-gap: 200px;
 }
 
 .produit {
-    text-align: center;
-    width: 350px; /* Largeur fixe pour chaque produit */
-    height: 400px; /* Hauteur fixe pour chaque produit */
-    position: relative;
-    background-image: var(--image-par-defaut);
+  text-align: center;
+  width: 350px; /* Largeur fixe pour chaque produit */
+  height: 400px; /* Hauteur fixe pour chaque produit */
+  position: relative;
+  background-image: var(--image-par-defaut);
 }
 
-    .produit img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* Ajuste l'image pour couvrir tout le conteneur tout en conservant son rapport hauteur/largeur */
-        object-position: center center; /* Centre l'image horizontalement et verticalement */
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        transition: content 0.3s ease-in-out;
-    }
+.produit img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajuste l'image pour couvrir tout le conteneur tout en conservant son rapport hauteur/largeur */
+  object-position: center center; /* Centre l'image horizontalement et verticalement */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: content 0.3s ease-in-out;
+}
 
-    .produit h3 {
-        margin-top: 10px;
-        font-size: 18px;
-    }
+.produit h3 {
+  margin-top: 10px;
+  font-size: 18px;
+}
 
-    .produit p {
-        margin-top: 5px;
-        color: #03889f;
-    }
+.produit p {
+  margin-top: 5px;
+  color: #03889f;
+}
 
-    .produit button {
-        border: solid transparent;
-        margin-top: 10px;
-        border-radius: 5px;
-        border-width: 1px;
-        padding: 10px;
-        padding-left: 20px;
-        padding-right: 20px;
-        letter-spacing: 1px;
-        font-weight: bold;
-        border-color: #03889f;
-        background-color: white;
-        color: #03889f;
-    }
+.produit button {
+  border: solid transparent;
+  margin-top: 10px;
+  border-radius: 5px;
+  border-width: 1px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  border-color: #03889f;
+  background-color: white;
+  color: #03889f;
+}
 
-        .produit button:hover {
-            cursor: pointer;
-            background-color: #03889f;
-            color: white;
-        }
+.produit button:hover {
+  cursor: pointer;
+  background-color: #03889f;
+  color: white;
+}
 
 #bouton-conteneur {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    padding-top: 100px;
-    padding-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 #voir-plus {
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 img.bijou-1 :hover {
-    background-image: url('../images/PhotosdescriptifBo/Bo18/20230908_182247.jpg');
+  background-image: url("../images/PhotosdescriptifBo/Bo18/20230908_182247.jpg");
 }

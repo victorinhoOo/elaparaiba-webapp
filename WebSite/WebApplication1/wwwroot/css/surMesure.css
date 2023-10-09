@@ -1,32 +1,27 @@
 
 .conteneur {
     position: relative;
+    background-image: url("../images/surMesure/bP1.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
     width: 100%;
-    height: auto;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 35px;
+    height: 400px;
 }
 
-    .conteneur::before {
+.conteneur::before {
         content: "";
-        display: block;
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.664);
-    }
-
-    .conteneur img {
-        display: block;
-        width: 100vw;
-        height: 400px;
-        z-index: 1;
-        object-fit: cover;
-    }
+        background-color: rgba(0, 0, 0, 0.6);
+}
 
 
 .texteConteneur h1 {
@@ -51,8 +46,6 @@
     text-align: center;
     margin-top: 1%;
 }
-
-
 
 
 
