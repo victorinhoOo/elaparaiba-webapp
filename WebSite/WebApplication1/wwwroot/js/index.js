@@ -11,7 +11,8 @@ function main() {
         controls[i].onclick = click; //onclick appellera click
        }
     document.getElementById("auto").addEventListener("click", click_cb);
-   }
+    
+}
 
 
 function print(nbr){
@@ -105,7 +106,7 @@ async function fetchInstagramPhotos() {
     const data = await response.json();
     const items = data.data;
     const nonReels = items.filter(item => {
-        return !(item.media_type === 'VIDEO' && item.media_url.includes('reel'));  // This line assumes that Reels media URLs contain the word 'reel'
+        return !(item.media_type === 'VIDEO' && item.media_url.includes('reel'));
     });
     const container = document.getElementById('instagram-feed');
     nonReels.forEach(item => {

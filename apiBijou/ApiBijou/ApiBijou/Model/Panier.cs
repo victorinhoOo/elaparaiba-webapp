@@ -9,9 +9,10 @@ namespace ApiBijou.Model
     {
         private int id;
 
-        private List<BijouInPanier> bijoux = new List<BijouInPanier>();
+        private List<PanierItem> bijoux = new List<PanierItem>();
 
-        public List<BijouInPanier> Bijoux { get => bijoux; set => bijoux = value; }
+        public List<PanierItem> Bijoux { get => bijoux; set => bijoux = value; }
+
         public int Id { get => id; set => id = value; }
 
 

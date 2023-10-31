@@ -62,6 +62,19 @@ nav {
     color: #03889F;
 }
 
+.iconH{
+    padding: 20px;
+}
+
+.fa-shopping-cart:hover{
+    color: #03889F;
+}
+
+.fa-user:hover{
+    color: #03889F;
+}
+
+
 .buttonH:hover::after {
     background-color: #03889F;
 }
@@ -146,6 +159,9 @@ footer h2{
     color: #03889F;
 }
 
+.footer-bottom p{
+    font-size: 16px;
+}
 
 .footer-content {
     display: flex;

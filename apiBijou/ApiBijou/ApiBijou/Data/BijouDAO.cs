@@ -16,17 +16,18 @@ namespace API_SAE.Data
         private string connectionString = "Server=localhost;Port=3306;Database=elaparaiba;Uid=root;Pwd=rootroot;";
 
 
-        public Bijou getById(int id) // Renommez la méthode pour respecter la convention C# (PascalCase)
+        public Bijou getById(int id)
         {
-            MySqlConnection conn = OpenConnection();
+            MySqlConnection conn = OpenConnection(); // Ouvre une connexion à la base de données
             string sqlQuery = "SELECT * FROM bijoux WHERE idBijou = @id";
             MySqlCommand command = new MySqlCommand(sqlQuery, conn);
-            command.Parameters.AddWithValue("@id", id);
-            MySqlDataReader reader = command.ExecuteReader();
-            Bijou bijou = new Bijou();
+            command.Parameters.AddWithValue("@id", id); // Définit le paramètre d'ID
+            MySqlDataReader reader = command.ExecuteReader(); // Exécute la requête SQL
+            Bijou bijou = new Bijou(); // Crée un objet Bijou pour stocker les résultats
 
             if (reader.Read())
             {
+                // Si une ligne est lue, remplit l'objet Bijou avec les données
                 bijou.Id = Convert.ToInt32(reader["idBijou"]);
                 bijou.Name = reader["nomBijou"].ToString();
                 bijou.Description = reader["descriptionBijou"].ToString();
@@ -34,32 +35,35 @@ namespace API_SAE.Data
                 bijou.Price = Convert.ToInt32(reader["prixBijou"]);
             }
 
-            CloseConnection(conn);
-            return bijou;
+            CloseConnection(conn); // Ferme la connexion à la base de données
+            return bijou; // Retourne le bijou trouvé ou un bijou vide
         }
 
         public IEnumerable<Bijou> GetAllBijoux()
         {
-            MySqlConnection conn = OpenConnection();
+            MySqlConnection conn = OpenConnection(); // Ouvre une connexion à la base de données
             string sqlQuery = "SELECT * FROM bijoux";
             MySqlCommand command = new MySqlCommand(sqlQuery, conn);
-            MySqlDataReader reader = command.ExecuteReader();
-            List<Bijou> bijoux = new List<Bijou>();
+            MySqlDataReader reader = command.ExecuteReader(); // Exécute la requête SQL
+            List<Bijou> bijoux = new List<Bijou>(); // Crée une liste pour stocker les bijoux
+
             while (reader.Read())
             {
+                // Pour chaque ligne lue, crée un nouvel objet Bijou et le remplit avec les données
                 Bijou bijou = new Bijou();
-
                 bijou.Id = Convert.ToInt32(reader["idBijou"]);
                 bijou.Name = reader["nomBijou"].ToString();
                 bijou.Description = reader["descriptionBijou"].ToString();
                 bijou.Quantity = Convert.ToInt32(reader["stockBijou"]);
                 bijou.Price = Convert.ToInt32(reader["prixBijou"]);
 
-                bijoux.Add(bijou);
+                bijoux.Add(bijou); // Ajoute le bijou à la liste
             }
-            CloseConnection(conn);
-            return bijoux;
+
+            CloseConnection(conn); // Ferme la connexion à la base de données
+            return bijoux; // Retourne la liste de tous les bijoux
         }
+
 
         public bool AddBijou(Bijou? bijou)
         {

@@ -5,7 +5,7 @@ namespace ApiBijou.Model
     /// <summary>
     /// Représente un bijou du panier
     /// </summary>
-    public class BijouInPanier
+    public class PanierItem
     {
         private Bijou bijou;
 
