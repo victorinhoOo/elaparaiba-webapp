@@ -15,11 +15,7 @@ namespace API_SAE.Data
         /// </summary>
         private string connectionString = "Server=localhost;Port=3306;Database=elaparaiba;Uid=root;Pwd=rootroot;";
 
-        /// <summary>
-        /// Récupérer un bijou avec son id
-        /// </summary>
-        /// <param name="id">id du bijou</param>
-        /// <returns></returns>
+
         public Bijou getById(int id) // Renommez la méthode pour respecter la convention C# (PascalCase)
         {
             MySqlConnection conn = OpenConnection();
@@ -41,10 +37,7 @@ namespace API_SAE.Data
             CloseConnection(conn);
             return bijou;
         }
-        /// <summary>
-        /// Renvoi tous les bijoux de la BDD
-        /// </summary>
-        /// <returns></returns>
+
         public IEnumerable<Bijou> GetAllBijoux()
         {
             MySqlConnection conn = OpenConnection();
@@ -68,23 +61,11 @@ namespace API_SAE.Data
             return bijoux;
         }
 
-        /// <summary>
-        /// Ajoute un bijou à la bdd
-        /// </summary>
-        /// <param name="bijou">Objet bijou</param>
-        /// <returns></returns>
-        /// <exception cref="NotImplementedException"></exception>
         public bool AddBijou(Bijou? bijou)
         {
             throw new NotImplementedException();
         }
 
-        /// <summary>
-        /// Supprime un bijou
-        /// </summary>
-        /// <param name="id">id du bijou à supprimer</param>
-        /// <returns></returns>
-        /// <exception cref="NotImplementedException"></exception>
         public bool DeleteBijouById(int id)
         {
             throw new NotImplementedException();

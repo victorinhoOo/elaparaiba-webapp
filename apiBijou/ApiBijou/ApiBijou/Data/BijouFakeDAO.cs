@@ -4,7 +4,7 @@ using API_SAE.Model;
 namespace API_SAE.Data
 {
     /// <summary>
-    /// Fake DAO 
+    /// Fake DAO de bijou
     /// </summary>
     public class BijouFakeDAO : IBijouDAO
     {

@@ -1,7 +1,7 @@
 ﻿namespace API_SAE.Model
 {
     /// <summary>
-    /// Classe des bijoux 
+    /// Gère les caractéristiques des bijoux
     /// </summary>
     public class Bijou
     {
