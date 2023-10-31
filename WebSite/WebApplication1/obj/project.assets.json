@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\oxort\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\Elaparaiba.csproj",
+      "projectUniqueName": "C:\\Users\\User\\OneDrive\\Bureau\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\Elaparaiba.csproj",
       "projectName": "Elaparaiba",
-      "projectPath": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\Elaparaiba.csproj",
-      "packagesPath": "C:\\Users\\oxort\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\obj\\",
+      "projectPath": "C:\\Users\\User\\OneDrive\\Bureau\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\Elaparaiba.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\OneDrive\\Bureau\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\oxort\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -64,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

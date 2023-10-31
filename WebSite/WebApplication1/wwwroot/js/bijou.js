@@ -177,7 +177,7 @@ function displayBijoux(bijoux) {
         const descriptionElement = document.createElement("button");
         descriptionElement.textContent = "Acheter";
         descriptionElement.addEventListener("click", function () {
-            redirectToBijouPresentation(bijou.id);
+            redirectToBijouPresentation(bijou.idBijou);
         });
         bijouElement.appendChild(descriptionElement);
 
