@@ -5,7 +5,9 @@ VisualStudioVersion = 17.6.33801.468
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiBijou", "ApiBijou\ApiBijou.csproj", "{05CE9BBD-31C6-48C8-8372-2256F51B7C15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiBijouxTests", "ApiBijouxTests\ApiBijouxTests.csproj", "{204C3CE6-AD24-4A58-AD34-D01AD7D10F7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiBijouxTests", "ApiBijouxTests\ApiBijouxTests.csproj", "{204C3CE6-AD24-4A58-AD34-D01AD7D10F7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "panierTest", "panierTest\panierTest.csproj", "{F28DBCA0-F3BB-4F05-85A3-944BEF3D6798}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{204C3CE6-AD24-4A58-AD34-D01AD7D10F7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{204C3CE6-AD24-4A58-AD34-D01AD7D10F7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{204C3CE6-AD24-4A58-AD34-D01AD7D10F7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F28DBCA0-F3BB-4F05-85A3-944BEF3D6798}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F28DBCA0-F3BB-4F05-85A3-944BEF3D6798}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F28DBCA0-F3BB-4F05-85A3-944BEF3D6798}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F28DBCA0-F3BB-4F05-85A3-944BEF3D6798}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

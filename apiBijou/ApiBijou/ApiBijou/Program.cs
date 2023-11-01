@@ -1,17 +1,43 @@
+using API_SAE.Model;
+using ApiBijou.Model;
+using ApiBijou.Model.Services;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using MySqlX.XDevAPI;
+using System;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
+// Ajout des services à l'application
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddDistributedMemoryCache(); // Ajoute un cache en mémoire distribué
+
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Temps d'inactivité avant expiration de la session
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
+// Enregistrement de la classe Panier comme service
+builder.Services.AddScoped<Panier>(); 
+builder.Services.AddScoped<PanierManager>(); 
+
+
 var app = builder.Build();
 
+// Configure le middleware de session
+app.UseSession();
 
-
-// Configure the HTTP request pipeline.
+// Configurer le pipeline de requêtes
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -19,12 +45,11 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseCors(x => x
-            .AllowAnyMethod()
-            .AllowAnyHeader()
-            .AllowCredentials()
-            .SetIsOriginAllowed(origin => true));
+    .AllowAnyMethod()
+    .AllowAnyHeader()
+    .AllowCredentials()
+    .SetIsOriginAllowed(origin => true));
 
 app.UseAuthorization();
 

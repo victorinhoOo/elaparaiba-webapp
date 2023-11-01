@@ -1,45 +1,32 @@
-﻿using System;
-using API_SAE.Data;
+﻿using ApiBijou.Model;
 
 namespace API_SAE.Model
 {
-    /// <summary>
-    /// Classe panier manager qui communique directement avec le DAO
-    /// </summary>
     public class PanierManager
     {
-        /// <summary>
-        /// Singleton Panier manager
-        /// </summary>
-        private static PanierManager instance;
+        private readonly Panier _panier;
 
-        public static PanierManager Instance
+        public PanierManager(Panier panier)
         {
-            get
-            {
-                if (instance == null)
-                {
-                    instance = new PanierManager();
-                }
-                return instance;
-            }
-        }
-        /// <summary>
-        /// DAO utilisé par panier manager
-        /// </summary>
-        private IBijouDAO bijouDAO;
-
-        /// <summary>
-        /// Constructeur (privé car singleton)
-        /// </summary>
-        private PanierManager()
-        {
-            bijouDAO = BijouFakeDAO.Instance;
+            _panier = panier;
         }
 
+        // Méthode pour ajouter un bijou au panier
+        public void AjouterBijouAuPanier(Bijou bijou)
+        {
+            _panier.AddBijoux(bijou);
+        }
 
+        // Méthode pour obtenir le panier
+        public List<PannierItem> ObtenirPanier()
+        {
+            return _panier.GetPanier();
+        }
 
-
+        // Méthode pour supprimer un bijou du panier
+        public void SupprimerBijouDuPanier(Bijou bijou)
+        {
+            _panier.DelBijoux(bijou);
+        }
     }
 }
-
