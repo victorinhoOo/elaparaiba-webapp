@@ -13,6 +13,13 @@
         private string datepublication;
         private string type;
         private string dossierPhoto;
+        private int nbPhotos;
+
+        public int NbPhotos
+        {
+            get { return nbPhotos; }
+            set { nbPhotos = value; }
+        }
 
         public int Id
         {

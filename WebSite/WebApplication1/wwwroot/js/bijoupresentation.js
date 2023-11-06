@@ -1,5 +1,5 @@
 ﻿class Bijou {
-    constructor(idBijou, nomBijou, descriptionBijou, prixBijou, stockBijou, type, dossierPhoto) {
+    constructor(idBijou, nomBijou, descriptionBijou, prixBijou, stockBijou, type, dossierPhoto, nbPhotos) {
         this.idBijou = idBijou;
         this.nomBijou = nomBijou;
         this.descriptionBijou = descriptionBijou;
@@ -7,6 +7,7 @@
         this.prixBijou = prixBijou;
         this.type = type;
         this.dossierPhoto = dossierPhoto;
+        this.nbPhotos = nbPhotos;
     }
 
 }
@@ -39,8 +40,9 @@ document.addEventListener("DOMContentLoaded", () => {
         bijouDescription.textContent = `Description: ${bijou.descriptionBijou}`;
 
 
+
         const miniaturesContainer = document.getElementById('miniatures');
-        for (let i = 1; i <= bijou.dossierPhoto.length; i++) {
+        for (let i = 1; i <= bijou.nbPhotos; i++) {
             const miniature = document.createElement('img');
             miniature.src = `../images/Photosdescriptif${bijou.type}/${bijou.dossierPhoto}/${i}.jpg`;
             miniature.alt = `Miniature ${i}`;
@@ -70,7 +72,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 data.price,
                 data.quantity,
                 data.type,
-                data.dossierPhoto
+                data.dossierPhoto,
+                data.nbPhotos
             );
 
             // Afficher les détails du bijou
