@@ -139,3 +139,53 @@ html {
 img.bijou-1 :hover {
   background-image: url("../images/PhotosdescriptifBo/Bo18/20230908_182247.jpg");
 }
+@media only screen and (max-width: 768px) {
+    .listes select {
+        width: 80%;
+        padding-top:10px;
+    }
+
+    .listes option {
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .listes {
+        flex-direction: column
+    }
+
+    .produit img {
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .listes select {
+        width: 80% ;
+    }
+
+    .listes option {
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    .listes {
+        flex-direction: column
+            
+    }
+
+    .produit img{
+        width:300px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .produit img {
+        width: 250px;
+    }
+    .listeBijoux{
+        padding-left:0;
+        padding-right:0;
+    }
+}

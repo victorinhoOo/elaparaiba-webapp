@@ -4,6 +4,10 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Cors;
 using ApiBijou.Model.formModel;
 using ApiBijou.Model.SurMesure;
+using Stripe;
+using Stripe.Checkout;
+using MySqlX.XDevAPI;
+using Stripe.BillingPortal;
 
 namespace API_SAE.Controllers
 {
@@ -14,13 +18,13 @@ namespace API_SAE.Controllers
     [Route("Bijoux")]
     public class BijouxController : ControllerBase
     {
-        public BijouxController() 
+        public BijouxController()
         {
 
         }
 
-        [HttpGet("GetBijouWithId",Name ="Check")]
-        public ActionResult<Bijou> Check(int? id) 
+        [HttpGet("GetBijouWithId", Name = "Check")]
+        public ActionResult<Bijou> Check(int? id)
         {
             ActionResult<Bijou> result = BadRequest("No id specified");
 
@@ -34,7 +38,7 @@ namespace API_SAE.Controllers
                 }
 
             }
-            
+
             return result;
         }
 

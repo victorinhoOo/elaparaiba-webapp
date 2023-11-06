@@ -211,21 +211,55 @@ h4 {
     margin-left: 40px;
 }
 
+@media only screen and (max-width: 768px) {
+    .lea {
+        max-width: 100%; /* Ajustez la largeur de l'image pour occuper toute la largeur de l'écran */
+        margin-left: 0; /* Réinitialisez la marge à gauche */
+        float: none; /* Annulez le flotement de l'image */
+    }
 
+    .conteneur-etapes {
+        grid-template-columns: 1fr; /* Une seule colonne pour les écrans plus petits */
+        margin-top: 20px; /* Ajustez l'espacement entre les étapes */
+    }
 
+    #section-dessin,
+    .mise-en-forme,
+    .assemblage,
+    #section-polissage,
+    #section-plaquage {
+        grid-column: auto; /* Réinitialisez le span des colonnes */
+    }
 
+    .ctexte {
+        margin-right: 0; /* Réinitialisez la marge à droite du texte */
+    }
 
+}
 
+@media only screen and (max-width: 480px) {
+    #section-dessin {
+        transform: translateX(0px);
+        margin-left:0;
+    }
 
+    #section-dessin .croquis {
+        transform: translateX(0px);
+    }
 
+    .conteneur-etapes {
+        display: block;
+    }
+    .presentation{
+        display: block;
+    }
 
-
-
-
-
-
-
-
-
-
-
+    .mise-en-forme{
+        transform: translateX(0);
+        margin-left:0;
+        width:auto;
+    }
+    .conteneur-etapes p{
+        margin-left:10px;
+    }
+}

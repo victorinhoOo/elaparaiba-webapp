@@ -44,7 +44,6 @@ nav {
     padding: 10px; 
     text-decoration: none;
     position: relative; 
-    margin: 0 3px;
 }
 
 .buttonH::after {
@@ -73,6 +72,7 @@ nav {
 }
 
 
+
 /* Media Query pour les écrans de taille inférieure à 768 pixels (taille standard pour les tablettes et les téléphones) */
 @media only screen and (max-width: 768px) {
     .logoLien {
@@ -98,12 +98,12 @@ nav {
         left: 0;
         width: 100%;
         background-color: #fff; /* Changez la couleur de fond selon vos besoins */
-        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Ajoutez une ombre si nécessaire */
         z-index: 3;
         margin-top:40px;
      }
     .mainNav.active a:hover {
-        background-color: #f2f2f2; /* Changez la couleur de survol selon vos besoins */
+        background-color: lightblue; /* Changez la couleur de survol selon vos besoins */
+        color:black;
     }
 
     .mainNav.active a {
@@ -111,10 +111,12 @@ nav {
         text-align: center;
         width: 100%;
     }
+    
     .mainNav a {
         padding: 10px;
         width: 100%;
         text-align: left;
+        color:black;
     }
 
     .mainNav.show-menu {
@@ -158,6 +160,7 @@ nav {
         margin-left: auto; /* Déplacez le logo vers la droite autant que possible */
     }
 }
+
 /* FOOTER */
 
 footer {
