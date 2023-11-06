@@ -2248,6 +2248,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "MySql.Data": "8.1.0",
+          "Newtonsoft.Json": "13.0.1",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
         "compile": {

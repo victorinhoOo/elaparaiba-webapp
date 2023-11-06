@@ -72,6 +72,7 @@ nav {
     display: none; /* Masquer le menu burger par défaut */
 }
 
+
 /* Media Query pour les écrans de taille inférieure à 768 pixels (taille standard pour les tablettes et les téléphones) */
 @media only screen and (max-width: 768px) {
     .logoLien {
@@ -89,6 +90,27 @@ nav {
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     }
 
+    .mainNav.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Ajustez la valeur en fonction de votre mise en page */
+        left: 0;
+        width: 100%;
+        background-color: #fff; /* Changez la couleur de fond selon vos besoins */
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Ajoutez une ombre si nécessaire */
+        z-index: 3;
+        margin-top:40px;
+     }
+    .mainNav.active a:hover {
+        background-color: #f2f2f2; /* Changez la couleur de survol selon vos besoins */
+    }
+
+    .mainNav.active a {
+        padding-top: 10px;
+        text-align: center;
+        width: 100%;
+    }
     .mainNav a {
         padding: 10px;
         width: 100%;
@@ -118,11 +140,16 @@ nav {
         display: flex;
     }
 
-
-    
     .burger-menu {
-        display: flex; /* Masquer le menu burger par défaut */
-        justify-self: baseline;
+        display: block;
+        cursor: pointer;
+    }
+
+
+    .burger-menu::before {
+        content: '\2630'; /* Code Unicode pour l'icône de menu hamburger */
+        font-size: 25px;
+        color: #333;
     }
     .logoLien {
         display: flex; /* Utilisez Flexbox pour centrer le contenu */
