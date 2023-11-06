@@ -1,6 +1,5 @@
 ﻿//Fonction pour afficher plus de bijoux sur la page
 function afficherPlus() {
-    // Ajoutez plus de bijoux ici (par exemple, à partir d'une source de données)
 
     // Exemple : Ajouter 3 bijoux supplémentaires
     for (let i = 0; i < 3; i++) {
@@ -199,6 +198,17 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
     displayBijoux(bijoux)
     console.log(bijoux);
+
+    // Récupération de la catégorie à partir du paramètre d'URL
+    var urlParams = new URLSearchParams(window.location.search);
+    var categorie = urlParams.get('categorie');
+
+    // Si une catégorie est spécifiée, sélectionnez cette option dans le menu déroulant
+    if (categorie) {
+        categorieSelect.value = categorie;
+        // Appel de la fonction pour trier et afficher les bijoux en fonction de la catégorie sélectionnée
+        sortAndDisplayBijoux();
+    }
 });
 
 

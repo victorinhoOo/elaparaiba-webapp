@@ -298,7 +298,7 @@ h2{
 
 .instagram-row a {
     width: calc(16.66% - 2px); /* Ajustez la valeur de soustraction ici pour compenser la réduction de la marge */
-    height: 200px; /* Hauteur fixe pour toutes les images */
+    height: 300px; /* Hauteur fixe pour toutes les images */
     margin: 1px; /* Réduisez la valeur de margin ici pour un tout petit espace */
 }
 

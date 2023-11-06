@@ -416,3 +416,23 @@ FodyWeavers.xsd
 # Additional files built by Visual Studio
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudio,visualstudiocode
+apiBijou/ApiBijou/.vs/ApiBijou/v17/TestStore/0/000.testlog
+apiBijou/ApiBijou/.vs/ApiBijou/v17/TestStore/0/000.testlog
+apiBijou/ApiBijou/ApiBijou/obj/Debug/net6.0/ApiBijou.assets.cache
+*.cache
+apiBijou/ApiBijou/ApiBijou/obj/Debug/net6.0/ApiBijou.csproj.CoreCompileInputs.cache
+apiBijou/ApiBijou/ApiBijou/obj/Debug/net6.0/ApiBijou.csproj.FileListAbsolute.txt
+apiBijou/ApiBijou/ApiBijou/obj/Debug/net6.0/ApiBijou.GeneratedMSBuildEditorConfig.editorconfig
+*.cache
+apiBijou/ApiBijou/ApiBijou/obj/project.assets.json
+apiBijou/ApiBijou/ApiBijou/obj/project.nuget.cache
+apiBijou/ApiBijou/ApiBijouxTests/bin/Debug/net6.0/CoverletSourceRootsMapping
+apiBijou/ApiBijou/ApiBijouxTests/obj/ApiBijouxTests.csproj.nuget.dgspec.json
+*.props
+apiBijou/ApiBijou/ApiBijouxTests/obj/Debug/net6.0/ApiBijouxTests.assets.cache
+apiBijou/ApiBijou/ApiBijouxTests/obj/Debug/net6.0/ApiBijouxTests.csproj.AssemblyReference.cache
+*.editorconfig
+apiBijou/ApiBijou/ApiBijouxTests/obj/project.assets.json
+apiBijou/ApiBijou/ApiBijouxTests/obj/project.nuget.cache
+WebSite/.vs/Elaparaiba/v17/.futdcache.v2
+WebSite/.vs/Elaparaiba/v17/.suo

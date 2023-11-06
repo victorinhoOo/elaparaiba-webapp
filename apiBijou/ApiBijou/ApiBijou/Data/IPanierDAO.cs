@@ -1,34 +1,29 @@
 ﻿using API_SAE.Model;
+using ApiBijou.Model;
 
-namespace API_SAE.Data
+namespace ApiBijou.Data
 {
     /// <summary>
     /// Interface des DAO Bijoux
     /// </summary>
-    public interface IBijouDAO
+    public interface IPanierDAO
     {
         /// <summary>
-        /// Récupère un bijou grâce à son id
+        /// Créer un panier
         /// </summary>
-        /// <param name="id">id du bijou</param>
-        /// <returns>Bijou renvoyé</returns>
-        public Bijou? getById(int id);
+        /// <param name="bijou">panier</param>
+        /// <returns>vrai si l'ajout du panier a réussi</returns>
+        public bool CreatePanier(Panier? panier);
 
         /// <summary>
-        /// Récupère tous les bijoux présents dans la base de données
-        /// </summary>
-        /// <returns>Liste de bijoux</returns>
-        public IEnumerable<Bijou> GetAllBijoux();
-
-        /// <summary>
-        /// Ajoute un bijou à la base de données
+        /// Ajoute un bijou au panier
         /// </summary>
         /// <param name="bijou">bijou à ajouter</param>
         /// <returns>vrai si l'ajout a réussi</returns>
         public bool AddBijou(Bijou? bijou);
 
         /// <summary>
-        /// Supprime un bijou
+        /// Supprime un bijou du panier
         /// </summary>
         /// <param name="id">id du bijou à supprimer</param>
         /// <returns>vrai si la suppresion a réussi</returns>

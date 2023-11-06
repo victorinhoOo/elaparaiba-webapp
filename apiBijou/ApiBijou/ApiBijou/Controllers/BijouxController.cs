@@ -19,36 +19,56 @@ namespace API_SAE.Controllers
 
         }
 
-        [HttpGet("GetBijouWithId",Name ="Check")]
-        public ActionResult<Bijou> Check(int? id) 
+        /// <summary>
+        /// Vérifie la validité d'un ID et renvoie un bijou correspondant s'il existe.
+        /// </summary>
+        /// <param name="id">L'ID du bijou à vérifier.</param>
+        /// <returns>
+        /// Un ActionResult contenant le bijou s'il existe, NotFound si l'ID est valide mais ne correspond à aucun bijou,
+        /// ou BadRequest si aucun ID n'est spécifié.
+        /// </returns>
+        [HttpGet("GetBijouWithId", Name = "Check")]
+        public ActionResult<Bijou> Check(int? id)
         {
-            ActionResult<Bijou> result = BadRequest("No id specified");
+            ActionResult<Bijou> result = BadRequest("No id specified"); 
 
             if (id.HasValue)
             {
-                result = NotFound();
+                result = NotFound(); 
+
                 Bijou? user = BijouManager.Instance.GetBijouById(id.Value);
+
                 if (user != null)
                 {
-                    result = Ok(user);
+                    result = Ok(user); // Si le bijou existe, change la réponse en Ok avec le bijou
                 }
-
             }
-            
-            return result;
+
+            return result; 
         }
 
+        /// <summary>
+        /// Récupère la liste de tous les bijoux.
+        /// </summary>
+        /// <returns>
+        /// Un ActionResult contenant la liste de tous les bijoux, 
+        /// ou BadRequest si une erreur survient lors de la récupération.
+        /// </returns>
         [HttpGet("GetAllBijoux")]
         public ActionResult<IEnumerable<Bijou>> GetAllBijoux()
         {
-            ActionResult<IEnumerable<Bijou>> reponse = BadRequest();
+            ActionResult<IEnumerable<Bijou>> reponse = BadRequest(); 
+
             IEnumerable<Bijou> users = BijouManager.Instance.GetAllBijoux();
+
             if (users != null)
             {
-                reponse = Ok(users);
+                reponse = Ok(users); // Si la liste de bijoux est valide, change la réponse en Ok avec la liste
             }
-            return reponse;
+
+            return reponse; 
         }
+
 
         [HttpPost("EnvoyerFormulaireSurMesure")]
         public IActionResult EnvoyerFormulaireSurMesure([FromBody] FormulaireSurMesureModel formulaire)

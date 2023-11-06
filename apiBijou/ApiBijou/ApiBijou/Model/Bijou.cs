@@ -1,7 +1,7 @@
 ﻿namespace API_SAE.Model
 {
     /// <summary>
-    /// Classe des bijoux 
+    /// Gère les caractéristiques des bijoux
     /// </summary>
     public class Bijou
     {
@@ -67,5 +67,17 @@
             set { dossierPhoto = value; }
         }
 
+        public override bool Equals(object? obj)
+        {
+            return obj is Bijou bijou &&
+                   id == bijou.id &&
+                   name == bijou.name &&
+                   description == bijou.description &&
+                   price == bijou.price &&
+                   quantity == bijou.quantity &&
+                   datepublication == bijou.datepublication &&
+                   type == bijou.type &&
+                   dossierPhoto == bijou.dossierPhoto;
+        }
     }
 }
