@@ -27,11 +27,6 @@ namespace ApiBijou.Model
                 UpdatePanier(panier);
             }
         }
-
-        /// <summary>
-        /// Liste des bijoux présents dans le panier
-        /// </summary>
-        private PanierBijoux panier;
         
 
         /// <summary>

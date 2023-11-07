@@ -1,5 +1,5 @@
 ﻿class Bijou {
-    constructor(idBijou, nomBijou, descriptionBijou, prixBijou, stockBijou, type, dossierPhoto, nbPhotos) {
+    constructor(idBijou, nomBijou, descriptionBijou, prixBijou, stockBijou, type, dossierPhoto, nbPhotos, datepublication) {
         this.idBijou = idBijou;
         this.nomBijou = nomBijou;
         this.descriptionBijou = descriptionBijou;
@@ -8,6 +8,7 @@
         this.type = type;
         this.dossierPhoto = dossierPhoto;
         this.nbPhotos = nbPhotos;
+        this.datepublication = datepublication;
     }
 
 }
@@ -70,7 +71,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 data.quantity,
                 data.type,
                 data.dossierPhoto,
-                data.nbPhotos
+                data.nbPhotos,
+                data.datepublication
             );
 
             // Afficher les détails du bijou
@@ -89,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Fonction pour ajouter le bijou au panier
 async function ajouterAuPanier(bijou) {
-    const apiUrl = 'https://localhost:7252/AjouterAuPanier'; // URL du contrôleur
+    const apiUrl = 'https://localhost:7252/Panier/AjouterAuPanier'; // URL du contrôleur
     try {
         // Requête vers l'API avec la méthode POST
         const response = await fetch(apiUrl, {
@@ -98,13 +100,15 @@ async function ajouterAuPanier(bijou) {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                id: bijou.idBijou,
-                name: bijou.nomBijou,
-                description: bijou.descriptionBijou,
-                price: bijou.prixBijou,
-                quantity: bijou.stockBijou,
-                type: bijou.type,
-                dossierPhoto: bijou.dossierPhoto,
+                NbPhotos: bijou.nbPhotos,
+                Id: bijou.idBijou,
+                Name: bijou.nomBijou,
+                Description: bijou.descriptionBijou,
+                Price: bijou.prixBijou,
+                Quantity: bijou.stockBijou,
+                DatePublication: bijou.datepublication,
+                Type: bijou.type,
+                DossierPhoto: bijou.dossierPhoto
             }) // Convertit les données du bijou en chaîne JSON
         });
 

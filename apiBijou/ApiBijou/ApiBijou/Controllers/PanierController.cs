@@ -3,6 +3,8 @@ using ApiBijou.Model;
 using ApiBijou.Model.Services;
 using API_SAE.Model;
 using ApiBijou.Model.Panier;
+using System.Text.Json;
+using Newtonsoft.Json;
 
 namespace API_SAE.Controllers
 {
@@ -16,6 +18,9 @@ namespace API_SAE.Controllers
         {
             this.panierManager = panierManager;
         }
+
+
+
 
         [HttpPost("AjouterAuPanier")]
         public IActionResult AjouterAuPanier([FromBody] Bijou bijou)
