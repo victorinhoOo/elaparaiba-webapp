@@ -27,6 +27,8 @@ namespace ApiBijou.Model
                 UpdatePanier(panier);
             }
         }
+
+        
         
 
         /// <summary>

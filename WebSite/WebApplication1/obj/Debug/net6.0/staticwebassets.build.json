@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "Ehkw/lVWcQOzmjhCJ7zA4q5L2A41Xj9IC5x2ZBSjy9Y=",
+=======
+  "Hash": "XGybZxgJSnuh3Lxap5hQM8ZvMcV+p8R8X4K7ogFIWF0=",
+>>>>>>> c87b0464ffa3576d8bb0f8bf90d71552b0ed6567
   "Source": "Elaparaiba",
   "BasePath": "_content/Elaparaiba",
   "Mode": "Default",
@@ -4471,7 +4475,28 @@
       "OriginalItemSpec": "wwwroot\\js\\ouMeTrouver.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\js\\surMesure.js",
+=======
+      "Identity": "C:\\Users\\mb203509\\Desktop\\c2\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\js\\panier.js",
+      "SourceId": "Elaparaiba",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mb203509\\Desktop\\c2\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/Elaparaiba",
+      "RelativePath": "js/panier.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\panier.js"
+    },
+    {
+      "Identity": "C:\\Users\\mb203509\\Desktop\\c2\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\js\\surMesure.js",
+>>>>>>> c87b0464ffa3576d8bb0f8bf90d71552b0ed6567
       "SourceId": "Elaparaiba",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\",

@@ -1049,7 +1049,15 @@
       "PackagePath": "staticwebassets\\js\\ouMeTrouver.js"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\js\\surMesure.js",
+=======
+      "Id": "C:\\Users\\mb203509\\Desktop\\c2\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\js\\panier.js",
+      "PackagePath": "staticwebassets\\js\\panier.js"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\c2\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\js\\surMesure.js",
+>>>>>>> c87b0464ffa3576d8bb0f8bf90d71552b0ed6567
       "PackagePath": "staticwebassets\\js\\surMesure.js"
     },
     {
