@@ -1,18 +1,20 @@
 ﻿using API_SAE.Model;
+using ApiBijou.Data;
 using System.Runtime.CompilerServices;
 
 namespace ApiBijou.Model.Panier
 {
     public class PanierManager
     {
-        private TokenManager tokenManager;
+        private TokenManager tokenManager = new TokenManager();
+        private IPanierDAO panierDAO = new PanierDAO();
         /// <summary>
         /// Ajouter un bijou au panier
         /// </summary>
         /// <param name="bijou">Bijou à ajouter</param>
         public void AjouterBijouAuPanier(string token, Bijou bijou)
         {
-           throw new NotImplementedException();
+            panierDAO.AjouterBijouAuPanier(tokenManager.GetPanierId(token), bijou);
         }
 
         /// <summary>
@@ -21,7 +23,7 @@ namespace ApiBijou.Model.Panier
         /// <returns> List<PanierItem></returns>
         public List<PanierItem> ObtenirPanier(string token)
         {
-            throw new NotImplementedException();
+            return panierDAO.ObtenirPanier(tokenManager.GetPanierId(token));
         }
 
         /// <summary>
@@ -30,7 +32,7 @@ namespace ApiBijou.Model.Panier
         /// <param name="bijou"></param>
         public void SupprimerBijouDuPanier(string token, Bijou bijou)
         {
-            throw new NotImplementedException();
+            panierDAO.SupprimerBijouDuPanier(tokenManager.GetPanierId(token), bijou);
         }
 
         /// <summary>
@@ -39,7 +41,20 @@ namespace ApiBijou.Model.Panier
         /// <returns></returns>
         public string CreerPanierToken()
         {
-             return tokenManager.CreerPanierToken();
+             //Création d'un panier token
+             string panierToken = tokenManager.CreerPanierToken();
+             int id = tokenManager.GetPanierId(panierToken);
+             //Créer le panier associé
+             CreerPanier(id);
+             return panierToken;
+        }
+        /// <summary>
+        /// Créer un nouveau panier
+        /// </summary>
+        /// <param name="id">id du panier à créer</param>
+        public void CreerPanier(int id)
+        {
+            panierDAO.CreerPanier(id);
         }
     }
 }
