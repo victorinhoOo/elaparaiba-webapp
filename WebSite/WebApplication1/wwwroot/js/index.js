@@ -17,12 +17,15 @@ function main() {
 
 function print(nbr){
     let liste = document.querySelectorAll(".slider-panel");
+    let buttons = document.querySelectorAll(".slider-button");
     for (let i = 0; i < liste.length; i++) {
         liste[i].classList.remove("active");
         controls[i].classList.remove("active");
-       }
-       liste[nbr].classList.add("active");
-       controls[nbr].classList.add("active");
+        buttons[i].classList.remove("active");
+    }
+    liste[nbr].classList.add("active");
+    controls[nbr].classList.add("active");
+    buttons[nbr].classList.add("active");
 }
 ///evt = paramètre du click (ou on a cliqué, ...)
 function click(evt){ 

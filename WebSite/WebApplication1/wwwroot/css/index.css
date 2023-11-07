@@ -102,6 +102,17 @@
     color: #fff;
     border: solid #fff 2px;
     font-size: 20px;
+    z-index: 1;
+    pointer-events: none;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slider-button.active{
+    z-index: 4;
+    pointer-events: auto;
 }
 
 a{
