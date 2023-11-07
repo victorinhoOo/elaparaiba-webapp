@@ -8,7 +8,7 @@ using ApiBijou.Model.SurMesure;
 namespace API_SAE.Controllers
 {
     /// <summary>
-    /// Controller de l'api
+    /// Controller de l'api bijoux
     /// </summary>
     [ApiController]
     [Route("Bijoux")]
