@@ -51,12 +51,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    /*
-    // Fonction pour ajouter le bijou au panier (pas encore implémentée)
-    function ajouterAuPanier(bijou) {
-        // Ajoutez ici la logique pour ajouter le bijou au panier
-        console.log(`Bijou ajouté au panier: ${bijou.nomBijou}`);
-    }*/
+
+
+
 
     // Fonction de requête pour récupérer les détails du bijou
     async function fetchBijouDetails() {
@@ -89,6 +86,40 @@ document.addEventListener("DOMContentLoaded", () => {
     // Appeler la fonction de requête pour récupérer les détails du bijou
     fetchBijouDetails();
 });
+
+// Fonction pour ajouter le bijou au panier
+async function ajouterAuPanier(bijou) {
+    const apiUrl = 'https://localhost:7252/AjouterAuPanier'; // URL du contrôleur
+    try {
+        // Requête vers l'API avec la méthode POST
+        const response = await fetch(apiUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                id: bijou.idBijou,
+                name: bijou.nomBijou,
+                description: bijou.descriptionBijou,
+                price: bijou.prixBijou,
+                quantity: bijou.stockBijou,
+                type: bijou.type,
+                dossierPhoto: bijou.dossierPhoto,
+            }) // Convertit les données du bijou en chaîne JSON
+        });
+
+        if (!response.ok) {
+            throw new Error('Réponse réseau non ok');
+        }
+
+        // Gére la réponse du serveur
+        const responseData = await response.text();
+        console.log(responseData);
+
+    } catch (error) {
+        console.error("Erreur de requête:", error);
+    }
+}
 
 function changerImagePrincipale(nouvelleImageSrc) {
     bijouImage.src = nouvelleImageSrc;
