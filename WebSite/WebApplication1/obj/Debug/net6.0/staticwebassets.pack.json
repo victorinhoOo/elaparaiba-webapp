@@ -1049,6 +1049,10 @@
       "PackagePath": "staticwebassets\\js\\ouMeTrouver.js"
     },
     {
+      "Id": "C:\\Users\\mb203509\\Desktop\\c2\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\js\\panier.js",
+      "PackagePath": "staticwebassets\\js\\panier.js"
+    },
+    {
       "Id": "C:\\Users\\mb203509\\Desktop\\c2\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\js\\surMesure.js",
       "PackagePath": "staticwebassets\\js\\surMesure.js"
     },

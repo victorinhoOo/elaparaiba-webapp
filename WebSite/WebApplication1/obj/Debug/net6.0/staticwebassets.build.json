@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "311SLVIMwyOroQhBefCSWdr4pjXMGGozS0McQ8SxIv8=",
+  "Hash": "XGybZxgJSnuh3Lxap5hQM8ZvMcV+p8R8X4K7ogFIWF0=",
   "Source": "Elaparaiba",
   "BasePath": "_content/Elaparaiba",
   "Mode": "Default",
@@ -4469,6 +4469,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\ouMeTrouver.js"
+    },
+    {
+      "Identity": "C:\\Users\\mb203509\\Desktop\\c2\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\js\\panier.js",
+      "SourceId": "Elaparaiba",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mb203509\\Desktop\\c2\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/Elaparaiba",
+      "RelativePath": "js/panier.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\panier.js"
     },
     {
       "Identity": "C:\\Users\\mb203509\\Desktop\\c2\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\js\\surMesure.js",

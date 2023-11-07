@@ -45,6 +45,8 @@ class PanierItem {
 
 //Liste des bijoux du panier
 var bijouxPanier = [];
+///Conteneur des bijoux sur la page html
+
 
 
 //Désérialise pannierItemJson
@@ -67,7 +69,7 @@ async function fetchPanier() {
         //Traduction de la requête en json
         const panierJson = await response.json();
         //On parcours le éléments du json
-        for(let i = 0; i < data.length; i++){
+        for(let i = 0; i < panierJson.length; i++){
             //Création d'un panierItem
             panierItem = PanierItemFromJson(panierJson[i]);
             //Ajout au panier
@@ -84,91 +86,54 @@ window.onload = initialiserBijoux;
 
 
 //Fonction d'affichage des bijoux
-function displayBijoux(bijoux) {
+function displayPannier(bijoux) {
+    //Div contenant tous les bijoux du panier
+    const bijouPanierConteneur = document.getElementById("cart-items");
+    bijouPanierConteneur.innerHTML = "";
 
-    //Conteneur des bijoux dans l'HTML
-    const conteneurBijoux = document.getElementById("listeBijoux");
-    conteneurBijoux.innerHTML = "";
-
-    //Clées du dictionnaire bijoux
-    let bijouxKeys = Object.keys(bijoux);
-
-    bijouxKeys.forEach(keys => {
-        //Récupération de la valeur de la clée
-        let bijou = bijoux[keys];
-
+    bijouxPanier.forEach(bijou => {
         //Création d'un conteneur pour le bijou
         const bijouElement = document.createElement("div");
-        bijouElement.classList.add("produit");
+        bijouElement.classList.add("item");
 
         //Mise en page du bijoux
 
         //Image du bijou
-        const totalImages = 3;
-        const randomImageNumber = Math.floor(Math.random() * totalImages) + 1;
-        const imagePath = `../images/Photosdescriptif${bijou.type}/${bijou.dossierPhoto}/1.jpg`;
-        const imageElement = document.createElement("img");
-        imageElement.src = imagePath;
-        imageElement.alt = bijou.nomBijou;
-        bijouElement.appendChild(imageElement);
+        // const totalImages = 3;
+        // const randomImageNumber = Math.floor(Math.random() * totalImages) + 1;
+        // const imagePath = `../images/Photosdescriptif${bijou.type}/${bijou.dossierPhoto}/1.jpg`;
+        // const imageElement = document.createElement("img");
+        // imageElement.src = imagePath;
+        // imageElement.alt = bijou.nomBijou;
+        // bijouElement.appendChild(imageElement);
 
         //Nom du bijou
-        const titreBijou = document.createElement("h3");
-        titreBijou.textContent = `${bijou.nomBijou}`;
-        bijouElement.appendChild(titreBijou);
+        const nomBijou = document.createElement("span");
+        nomBijou.classList.add("item-name");
+        nomBijou.textContent = bijou.nomBijou;
 
         //Prix
-        const prixBijou = document.createElement('p');
-        prixBijou.textContent = `${bijou.prixBijou}€`;
+        const prixBijou = document.createElement("span");
+        prixBijou.classList.add("item-price");
+        prixBijou.textContent = bijou.price * bijou.quantite;
+
+        //Quantité
+        const quantiteBijou = document.createElement("span");
+        quantiteBijou.classList.add("item-quantity");
+        prixBijou.textContent = bijou.quantite;
+
+        //Ajout des span à la div du bijou
         bijouElement.appendChild(prixBijou);
+        bijouElement.appendChild(nomBijou);
+        bijouElement.appendChild(quantiteBijou);
 
-        //Description
-        const descriptionElement = document.createElement("button");
-        descriptionElement.textContent = "Acheter";
-        descriptionElement.addEventListener("click", function () {
-            redirectToBijouPresentation(bijou.idBijou);
-        });
-        bijouElement.appendChild(descriptionElement);
-
-        conteneurBijoux.appendChild(bijouElement);
+        //Ajout de l'item au panier
+        bijouPanierConteneur.appendChild(bijouElement);
     });
 }
 //Fonction lancer au chargement des élèments html
 document.addEventListener("DOMContentLoaded", async function () {
-    //Ajout d'évènement pour lancer la fonction de tri
-    const categorieSelect = document.getElementById("categorie-select");
-    const triSelect = document.getElementById("tri-select");
-
-    categorieSelect.addEventListener("change", sortAndDisplayBijoux);
-    triSelect.addEventListener("change", sortAndDisplayBijoux);
-
-    // Récupération de 10 bijoux
-    for (let i = 0; i < bijouAffiches; i++) {
-        await fetchBijou(i);
-    }
-    displayBijoux(bijoux)
-    console.log(bijoux);
-
-    // Récupération de la catégorie à partir du paramètre d'URL
-    var urlParams = new URLSearchParams(window.location.search);
-    var categorie = urlParams.get('categorie');
-
-    // Si une catégorie est spécifiée, sélectionnez cette option dans le menu déroulant
-    if (categorie) {
-        categorieSelect.value = categorie;
-        // Appel de la fonction pour trier et afficher les bijoux en fonction de la catégorie sélectionnée
-        sortAndDisplayBijoux();
-    }
+    fetchPanier();
+    displayPannier(bijouxPanier);
 });
-
-
-// Fonction d'initialisation appelée au chargement de la page
-function initialiserBijoux() {
-    tousLesBijoux = document.querySelectorAll(".produit");
-}
-
-
-function redirectToBijouPresentation(bijouId) {
-    window.location.href = "bijouxpresentation.html?bijouId=" + bijouId;
-}
 
