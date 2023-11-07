@@ -92,3 +92,24 @@
     font-size: 18px;
     margin-top: 20px;
 }
+
+@media (max-width: 1024px) {
+    #presentationBijou{
+        display:block;
+        justify-content:center;
+    }
+
+    #bijouImage{
+        margin:auto;
+        width:90%;
+        height:500px;
+    }
+
+    #miniatures{
+        margin-left:5%;
+    }
+
+    #bijouName{
+        padding-top:20px;
+    }
+}
