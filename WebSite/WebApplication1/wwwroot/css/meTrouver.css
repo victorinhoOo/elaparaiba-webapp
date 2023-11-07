@@ -60,13 +60,11 @@ h2 {
 }
 
     #carte iframe { /*carte de localisation*/
-        width: 700px auto;
+        width: auto;
         height: 700px;
         border: 1px solid black;
     }
 
-    #carte small { /*lien de la map */
-    }
 
 #étage_1 { /*style de positionnement du premeier étage*/
     text-align: center;
@@ -161,8 +159,8 @@ p { /*Affichage générale des textes*/
     border: 1px solid #ccc;
     border-radius: 4px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    width: 600px auto;
-    height: 400px auto;
+    width: auto;
+    height: auto;
     max-width: 600px;
     max-height: 400px;
     justify-content: center;
@@ -195,7 +193,7 @@ p { /*Affichage générale des textes*/
         margin-left: 20px;
         ;
         margin-right: 20px;
-        width: 300px auto;
+        width: auto;
         height: 400px;
     }
 
@@ -216,8 +214,8 @@ p { /*Affichage générale des textes*/
         margin: 0 auto;
         padding-left: 20px;
         padding-right: 20px;
-        width: 470px auto;
-        height: 330px auto;
+        width: auto;
+        height: auto;
         max-width: 470px;
     }
 
@@ -229,19 +227,14 @@ p { /*Affichage générale des textes*/
     }
 
     #email { /*style de l'intpu text du mail*/
-        width: 300 auto;
+        width: auto;
         height: 40px;
-        max-width: 300;
         margin-right: 43px;
-    }
-
-    form label {
     }
 
     #mail { /*affichage du form*/
         display: flex;
         flex-direction: row;
-        align-items: left;
         justify-content: flex-start;
         padding-bottom: 20px;
     }

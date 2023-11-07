@@ -2,7 +2,6 @@
 .conteneur {
     position: relative;
     background-image: url("../images/surMesure/bP1.jpg");
-    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -219,26 +218,38 @@ input[type="submit"] {
 }
 
 /* Responsive CSS */
-
-@media (max-width: 600px) {
-    form {
-        max-width: 100%;
+@media (max-width: 1000px) {
+    .conteneur{
+        background-attachment:unset;
     }
-
-    .conteneur {
-        height: 800px;
+    .conteneur p{
+        padding-top: 60px;
     }
+}
 
-        .conteneur #imageOrdi {
-            display: none;
+
+
+
+
+    @media (max-width: 600px) {
+        form {
+            max-width: 100%;
         }
 
-        .conteneur #imageMobile {
-            display: block;
+        .conteneur {
             height: 800px;
         }
 
-    .texteConteneur p {
-        margin-top: 100px;
+            .conteneur #imageOrdi {
+                display: none;
+            }
+
+            .conteneur #imageMobile {
+                display: block;
+                height: 800px;
+            }
+
+        .texteConteneur p {
+            margin-top: 100px;
+        }
     }
-}
