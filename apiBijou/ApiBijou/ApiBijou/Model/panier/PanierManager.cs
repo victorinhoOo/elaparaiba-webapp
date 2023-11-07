@@ -29,7 +29,6 @@ namespace ApiBijou.Model.Panier
         /// <returns> List<PanierItem></returns>
         public List<PanierItem> ObtenirPanier()
         {
-            List<PanierItem> panierItems = new List<PanierItem>();
             return session.GetPanier().GetBijoux();
         }
 
