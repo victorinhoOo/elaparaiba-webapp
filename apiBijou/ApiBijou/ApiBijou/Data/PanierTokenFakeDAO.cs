@@ -12,7 +12,7 @@ namespace ApiBijou.Data
         /// Singleton de la classe
         /// </summary>
         private static PanierTokenFakeDAO instance;
-        private Dictionary<int, PanierToken> pannierToken;
+        private Dictionary<int, TokenDate> pannierToken;
         /// <summary>
         /// Propriété d'accès au singleton
         /// </summary>
@@ -27,27 +27,29 @@ namespace ApiBijou.Data
                 return instance;
             }
         }
-        public PanierTokenFakeDAO()
-        {
-            MD5 md5 = MD5.Create();
-            this.pannierToken = new Dictionary<int, PanierToken>
-            {
-                { 0, new PanierToken(Encoding.UTF8.GetString(md5.ComputeHash(Encoding.UTF8.GetBytes("0"))), new PanierBijoux()) },
-                { 1, new PanierToken(Encoding.UTF8.GetString(md5.ComputeHash(Encoding.UTF8.GetBytes("1"))), new PanierBijoux()) },
-                { 2, new PanierToken(Encoding.UTF8.GetString(md5.ComputeHash(Encoding.UTF8.GetBytes("2"))), new PanierBijoux()) },
-                { 3, new PanierToken(Encoding.UTF8.GetString(md5.ComputeHash(Encoding.UTF8.GetBytes("3"))), new PanierBijoux()) },
-                { 4, new PanierToken(Encoding.UTF8.GetString(md5.ComputeHash(Encoding.UTF8.GetBytes("4"))), new PanierBijoux()) },
-                { 5, new PanierToken(Encoding.UTF8.GetString(md5.ComputeHash(Encoding.UTF8.GetBytes("5"))), new PanierBijoux()) },
-                { 6, new PanierToken(Encoding.UTF8.GetString(md5.ComputeHash(Encoding.UTF8.GetBytes("6"))), new PanierBijoux()) },
-                { 7, new PanierToken(Encoding.UTF8.GetString(md5.ComputeHash(Encoding.UTF8.GetBytes("7"))), new PanierBijoux()) },
 
-            };
+        private PanierTokenFakeDAO()
+        {
+            
+            this.pannierToken = new Dictionary<int, TokenDate>
+        {
+            { 0, new TokenDate(Token.GenerateToken(), new DateTime()) },
+            { 1, new TokenDate(Token.GenerateToken(), new DateTime()) },
+            { 2, new TokenDate(Token.GenerateToken(), new DateTime()) },
+            { 3, new TokenDate(Token.GenerateToken(), new DateTime()) },
+            { 4, new TokenDate("b70a8c45cb4366a02939b68e24ed126", new DateTime()) }, //On, attribue une variable arbitraire pour nos test
+            { 5, new TokenDate(Token.GenerateToken(), new DateTime()) },
+            { 6, new TokenDate(Token.GenerateToken(), new DateTime()) },
+            { 7, new TokenDate(Token.GenerateToken(), new DateTime()) }
+        };
         }
+
+
 
         public string CreerPanierToken()
         {
             string token = Token.GenerateToken();
-            this.pannierToken.Add(pannierToken.Count(), new PanierToken(Token.GenerateToken(), new PanierBijoux()));
+            this.pannierToken.Add(pannierToken.Count(), new TokenDate(token, new DateTime()));
             return token;
         }
 
@@ -65,24 +67,24 @@ namespace ApiBijou.Data
         }
 
 
-        class PanierToken
+        class TokenDate
         {
             private string token;
-            private PanierBijoux panier;
+            private DateTime date;
             public string Token
             {
                 get { return token; }
                 set { token = value; }
             }
-            public PanierBijoux Panier
+            public DateTime Panier
             {
-                get { return panier; }
+                get { return date; }
             }
 
-            public PanierToken(string token, PanierBijoux panier)
+            public TokenDate(string token, DateTime date)
             {
                 this.token = token;
-                this.panier = panier;
+                this.date = date;
             }
         }
     }

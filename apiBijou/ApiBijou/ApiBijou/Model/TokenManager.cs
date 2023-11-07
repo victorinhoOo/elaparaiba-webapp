@@ -11,7 +11,17 @@ namespace ApiBijou.Model
 
         public TokenManager()
         {
-            this.panierTokenDAO = new PanierTokenFakeDAO();
+            this.panierTokenDAO = PanierTokenFakeDAO.Instance;
+        }
+
+        public string CreerPanierToken()
+        {
+            return panierTokenDAO.CreerPanierToken();
+        }
+
+        public int GetPanierId(string token)
+        {
+            return panierTokenDAO.getPanierId(token);
         }
 
 

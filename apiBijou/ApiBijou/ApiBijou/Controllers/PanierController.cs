@@ -15,11 +15,11 @@ namespace API_SAE.Controllers
     [Route("Panier")]
     public class PanierController : ControllerBase
     {
-        private readonly PanierManager panierManager;
+        private PanierManager panierManager;
 
-        public PanierController(PanierManager panierManager)
+        public PanierController()
         {
-            this.panierManager = panierManager;
+            panierManager = new PanierManager();
         }
 
 
