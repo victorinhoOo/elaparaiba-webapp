@@ -1,42 +1,45 @@
-//using API_SAE.Data;
-//using API_SAE.Model;
-//using ApiBijou.Model;
+using API_SAE.Data;
+using API_SAE.Model;
+using ApiBijou.Model;
+using ApiBijou.Model.Panier;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection;
+using Xunit;
 
-//namespace panierTest
-//{
-//    public class PanierTest
-//    {
-//        [Fact]
-//        public void ajouterBijou()
-//        {
-//            Panier panier = new Panier();
-//            panier.addBijoux(BijouFakeDAO.Instance.getById(1));
-//            Assert.Equal<int>(0, panier.contientBijou(BijouFakeDAO.Instance.getById(1)));
-//        }
+public class PanierTests
+{
+    [Fact]
+    public void AjouterPanierTest()
+    {
+        PanierBijoux panier = new PanierBijoux();
+        panier.AddBijoux(BijouFakeDAO.Instance.getById(1));
+        panier.AddBijoux(BijouFakeDAO.Instance.getById(5));
+        panier.AddBijoux(BijouFakeDAO.Instance.getById(6));
+        List<PanierItem> listBijou = panier.GetBijoux();
+        Assert.Equal(BijouFakeDAO.Instance.getById(1), listBijou[0].Bijou);
+        Assert.Equal(BijouFakeDAO.Instance.getById(5), listBijou[1].Bijou);
 
+    }
 
-//        /// <summary>
-//        /// Test sur la quantité du bijou dans la liste après l'ajout du même bijou
-//        /// </summary>
-//        [Fact]
-//        public void ajouterMemeBijou()
-//        {
-//            Panier panier = new Panier();
-//            panier.addBijoux(BijouFakeDAO.Instance.getById(1));
-//            panier.addBijoux(BijouFakeDAO.Instance.getById(1));
-//            Assert.Equal<int>(2, panier.Bijoux[0].Quantite);
-//        }
+    [Fact]
+    public void ContientBijouTest()
+    {
+        PanierBijoux panier = new PanierBijoux();
+        panier.AddBijoux(BijouFakeDAO.Instance.getById(1));
+        panier.AddBijoux(BijouFakeDAO.Instance.getById(5));
+        panier.AddBijoux(BijouFakeDAO.Instance.getById(6));
+        Assert.Equal(panier.ContientBijou(BijouFakeDAO.Instance.getById(1)), 0);
+        Assert.Equal(panier.ContientBijou(BijouFakeDAO.Instance.getById(5)), 1);
+        Assert.Equal(panier.ContientBijou(BijouFakeDAO.Instance.getById(6)), 2);
+    }
 
-//        [Fact]
-//        public void contenirBijou()
-//        {
-//            Panier panier = new Panier();
-//            Assert.Equal<int>(-1, panier.contientBijou(BijouFakeDAO.Instance.getById(1)));
-//            panier.addBijoux(BijouFakeDAO.Instance.getById(1));
-//            panier.addBijoux(BijouFakeDAO.Instance.getById(2));
-//            panier.addBijoux(BijouFakeDAO.Instance.getById(3));
-//            Assert.Equal<int>(2,panier.contientBijou(BijouFakeDAO.Instance.getById(3)));
-
-//        }
-//    }
-//}
+    [Fact]
+    public void quantiteBijouTest()
+    {
+        PanierBijoux panier = new PanierBijoux();
+        panier.AddBijoux(BijouFakeDAO.Instance.getById(1));
+        panier.AddBijoux(BijouFakeDAO.Instance.getById(1));
+        List<PanierItem> listBijou = panier.GetBijoux();
+        Assert.Equal(listBijou[0].Quantite, 2);
+    }
+}

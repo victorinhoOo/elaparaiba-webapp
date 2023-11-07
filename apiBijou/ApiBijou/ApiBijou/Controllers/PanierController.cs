@@ -2,6 +2,7 @@
 using ApiBijou.Model;
 using ApiBijou.Model.Services;
 using API_SAE.Model;
+using ApiBijou.Model.Panier;
 
 namespace API_SAE.Controllers
 {

@@ -1,5 +1,4 @@
-using API_SAE.Model;
-using ApiBijou.Model;
+using ApiBijou.Model.Panier;
 using ApiBijou.Model.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -27,9 +26,9 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
-// Enregistrement de la classe Panier comme service
-builder.Services.AddScoped<Panier>(); 
-builder.Services.AddScoped<PanierManager>(); 
+//Ajout du cycle de vie Transient aux variables pour pouvoir faire une injection de dépendance 
+builder.Services.AddTransient<ApiBijou.Model.Session>();
+builder.Services.AddTransient<PanierManager>();
 
 
 var app = builder.Build();

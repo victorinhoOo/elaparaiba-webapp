@@ -5,45 +5,17 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ApiBijou.Model
+namespace ApiBijou.Model.Panier
 {   /// <summary>
     /// Cette classe représente le pannier d'une session
     /// </summary>
-    public class Panier
+    public class PanierBijoux
     {
-        private readonly IHttpContextAccessor _httpContextAccessor;
-        /// <summary>
-        /// Constructeur d'un panier
-        /// </summary>
-        /// <param name="httpContextAccessor">Context http</param>
-        public Panier(IHttpContextAccessor httpContextAccessor)
-        {
-            _httpContextAccessor = httpContextAccessor;
-        }
         /// <summary>
         /// Liste des bijoux présents dans le panier
         /// </summary>
-        private List<PannierItem> bijoux
-        {
-            get
-            {
-                List<PannierItem> res;
-                var session = _httpContextAccessor.HttpContext.Session;
-                if (session.Keys.Contains("Panier"))//La séssion à déja un panier
-                {
-                    res = session.GetObjectFromJson<List<PannierItem>>("Panier"); //On récupère le panier
-                }
-                else
-                {
-                    res = new List<PannierItem>();//Création d'un nouveau panier
-                }
-                return res;
-            }
-            set
-            {
-                _httpContextAccessor.HttpContext.Session.SetObjectAsJson("Panier", value);
-            }
-        }
+        [JsonProperty]
+        private List<PanierItem> bijoux = new List<PanierItem>();
 
         /// <summary>
         /// Ajouter un bijou au panier
@@ -51,19 +23,15 @@ namespace ApiBijou.Model
         /// <param name="bijou">bijou à ajouter</param>
         public void AddBijoux(Bijou bijou)
         {
-            List<PannierItem> bijoux = this.bijoux;
-
             int position = ContientBijou(bijou);
             if (position != -1)//Il y a déja un bijou de ce type dans le panier
             {
                 bijoux[position].Quantite += 1;
             }
-            else
+            else//On ajoute un bijou à la suite 
             {
-                bijoux.Add(new PannierItem(bijou, bijoux.Count));
-            }
-
-            this.bijoux = bijoux;
+                bijoux.Add(new PanierItem(bijou, bijoux.Count));
+            }      
         }
 
         /// <summary>
@@ -72,8 +40,6 @@ namespace ApiBijou.Model
         /// <param name="bijou">bijou à supprimer</param>
         public void DelBijoux(Bijou bijou)
         {
-            List<PannierItem> bijoux = this.bijoux;
-
             int position = ContientBijou(bijou);
             if (position != -1)
             {
@@ -86,18 +52,16 @@ namespace ApiBijou.Model
                     bijoux.RemoveAt(position);
                 }
             }
-
-            this.bijoux = bijoux;
         }
 
         /// <summary>
         /// Obtenir les bijoux du panier
         /// </summary>
         /// <returns></returns>
-        public List<PannierItem> GetPanier()
+        public List<PanierItem> GetBijoux()
         {
-            List<PannierItem> res = new List<PannierItem>();
-            foreach (PannierItem item in bijoux)
+            List<PanierItem> res = new List<PanierItem>();
+            foreach(PanierItem item in bijoux)
             {
                 res.Add(item);
             }
