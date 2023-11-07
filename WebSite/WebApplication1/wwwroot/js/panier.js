@@ -82,7 +82,6 @@ async function fetchPanier() {
 }
 
 
-window.onload = initialiserBijoux;
 
 
 //Fonction d'affichage des bijoux
@@ -91,7 +90,7 @@ function displayPannier(bijoux) {
     const bijouPanierConteneur = document.getElementById("cart-items");
     bijouPanierConteneur.innerHTML = "";
 
-    bijouxPanier.forEach(bijou => {
+    bijoux.forEach(bijou => {
         //Création d'un conteneur pour le bijou
         const bijouElement = document.createElement("div");
         bijouElement.classList.add("item");
@@ -129,11 +128,15 @@ function displayPannier(bijoux) {
 
         //Ajout de l'item au panier
         bijouPanierConteneur.appendChild(bijouElement);
+        console.log(bijou);
+        
     });
 }
 //Fonction lancer au chargement des élèments html
 document.addEventListener("DOMContentLoaded", async function () {
+    console.log("DOMCONTENT lancé !"); // Affiche "Bonjour, monde !" dans la console
     fetchPanier();
     displayPannier(bijouxPanier);
+    console.log("DOMCONTENT fin !"); // Affiche "Bonjour, monde !" dans la console
 });
 
