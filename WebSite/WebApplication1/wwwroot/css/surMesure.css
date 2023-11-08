@@ -64,7 +64,8 @@ h2 {
     text-align: center;
     margin-top: 45px;
     color: #03889f;
-    font-family: 'Caveat-Regular'
+    font-family: 'Caveat';
+    font-size: 35px;
 }
 
 /* gestion du carrousel */

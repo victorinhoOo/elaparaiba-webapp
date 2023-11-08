@@ -238,12 +238,12 @@ a{
 /* Body */
 
 h1{
-    font-size: 30px;
+    font-size: 40px;
     text-align: center;
     margin-top: 20px;
     color: #03889F;
     margin-bottom: 10px;
-    font-family: 'Caveat-Regular';
+    font-family: 'Caveat';
 }
 
 h3{
@@ -254,12 +254,12 @@ h3{
 }
 h2{
     text-align: center;
-    font-size: 25px;
+    font-size: 35px;
     margin-top: 50px;
     /* color: #075c75; */
     color: #03889F;
     margin-bottom: 30px;
-    font-family: 'Caveat-Regular'
+    font-family: 'Caveat';
 
 }
 
