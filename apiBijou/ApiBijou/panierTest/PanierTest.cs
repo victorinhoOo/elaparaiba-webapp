@@ -1,5 +1,5 @@
-using API_SAE.Data;
 using API_SAE.Model;
+using ApiBijou.Data.Bijoux;
 using ApiBijou.Model;
 using ApiBijou.Model.Panier;
 using Microsoft.AspNetCore.Http;
@@ -8,10 +8,13 @@ using Xunit;
 
 public class PanierTests
 {
+    /// <summary>
+    /// Créé un panier, ajoute des bijoux et vérifie qu'ils ont le bon id dans le panier
+    /// </summary>
     [Fact]
     public void AjouterPanierTest()
     {
-        PanierBijoux panier = new PanierBijoux();
+        Panier panier = new Panier();
         panier.AddBijoux(BijouFakeDAO.Instance.getById(1));
         panier.AddBijoux(BijouFakeDAO.Instance.getById(5));
         panier.AddBijoux(BijouFakeDAO.Instance.getById(6));
@@ -21,10 +24,13 @@ public class PanierTests
 
     }
 
+    /// <summary>
+    /// Créé un panier, ajoute des bijoux et vérifie qu'ils ont bien été ajoutés au panier
+    /// </summary>
     [Fact]
     public void ContientBijouTest()
     {
-        PanierBijoux panier = new PanierBijoux();
+        Panier panier = new Panier();
         panier.AddBijoux(BijouFakeDAO.Instance.getById(1));
         panier.AddBijoux(BijouFakeDAO.Instance.getById(5));
         panier.AddBijoux(BijouFakeDAO.Instance.getById(6));
@@ -33,10 +39,14 @@ public class PanierTests
         Assert.Equal(panier.ContientBijou(BijouFakeDAO.Instance.getById(6)), 2);
     }
 
+
+    /// <summary>
+    /// Créé un panier ajoute des bijoux et vérifie que la quantité de bijoux dans le panier correspond
+    /// </summary>
     [Fact]
     public void quantiteBijouTest()
     {
-        PanierBijoux panier = new PanierBijoux();
+        Panier panier = new Panier();
         panier.AddBijoux(BijouFakeDAO.Instance.getById(1));
         panier.AddBijoux(BijouFakeDAO.Instance.getById(1));
         List<PanierItem> listBijou = panier.GetBijoux();

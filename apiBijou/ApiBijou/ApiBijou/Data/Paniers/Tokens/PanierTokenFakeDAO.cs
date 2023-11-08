@@ -4,7 +4,7 @@ using System;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace ApiBijou.Data
+namespace ApiBijou.Data.Paniers.Tokens
 {
     public class PanierTokenFakeDAO : IPanierTokenDAO
     {
@@ -30,8 +30,8 @@ namespace ApiBijou.Data
 
         private PanierTokenFakeDAO()
         {
-            
-            this.pannierToken = new Dictionary<int, TokenDate>
+
+            pannierToken = new Dictionary<int, TokenDate>
         {
             { 0, new TokenDate(Token.GenerateToken(), new DateTime()) },
             { 1, new TokenDate(Token.GenerateToken(), new DateTime()) },
@@ -51,12 +51,12 @@ namespace ApiBijou.Data
             string token = Token.GenerateToken();
             // Trouve le plus petit ID non utilisé dans le dictionnaire
             int nextId = 0;
-            while (this.pannierToken.ContainsKey(nextId))
+            while (pannierToken.ContainsKey(nextId))
             {
                 nextId++;
             }
             // Ajouter le nouveau token avec le prochain ID disponible
-            this.pannierToken.Add(nextId, new TokenDate(token, DateTime.Now));
+            pannierToken.Add(nextId, new TokenDate(token, DateTime.Now));
             return token;
         }
 

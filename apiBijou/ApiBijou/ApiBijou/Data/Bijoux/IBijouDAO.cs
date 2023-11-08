@@ -1,6 +1,7 @@
-﻿using API_SAE.Model;
+﻿
+using ApiBijou.Model.Bijoux;
 
-namespace API_SAE.Data
+namespace ApiBijou.Data.Bijoux
 {
     /// <summary>
     /// Interface des DAO Bijoux

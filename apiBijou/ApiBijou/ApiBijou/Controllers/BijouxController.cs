@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
-using API_SAE.Model;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Cors;
 using ApiBijou.Model.formModel;
 using ApiBijou.Model.SurMesure;
+using ApiBijou.Model.Bijoux;
 
 namespace API_SAE.Controllers
 {

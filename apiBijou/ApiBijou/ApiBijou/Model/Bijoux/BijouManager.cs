@@ -1,7 +1,7 @@
 ﻿using System;
-using API_SAE.Data;
+using ApiBijou.Data.Bijoux;
 
-namespace API_SAE.Model
+namespace ApiBijou.Model.Bijoux
 {
     /// <summary>
     /// Classe bijoux manager qui communique directement avec le DAO

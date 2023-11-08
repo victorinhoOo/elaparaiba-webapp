@@ -1,16 +1,16 @@
-﻿using API_SAE.Model;
+﻿using ApiBijou.Model.Bijoux;
 using ApiBijou.Model.Panier;
 using Newtonsoft.Json; // Assurez-vous d'avoir ajouté la référence à la bibliothèque Newtonsoft.Json
 
-namespace ApiBijou.Data
+namespace ApiBijou.Data.Paniers
 {
     public class PanierDAO : IPanierDAO
     {
-        
+
         public void AjouterBijouAuPanier(int idPanier, Bijou bijou)
         {
             string contenuFichier = File.ReadAllText(ObtenirCheminJson(idPanier));
-            PanierBijoux panier = JsonConvert.DeserializeObject<PanierBijoux>(contenuFichier);
+            Panier panier = JsonConvert.DeserializeObject<Panier>(contenuFichier);
             panier.AddBijoux(bijou);
             updatePanier(idPanier, panier);
         }
@@ -18,22 +18,22 @@ namespace ApiBijou.Data
         public List<PanierItem> ObtenirPanier(int idPanier)
         {
             string contenuFichier = File.ReadAllText(ObtenirCheminJson(idPanier));
-            PanierBijoux panier = JsonConvert.DeserializeObject<PanierBijoux>(contenuFichier);
+            Panier panier = JsonConvert.DeserializeObject<Panier>(contenuFichier);
             return panier.GetBijoux();
         }
-        
+
         public void SupprimerBijouDuPanier(int idPanier, Bijou bijou)
         {
             string contenuFichier = File.ReadAllText(ObtenirCheminJson(idPanier));
-            PanierBijoux panier = JsonConvert.DeserializeObject<PanierBijoux>(contenuFichier);
+            Panier panier = JsonConvert.DeserializeObject<Panier>(contenuFichier);
             panier.DelBijoux(bijou);
             updatePanier(idPanier, panier);
         }
-        
+
         public void CreerPanier(int idPanier)
         {
             //Création du panier 
-            PanierBijoux panierBijoux = new PanierBijoux();
+            Panier panierBijoux = new Panier();
             //Ecriture du bijou dans le panier
             File.WriteAllText(ObtenirCheminJson(idPanier), JsonConvert.SerializeObject(panierBijoux));
         }
@@ -43,7 +43,7 @@ namespace ApiBijou.Data
         /// </summary>
         /// <param name="idPanier">Id du panier à mettre à jour</param>
         /// <param name="panierBijoux">Nouveau panier à hydrater</param>
-        private void updatePanier(int idPanier, PanierBijoux panierBijoux)
+        private void updatePanier(int idPanier, Panier panierBijoux)
         {
             File.WriteAllText(ObtenirCheminJson(idPanier), JsonConvert.SerializeObject(panierBijoux));
         }

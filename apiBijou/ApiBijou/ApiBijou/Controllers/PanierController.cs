@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ApiBijou.Model;
 using ApiBijou.Model.Services;
-using API_SAE.Model;
 using ApiBijou.Model.Panier;
 using System.Text.Json;
 using Newtonsoft.Json;
+using ApiBijou.Model.Bijoux;
 
 namespace API_SAE.Controllers
 {

@@ -1,6 +1,6 @@
-﻿using ApiBijou.Data;
+﻿using ApiBijou.Data.Paniers.Tokens;
 
-namespace ApiBijou.Model
+namespace ApiBijou.Model.Paniers
 {
     public class TokenManager
     {
@@ -11,7 +11,7 @@ namespace ApiBijou.Model
 
         public TokenManager()
         {
-            this.panierTokenDAO = PanierTokenFakeDAO.Instance;
+            panierTokenDAO = PanierTokenFakeDAO.Instance;
         }
 
         /// <summary>

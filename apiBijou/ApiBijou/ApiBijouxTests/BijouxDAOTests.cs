@@ -1,6 +1,6 @@
 ﻿using API_SAE.Controllers;
-using API_SAE.Data;
-using API_SAE.Model;
+using ApiBijou.Data.Bijoux;
+using ApiBijou.Model.Bijoux;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using Xunit;

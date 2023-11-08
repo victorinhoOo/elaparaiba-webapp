@@ -1,4 +1,4 @@
-﻿namespace API_SAE.Model
+﻿namespace ApiBijou.Model.Bijoux
 {
     /// <summary>
     /// Gère les caractéristiques des bijoux
@@ -28,23 +28,23 @@
         }
         public string Name
         {
-            get { return name;}
+            get { return name; }
             set { name = value; }
         }
 
         public string Description
         {
-            get { return description;}
+            get { return description; }
             set { description = value; }
         }
         public int Price
         {
-            get { return price;}
+            get { return price; }
             set { price = value; }
         }
         public int Quantity
         {
-            get { return quantity;}
+            get { return quantity; }
             set { quantity = value; }
         }
 
@@ -55,13 +55,13 @@
             set { datepublication = value; }
         }
 
-        public String Type
+        public string Type
         {
             get { return type; }
             set { type = value; }
         }
 
-        public String DossierPhoto
+        public string DossierPhoto
         {
             get { return dossierPhoto; }
             set { dossierPhoto = value; }

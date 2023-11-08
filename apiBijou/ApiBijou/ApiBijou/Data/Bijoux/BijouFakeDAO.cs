@@ -1,7 +1,6 @@
-﻿using API_SAE.Data;
-using API_SAE.Model;
+﻿using ApiBijou.Model.Bijoux;
 
-namespace API_SAE.Data
+namespace ApiBijou.Data.Bijoux
 {
     /// <summary>
     /// Fake DAO de bijou
@@ -34,7 +33,7 @@ namespace API_SAE.Data
         private BijouFakeDAO()
         {
 
-            this.bijoux = new Dictionary<int, Bijou>
+            bijoux = new Dictionary<int, Bijou>
         {
             { 0, new Bijou { Id = 0, Name = "Boucles d'oreille collection 'Géométrie abstraite'",Description = "Description du bijou 1", Price = 69, Quantity=2, Type="Bo", DossierPhoto="Bo18", NbPhotos=4, Datepublication="01/01/1000"} },
             { 1, new Bijou { Id = 1, Name = "Bracelet, Manchette", Description = "Description du bijou 2", Price = 96, Quantity=3, Type="Bracelets", DossierPhoto="Bra39", NbPhotos=5, Datepublication="01/01/1000"} },
@@ -57,7 +56,7 @@ namespace API_SAE.Data
             bool result = false;
             if (!bijoux.ContainsKey(bijou.Id))
             {
-                this.bijoux[bijoux.Count] = bijou;
+                bijoux[bijoux.Count] = bijou;
                 result = true;
             }
             return result;
@@ -70,7 +69,7 @@ namespace API_SAE.Data
 
         public IEnumerable<Bijou> GetAllBijoux()
         {
-            return this.bijoux.Values;
+            return bijoux.Values;
         }
 
         public Bijou? getById(int id)

@@ -1,4 +1,4 @@
-﻿using API_SAE.Model;
+﻿using ApiBijou.Model.Bijoux;
 using Newtonsoft.Json;
 
 namespace ApiBijou.Model.Panier
