@@ -71,6 +71,10 @@ namespace ApiBijou.Data.Paniers.Tokens
                     res = keys;
                 }
             }
+            if(res == -1)
+            {
+                throw new Exception("Aucun panier associé à ce token");
+            }
             return res;
         }
 
