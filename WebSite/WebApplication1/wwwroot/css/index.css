@@ -1,4 +1,7 @@
-
+@font-face {
+    font-family: 'Caveat';
+    src: url('../font/Caveat-Regular.ttf') format('truetype');
+}
 
 /* gestion du carrousel */
 .slider {
@@ -240,6 +243,7 @@ h1{
     margin-top: 20px;
     color: #03889F;
     margin-bottom: 10px;
+    font-family: 'Caveat-Regular';
 }
 
 h3{
@@ -255,6 +259,12 @@ h2{
     /* color: #075c75; */
     color: #03889F;
     margin-bottom: 30px;
+    font-family: 'Caveat-Regular'
+
+}
+
+.sliderh2{
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #descE{

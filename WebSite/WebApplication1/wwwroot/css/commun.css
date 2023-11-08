@@ -1,4 +1,11 @@
+@font-face {
+    font-family: 'Caveat';
+    src: url('../font/Caveat-Regular.ttf') format('truetype');
+}
+
+
 /* HEADER */
+  
 
 * {
     margin: 0;
@@ -157,6 +164,7 @@ footer {
 
 footer h2{
     color: #03889F;
+    font-family: 'Caveat-Regular'
 }
 
 .footer-bottom p{

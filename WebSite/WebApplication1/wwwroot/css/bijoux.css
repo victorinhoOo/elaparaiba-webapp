@@ -99,6 +99,7 @@ html {
 .produit p {
   margin-top: 5px;
   color: #03889f;
+  font-weight: bold;
 }
 
 .produit button {

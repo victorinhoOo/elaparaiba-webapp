@@ -7,6 +7,7 @@ body, html {
 
 h2 {
     color: #03889f;
+    font-family: 'Caveat-Regular';
 }
 
 .conteneur {
@@ -65,8 +66,6 @@ h2 {
         border: 1px solid black;
     }
 
-    #carte small { /*lien de la map */
-    }
 
 #étage_1 { /*style de positionnement du premeier étage*/
     text-align: center;
@@ -233,9 +232,6 @@ p { /*Affichage générale des textes*/
         height: 40px;
         max-width: 300;
         margin-right: 43px;
-    }
-
-    form label {
     }
 
     #mail { /*affichage du form*/
