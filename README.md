@@ -7,9 +7,9 @@ Le site web Elaparaïba est une plateforme de vente de bijoux artisanaux en lign
 
 ## Fabriqué avec
 
-Front-end : HTML/CSS/JS
+**Front-end** : HTML/CSS/JS
 
-Back-end : ASP.NET Core 
+**Back-end** : ASP.NET Core 
 
 
 ## Captures d'écrans
@@ -21,7 +21,7 @@ Back-end : ASP.NET Core
 
 * **Matéo Bigeard** _alias_ [@Biigeard](https://github.com/Mbigeard06)
 * **Victor Duboz** _alias_ [@VictorinhoOo](https://github.com/victorinhoOo)
-* **Martin Simon** _alias_ [@Elven]
+* **Martin Simon** _alias_ [@Elven](https://github.com/ms292435)
 * **Ezai Comtois** _alias_ [@ezmaaan](https://github.com/tpiut212)
 * **Jhon doe** _alias_ [@outout14](https://github.com/outout14)
 
