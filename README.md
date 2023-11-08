@@ -19,5 +19,7 @@ Back-end : ASP.NET Core
 * **Victor Duboz** ([https://github.com/victorinhoOo])
 * **Martin Simon** 
 * **Ezai Comtois** ([https://github.com/tpiut212])
+* **Jhon doe** _alias_ [@outout14](https://github.com/outout14)
 
-Lisez la liste des [contributeurs](github.com/dept-info-iut-dijon/C2_Elaparaiba_SAE3/contributors) pour voir qui à aidé au projet !
+
+
