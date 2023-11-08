@@ -1,6 +1,6 @@
-// Fonction pour crÃ©er un cookie
+// Fonction pour créer un cookie
 export function setPanierToken() {
-    // DÃ©finition du temps de vie du cookie
+    // Définition du temps de vie du cookie
     const value = fetchTokenPanier();
     const name = "PanierToken";
     var expires = "";
@@ -28,16 +28,16 @@ function eraseCookie(name) {
 }
 
 
-async function fetchTokenPanier(){
+async function fetchTokenPanier() {
     var tokenPanier = "";
     const apiUrl = `https://localhost:7252/Panier/CreerPanierToken`;
-    try{
+    try {
         const response = await fetch(apiUrl);
 
         tokenPanier = await response.text();
     }
-    catch (error){
-        console.error("Erreur de requÃªte:", error);
+    catch (error) {
+        console.error("Erreur de requête:", error);
     }
     return tokenPanier;
-}
+}	
