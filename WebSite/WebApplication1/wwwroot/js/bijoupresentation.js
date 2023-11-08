@@ -95,6 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Fonction pour ajouter le bijou au panier
 async function ajouterAuPanier(bijou) {
+    //Créer un paniertoken si l'utilisateur en a pas
     var panierTokenValue = getPanierToken("PanierToken");
         if(panierTokenValue === ""){ //Le token n'est pas définie
             panierTokenValue = await setPanierToken();

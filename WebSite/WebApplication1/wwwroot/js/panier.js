@@ -86,7 +86,12 @@ async function fetchPanier() {
 
 
 //Fonction d'affichage des bijoux
-function displayPanier(bijoux) {
+async function displayPanier(bijoux) {
+    //Créer un paniertoken si l'utilisateur en a pas
+    var panierTokenValue = getPanierToken("PanierToken");
+    if (panierTokenValue === "") { //Le token n'est pas définie
+        panierTokenValue = await setPanierToken();
+    }
     //Div contenant tous les bijoux du panier
     const bijouPanierConteneur = document.getElementById("cart-items");
     bijouPanierConteneur.innerHTML = "";
@@ -137,7 +142,7 @@ function displayPanier(bijoux) {
     });
 }
 
-async function fetchtotalPanier(){
+async function fetchTotalPanier(){
     const apiUrl = `https://localhost:7252/Panier/ObtenirPanier?token=${getPanierToken("PanierToken")}`;
     try {
         //Requête vers l'Api
@@ -159,11 +164,7 @@ async function fetchtotalPanier(){
 
 //Fonction lancer au chargement des élèments html
 document.addEventListener("DOMContentLoaded", async function () {
-    console.log("Panier avant fetch :"); 
-    console.log(bijouxPanier); 
     await fetchPanier();
-    console.log("Panier après fetch :"); 
-    console.log(bijouxPanier); 
     displayPanier(bijouxPanier);
 });
 
