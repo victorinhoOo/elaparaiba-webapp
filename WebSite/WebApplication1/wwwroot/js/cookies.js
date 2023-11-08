@@ -14,7 +14,7 @@ async function setPanierToken() {
 
 // Fonction pour obtenir la valeur d'un cookie
 function getPanierToken(tokenName) {
-    var res = undefined;
+    var res ="";
     var nameEQ = tokenName + "=";
     var ca = document.cookie.split(';');
     for (var i = 0; i < ca.length; i++) {

@@ -84,6 +84,13 @@ namespace ApiBijou.Data.Paniers
             string cheminRelatif = Path.Combine("..", "panierData", Convert.ToString(idPanier) + ".json");
             return Path.GetFullPath(cheminRelatif);
         }
+
+        public double CoutTotalPanier(int idPanier)
+        {
+            string contenuFichier = File.ReadAllText(ObtenirCheminJson(idPanier));
+            Panier panier = JsonConvert.DeserializeObject<Panier>(contenuFichier);
+            return panier.Total;
+        }
     }
 }
 

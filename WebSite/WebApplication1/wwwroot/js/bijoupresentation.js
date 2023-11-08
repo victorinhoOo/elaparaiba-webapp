@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Fonction pour ajouter le bijou au panier
 async function ajouterAuPanier(bijou) {
     var panierTokenValue = getPanierToken("PanierToken");
-        if(panierTokenValue === undefined){ //Le token n'est pas définie
+        if(panierTokenValue === ""){ //Le token n'est pas définie
             panierTokenValue = setPanierToken();
         }
     const apiUrl = `https://localhost:7252/Panier/AjouterAuPanier?token=${panierTokenValue}`; // URL du contrôleur

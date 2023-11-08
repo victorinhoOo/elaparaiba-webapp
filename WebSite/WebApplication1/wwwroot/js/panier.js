@@ -139,6 +139,27 @@ function displayPanier(bijoux) {
         
     });
 }
+
+async function fetchtotalPanier(){
+    const apiUrl = `https://localhost:7252/Panier/ObtenirPanier?token=${getPanierToken("PanierToken")}`;
+    try {
+        //Requête vers l'Api
+        const response = await fetch(apiUrl);
+        //Traduction de la requête en json
+        const panierJson = await response.json();
+        //On parcours le éléments du json
+        for(let i = 0; i < panierJson.length; i++){
+            //Création d'un panierItem
+            const panierItem = PanierItemFromJson(panierJson[i]);
+            //Ajout au panier
+            bijouxPanier.push(panierItem);
+        }
+
+    } catch (error) {
+        console.error("Erreur de requête:", error);
+    }
+}
+
 //Fonction lancer au chargement des élèments html
 document.addEventListener("DOMContentLoaded", async function () {
     console.log("Panier avant fetch :"); 
