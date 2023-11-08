@@ -21,7 +21,7 @@ namespace ApiBijou.Model
 
         public int GetPanierId(string token)
         {
-            return panierTokenDAO.getPanierId(token);
+            return panierTokenDAO.GetPanierId(token);
         }
 
 
