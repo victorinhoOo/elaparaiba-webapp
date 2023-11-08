@@ -99,14 +99,10 @@ function displayPanier(bijoux) {
         //Mise en page du bijoux
 
         //Image du bijou
-        // const totalImages = 3;
-        // const randomImageNumber = Math.floor(Math.random() * totalImages) + 1;
-        // const imagePath = `../images/Photosdescriptif${bijou.type}/${bijou.dossierPhoto}/1.jpg`;
-        // const imageElement = document.createElement("img");
-        // imageElement.src = imagePath;
-        // imageElement.alt = bijou.nomBijou;
-        // bijouElement.appendChild(imageElement);
-
+        const imagePath = `../images/PhotosDescriptif${bijou.bijou.type}/${bijou.bijou.dossierPhoto}/1.jpg`;
+        const imageElement = document.createElement("img");
+        imageElement.src = imagePath;
+        imageElement.alt = bijou.nomBijou;
         //Nom du bijou
         const nomBijou = document.createElement("span");
         nomBijou.classList.add("item-name");
@@ -115,12 +111,12 @@ function displayPanier(bijoux) {
         //Prix
         const prixBijou = document.createElement("span");
         prixBijou.classList.add("item-price");
-        prixBijou.textContent = bijou.bijou.prixBijou + `€`;
+        prixBijou.textContent = ` ` + bijou.bijou.prixBijou + `€`;
 
         //Quantité
         const quantiteBijou = document.createElement("span");
         quantiteBijou.classList.add("item-quantity");
-        quantiteBijou.textContent = bijou.quantite + ` x`;
+        quantiteBijou.textContent = bijou.quantite + ` x `;
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Prix total
@@ -129,6 +125,7 @@ function displayPanier(bijoux) {
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         //Ajout des span à la div du bijou
+        bijouElement.appendChild(imageElement);
         bijouElement.appendChild(nomBijou);
         bijouElement.appendChild(quantiteBijou);
         bijouElement.appendChild(prixBijou);

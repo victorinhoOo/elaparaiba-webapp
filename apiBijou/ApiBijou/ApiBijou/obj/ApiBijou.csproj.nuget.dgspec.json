@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mb203509\\Desktop\\C2\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\ApiBijou.csproj": {}
+    "\\\\iut21.u-bourgogne.fr\\racine\\dijon\\enseignement\\Etudiants\\INFO-DIJ\\BUT-INFO-DIJ-2-CDV\\ms292435\\GitHub\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\ApiBijou.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mb203509\\Desktop\\C2\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\ApiBijou.csproj": {
+    "\\\\iut21.u-bourgogne.fr\\racine\\dijon\\enseignement\\Etudiants\\INFO-DIJ\\BUT-INFO-DIJ-2-CDV\\ms292435\\GitHub\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\ApiBijou.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mb203509\\Desktop\\C2\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\ApiBijou.csproj",
+        "projectUniqueName": "\\\\iut21.u-bourgogne.fr\\racine\\dijon\\enseignement\\Etudiants\\INFO-DIJ\\BUT-INFO-DIJ-2-CDV\\ms292435\\GitHub\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\ApiBijou.csproj",
         "projectName": "ApiBijou",
-        "projectPath": "C:\\Users\\mb203509\\Desktop\\C2\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\ApiBijou.csproj",
-        "packagesPath": "C:\\Users\\mb203509\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mb203509\\Desktop\\C2\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\obj\\",
+        "projectPath": "\\\\iut21.u-bourgogne.fr\\racine\\dijon\\enseignement\\Etudiants\\INFO-DIJ\\BUT-INFO-DIJ-2-CDV\\ms292435\\GitHub\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\ApiBijou.csproj",
+        "packagesPath": "C:\\Users\\ms292435\\.nuget\\packages\\",
+        "outputPath": "\\\\iut21.u-bourgogne.fr\\racine\\dijon\\enseignement\\Etudiants\\INFO-DIJ\\BUT-INFO-DIJ-2-CDV\\ms292435\\GitHub\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\mb203509\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ms292435\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
