@@ -1,12 +1,14 @@
 async function setPanierToken() {
-    // D�finition du temps de vie du cookie
+    // Définition du temps de vie du cookie
     const value = await fetchTokenPanier();
     const name = "PanierToken";
     const oneWeekInMilliseconds = 7 * 24 * 60 * 60 * 1000; // Durée d'une semaine en millisecondes
     const expires = new Date(Date.now() + oneWeekInMilliseconds).toUTCString();
 
     
-    document.cookie = name + "=" + value + "; expires=" + expires + "; path=/; Secure; SameSite=None";
+    document.cookie = name + "=" + value + "; expires=" + expires + "; path=/; SameSite=True";
+
+    return value;
 
 }
 
@@ -29,6 +31,7 @@ function eraseCookie(name) {
 }
 
 
+// Fonction qui permet de créer un nouveau Token
 async function fetchTokenPanier() {
     var tokenPanier = "";
     const apiUrl = `https://localhost:7252/Panier/CreerPanierToken`;

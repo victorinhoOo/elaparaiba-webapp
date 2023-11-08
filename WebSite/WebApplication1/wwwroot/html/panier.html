@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="../css/panier.css">
     <link rel="stylesheet" href="../css/commun.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
-    <script src="../js/panier.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
+    <script src="../js/panier.js" type="module"></script>
+    <script src="../js/commun.js"></script>
 
 </head>
 
@@ -39,9 +39,9 @@
         <h2>Mon panier</h2>
         <div id="cart-items">
         </div>
-        <div class="cart-total">
+        <div id="cart-total">
             <span>Total</span>
-            <span class="total-price">155.00 €</span>
+            <span id="total-price"></span>
         </div>
         <button class="checkout-btn">Paiement</button>
     </div>
