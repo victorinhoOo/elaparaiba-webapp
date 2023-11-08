@@ -1,9 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
-using API_SAE.Model;
+using ApiBijou.Model.Bijoux;
 
-
-
-namespace API_SAE.Data
+namespace ApiBijou.Data.Bijoux
 {
     /// <summary>
     /// DAO pour accèder à la base de données MySQL
@@ -16,7 +14,7 @@ namespace API_SAE.Data
         private string connectionString = "Server=localhost;Port=3306;Database=elaparaiba;Uid=root;Pwd=rootroot;";
 
 
-        public Bijou getById(int id)
+        public Bijou? getById(int id)
         {
             MySqlConnection conn = OpenConnection(); // Ouvre une connexion à la base de données
             string sqlQuery = "SELECT * FROM bijoux WHERE idBijou = @id";

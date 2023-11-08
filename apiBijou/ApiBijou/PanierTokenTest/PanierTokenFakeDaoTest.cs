@@ -1,9 +1,12 @@
-using ApiBijou.Data;
+using ApiBijou.Data.Paniers.Tokens;
 
 namespace PanierTokenTest
 {
     public class PanierTokenFakeDaoTest
     {
+        /// <summary>
+        /// Vérifie l'ID de certains tokens du fakeDAO
+        /// </summary>
         [Fact]
         public void getPanierIdTest()
         {
@@ -11,6 +14,9 @@ namespace PanierTokenTest
             Assert.Equal(PanierTokenFakeDAO.Instance.GetPanierId("b70a8c45cb4366a02939?68e64ed126"), -1);
         }
 
+        /// <summary>
+        /// Creer un token dans le fakeDAO et vérifie qu'il a le bon id
+        /// </summary>
         [Fact]
         public void CreerPanierTokenTest()
         {

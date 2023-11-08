@@ -1,5 +1,5 @@
 ﻿using API_SAE.Controllers;
-using API_SAE.Model;
+using ApiBijou.Model.Bijoux;
 using ApiBijou.Model.SurMesure;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;

@@ -1,7 +1,7 @@
 ﻿using ApiBijou.Model.Services;
 using MySql.Data.MySqlClient;
 
-namespace ApiBijou.Data
+namespace ApiBijou.Data.Paniers.Tokens
 {
     public class PanierTokenDAO : IPanierTokenDAO
     {
@@ -16,7 +16,7 @@ namespace ApiBijou.Data
         {
             string token = Token.GenerateToken();
             using (var conn = new MySqlConnection(connectionString))
-            {
+            { // Ouvre une connection SQL et effectue une requête paramètrée pour insérer le token dans la table panier_tokens
                 conn.Open();
                 var sql = "INSERT INTO panier_tokens (token, date) VALUES (@token, NOW());";
                 using (var cmd = new MySqlCommand(sql, conn))
@@ -38,7 +38,7 @@ namespace ApiBijou.Data
         public int GetPanierId(string token)
         {
             using (var conn = new MySqlConnection(connectionString))
-            {
+            { // Ouvre une connection SQL et effectue une requête paramètrée pour afficher l'id du panier correspondant au token saisi
                 conn.Open();
                 var sql = "SELECT id FROM panier_tokens WHERE token = @token;";
                 using (var cmd = new MySqlCommand(sql, conn))

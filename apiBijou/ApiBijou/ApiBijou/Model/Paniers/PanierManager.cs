@@ -1,5 +1,7 @@
-﻿using API_SAE.Model;
-using ApiBijou.Data;
+﻿using ApiBijou.Data;
+using ApiBijou.Data.Paniers;
+using ApiBijou.Model.Bijoux;
+using ApiBijou.Model.Paniers;
 using System.Runtime.CompilerServices;
 
 namespace ApiBijou.Model.Panier
@@ -36,9 +38,9 @@ namespace ApiBijou.Model.Panier
         }
 
         /// <summary>
-        /// Créer un panier token
+        /// Créer un token associé au panier
         /// </summary>
-        /// <returns></returns>
+        /// <returns>token </returns>
         public string CreerPanierToken()
         {
              //Création d'un panier token

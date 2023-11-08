@@ -1,7 +1,7 @@
-﻿using API_SAE.Model;
+﻿using ApiBijou.Model.Bijoux;
 using ApiBijou.Model.Panier;
 
-namespace ApiBijou.Data
+namespace ApiBijou.Data.Paniers
 {
     public interface IPanierDAO
     {

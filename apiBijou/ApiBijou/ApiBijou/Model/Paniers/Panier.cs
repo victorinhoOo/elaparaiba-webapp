@@ -1,4 +1,4 @@
-﻿using API_SAE.Model;
+﻿using ApiBijou.Model.Bijoux;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 using System;
@@ -9,7 +9,7 @@ namespace ApiBijou.Model.Panier
 {   /// <summary>
     /// Cette classe représente le pannier d'une session
     /// </summary>
-    public class PanierBijoux
+    public class Panier
     {
         /// <summary>
         /// Liste des bijoux présents dans le panier

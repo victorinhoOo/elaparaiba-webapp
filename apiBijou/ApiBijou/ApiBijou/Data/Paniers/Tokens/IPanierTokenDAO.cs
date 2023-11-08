@@ -1,4 +1,4 @@
-﻿namespace ApiBijou.Data
+﻿namespace ApiBijou.Data.Paniers.Tokens
 {
     public interface IPanierTokenDAO
     {
