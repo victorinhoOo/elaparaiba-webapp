@@ -49,11 +49,19 @@ namespace ApiBijou.Data
         public string CreerPanierToken()
         {
             string token = Token.GenerateToken();
-            this.pannierToken.Add(pannierToken.Count(), new TokenDate(token, new DateTime()));
+            // Trouve le plus petit ID non utilisé dans le dictionnaire
+            int nextId = 0;
+            while (this.pannierToken.ContainsKey(nextId))
+            {
+                nextId++;
+            }
+            // Ajouter le nouveau token avec le prochain ID disponible
+            this.pannierToken.Add(nextId, new TokenDate(token, DateTime.Now));
             return token;
         }
 
-        public int getPanierId(string token)
+
+        public int GetPanierId(string token)
         {
             int res = -1;
             foreach (int keys in pannierToken.Keys)

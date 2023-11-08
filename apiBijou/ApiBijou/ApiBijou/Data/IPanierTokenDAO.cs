@@ -11,7 +11,7 @@
         /// </summary>
         /// <param name="token">Token associé au pannier</param>
         /// <returns></returns>
-        public int getPanierId(string token);
+        public int GetPanierId(string token);
 
     }
 }
