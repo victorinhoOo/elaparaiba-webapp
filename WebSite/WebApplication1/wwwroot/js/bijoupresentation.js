@@ -1,4 +1,5 @@
-﻿class Bijou {
+﻿import { getPanierToken, setPanierToken } from "../js/cookies.js";
+class Bijou {
     constructor(idBijou, nomBijou, descriptionBijou, prixBijou, stockBijou, type, dossierPhoto, nbPhotos, datepublication) {
         this.idBijou = idBijou;
         this.nomBijou = nomBijou;

@@ -1,25 +1,26 @@
-// Fonction pour créer un cookie
-export function setPanierToken() {
-    // Définition du temps de vie du cookie
-    const value = fetchTokenPanier();
+async function setPanierToken() {
+    // Dï¿½finition du temps de vie du cookie
+    const value = await fetchTokenPanier();
     const name = "PanierToken";
-    var expires = "";
-    var date = new Date();
-    date.setTime(date.getTime() + (time * 7 * 24 * 60 * 60 * 1000));
-    expires = "; expires=" + date.toUTCString();
-    document.cookie = name + "=" + value + expires + "; path=/";
+    const oneWeekInMilliseconds = 7 * 24 * 60 * 60 * 1000; // DurÃ©e d'une semaine en millisecondes
+    const expires = new Date(Date.now() + oneWeekInMilliseconds).toUTCString();
+
+    
+    document.cookie = name + "=" + value + "; expires=" + expires + "; path=/; Secure; SameSite=None";
+
 }
 
 // Fonction pour obtenir la valeur d'un cookie
-export function getPanierToken() {
-    var nameEQ = "PanierToken" + "=";
+function getPanierToken(tokenName) {
+    var res = undefined;
+    var nameEQ = tokenName + "=";
     var ca = document.cookie.split(';');
     for (var i = 0; i < ca.length; i++) {
         var c = ca[i];
         while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+        if (c.indexOf(nameEQ) === 0) res = c.substring(nameEQ.length, c.length);
     }
-    return null;
+    return res;
 }
 
 // Fonction pour supprimer un cookie
@@ -37,7 +38,9 @@ async function fetchTokenPanier() {
         tokenPanier = await response.text();
     }
     catch (error) {
-        console.error("Erreur de requête:", error);
+        console.error("Erreur de requete:", error);
     }
     return tokenPanier;
 }	
+
+export{ setPanierToken, getPanierToken };
