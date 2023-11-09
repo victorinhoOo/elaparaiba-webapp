@@ -56,27 +56,27 @@
         <h2>Formuler votre demande</h2>
         <p> Une fois le formulaire rempli, je vous recontacterais pour vous proposer quelques dessins suivant votre demande, et après validation, je confectionnerais sur mesure votre bijou. </p>
         <div id="formulaireSurMesure">
-            <form action="https://localhost:7234/Bijoux/EnvoyerFormulaire" method="post">
+            <form>
                 <fieldset id="informationPersonnel">
                     <legend>Informations personnelles</legend>
                     <div class="form-row nom"> 
                         <label for="nom">Nom* </label>
-                        <input type="text" id="nom" name="nom" required>
+                        <input type="text" id="nom" name="Nom" required>
                     </div>
                     <div class="form-row prenom"> 
                         <label for="prenom">Prénom* </label>
-                        <input type="text" id="prenom" name="prenom" required>
+                        <input type="text" id="prenom" name="Prenom" required>
                     </div>      
                     <div class="form-row name"> 
                         <label for="email">E-mail* </label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="Email" required>
                     </div>
                 </fieldset>
                 <fieldset id="demandeBijou">
                     <legend>Consignes de création </legend>
                     <div class="form-row matiere"> 
                         <label for="matiere">Matière* </label>
-                        <select id="matiere" name="matiere">
+                        <select id="matiere" name="Matiere">
                             <option value="collier">Or</option>
                             <option value="bracelet">Diamant</option>
                             <option value="boucles">Bronze</option>
@@ -84,7 +84,7 @@
                     </div>
                     <div class="form-row type"> 
                         <label for="type">Type* </label>
-                        <select id="type" name="type">
+                        <select id="type" name="Type">
                             <option value="collier">Collier</option>
                             <option value="bracelet">Bracelet</option>
                             <option value="boucles">Boucles d'oreille</option>
@@ -93,12 +93,12 @@
                             
                     <div class="form-row description"> 
                         <label for="description">Description*</label>
-                        <textarea id="description" name="description" placeholder="Détaillez votre demande (forme, consigne particulière, date de réalisation souhaitée…)" required></textarea>
+                        <textarea id="description" name="Description" placeholder="Détaillez votre demande (forme, consigne particulière, date de réalisation souhaitée…)" required></textarea>
                     </div>
         
                     <div class="form-row modeles"> 
                         <label for="modeles">Modèles*</label>
-                        <input type="file" id="modeles" name="modeles" accept=".pdf,.doc,.docx,.jpg" multiple>
+                        <input type="file" id="modeles" name="Modeles" accept=".pdf,.doc,.docx,.jpg" multiple>
                         <p class="file-description">Transmettez moi vos idées sous forme d'images (dessins, photo...).</p>
                     </div>
                 </fieldset>

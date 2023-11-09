@@ -6965,39 +6965,23 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "C:\\Users\\mb203509\\.nuget\\packages\\": {},
-=======
-    "C:\\Users\\ms292435\\.nuget\\packages\\": {},
->>>>>>> a6e34f38972074c93b732d62e5370e4477ecf488
+    "C:\\Users\\mateo\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\mb203509\\Desktop\\C2\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\ApiBijouxTests.csproj",
+      "projectUniqueName": "C:\\Users\\mateo\\OneDrive\\Bureau\\C2\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\ApiBijouxTests.csproj",
       "projectName": "ApiBijouxTests",
-      "projectPath": "C:\\Users\\mb203509\\Desktop\\C2\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\ApiBijouxTests.csproj",
-      "packagesPath": "C:\\Users\\mb203509\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mb203509\\Desktop\\C2\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\ms292435\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\ApiBijouxTests.csproj",
-      "projectName": "ApiBijouxTests",
-      "projectPath": "C:\\Users\\ms292435\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\ApiBijouxTests.csproj",
-      "packagesPath": "C:\\Users\\ms292435\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ms292435\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\obj\\",
->>>>>>> a6e34f38972074c93b732d62e5370e4477ecf488
+      "projectPath": "C:\\Users\\mateo\\OneDrive\\Bureau\\C2\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\ApiBijouxTests.csproj",
+      "packagesPath": "C:\\Users\\mateo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mateo\\OneDrive\\Bureau\\C2\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-<<<<<<< HEAD
-        "C:\\Users\\mb203509\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-        "C:\\Users\\ms292435\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> a6e34f38972074c93b732d62e5370e4477ecf488
+        "C:\\Users\\mateo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -7006,20 +6990,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-<<<<<<< HEAD
-            "C:\\Users\\mb203509\\Desktop\\C2\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\ApiBijou.csproj": {
-              "projectPath": "C:\\Users\\mb203509\\Desktop\\C2\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\ApiBijou.csproj"
-=======
-            "C:\\Users\\ms292435\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\ApiBijou.csproj": {
-              "projectPath": "C:\\Users\\ms292435\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\ApiBijou.csproj"
->>>>>>> a6e34f38972074c93b732d62e5370e4477ecf488
+            "C:\\Users\\mateo\\OneDrive\\Bureau\\C2\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\ApiBijou.csproj": {
+              "projectPath": "C:\\Users\\mateo\\OneDrive\\Bureau\\C2\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\ApiBijou.csproj"
             }
           }
         }
@@ -7078,5 +7056,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problème de lecture du fichier cache C:\\Users\\mateo\\OneDrive\\Bureau\\C2\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

@@ -11,8 +11,9 @@
         private string _matiere;
         private string _type;
         private string _description;
+        private List<IFormFile> _modeles;
 
-       
+
         public string Nom
         {
             get { return _nom; }
@@ -48,5 +49,27 @@
             get { return _description; }
             set { _description = value; }
         }
+
+        public List<IFormFile> Modeles
+        {
+            get { return _modeles; }
+            set { _modeles = value; }
+        }
+
+        public FormulaireSurMesureModel(string nom, string prenom, string email, string matiere, string type, string description, List<IFormFile> modeles)
+        {
+            Nom = nom;
+            Prenom = prenom;
+            Email = email;
+            Matiere = matiere;
+            Type = type;
+            Description = description;
+            Modeles = modeles;
+        }
+        /// <summary>
+        /// Constructeur utilisé par le binder
+        /// </summary>
+        public FormulaireSurMesureModel() { }
     }
+
 }

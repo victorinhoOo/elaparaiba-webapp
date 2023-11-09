@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ms292435\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\Elaparaiba.csproj": {}
+    "C:\\Users\\mateo\\OneDrive\\Bureau\\C2\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\Elaparaiba.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ms292435\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\Elaparaiba.csproj": {
+    "C:\\Users\\mateo\\OneDrive\\Bureau\\C2\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\Elaparaiba.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ms292435\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\Elaparaiba.csproj",
+        "projectUniqueName": "C:\\Users\\mateo\\OneDrive\\Bureau\\C2\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\Elaparaiba.csproj",
         "projectName": "Elaparaiba",
-        "projectPath": "C:\\Users\\ms292435\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\Elaparaiba.csproj",
-        "packagesPath": "C:\\Users\\ms292435\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ms292435\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\obj\\",
+        "projectPath": "C:\\Users\\mateo\\OneDrive\\Bureau\\C2\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\Elaparaiba.csproj",
+        "packagesPath": "C:\\Users\\mateo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mateo\\OneDrive\\Bureau\\C2\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ms292435\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mateo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },

@@ -14,7 +14,7 @@ namespace API_SAE.Controllers
     [Route("Bijoux")]
     public class BijouxController : ControllerBase
     {
-        public BijouxController() 
+        public BijouxController()
         {
 
         }
@@ -30,11 +30,11 @@ namespace API_SAE.Controllers
         [HttpGet("GetBijouWithId", Name = "Check")]
         public ActionResult<Bijou> Check(int? id)
         {
-            ActionResult<Bijou> result = BadRequest("No id specified"); 
+            ActionResult<Bijou> result = BadRequest("No id specified");
 
             if (id.HasValue)
             {
-                result = NotFound(); 
+                result = NotFound();
 
                 Bijou? user = BijouManager.Instance.GetBijouById(id.Value);
 
@@ -44,7 +44,7 @@ namespace API_SAE.Controllers
                 }
             }
 
-            return result; 
+            return result;
         }
 
         /// <summary>
@@ -57,7 +57,7 @@ namespace API_SAE.Controllers
         [HttpGet("GetAllBijoux")]
         public ActionResult<IEnumerable<Bijou>> GetAllBijoux()
         {
-            ActionResult<IEnumerable<Bijou>> reponse = BadRequest(); 
+            ActionResult<IEnumerable<Bijou>> reponse = BadRequest();
 
             IEnumerable<Bijou> users = BijouManager.Instance.GetAllBijoux();
 
@@ -66,12 +66,12 @@ namespace API_SAE.Controllers
                 reponse = Ok(users); // Si la liste de bijoux est valide, change la réponse en Ok avec la liste
             }
 
-            return reponse; 
+            return reponse;
         }
 
 
         [HttpPost("EnvoyerFormulaireSurMesure")]
-        public IActionResult EnvoyerFormulaireSurMesure([FromBody] FormulaireSurMesureModel formulaire)
+        public IActionResult EnvoyerFormulaireSurMesure([FromForm] FormulaireSurMesureModel formulaire)
         {
             ActionResult result = BadRequest();
 
@@ -79,17 +79,7 @@ namespace API_SAE.Controllers
             {
                 try
                 {
-                    // Utilisez les données du formulaire
-                    string nom = formulaire.Nom;
-                    string prenom = formulaire.Prenom;
-                    string email = formulaire.Email;
-                    string matiere = formulaire.Matiere;
-                    string type = formulaire.Type;
-                    string description = formulaire.Description;
-
-                    // Accéder aux fichiers
-                    //List<IFormFile> modeles = formulaire.Modeles;
-
+                    // Utilisez directement l'objet FormulaireSurMesureModel pour récupérer les données
                     SurMesureMail mailBuilder = new SurMesureMail(formulaire);
 
                     result = Ok("Formulaire soumis avec succès !");
@@ -106,7 +96,5 @@ namespace API_SAE.Controllers
 
             return result;
         }
-
-
     }
 }
