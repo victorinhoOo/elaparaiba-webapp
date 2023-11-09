@@ -35,7 +35,7 @@ namespace ApiBijou.Data.Bijoux
 
             bijoux = new Dictionary<int, Bijou>
         {
-            { 0, new Bijou { Id = 0, Name = "Boucles d'oreille collection Géométrie abstraite'",Description = "Description du bijou 1", Price = 69, Quantity=2, Type="Bo", DossierPhoto="Bo18", NbPhotos=4, Datepublication="01/01/1000"} },
+            { 0, new Bijou { Id = 0, Name = "Boucles d'oreille collection 'Géométrie abstraite'",Description = "Description du bijou 1", Price = 69, Quantity=2, Type="Bo", DossierPhoto="Bo18", NbPhotos=4, Datepublication="01/01/1000"} },
             { 1, new Bijou { Id = 1, Name = "Bracelet, Manchette", Description = "Description du bijou 2", Price = 96, Quantity=3, Type="Bracelets", DossierPhoto="Bra39", NbPhotos=5, Datepublication="01/01/1000"} },
             { 2, new Bijou { Id = 2, Name = "Collier, collection 'Élégance'", Description = "Description du bijou 3", Price = 49, Type="Colliers", DossierPhoto="Col43", NbPhotos=4, Datepublication="01/01/1000"} },
             { 3, new Bijou { Id = 3, Name = "Bague, collection 'Élégance'", Description = "Description du bijou 4", Price = 78, Type="Bagues", DossierPhoto="Bague62", NbPhotos=3, Datepublication = "01/01/1000"} },

@@ -28,5 +28,10 @@ namespace ApiBijou.Data.Paniers
         /// </summary>
         /// <param name="idPanier">Id du panier a créer</param>
         public void CreerPanier(int idPanier);
+        /// <summary>
+        /// Renvoi le cou
+        /// </summary>
+        /// <returns></returns>
+        public double CoutTotalPanier(int idPanier);
     }
 }

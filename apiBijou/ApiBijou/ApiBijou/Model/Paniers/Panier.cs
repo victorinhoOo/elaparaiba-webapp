@@ -71,7 +71,7 @@ namespace ApiBijou.Model.Panier
         /// <summary>
         /// Calculer le coût total du panier
         /// </summary>
-        public decimal Total => bijoux.Sum(b => b.Bijou.Price * b.Quantite);
+        public double Total => bijoux.Sum(b => b.Bijou.Price * b.Quantite);
 
         /// <summary>
         /// Renvoi la position d'un bijo dans le panier. Ou -1 si il n'est pas présent

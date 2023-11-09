@@ -83,6 +83,21 @@ namespace API_SAE.Controllers
             return result;
         }
 
+        /// <summary>
+        /// Récupére le prix du panier
+        /// </summary>
+        /// <returns>renvoi le token créé</returns>
+        [HttpGet("CoutTotalPanier")]
+        public IActionResult CoutTotalPanier(string token)
+        {
+            IActionResult result = BadRequest("Erreur lors de la génération du panier");
+            double ct = panierManager.CoutTotalPanier(token);
+            result = Ok(ct);
+            return result;
+        }
+
+
+
 
 
     }

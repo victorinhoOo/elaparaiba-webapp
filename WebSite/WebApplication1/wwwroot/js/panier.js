@@ -1,3 +1,4 @@
+import { getPanierToken, setPanierToken } from "../js/cookies.js";
 class Bijou {
     constructor(idBijou, nomBijou, descriptionBijou, prixBijou, stockBijou, type, dossierPhoto, nbPhotos) {
       this.idBijou = idBijou;
@@ -53,7 +54,7 @@ var bijouxPanier = [];
 function PanierItemFromJson(json){
     //Création du panierItem a partir du json
     const panierItem = new PanierItem(
-        createBijouFromJSON(json.Bijou),
+        Bijou.createBijouFromJSON(json.bijou),
         json.quantite,
         json.id   
     )
@@ -62,7 +63,7 @@ function PanierItemFromJson(json){
 
 //Fonction communicante avec l'API bijou
 async function fetchPanier() {
-    const apiUrl = `https://localhost:7252/Panier/ObtenirPanier`;
+    const apiUrl = `https://localhost:7252/Panier/ObtenirPanier?token=${getPanierToken("PanierToken")}`;
     try {
         //Requête vers l'Api
         const response = await fetch(apiUrl);
@@ -71,7 +72,7 @@ async function fetchPanier() {
         //On parcours le éléments du json
         for(let i = 0; i < panierJson.length; i++){
             //Création d'un panierItem
-            panierItem = PanierItemFromJson(panierJson[i]);
+            const panierItem = PanierItemFromJson(panierJson[i]);
             //Ajout au panier
             bijouxPanier.push(panierItem);
         }
@@ -85,7 +86,12 @@ async function fetchPanier() {
 
 
 //Fonction d'affichage des bijoux
-function displayPannier(bijoux) {
+async function displayPanier(bijoux) {
+    //Créer un paniertoken si l'utilisateur en a pas
+    var panierTokenValue = getPanierToken("PanierToken");
+    if (panierTokenValue === "") { //Le token n'est pas définie
+        panierTokenValue = await setPanierToken();
+    }
     //Div contenant tous les bijoux du panier
     const bijouPanierConteneur = document.getElementById("cart-items");
     bijouPanierConteneur.innerHTML = "";
@@ -98,33 +104,36 @@ function displayPannier(bijoux) {
         //Mise en page du bijoux
 
         //Image du bijou
-        // const totalImages = 3;
-        // const randomImageNumber = Math.floor(Math.random() * totalImages) + 1;
-        // const imagePath = `../images/Photosdescriptif${bijou.type}/${bijou.dossierPhoto}/1.jpg`;
-        // const imageElement = document.createElement("img");
-        // imageElement.src = imagePath;
-        // imageElement.alt = bijou.nomBijou;
-        // bijouElement.appendChild(imageElement);
-
+        const imagePath = `../images/PhotosDescriptif${bijou.bijou.type}/${bijou.bijou.dossierPhoto}/1.jpg`;
+        const imageElement = document.createElement("img");
+        imageElement.src = imagePath;
+        imageElement.alt = bijou.nomBijou;
         //Nom du bijou
         const nomBijou = document.createElement("span");
         nomBijou.classList.add("item-name");
-        nomBijou.textContent = bijou.nomBijou;
+        nomBijou.textContent = bijou.bijou.nomBijou;
 
         //Prix
         const prixBijou = document.createElement("span");
         prixBijou.classList.add("item-price");
-        prixBijou.textContent = bijou.price * bijou.quantite;
+        prixBijou.textContent = ` ` + bijou.bijou.prixBijou + `€`;
 
         //Quantité
         const quantiteBijou = document.createElement("span");
         quantiteBijou.classList.add("item-quantity");
-        prixBijou.textContent = bijou.quantite;
+        quantiteBijou.textContent = bijou.quantite + ` x `;
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //Prix total
+        const prixTotal = document.getElementById("total-price");                  //Faire la méthode qui permet de calculer le prix total
+        prixTotal.textContent = ``; // F
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         //Ajout des span à la div du bijou
-        bijouElement.appendChild(prixBijou);
+        bijouElement.appendChild(imageElement);
         bijouElement.appendChild(nomBijou);
         bijouElement.appendChild(quantiteBijou);
+        bijouElement.appendChild(prixBijou);
 
         //Ajout de l'item au panier
         bijouPanierConteneur.appendChild(bijouElement);
@@ -132,11 +141,30 @@ function displayPannier(bijoux) {
         
     });
 }
+
+async function fetchTotalPanier(){
+    const apiUrl = `https://localhost:7252/Panier/ObtenirPanier?token=${getPanierToken("PanierToken")}`;
+    try {
+        //Requête vers l'Api
+        const response = await fetch(apiUrl);
+        //Traduction de la requête en json
+        const panierJson = await response.json();
+        //On parcours le éléments du json
+        for(let i = 0; i < panierJson.length; i++){
+            //Création d'un panierItem
+            const panierItem = PanierItemFromJson(panierJson[i]);
+            //Ajout au panier
+            bijouxPanier.push(panierItem);
+        }
+
+    } catch (error) {
+        console.error("Erreur de requête:", error);
+    }
+}
+
 //Fonction lancer au chargement des élèments html
 document.addEventListener("DOMContentLoaded", async function () {
-    console.log("DOMCONTENT lancé !"); // Affiche "Bonjour, monde !" dans la console
-    fetchPanier();
-    displayPannier(bijouxPanier);
-    console.log("DOMCONTENT fin !"); // Affiche "Bonjour, monde !" dans la console
+    await fetchPanier();
+    displayPanier(bijouxPanier);
 });
 

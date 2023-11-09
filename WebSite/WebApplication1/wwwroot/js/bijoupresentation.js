@@ -1,4 +1,5 @@
 ﻿import { getPanierToken, setPanierToken } from "../js/cookies.js";
+
 class Bijou {
     constructor(idBijou, nomBijou, descriptionBijou, prixBijou, stockBijou, type, dossierPhoto, nbPhotos, datepublication) {
         this.idBijou = idBijou;
@@ -22,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const urlParams = new URLSearchParams(queryString);
     const bijouId = urlParams.get('bijouId');
 
-    // Récupérer les éléments dans lesquels afficher les détails du bijou
+    // Associe des constantes aux éléments contenant l'ID correspondant dans l'HTML
     const bijouImage = document.getElementById('bijouImage');
     const bijouName = document.getElementById('bijouName');
     const bijouPrice = document.getElementById('priceValue');
@@ -33,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+    // Affiche les différentes informations du bijou en complétant les Id de la page HTML
     function afficherDetailsBijou(bijou) {
         bijouImage.src = `../images/Photosdescriptif${bijou.type}/${bijou.dossierPhoto}/1.jpg`;
         bijouName.textContent = bijou.nomBijou;
@@ -43,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+        // Permet d'afficher les différentes images de chaque bijou sous forme de miniature
         const miniaturesContainer = document.getElementById('miniatures');
         for (let i = 1; i <= bijou.nbPhotos; i++) {
             const miniature = document.createElement('img');
@@ -92,7 +95,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Fonction pour ajouter le bijou au panier
 async function ajouterAuPanier(bijou) {
-    const apiUrl = 'https://localhost:7252/Panier/AjouterAuPanier'; // URL du contrôleur
+    //Créer un paniertoken si l'utilisateur en a pas
+    var panierTokenValue = getPanierToken("PanierToken");
+        if(panierTokenValue === ""){ //Le token n'est pas définie
+            panierTokenValue = await setPanierToken();
+        }
+    const apiUrl = `https://localhost:7252/Panier/AjouterAuPanier?token=${panierTokenValue}`; // URL du contrôleur
     try {
         // Requête vers l'API avec la méthode POST
         const response = await fetch(apiUrl, {

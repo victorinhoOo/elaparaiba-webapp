@@ -58,5 +58,10 @@ namespace ApiBijou.Model.Panier
         {
             panierDAO.CreerPanier(id);
         }
+
+        public double CoutTotalPanier(string token)
+        {
+            return panierDAO.CoutTotalPanier(tokenManager.GetPanierId(token));
+        }
     }
 }
