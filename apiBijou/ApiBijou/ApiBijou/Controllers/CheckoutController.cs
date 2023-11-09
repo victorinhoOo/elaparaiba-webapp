@@ -21,6 +21,11 @@ namespace ApiBijou.Controllers
 
         private string token;
 
+        /// <summary>
+        /// Constructeur, récupère le token utilisateur et 
+        /// </summary>
+        /// <param name="stripeSettings"></param>
+        /// <param name="token"></param>
         public CheckoutController(IOptions<StripeSettings> stripeSettings, string token)
         {
             this.token = token;
