@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="../css/commun.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
+    <script src="../js/commun.js"></script>
     <title>Savoir-Faire - Elaparaïba</title>
 </head>
 <body>
 
     <header>
         <nav>
+            <div class="burger-menu"></div>
             <a class="logoLien" href="index.html">
                 <img class="logo" src="../images/logo_elaparaïba.png" alt="logo de l'entreprise Elaparaïba">
             </a>
@@ -23,12 +25,8 @@
                 <a class="buttonH" href='/html/savoirFaire.html'>SAVOIR FAIRE</a>
                 <a class="buttonH" href='/html/ouMeTrouver.html'>OÙ ME TROUVER ?</a>
             </div>
-            <div class="authNav">
-                <a class="iconH" href='./panier.html'><i class="fas fa-shopping-cart fa-2x"></i></a>
-                <a class="iconH" href=''><i class="fas fa-user fa-2x"></i></a>
-            </div>
-                      
-        </nav>
+            <a class="iconH" href=''><i class="fas fa-shopping-cart fa-2x"></i></a>
+        </nav>    
     </header>
 
     <div class="conteneur">
@@ -69,16 +67,16 @@
                 <section class="mise-en-forme">
                     <h3>La mise en forme : Sciage, limage</h3>
                     <img class="sciage" src="../images/PhotosFabrication/soudure2.JPG" alt="Opération de sciage">
-                    <div>
-                        <p>Tous mes bijoux sont découpés dans des plaques ou fils de laiton à l'aide de mon bocfil.</p>
-                        <p>Les différentes pièces découpées sont ensuote limées à l'aide de limes de différentes formes et grosseur.</p>
+                    <div class="texte">
+                        <p>La mise en forme des bijoux commence par le sciage, une technique précise de découpage. </p>
+                        <p>Après cela, le limage est employé pour adoucir et perfectionner les bords, garantissant ainsi un fini élégant et raffiné.</p>
                     </div>
                 </section>
     
                 <section class="assemblage">
                     <h3>L'assemblage par soudures</h3>
                     <img class="soudure" src="../images/PhotosFabrication/soudure2.JPG" alt="Opération de soudure">
-                    <div class="text">
+                    <div class="texte">
                         <p>L'assemblage par soudures est une étape cruciale où les pièces sont fusionnées avec précision.</p>
                         <p>Grâce à une chaleur contrôlée, les éléments s'unissent solidement, assurant ainsi la durabilité et l'harmonie du bijou final.</p>
                     </div>
@@ -88,16 +86,16 @@
                 <section class="section" id="section-polissage">
                     <h3>Le polissage</h3>
                     <img class="polissage" src="../images/PhotosFabrication/polissage.JPG" alt="Opération de polissage">
-                    <div>
-                        <p>Le polissage est l'avant dernière étape de la fabrication du bijou. Il va permettre de donner à la pièce son éclat final, sa brillance. </p>
-                        <p>J'alterne avec différents effets de surface qui procure à la pièce profondeur et relief.</p> 
+                    <div class="texte">
+                        <p>Le polissage est une phase essentielle qui donne aux bijoux leur éclat distinctif.</p>
+                        <p>Par des mouvements circulaires et l'emploi de pâtes spéciales, la surface est rendue lisse et brillante, reflétant ainsi la lumière avec élégance.</p>
                     </div>
                 </section>
     
                 <section class="section" id="section-plaquage">
                     <h3>Le plaquage par galvanoplastie</h3>
                     <img class="plaquage" src="../images/PhotosFabrication/plaquage.JPG" alt="Opération de plaquage">
-                    <div>
+                    <div class="texte">
                         <p>Le plaquage consiste en un processus de galvanoplastie réalisé par bain et électrolyse.</p>
                         <p>Avant l'application finale de la couche d'or de 3 microns, une sous-couche de palladium est préalablement effectuée.</p>
                     </div>
@@ -114,23 +112,19 @@
                 <h2>À propos</h2>
                 <a href="#" class="buttonF">Me contacter</a>
                 <div class="social-icons">
-                    <a href="https://www.instagram.com/elaparaiba/" class="social-icon" aria-label="Instagram"><i
-                            class="fab fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/elaparaiba/" class="social-icon" aria-label="Facebook"><i
-                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/elaparaiba/" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/elaparaiba/" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                 </div>
-            </div>
+            </div>   
 
             <div class="footer-section2">
                 <h2>Informations légales</h2>
                 <ul>
-                    <li><a href="#" class="buttonF">Mentions légales</a></li>
-                    <li><a href="#" class="buttonF">Vie privée et Cookies</a></li>
-                    <li><a href="#" class="buttonF">Conditions générales de vente et d'utilisation</a></li>
-
+                    <li><a href="#" class="buttonF">Conditions générales d'utilisation</a></li>
+                    <li><a href="#" class="buttonF">Politique générale de protection des données</a></li>
                 </ul>
             </div>
-        </div>
+        </div> 
         <div class="footer-bottom">
             <p>Copyright © 2023 Elaparaïba</p>
             <div class="lang-selector">
