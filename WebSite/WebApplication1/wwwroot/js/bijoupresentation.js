@@ -1,5 +1,5 @@
 ﻿import { getPanierToken, setPanierToken } from "../js/cookies.js";
-
+import { updatePanierCount } from "../js/commun.js";
 class Bijou {
     constructor(idBijou, nomBijou, descriptionBijou, prixBijou, stockBijou, type, dossierPhoto, nbPhotos, datepublication) {
         this.idBijou = idBijou;
@@ -54,15 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
             miniature.addEventListener('click', () => changerImagePrincipale(miniature.src));
             miniaturesContainer.appendChild(miniature);
         }
-    }
-
-
-    function updatePanierCount() {
-        // Récupère l'élément HTML représentant le nombre d'articles dans le panier
-        const panierCountElement = document.getElementById('panierCount');
-
-        // Met à jour le texte avec le nombre d'articles dans le panier
-        panierCountElement.textContent = bijouxPanier.length.toString();
     }
 
 

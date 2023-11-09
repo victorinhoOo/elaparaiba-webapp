@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="../css/commun.css">
     <link rel="stylesheet" href="../css/bijouxpresentation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <script src="../js/bijoupresentation.js"></script>
-    <script src="../js/commun.js"></script>
+    <script src="../js/bijoupresentation.js" type="module"></script>
+    <script src="../js/commun.js" type="module"></script>
     <title id="bijouTitle">Présentation du bijou</title>
 </head>
 
@@ -26,7 +26,9 @@
                 <a class="buttonH" href='/html/savoirFaire.html'>SAVOIR FAIRE</a>
                 <a class="buttonH" href='/html/ouMeTrouver.html'>OÙ ME TROUVER ?</a>
             </div>
-            <a class="iconH" href=''><i class="fas fa-shopping-cart fa-2x"></i></a>
+            <div class="authNav">
+                <a class="iconH" href='./panier.html'><i id="panier" class="fas fa-shopping-cart fa-2x"><span id="panierCount">0</span></i></a>
+            </div>
         </nav>
     </header>
 

@@ -1,11 +1,14 @@
+import { updatePanierCount } from "../js/commun.js";
+
 var id;
 var controls;
 var num_image = 0;
 
 function main() {
+    updatePanierCount();
     initNewsSlider();
     fetchInstagramPhotos();
-    id = setInterval(nextImage, 500000);
+    id = setInterval(nextImage, 500);
     controls = document.querySelectorAll(".slider-control");
     for (let i = 0; i < controls.length; i++) { //Méthode événementielle directe
         controls[i].onclick = click; //onclick appellera click

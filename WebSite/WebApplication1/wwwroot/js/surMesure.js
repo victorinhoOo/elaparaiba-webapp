@@ -1,3 +1,5 @@
+import { updatePanierCount } from "../js/commun.js";
+
 var id;
 var controls;
 var num_image = 0;
@@ -9,7 +11,8 @@ function main() {
         controls[i].onclick = click; //onclick appellera click
        }
     document.getElementById("auto").addEventListener("click", click_cb);
-   }
+    updatePanierCount();
+}
 
 function print(nbr){
     let liste = document.querySelectorAll(".slider-panel");

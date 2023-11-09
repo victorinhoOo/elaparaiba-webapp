@@ -1,3 +1,5 @@
+import { updatePanierCount } from "../js/commun.js";
+
 function ValidationSubmit()
 {
     return validateForm();
@@ -17,4 +19,6 @@ function validateForm() {
         return false
     }
 }
+
+window.onload = updatePanierCount();
 

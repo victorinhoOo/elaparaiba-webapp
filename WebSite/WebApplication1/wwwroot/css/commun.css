@@ -71,6 +71,29 @@ nav {
     display: none; /* Masquer le menu burger par défaut */
 }
 
+#panier {
+    font-size: 50px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    position: relative;
+    margin-right: 100px;
+}
+
+#panierCount {
+    font-size: 20px;
+    border-radius: 50%;
+    padding: 10px;
+    position: absolute;
+    top: 0; /* Alignement en haut du conteneur du panier */
+    right: 0; /* Alignement à droite du conteneur du panier */
+    transform: translate(50%, -50%);
+    background-color: #03889F;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
 
 
 /* Media Query pour les écrans de taille inférieure à 768 pixels (taille standard pour les tablettes et les téléphones) */
@@ -158,6 +181,13 @@ nav {
         align-items: center; /* Alignez le contenu verticalement au centre */
         margin-right: auto; /* Déplacez le logo vers la gauche autant que possible */
         margin-left: auto; /* Déplacez le logo vers la droite autant que possible */
+    }
+
+    nav{
+        justify-content:space-evenly
+    }
+    .iconH{
+        padding:unset;
     }
 }
 

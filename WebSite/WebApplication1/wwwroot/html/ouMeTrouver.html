@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/meTrouver.css">
     <link rel="stylesheet" href="../css/commun.css">
-    <script src="js/ouMeTrouver.js"></script>
-    <script src="../js/commun.js"></script>
+    <script src="js/ouMeTrouver.js" type="module"></script>
+    <script src="../js/commun.js" type="module"></script>
     <title>Où me trouver</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <!-- css de boostrap -->
@@ -26,7 +26,9 @@
                 <a class="buttonH" href='/html/savoirFaire.html'>SAVOIR FAIRE</a>
                 <a class="buttonH" href='/html/ouMeTrouver.html'>OÙ ME TROUVER ?</a>
             </div>
-            <a class="iconH" href=''><i class="fas fa-shopping-cart fa-2x"></i></a>
+            <div class="authNav">
+                <a class="iconH" href='./panier.html'><i id="panier" class="fas fa-shopping-cart fa-2x"><span id="panierCount">0</span></i></a>
+            </div>
         </nav>
     </header>
     <div class="conteneur">

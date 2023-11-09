@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/commun.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
-    <script src="../js/commun.js"></script>
+    <script src="../js/commun.js" type="module"></script>
     <title>Savoir-Faire - Elaparaïba</title>
 </head>
 <body>
@@ -25,7 +25,9 @@
                 <a class="buttonH" href='/html/savoirFaire.html'>SAVOIR FAIRE</a>
                 <a class="buttonH" href='/html/ouMeTrouver.html'>OÙ ME TROUVER ?</a>
             </div>
-            <a class="iconH" href=''><i class="fas fa-shopping-cart fa-2x"></i></a>
+            <div class="authNav">
+                <a class="iconH" href='./panier.html'><i id="panier" class="fas fa-shopping-cart fa-2x"><span id="panierCount">0</span></i></a>
+            </div>
         </nav>    
     </header>
 

@@ -1,4 +1,5 @@
 import { getPanierToken, setPanierToken } from "../js/cookies.js";
+import { updatePanierCount } from "../js/commun.js";
 class Bijou {
     constructor(idBijou, nomBijou, descriptionBijou, prixBijou, stockBijou, type, dossierPhoto, nbPhotos) {
       this.idBijou = idBijou;
@@ -101,6 +102,7 @@ async function supprimerDuPanier(id) {
         const responseData = await response.text();
         console.log(responseData);
         window.location.reload();
+        updatePanierCount();
     } catch (error) {
         console.error("Erreur de requête:", error);
     }
@@ -201,3 +203,4 @@ document.addEventListener("DOMContentLoaded", async function () {
     displayPanier(bijouxPanier);
 });
 
+window.onload = updatePanierCount();

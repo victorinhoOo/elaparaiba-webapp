@@ -1,4 +1,7 @@
-﻿//Fonction pour afficher plus de bijoux sur la page
+﻿import { updatePanierCount } from "../js/commun.js";
+
+
+//Fonction pour afficher plus de bijoux sur la page
 function afficherPlus() {
 
     // Exemple : Ajouter 3 bijoux supplémentaires
