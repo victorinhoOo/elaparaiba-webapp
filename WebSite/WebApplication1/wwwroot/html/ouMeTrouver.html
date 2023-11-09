@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../css/meTrouver.css">
     <link rel="stylesheet" href="../css/commun.css">
     <script src="js/ouMeTrouver.js"></script>
+    <script src="../js/commun.js"></script>
     <title>Où me trouver</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <!-- css de boostrap -->
@@ -14,6 +15,7 @@
 <body>
     <header>
         <nav>
+            <div class="burger-menu"></div>
             <a class="logoLien" href="index.html">
                 <img class="logo" src="../images/logo_elaparaïba.png" alt="logo de l'entreprise Elaparaïba">
             </a>
@@ -24,11 +26,7 @@
                 <a class="buttonH" href='/html/savoirFaire.html'>SAVOIR FAIRE</a>
                 <a class="buttonH" href='/html/ouMeTrouver.html'>OÙ ME TROUVER ?</a>
             </div>
-            <div class="authNav">
-                <a class="iconH" href='./panier.html'><i class="fas fa-shopping-cart fa-2x"></i></a>
-                <a class="iconH" href=''><i class="fas fa-user fa-2x"></i></a>
-            </div>
-                      
+            <a class="iconH" href=''><i class="fas fa-shopping-cart fa-2x"></i></a>
         </nav>
     </header>
     <div class="conteneur">
@@ -66,10 +64,10 @@
         <h2 id="h2">Avez-vous une question ?</h2>
         <form method="post">
             <div id="mail">
-                <label for="Le_email" id="label_mail">E-mail :</label>
+                <label for="email" id="label_mail">E-mail :</label>
                 <input type="text" id="email" name="email" required placeholder="Entrer votre adresse mail ">
             </div>
-            <textarea id="message" name="message" placeholder="Veillez saisir votre méssage" value="" rows="9" cols="60"></textarea>
+            <textarea id="message" name="message" placeholder=" Veuillez saisir votre message" rows="9" cols="60"></textarea>
             <div id="envoyer">
                 <input id="valid" type="submit" value="Envoyer" class="bouton">
             </div>
@@ -83,20 +81,16 @@
                 <h2>À propos</h2>
                 <a href="#" class="buttonF">Me contacter</a>
                 <div class="social-icons">
-                    <a href="https://www.instagram.com/elaparaiba/" class="social-icon" aria-label="Instagram"><i
-                            class="fab fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/elaparaiba/" class="social-icon" aria-label="Facebook"><i
-                            class="fab fa-facebook-f"></i></a>
+                    <a href="instagram.com/" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                 </div>
             </div>
 
             <div class="footer-section2">
                 <h2>Informations légales</h2>
                 <ul>
-                    <li><a href="#" class="buttonF">Mentions légales</a></li>
-                    <li><a href="#" class="buttonF">Vie privée et Cookies</a></li>
-                    <li><a href="#" class="buttonF">Conditions générales de vente et d'utilisation</a></li>
-
+                    <li><a href="#" class="buttonF">Conditions générales d'utilisation</a></li>
+                    <li><a href="#" class="buttonF">Politique générale de protection des données</a></li>
                 </ul>
             </div>
         </div>

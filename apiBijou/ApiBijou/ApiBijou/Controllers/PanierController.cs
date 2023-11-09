@@ -60,11 +60,11 @@ namespace API_SAE.Controllers
         /// <param name="token">token unique de l'utilisateur</param>
         /// <returns>réussite ou non de la requête</returns>
         [HttpDelete("SupprimerDuPanier")]
-        public IActionResult SupprimerDuPanier(string token, [FromBody] Bijou bijou)
+        public IActionResult SupprimerDuPanier(string token, int id)
         {
-            if (bijou != null)
+            if (id != null)
             {
-                panierManager.SupprimerBijouDuPanier(token, bijou);
+                panierManager.SupprimerBijouDuPanier(token, id);
                 return Ok("Article supprimé du panier !");
             }
             return BadRequest("Erreur lors de la suppression du panier.");

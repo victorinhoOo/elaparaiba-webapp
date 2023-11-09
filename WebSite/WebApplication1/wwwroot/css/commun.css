@@ -1,11 +1,4 @@
-@font-face {
-    font-family: 'Caveat';
-    src: url('../font/Caveat-Regular.ttf') format('truetype');
-}
-
-
 /* HEADER */
-  
 
 * {
     margin: 0;
@@ -51,7 +44,6 @@ nav {
     padding: 10px; 
     text-decoration: none;
     position: relative; 
-    margin: 0 3px;
 }
 
 .buttonH::after {
@@ -69,19 +61,6 @@ nav {
     color: #03889F;
 }
 
-.iconH{
-    padding: 20px;
-}
-
-.fa-shopping-cart:hover{
-    color: #03889F;
-}
-
-.fa-user:hover{
-    color: #03889F;
-}
-
-
 .buttonH:hover::after {
     background-color: #03889F;
 }
@@ -91,6 +70,8 @@ nav {
     cursor: pointer;
     display: none; /* Masquer le menu burger par défaut */
 }
+
+
 
 /* Media Query pour les écrans de taille inférieure à 768 pixels (taille standard pour les tablettes et les téléphones) */
 @media only screen and (max-width: 768px) {
@@ -109,10 +90,33 @@ nav {
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     }
 
+    .mainNav.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Ajustez la valeur en fonction de votre mise en page */
+        left: 0;
+        width: 100%;
+        background-color: #fff; /* Changez la couleur de fond selon vos besoins */
+        z-index: 3;
+        margin-top:40px;
+     }
+    .mainNav.active a:hover {
+        background-color: lightblue; /* Changez la couleur de survol selon vos besoins */
+        color:black;
+    }
+
+    .mainNav.active a {
+        padding-top: 10px;
+        text-align: center;
+        width: 100%;
+    }
+    
     .mainNav a {
         padding: 10px;
         width: 100%;
         text-align: left;
+        color:black;
     }
 
     .mainNav.show-menu {
@@ -138,11 +142,16 @@ nav {
         display: flex;
     }
 
-
-    
     .burger-menu {
-        display: flex; /* Masquer le menu burger par défaut */
-        justify-self: baseline;
+        display: block;
+        cursor: pointer;
+    }
+
+
+    .burger-menu::before {
+        content: '\2630'; /* Code Unicode pour l'icône de menu hamburger */
+        font-size: 25px;
+        color: #333;
     }
     .logoLien {
         display: flex; /* Utilisez Flexbox pour centrer le contenu */
@@ -151,6 +160,7 @@ nav {
         margin-left: auto; /* Déplacez le logo vers la droite autant que possible */
     }
 }
+
 /* FOOTER */
 
 footer {
@@ -164,13 +174,8 @@ footer {
 
 footer h2{
     color: #03889F;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;
 }
 
-.footer-bottom p{
-    font-size: 16px;
-}
 
 .footer-content {
     display: flex;

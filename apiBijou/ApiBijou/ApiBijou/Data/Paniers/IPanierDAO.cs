@@ -16,7 +16,7 @@ namespace ApiBijou.Data.Paniers
         /// </summary>
         /// <param name="idPanier">id du panier</param>
         /// <param name="bijou">bijou à supprimer</param>
-        public void SupprimerBijouDuPanier(int idPanier, Bijou bijou);
+        public void SupprimerBijouDuPanier(int idPanier, int id);
         /// <summary>
         /// Renvoi le contenu du panier
         /// </summary>

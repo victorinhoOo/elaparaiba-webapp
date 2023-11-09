@@ -81,8 +81,30 @@ async function fetchPanier() {
         console.error("Erreur de requête:", error);
     }
 }
+async function supprimerDuPanier(id) {
+    var panierTokenValue = getPanierToken("PanierToken");
 
+    const apiUrl = `https://localhost:7252/Panier/SupprimerDuPanier?token=${panierTokenValue}&id=${id}`;
 
+    try {
+        const response = await fetch(apiUrl, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+
+        if (!response.ok) {
+            throw new Error('Réponse réseau non ok');
+        }
+
+        const responseData = await response.text();
+        console.log(responseData);
+        window.location.reload();
+    } catch (error) {
+        console.error("Erreur de requête:", error);
+    }
+}
 
 
 //Fonction d'affichage des bijoux
@@ -129,12 +151,23 @@ async function displayPanier(bijoux) {
         prixTotal.textContent = ``; // F
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+
+        // Bouton qui permet de supprimer un bijou du panier
+        const supprimerBijou = document.createElement("button");
+        const favicon = document.createElement("i");
+        supprimerBijou.setAttribute("class","btn-supprimer-bijou")
+        favicon.setAttribute("class", "fas fa-trash");
+        supprimerBijou.appendChild(favicon);
+
         //Ajout des span à la div du bijou
         bijouElement.appendChild(imageElement);
         bijouElement.appendChild(nomBijou);
         bijouElement.appendChild(quantiteBijou);
         bijouElement.appendChild(prixBijou);
-
+        bijouElement.appendChild(supprimerBijou);
+        supprimerBijou.addEventListener('click', () => supprimerDuPanier(bijou.id));
+    
         //Ajout de l'item au panier
         bijouPanierConteneur.appendChild(bijouElement);
         console.log(bijou);

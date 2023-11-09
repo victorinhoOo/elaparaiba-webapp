@@ -5,7 +5,7 @@ var num_image = 0;
 function main() {
     initNewsSlider();
     fetchInstagramPhotos();
-    id = setInterval(nextImage, 5000);
+    id = setInterval(nextImage, 500000);
     controls = document.querySelectorAll(".slider-control");
     for (let i = 0; i < controls.length; i++) { //Méthode événementielle directe
         controls[i].onclick = click; //onclick appellera click
@@ -124,8 +124,5 @@ async function fetchInstagramPhotos() {
         container.appendChild(link);  
     });
 }
-       
-    
-
 
 window.onload = main;

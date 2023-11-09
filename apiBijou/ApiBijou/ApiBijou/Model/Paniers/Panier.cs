@@ -99,6 +99,20 @@ namespace ApiBijou.Model.Panier
             }
             return index;
         }
+
+        public void DelBijouxById(int bijouId)
+        {
+            var bijouASupprimer = bijoux.FirstOrDefault(b => b.Id == bijouId);
+            if (bijouASupprimer.Quantite > 1)
+            {
+                bijouASupprimer.Quantite--;
+            }
+            else
+            {
+                // Si la quantité est égale à 1, supprimer complètement l'article
+                bijoux.Remove(bijouASupprimer);
+            }
+        }
     }
 
 }

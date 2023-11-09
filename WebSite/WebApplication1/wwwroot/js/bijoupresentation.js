@@ -57,7 +57,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
+    function updatePanierCount() {
+        // Récupère l'élément HTML représentant le nombre d'articles dans le panier
+        const panierCountElement = document.getElementById('panierCount');
 
+        // Met à jour le texte avec le nombre d'articles dans le panier
+        panierCountElement.textContent = bijouxPanier.length.toString();
+    }
 
 
     // Fonction de requête pour récupérer les détails du bijou
@@ -91,6 +97,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Appeler la fonction de requête pour récupérer les détails du bijou
     fetchBijouDetails();
+
+    updatePanierCount();
 });
 
 // Fonction pour ajouter le bijou au panier
@@ -129,6 +137,7 @@ async function ajouterAuPanier(bijou) {
         const responseData = await response.text();
         console.log(responseData);
 
+        updatePanierCount();
     } catch (error) {
         console.error("Erreur de requête:", error);
     }
