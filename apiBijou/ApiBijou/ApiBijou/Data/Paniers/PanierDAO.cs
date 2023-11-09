@@ -22,11 +22,11 @@ namespace ApiBijou.Data.Paniers
             return panier.GetBijoux();
         }
 
-        public void SupprimerBijouDuPanier(int idPanier, Bijou bijou)
+        public void SupprimerBijouDuPanier(int idPanier, int id)
         {
             string contenuFichier = File.ReadAllText(ObtenirCheminJson(idPanier));
             Panier panier = JsonConvert.DeserializeObject<Panier>(contenuFichier);
-            panier.DelBijoux(bijou);
+            panier.DelBijouxById(id);
             UpdatePanier(idPanier, panier);
         }
 

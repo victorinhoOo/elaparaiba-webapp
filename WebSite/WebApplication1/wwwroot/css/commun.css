@@ -71,6 +71,7 @@ nav {
 
 .iconH{
     padding: 20px;
+    padding-right:100px;
 }
 
 .fa-shopping-cart:hover{
@@ -92,6 +93,26 @@ nav {
     display: none; /* Masquer le menu burger par défaut */
 }
 
+#panier {
+    font-size: 60px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    position: relative; /* Ajout de position relative */
+}
+
+#panierCount {
+    font-size: 20px;
+    border-radius:20%;
+    position: absolute; /* Changement en position absolue */
+    top: 37%; /* Ajustement du positionnement vertical au centre */
+    right: 31%; /* Alignement à droite du conteneur du panier */
+    transform: translate(0%, -50%); /* Ajustement vertical au centre */
+    color:white;
+}
+
+a {
+    text-decoration: none;
+}
 /* Media Query pour les écrans de taille inférieure à 768 pixels (taille standard pour les tablettes et les téléphones) */
 @media only screen and (max-width: 768px) {
     .logoLien {

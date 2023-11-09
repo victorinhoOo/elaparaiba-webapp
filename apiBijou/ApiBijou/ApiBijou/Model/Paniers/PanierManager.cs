@@ -32,9 +32,9 @@ namespace ApiBijou.Model.Panier
         /// Méthode pour supprimer un bijou du panier
         /// </summary>
         /// <param name="bijou"></param>
-        public void SupprimerBijouDuPanier(string token, Bijou bijou)
+        public void SupprimerBijouDuPanier(string token, int id)
         {
-            panierDAO.SupprimerBijouDuPanier(tokenManager.GetPanierId(token), bijou);
+            panierDAO.SupprimerBijouDuPanier(tokenManager.GetPanierId(token), id);
         }
 
         /// <summary>
