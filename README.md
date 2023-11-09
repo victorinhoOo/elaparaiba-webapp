@@ -15,6 +15,11 @@ Le site web Elaparaïba est une plateforme de vente de bijoux artisanaux en lign
 
 
 ## Captures d'écrans
+![accueil 1](https://github.com/dept-info-iut-dijon/C2_Elaparaiba_SAE3/assets/116215966/c75a755a-b336-4e00-b63e-3690332ace28)
+![Les_bijoux](https://github.com/dept-info-iut-dijon/C2_Elaparaiba_SAE3/assets/116215966/57f2dda9-981b-4a95-a5d7-2cb13002149f)
+![sue mesure](https://github.com/dept-info-iut-dijon/C2_Elaparaiba_SAE3/assets/116215966/16e7492e-bd1a-412a-bc62-12b1aa762891)
+![Savoir-faire](https://github.com/dept-info-iut-dijon/C2_Elaparaiba_SAE3/assets/116215966/887eef95-fa67-4d9b-a29d-52a6bdecd7b3)
+![ou me trouver](https://github.com/dept-info-iut-dijon/C2_Elaparaiba_SAE3/assets/116215966/bbaa648f-1f93-4bfc-94dc-6c79e84cabf9)
 
 
 
@@ -25,7 +30,7 @@ Le site web Elaparaïba est une plateforme de vente de bijoux artisanaux en lign
 * **Victor Duboz** _alias_ [@VictorinhoOo](https://github.com/victorinhoOo)
 * **Martin Simon** _alias_ [@Elven](https://github.com/ms292435)
 * **Ezai Comtois** _alias_ [@ezmaaan](https://github.com/tpiut212)
-* **Jhon doe** _alias_ [@outout14](https://github.com/outout14)
+
 
 
 
