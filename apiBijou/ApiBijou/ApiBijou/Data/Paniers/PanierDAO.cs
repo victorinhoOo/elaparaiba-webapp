@@ -12,7 +12,7 @@ namespace ApiBijou.Data.Paniers
             string contenuFichier = File.ReadAllText(ObtenirCheminJson(idPanier));
             Panier panier = JsonConvert.DeserializeObject<Panier>(contenuFichier);
             panier.AddBijoux(bijou);
-            updatePanier(idPanier, panier);
+            UpdatePanier(idPanier, panier);
         }
 
         public List<PanierItem> ObtenirPanier(int idPanier)
@@ -27,7 +27,7 @@ namespace ApiBijou.Data.Paniers
             string contenuFichier = File.ReadAllText(ObtenirCheminJson(idPanier));
             Panier panier = JsonConvert.DeserializeObject<Panier>(contenuFichier);
             panier.DelBijoux(bijou);
-            updatePanier(idPanier, panier);
+            UpdatePanier(idPanier, panier);
         }
 
         public void CreerPanier(int idPanier)
@@ -43,7 +43,7 @@ namespace ApiBijou.Data.Paniers
         /// </summary>
         /// <param name="idPanier">Id du panier à mettre à jour</param>
         /// <param name="panierBijoux">Nouveau panier à hydrater</param>
-        private void updatePanier(int idPanier, Panier panierBijoux)
+        private void UpdatePanier(int idPanier, Panier panierBijoux)
         {
             File.WriteAllText(ObtenirCheminJson(idPanier), JsonConvert.SerializeObject(panierBijoux));
         }

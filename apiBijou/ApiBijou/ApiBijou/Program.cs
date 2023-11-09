@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MySqlX.XDevAPI;
+using Stripe;
 using System;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -37,6 +38,7 @@ app.UseCors(x => x
     .AllowCredentials()
     .SetIsOriginAllowed(origin => true));
 
+StripeConfiguration.ApiKey = builder.Configuration.GetSection("Stripe:SecretKey").Get<string>();
 app.UseAuthorization();
 
 app.MapControllers();

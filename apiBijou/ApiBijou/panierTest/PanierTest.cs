@@ -1,4 +1,3 @@
-using API_SAE.Model;
 using ApiBijou.Data.Bijoux;
 using ApiBijou.Model;
 using ApiBijou.Model.Panier;
