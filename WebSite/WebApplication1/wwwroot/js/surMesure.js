@@ -1,3 +1,5 @@
+import { formToJson } from "./form.js";
+
 var id;
 var controls;
 var num_image = 0;
@@ -34,3 +36,28 @@ function nextImage(){
 }
 
 window.onload = main;
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    //Selection du form
+    const form = document.querySelector('form');
+    //Création d'un événement quand il est submit
+    form.addEventListener('submit', function (event) {
+        // Empêche l'envoi du formulaire par défaut
+        event.preventDefault(); 
+        const formJson = formToJson(form);
+        delete formJson['Modeles']
+        try {
+            fetch('https://localhost:7252/Bijoux/EnvoyerFormulaireSurMesure', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: formJson
+            })
+        }
+        catch (error) {
+            console.error("Erreur de requête:", error);
+        }  
+    });
+});

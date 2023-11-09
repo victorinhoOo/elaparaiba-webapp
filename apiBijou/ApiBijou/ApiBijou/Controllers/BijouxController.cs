@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Cors;
-using ApiBijou.Model.formModel;
-using ApiBijou.Model.SurMesure;
 using ApiBijou.Model.Bijoux;
+using ApiBijou.Model.Mail;
+using Newtonsoft.Json;
 
 namespace API_SAE.Controllers
 {
@@ -74,26 +74,39 @@ namespace API_SAE.Controllers
         public IActionResult EnvoyerFormulaireSurMesure([FromBody] FormulaireSurMesureModel formulaire)
         {
             ActionResult result = BadRequest();
+
             if (ModelState.IsValid)
             {
                 try
                 {
-                    MailBuilder mailBuilder = new MailBuilder(formulaire);
-                    // Utilisez mailBuilder pour générer et envoyer le mail ici
+                    // Utilisez les données du formulaire
+                    string nom = formulaire.Nom;
+                    string prenom = formulaire.Prenom;
+                    string email = formulaire.Email;
+                    string matiere = formulaire.Matiere;
+                    string type = formulaire.Type;
+                    string description = formulaire.Description;
 
-                    return Ok("Formulaire soumis avec succès !");
+                    // Accéder aux fichiers
+                    //List<IFormFile> modeles = formulaire.Modeles;
+
+                    SurMesureMail mailBuilder = new SurMesureMail(formulaire);
+
+                    result = Ok("Formulaire soumis avec succès !");
                 }
                 catch (Exception ex)
                 {
-                    // Gérez l'exception ici, par exemple, en enregistrant les détails de l'erreur dans un journal.
-                    return StatusCode(500, "Une erreur s'est produite lors de la tentative d'envoi de l'e-mail.");
+                    result = StatusCode(500, "Une erreur s'est produite lors de la tentative d'envoi du formulaire.");
                 }
             }
             else
             {
-                return BadRequest(ModelState);
+                result = BadRequest(ModelState);
             }
+
+            return result;
         }
+
 
     }
 }
