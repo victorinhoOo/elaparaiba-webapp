@@ -69,9 +69,13 @@ namespace API_SAE.Controllers
             return reponse;
         }
 
-
+        /// <summary>
+        /// Envoi un formulaire sur Mesure
+        /// </summary>
+        /// <param name="formulaire"></param>
+        /// <returns></returns>
         [HttpPost("EnvoyerFormulaireSurMesure")]
-        public IActionResult EnvoyerFormulaireSurMesure([FromForm] FormulaireSurMesureModel formulaire)
+        public IActionResult EnvoyerFormulaireSurMesure([FromForm] FormulaireSurMesureData formulaire)
         {
             ActionResult result = BadRequest();
 
@@ -96,5 +100,37 @@ namespace API_SAE.Controllers
 
             return result;
         }
+
+        /// <summary>
+        /// Envoi un formulaire sur Mesure
+        /// </summary>
+        /// <param name="formulaire"></param>
+        /// <returns></returns>
+        [HttpPost("EnvoyerFormulaireOuMeTrouver")]
+        public IActionResult EnvoyerFormulaireOuMeTrouver([FromForm] FormulaireOuMeTrouverData formulaire)
+        {
+            ActionResult result = BadRequest();
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    // Utilisez directement l'objet FormulaireSurMesureModel pour récupérer les données
+                    OuMeTrouverMail mailBuilder = new OuMeTrouverMail(formulaire);
+                    result = Ok("Formulaire soumis avec succès !");
+                }
+                catch (Exception ex)
+                {
+                    result = StatusCode(500, "Une erreur s'est produite lors de la tentative d'envoi du formulaire.");
+                }
+            }
+            else
+            {
+                result = BadRequest(ModelState);
+            }
+
+            return result;
+        }
+
     }
 }

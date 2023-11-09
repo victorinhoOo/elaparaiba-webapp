@@ -39,14 +39,12 @@ window.onload = main;
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.querySelector('form');
 
+    //Création d'un Event pour envoyer le formulaire une fois rempli
     form.addEventListener('submit', function (event) {
         event.preventDefault(); // Empêche l'envoi du formulaire par défaut
 
         const formData = new FormData(form); // Création d'un objet FormData pour le formulaire
 
-        for (const [key, value] of formData.entries()) {
-            console.log(key, value); // Afficher les paires clé/valeur
-        }
 
         fetch('https://localhost:7252/Bijoux/EnvoyerFormulaireSurMesure', {
             method: 'POST',

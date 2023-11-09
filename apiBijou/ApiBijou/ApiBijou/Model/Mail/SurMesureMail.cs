@@ -6,12 +6,19 @@ using ApiBijou.Model.formModel;
 
 namespace ApiBijou.Model.Mail
 {
+    /// <summary>
+    /// Classe pour générer mail Sur Mesure
+    /// </summary>
     public class SurMesureMail
     {
         private readonly StringBuilder body;
         private readonly IMailSender mailSender = new GoogleSmtp();
 
-        public SurMesureMail(FormulaireSurMesureModel formulaireSurMesureModel)
+        /// <summary>
+        /// Constructure SurMesureMail
+        /// </summary>
+        /// <param name="formulaireSurMesureModel">Données à insérer</param>
+        public SurMesureMail(FormulaireSurMesureData formulaireSurMesureModel)
         {
             body = new StringBuilder();
             GenerateBody(formulaireSurMesureModel);
@@ -20,8 +27,11 @@ namespace ApiBijou.Model.Mail
 
             mailSender.SendMail("mateobigearddasen21@gmail.com", formulaireSurMesureModel.Email, "Demande de bijoux Sur Mesure", body.ToString(), attachments);
         }
-
-        public void GenerateBody(FormulaireSurMesureModel formulaireSurMesureModel)
+        /// <summary>
+        /// Génére le body du mail sur mesure
+        /// </summary>
+        /// <param name="formulaireSurMesureModel"></param>
+        public void GenerateBody(FormulaireSurMesureData formulaireSurMesureModel)
         {
             body.AppendLine($"Nom du client: {formulaireSurMesureModel.Nom}");
             body.AppendLine($"Prénom du client: {formulaireSurMesureModel.Prenom}");
@@ -29,9 +39,13 @@ namespace ApiBijou.Model.Mail
             body.AppendLine($"Matière souhaitée: {formulaireSurMesureModel.Matiere}");
             body.AppendLine($"Type: {formulaireSurMesureModel.Type}");
             body.AppendLine($"Description: {formulaireSurMesureModel.Description}");
-            body.AppendLine("Pièces jointes:");
         }
 
+        /// <summary>
+        /// Génére la liste des attachements du mail
+        /// </summary>
+        /// <param name="photos">Photos à envoyer</param>
+        /// <returns></returns>
         public List<Attachment> GenerateAttachments(List<IFormFile> photos)
         {
             List<Attachment> attachments = new List<Attachment>();

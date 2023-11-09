@@ -22,3 +22,23 @@ function validateForm() {
 
 window.onload = updatePanierCount();
 
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('form');
+    //Création d'un Event pour envoyer le formulaire une fois rempli
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Empêche l'envoi du formulaire par défaut
+
+        const formData = new FormData(form); // Création d'un objet FormData pour le formulaire
+
+        
+
+        fetch('https://localhost:7252/Bijoux/EnvoyerFormulaireOuMeTrouver', {
+            method: 'POST',
+            body: formData // Envoyer le formulaire avec le fichier
+        })
+            .catch(error => {
+                console.error('Erreur:', error);
+            });
+    });
+});
+

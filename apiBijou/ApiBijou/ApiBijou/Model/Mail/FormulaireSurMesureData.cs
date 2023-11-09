@@ -1,9 +1,9 @@
 ﻿namespace ApiBijou.Model.Mail
 {
     /// <summary>
-    /// Cette classe définit le modèle du questionnaire Sur Mesure
+    /// Structure de données du formulaire SurMesure
     /// </summary>
-    public class FormulaireSurMesureModel
+    public class FormulaireSurMesureData
     {
         private string _nom;
         private string _prenom;
@@ -56,7 +56,7 @@
             set { _modeles = value; }
         }
 
-        public FormulaireSurMesureModel(string nom, string prenom, string email, string matiere, string type, string description, List<IFormFile> modeles)
+        public FormulaireSurMesureData(string nom, string prenom, string email, string matiere, string type, string description, List<IFormFile> modeles)
         {
             Nom = nom;
             Prenom = prenom;
@@ -69,7 +69,7 @@
         /// <summary>
         /// Constructeur utilisé par le binder
         /// </summary>
-        public FormulaireSurMesureModel() { }
+        public FormulaireSurMesureData() { }
     }
 
 }
