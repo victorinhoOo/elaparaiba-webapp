@@ -2,8 +2,8 @@
 .conteneur {
     position: relative;
     background-image: url("../images/surMesure/bP1.jpg");
+    background-attachment: fixed;
     background-position: center;
-    background-attachment:fixed;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex; 
@@ -64,8 +64,6 @@ h2 {
     text-align: center;
     margin-top: 45px;
     color: #03889f;
-    font-family: 'Caveat';
-    font-size: 35px;
 }
 
 /* gestion du carrousel */
@@ -221,38 +219,65 @@ input[type="submit"] {
 }
 
 /* Responsive CSS */
-@media (max-width: 1000px) {
-    .conteneur{
-        background-attachment:unset;
+
+@media (max-width: 600px) {
+    form {
+        max-width: 100%;
     }
-    .conteneur p{
-        padding-top: 60px;
+
+    .conteneur {
+        height: 800px;
     }
+
+        .conteneur #imageOrdi {
+            display: none;
+        }
+
+        .conteneur #imageMobile {
+            display: block;
+            height: 800px;
+        }
+
+    .texteConteneur p {
+        margin-top: 100px;
+    }
+}
+
+/* Ajoutez ces styles pour le pop-up */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.267);
+}
+
+.popup-content {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 25%;
+}
+
+.popup-content p{
+    color: #03889f;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 
 
-
-
-    @media (max-width: 600px) {
-        form {
-            max-width: 100%;
-        }
-
-        .conteneur {
-            height: 800px;
-        }
-
-            .conteneur #imageOrdi {
-                display: none;
-            }
-
-            .conteneur #imageMobile {
-                display: block;
-                height: 800px;
-            }
-
-        .texteConteneur p {
-            margin-top: 100px;
-        }
-    }
