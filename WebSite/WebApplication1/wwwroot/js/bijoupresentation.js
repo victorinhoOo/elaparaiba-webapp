@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnPanier = document.getElementById('btnPanier');
     const bijouCategorie = document.getElementById('bijouCategorie');
     const bijouDescription = document.getElementById('bijouDescription');
-
+    const bijouImageA = document.getElementById('aFlyPanier');
 
 
     // Affiche les différentes informations du bijou en complétant les Id de la page HTML
@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         bijouQuantite.textContent = bijou.stockBijou;
         bijouCategorie.textContent = `Catégorie: ${bijou.type}`;
         bijouDescription.textContent = `Description: ${bijou.descriptionBijou}`;
+        bijouImageA.src = `../images/Photosdescriptif${bijou.type}/${bijou.dossierPhoto}/1.jpg`;
 
 
 
@@ -133,7 +134,51 @@ async function ajouterAuPanier(bijou) {
         console.error("Erreur de requête:", error);
     }
 }
+document.addEventListener('DOMContentLoaded', function () {
+    var btnPanier = document.getElementById('btnPanier');
+    var bijouImage = document.getElementById('bijouImage');
+    var panier = document.getElementById('panier');
 
+    btnPanier.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        // On clone l'image
+        var clonedImage = bijouImage.cloneNode(true);
+        clonedImage.setAttribute('id', 'fly-to-basket');
+        document.body.appendChild(clonedImage);
+
+        // On récupère la position initiale de l'image et du panier
+        var initialImagePosition = bijouImage.getBoundingClientRect();
+        var initialPanierPosition = panier.getBoundingClientRect();
+
+        // On paramètre le style de l'image
+        clonedImage.style.position = 'absolute';
+        clonedImage.style.top = initialImagePosition.top + 'px';
+        clonedImage.style.left = initialImagePosition.left + 'px';
+        clonedImage.style.width = initialImagePosition.width + 'px';
+        clonedImage.style.height = initialImagePosition.height + 'px';
+        clonedImage.style.transition = 'all 0.5s ease-in-out';
+        clonedImage.style.objectFit = 'cover';
+
+        // On calcule le rapport hauteur largeur
+        var offset = { x: 5, y: 15 };
+
+        // On déplace l'image jusqu'au rapport calculé
+        clonedImage.style.transform = 'translate(' + offset.x + 'px, ' + offset.y + 'px)';
+
+        // On déplace l'image avec un système de défillement 
+        setTimeout(function () {
+            clonedImage.style.transform = 'translate(' + (initialPanierPosition.left - initialImagePosition.left) + 'px, ' + (initialPanierPosition.top - initialImagePosition.top) + 'px)';
+            clonedImage.style.width = '20px';
+            clonedImage.style.height = '20px';
+        }, 100);
+
+        // L'image est supprimé à la fin de l'animation
+        setTimeout(function () {
+            clonedImage.parentNode.removeChild(clonedImage);
+        }, 600);
+    });
+});
 function changerImagePrincipale(nouvelleImageSrc) {
     bijouImage.src = nouvelleImageSrc;
 }

@@ -8,7 +8,7 @@ function main() {
     updatePanierCount();
     initNewsSlider();
     fetchInstagramPhotos();
-    id = setInterval(nextImage, 500);
+    id = setInterval(nextImage, 5000);
     controls = document.querySelectorAll(".slider-control");
     for (let i = 0; i < controls.length; i++) { //Méthode événementielle directe
         controls[i].onclick = click; //onclick appellera click

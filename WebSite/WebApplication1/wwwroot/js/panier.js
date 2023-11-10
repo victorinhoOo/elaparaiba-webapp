@@ -99,9 +99,20 @@ async function supprimerDuPanier(id) {
             throw new Error('Réponse réseau non ok');
         }
 
-        const responseData = await response.text();
-        console.log(responseData);
-        window.location.reload();
+        // Trouver l'index du bijou dans le panier
+        const index = bijouxPanier.findIndex(item => item.id === id);
+
+        // Si l'index est trouvé, supprimer le bijou du panier local
+        if (index !== -1) {
+            bijouxPanier[index].quantite--; // Décrémenter la quantité
+            if (bijouxPanier[index].quantite <= 0) {
+                bijouxPanier.splice(index, 1); // Si la quantité est inférieure ou égale à zéro, supprimer complètement le bijou du panier
+            }
+        }
+
+        // Mettre à jour l'affichage du panier
+        displayPanier(bijouxPanier);
+
         updatePanierCount();
     } catch (error) {
         console.error("Erreur de requête:", error);

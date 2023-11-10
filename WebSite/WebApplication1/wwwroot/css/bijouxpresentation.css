@@ -110,3 +110,18 @@
         padding-top:20px;
     }
 }
+
+
+img.btn-lg {
+    padding: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 20px;
+}
+
+img.fly-to-basket {
+    margin: 30px;
+    display: block;
+    float: left;
+}
