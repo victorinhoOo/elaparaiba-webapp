@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Caveat';
+    src: url('../font/Caveat-Regular.ttf') format('truetype');
+}
+
 /* HEADER */
 
 * {
@@ -223,9 +228,14 @@ footer {
 
 footer h2{
     color: #03889F;
+    font-family:Arial;
+    font-size:25px;
+    text-align:unset;
 }
 
-
+footer p{
+    font-size:unset;
+}
 .footer-content {
     display: flex;
     justify-content: space-between;
@@ -300,7 +310,6 @@ p {
     outline: none;
     box-shadow: 0px 2px 4px #008098; 
 }
-
 
 
 

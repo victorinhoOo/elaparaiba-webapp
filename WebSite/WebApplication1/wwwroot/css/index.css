@@ -111,7 +111,7 @@
     z-index: 1;
     pointer-events: none;
     position: absolute;
-    top: 65%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -330,6 +330,7 @@ h2{
     width: 100%; /* Prend toute la largeur disponible */
     height: 100%; /* Prend toute la hauteur disponible */
     object-fit: cover; /* Assure que les images sont redimensionnées correctement */
+    max-height:300px;
 }
 
 
