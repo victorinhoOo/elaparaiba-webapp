@@ -2,46 +2,46 @@ import { getPanierToken, setPanierToken } from "../js/cookies.js";
 import { updatePanierCount } from "../js/commun.js";
 class Bijou {
     constructor(idBijou, nomBijou, descriptionBijou, prixBijou, stockBijou, type, dossierPhoto, nbPhotos) {
-      this.idBijou = idBijou;
-      this.nomBijou = nomBijou;
-      this.descriptionBijou = descriptionBijou;
-      this.stockBijou = stockBijou;
-      this.prixBijou = prixBijou;
-      this.type = type;
-      this.dossierPhoto = dossierPhoto;
-      this.nbPhotos = nbPhotos;
+        this.idBijou = idBijou;
+        this.nomBijou = nomBijou;
+        this.descriptionBijou = descriptionBijou;
+        this.stockBijou = stockBijou;
+        this.prixBijou = prixBijou;
+        this.type = type;
+        this.dossierPhoto = dossierPhoto;
+        this.nbPhotos = nbPhotos;
     }
-  
+
     // Méthode pour créer un bijou à partir d'un objet JSON
     static createBijouFromJSON(bijouJSON) {
-      try {
-        // Créez une nouvelle instance de la classe Bijou en utilisant les propriétés de l'objet JSON
-        const nouveauBijou = new Bijou(
-          bijouJSON.id,
-          bijouJSON.name,
-          bijouJSON.description,
-          bijouJSON.price,
-          bijouJSON.quantity,
-          bijouJSON.type,
-          bijouJSON.dossierPhoto,
-          bijouJSON.nbPhotos
-        );
-    
-        // Retourne le bijou créé
-        return nouveauBijou;
-      } catch (error) {
-        console.error("Erreur lors de la création du bijou:", error);
-        throw error;
-      }
+        try {
+            // Créez une nouvelle instance de la classe Bijou en utilisant les propriétés de l'objet JSON
+            const nouveauBijou = new Bijou(
+                bijouJSON.id,
+                bijouJSON.name,
+                bijouJSON.description,
+                bijouJSON.price,
+                bijouJSON.quantity,
+                bijouJSON.type,
+                bijouJSON.dossierPhoto,
+                bijouJSON.nbPhotos
+            );
+
+            // Retourne le bijou créé
+            return nouveauBijou;
+        } catch (error) {
+            console.error("Erreur lors de la création du bijou:", error);
+            throw error;
+        }
     }
 }
 
 //Représente les bijoux dans le panier
 class PanierItem {
-    constructor(bijou, quantite, id){
+    constructor(bijou, quantite, id) {
         this.bijou = bijou;
         this.quantite = quantite;
-        this.id=id;
+        this.id = id;
     }
 }
 
@@ -52,15 +52,15 @@ var bijouxPanier = [];
 
 
 //Désérialise pannierItemJson
-function PanierItemFromJson(json){
+function PanierItemFromJson(json) {
     //Création du panierItem a partir du json
     const panierItem = new PanierItem(
         Bijou.createBijouFromJSON(json.bijou),
         json.quantite,
-        json.id   
+        json.id
     )
-    return panierItem;    
-} 
+    return panierItem;
+}
 
 //Fonction communicante avec l'API bijou
 async function fetchPanier() {
@@ -71,7 +71,7 @@ async function fetchPanier() {
         //Traduction de la requête en json
         const panierJson = await response.json();
         //On parcours le éléments du json
-        for(let i = 0; i < panierJson.length; i++){
+        for (let i = 0; i < panierJson.length; i++) {
             //Création d'un panierItem
             const panierItem = PanierItemFromJson(panierJson[i]);
             //Ajout au panier
@@ -82,6 +82,7 @@ async function fetchPanier() {
         console.error("Erreur de requête:", error);
     }
 }
+
 async function supprimerDuPanier(id) {
     var panierTokenValue = getPanierToken("PanierToken");
 
@@ -118,7 +119,14 @@ async function supprimerDuPanier(id) {
         console.error("Erreur de requête:", error);
     }
 }
-
+//Renvoi le cout total du panier
+function CoutPanier() {
+    var coutPanier = 0;
+    bijouxPanier.forEach(item => {
+        coutPanier += item.bijou.prixBijou * item.quantite;
+    });
+    return coutPanier;
+}
 
 //Fonction d'affichage des bijoux
 async function displayPanier(bijoux) {
@@ -158,18 +166,18 @@ async function displayPanier(bijoux) {
         quantiteBijou.classList.add("item-quantity");
         quantiteBijou.textContent = bijou.quantite + ` x `;
 
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
         //Prix total
-        const prixTotal = document.getElementById("total-price");                  //Faire la méthode qui permet de calculer le prix total
-        prixTotal.textContent = ``; // F
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        const prixTotal = document.getElementById("total-price");
+        prixTotal.textContent = CoutPanier() + `€`;
+
 
 
 
         // Bouton qui permet de supprimer un bijou du panier
         const supprimerBijou = document.createElement("button");
         const favicon = document.createElement("i");
-        supprimerBijou.setAttribute("class","btn-supprimer-bijou")
+        supprimerBijou.setAttribute("class", "btn-supprimer-bijou")
         favicon.setAttribute("class", "fas fa-trash");
         supprimerBijou.appendChild(favicon);
 
@@ -180,15 +188,15 @@ async function displayPanier(bijoux) {
         bijouElement.appendChild(prixBijou);
         bijouElement.appendChild(supprimerBijou);
         supprimerBijou.addEventListener('click', () => supprimerDuPanier(bijou.id));
-    
+
         //Ajout de l'item au panier
         bijouPanierConteneur.appendChild(bijouElement);
         console.log(bijou);
-        
+
     });
 }
 
-async function fetchTotalPanier(){
+async function fetchTotalPanier() {
     const apiUrl = `https://localhost:7252/Panier/ObtenirPanier?token=${getPanierToken("PanierToken")}`;
     try {
         //Requête vers l'Api
@@ -196,7 +204,7 @@ async function fetchTotalPanier(){
         //Traduction de la requête en json
         const panierJson = await response.json();
         //On parcours le éléments du json
-        for(let i = 0; i < panierJson.length; i++){
+        for (let i = 0; i < panierJson.length; i++) {
             //Création d'un panierItem
             const panierItem = PanierItemFromJson(panierJson[i]);
             //Ajout au panier
@@ -218,7 +226,7 @@ async function createStripeCheckoutSession() {
             headers: {
                 'Content-Type': 'application/json',
             },
-            
+
         });
 
         // Vérifie si la requête a réussi
@@ -252,5 +260,8 @@ document.addEventListener("DOMContentLoaded", async function () {
     await fetchPanier();
     displayPanier(bijouxPanier);
 });
+
+
+
 
 window.onload = updatePanierCount();
