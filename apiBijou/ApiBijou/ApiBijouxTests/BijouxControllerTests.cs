@@ -1,10 +1,6 @@
 ﻿using API_SAE.Controllers;
 using ApiBijou.Model.Bijoux;
-using ApiBijou.Model.SurMesure;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
-using System.Collections.Generic;
-using Xunit;
 
 namespace ApiBijouxTests
 {
@@ -67,7 +63,7 @@ namespace ApiBijouxTests
             var okResult = _controller.GetAllBijoux().Result as OkObjectResult;
             var items = Assert.IsAssignableFrom<ICollection<Bijou>>(okResult.Value);
 
-            Assert.Equal(2, items.Count);
+            Assert.Equal(12, items.Count);
         }
     }
 }

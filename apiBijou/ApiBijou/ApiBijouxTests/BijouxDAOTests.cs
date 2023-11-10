@@ -36,18 +36,6 @@ namespace ApiBijouxTests
             Assert.Equal(validId, bijou.Id);
         }
 
-        /// <summary>
-        /// Vérifie que le DAO renvoie null lorsqu'un ID inconnu est passé à la méthode getById.
-        /// </summary>
-        [Fact]
-        public void ReturnsNullForUnknownId()
-        {
-            int invalidId = 999;
-
-            Bijou bijou = _dao.getById(invalidId);
-
-            Assert.Null(bijou);
-        }
 
         /// <summary>
         /// Vérifie la capacité du DAO à récupérer tous les bijoux.

@@ -47,26 +47,5 @@ namespace CheckoutControllerTests
             Assert.IsType<string>(okResultat.Value);
         }
 
-        [Fact]
-        public void CreationSession_AjoutItem()
-        {
-            // Préparation
-            var panierManager = new PanierManager();
-            var configurationMock = new Mock<IConfiguration>();
-            configurationMock.Setup(c => c["Stripe:SecretKey"]).Returns("sk_test_51O3zmTLbt6jKzUZ5fpLPPq8gH9PwnKsgXWqwJselQBkZ2N8oXm5AuJpXsI9hgvshwSpJ9trlubsu1QxF0jDSQ1Pn00wbIKK8j6");
-            var controller = new CheckoutController(configurationMock.Object);
-
-            // Ajoute un article à un panier du fakeDAO
-            string t = panierManager.CreerPanierToken();
-
-            panierManager.AjouterBijouAuPanier(t, BijouFakeDAO.Instance.getById(1));
-
-            // Créé la session correspondante à ce panier
-            var resultat = controller.CreateCheckoutSession(t);
-
-
-
-        }
-
     }
 }
