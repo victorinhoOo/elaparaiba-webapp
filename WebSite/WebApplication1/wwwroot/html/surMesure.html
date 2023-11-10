@@ -8,12 +8,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
     <script src="../js/surMesure.js"></script>
+    <script src="../js/commun.js" type="module"></script>
     <title>Sur mesure</title>
     <link rel="icon" type="image/vnd.icon" href="../images/favicon.ico">
 </head>
 <body>
     <header>
         <nav>
+            <div class="burger-menu"></div>
             <a class="logoLien" href="index.html">
                 <img class="logo" src="../images/logo_final_elaparaiba.png" alt="logo de l'entreprise Elaparaïba">
             </a>
@@ -25,9 +27,8 @@
                 <a class="buttonH" href='/html/ouMeTrouver.html'>OÙ ME TROUVER ?</a>
             </div>
             <div class="authNav">
-                <a class="iconH" href=''><i class="fas fa-shopping-cart fa-2x"></i></a>
-                <a class="iconH" href=''><i class="fas fa-user fa-2x"></i></a>
-            </div>                     
+                <a class="iconH" href='./panier.html'><i id="panier" class="fas fa-shopping-cart fa-2x"><span id="panierCount">0</span></i></a>
+            </div>
         </nav>
     </header>
 

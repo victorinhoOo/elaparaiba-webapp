@@ -25,6 +25,8 @@
     color: #03889F;
     border-bottom: 2px solid grey;
     padding-bottom: 10px;
+    font-family:'Caveat';
+    font-size:35px;
 }
 
 #cart-items {
