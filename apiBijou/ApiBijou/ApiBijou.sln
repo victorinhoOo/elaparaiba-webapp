@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiBijouxTests", "ApiBijoux
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "panierTest", "panierTest\panierTest.csproj", "{F28DBCA0-F3BB-4F05-85A3-944BEF3D6798}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PanierTokenTest", "PanierTokenTest\PanierTokenTest.csproj", "{A0CA1507-4FC1-4BDE-802C-3DEDCB58D70C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PanierTokenTest", "PanierTokenTest\PanierTokenTest.csproj", "{A0CA1507-4FC1-4BDE-802C-3DEDCB58D70C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckoutControllerTests", "CheckoutControllerTests\CheckoutControllerTests.csproj", "{0B8D2543-83BA-4642-BFF4-F35D8F59BFFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{A0CA1507-4FC1-4BDE-802C-3DEDCB58D70C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0CA1507-4FC1-4BDE-802C-3DEDCB58D70C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0CA1507-4FC1-4BDE-802C-3DEDCB58D70C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B8D2543-83BA-4642-BFF4-F35D8F59BFFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B8D2543-83BA-4642-BFF4-F35D8F59BFFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B8D2543-83BA-4642-BFF4-F35D8F59BFFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B8D2543-83BA-4642-BFF4-F35D8F59BFFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

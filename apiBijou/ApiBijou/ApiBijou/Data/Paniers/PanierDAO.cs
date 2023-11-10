@@ -75,10 +75,10 @@ namespace ApiBijou.Data.Paniers
             }
         }
         /// <summary>
-        /// Renoi chemin du fichier json
+        /// Renvoi le chemin du fichier json
         /// </summary>
         /// <param name="idPanier">id du panier sérialisé</param>
-        /// <returns></returns>
+        /// <returns>chemin du fichier</returns>
         public string ObtenirCheminJson(int idPanier)
         {
             string cheminRelatif = Path.Combine("..", "panierData", Convert.ToString(idPanier) + ".json");

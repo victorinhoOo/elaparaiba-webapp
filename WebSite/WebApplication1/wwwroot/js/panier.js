@@ -208,6 +208,45 @@ async function fetchTotalPanier(){
     }
 }
 
+// Créé une session stripe en envoyant le tokenPanier de l'utilisateur
+async function createStripeCheckoutSession() {
+    const apiurl = `https://localhost:7252/CreateCheckoutSession?token=${getPanierToken("PanierToken")}`;
+    try {
+        // Requête vers l'API
+        const response = await fetch(apiurl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            
+        });
+
+        // Vérifie si la requête a réussi
+        if (!response.ok) {
+            throw new Error(`Erreur HTTP! statut: ${response.status}`);
+        }
+
+        // Obtient l'URL de la session Stripe du corps de la réponse
+        const url = await response.text();
+
+
+        // Redirige l'utilisateur vers la page de paiement Stripe
+        window.location.href = url;
+    } catch (error) {
+        console.error("Erreur lors de la création de la session Stripe Checkout:", error);
+    }
+}
+
+// Ecouteur du bouton checkout-button, execute la fonction correspondante
+document.addEventListener('DOMContentLoaded', (event) => {
+    const checkoutButton = document.getElementById('checkout-button');
+    if (checkoutButton) {
+        checkoutButton.addEventListener('click', (event) => {
+            createStripeCheckoutSession();
+        });
+    }
+});
+
 //Fonction lancer au chargement des élèments html
 document.addEventListener("DOMContentLoaded", async function () {
     await fetchPanier();

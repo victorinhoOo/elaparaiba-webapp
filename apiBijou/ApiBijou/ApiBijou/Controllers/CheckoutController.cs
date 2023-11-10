@@ -15,23 +15,15 @@ namespace ApiBijou.Controllers
     /// </summary>
     public class CheckoutController : ControllerBase
     {
-        private readonly StripeSettings _stripeSettings;
+        private readonly IConfiguration _configuration;
 
         private PanierManager panierManager;
 
-        private string token;
-
-        /// <summary>
-        /// Constructeur, récupère le token utilisateur et 
-        /// </summary>
-        /// <param name="stripeSettings"></param>
-        /// <param name="token"></param>
-        public CheckoutController(IOptions<StripeSettings> stripeSettings, string token)
+        public CheckoutController(IConfiguration configuration)
         {
-            this.token = token;
             panierManager = new PanierManager();
-            _stripeSettings = stripeSettings.Value;
-            StripeConfiguration.ApiKey = _stripeSettings.SecretKey;
+            _configuration = configuration;
+            StripeConfiguration.ApiKey = _configuration["Stripe:SecretKey"];
         }
 
         /// <summary>
@@ -39,43 +31,89 @@ namespace ApiBijou.Controllers
         /// </summary>
         /// <returns>Réussite du paiement ou non</returns>
         [HttpPost("CreateCheckoutSession")]
-        public async Task<IActionResult> CreateCheckoutSessionAsync()
+        public IActionResult CreateCheckoutSession(string token)
         {
-            var panier = panierManager.ObtenirPanier(token); // récupère le panier de l'utilisateur
-            var lineItems = new List<SessionLineItemOptions>();
-            foreach (var item in panier) // Pour chaque item du panier, l'ajoute dans un item stripe
+            var options = new SessionCreateOptions // initialise les options de la session stripe
             {
-                lineItems.Add(new SessionLineItemOptions
+                LineItems = new List<SessionLineItemOptions>(),
+                Mode = "payment",
+                SuccessUrl = "https://localhost:7230/html/paiement_reussi.html",
+                CancelUrl = "https://localhost:7230/html/paiement_echoue.html",
+                ShippingOptions = new List<SessionShippingOptionOptions>
+                {
+                    new SessionShippingOptionOptions // Créé une méthode de livraison (collissimo)
+                    {
+                        ShippingRateData = new SessionShippingOptionShippingRateDataOptions
+                        {
+                            Type = "fixed_amount",
+                            FixedAmount = new SessionShippingOptionShippingRateDataFixedAmountOptions
+                            {
+                                Amount = 495, // Colissimo livraison en centimes
+                                Currency = "eur",
+                            },
+                            DisplayName = "Colissimo - Livraison à domicile entre 2-3 jours ouvrés",
+                            
+                            DeliveryEstimate = new SessionShippingOptionShippingRateDataDeliveryEstimateOptions
+                            {
+                                Minimum = new SessionShippingOptionShippingRateDataDeliveryEstimateMinimumOptions
+                                {
+                                    Unit = "business_day",
+                                    Value = 2,
+                                },
+                                Maximum = new SessionShippingOptionShippingRateDataDeliveryEstimateMaximumOptions
+                                {
+                                    Unit = "business_day",
+                                    Value = 3,
+                                }
+                            }
+                        }
+                    },
+
+                    new SessionShippingOptionOptions // Créé une méthode de livraison (retrait en magasin)
+                    {
+                        ShippingRateData = new SessionShippingOptionShippingRateDataOptions
+                        {
+                            Type = "fixed_amount",
+                            FixedAmount = new SessionShippingOptionShippingRateDataFixedAmountOptions
+                            {
+                                Amount = 0,
+                                Currency = "eur",
+                            },
+                            DisplayName = "Retrait en magasin - Gratuit, 560 route du Bourg, 71500, SAINT USAGE, France",                          
+                        }
+                    },
+
+
+                }
+            };
+
+            var panier = panierManager.ObtenirPanier(token); // récupère le panier de l'utilisateur
+            foreach (var item in panier) // Pour chaque item du panier, l'ajoute dans un item stripe 
+            {
+                var sessionListItem = new SessionLineItemOptions
                 {
                     PriceData = new SessionLineItemPriceDataOptions
                     {
-                        UnitAmount = (long)(item.Bijou.Price * 100), // convertit le prix en centimes
+                        UnitAmount = (long)(item.Bijou.Price * 100), // prix en centimes
                         Currency = "eur",
                         ProductData = new SessionLineItemPriceDataProductDataOptions
                         {
                             Name = item.Bijou.Name,
                             Description = item.Bijou.Description,
-                        },
-                    },
-                    Quantity = item.Quantite,
-                });
-            }
-            var options = new SessionCreateOptions // modifie les options de la session stripe
-            {
-                LineItems = lineItems,
-                Mode = "payment",
-                SuccessUrl = "https://votre_site.com/success",
-                CancelUrl = "https://votre_site.com/cancel",
-            };
 
+                        }
+
+                    },
+                    Quantity = item.Quantite
+                };
+                options.LineItems.Add(sessionListItem); // ajoute l'item stripe aux options de la sessions
+            }
 
             try
             {
                 var service = new SessionService();
-                Session session = await service.CreateAsync(options);
-
-                Response.Headers.Add("Location", session.Url);
-                return new StatusCodeResult(303);
+                Session session = service.Create(options); // créer la session avec les options sélectionnés
+                return Ok(session.Url);
             }
             catch (StripeException e)
             {
