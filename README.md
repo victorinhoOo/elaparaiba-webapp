@@ -17,15 +17,31 @@ Le site web Elaparaïba est une plateforme de vente de bijoux artisanaux en lign
 ## Captures d'écrans
 ![accueil 1](https://github.com/dept-info-iut-dijon/C2_Elaparaiba_SAE3/assets/116215966/c75a755a-b336-4e00-b63e-3690332ace28)
 
+
+
 ![Les_bijoux](https://github.com/dept-info-iut-dijon/C2_Elaparaiba_SAE3/assets/116215966/57f2dda9-981b-4a95-a5d7-2cb13002149f)
+
+
 
 ![sue mesure](https://github.com/dept-info-iut-dijon/C2_Elaparaiba_SAE3/assets/116215966/16e7492e-bd1a-412a-bc62-12b1aa762891)
 
+
+
 ![Savoir-faire](https://github.com/dept-info-iut-dijon/C2_Elaparaiba_SAE3/assets/116215966/887eef95-fa67-4d9b-a29d-52a6bdecd7b3)
+
+
 
 ![ou me trouver](https://github.com/dept-info-iut-dijon/C2_Elaparaiba_SAE3/assets/116215966/bbaa648f-1f93-4bfc-94dc-6c79e84cabf9)
 
 
+
+## NOTE AUX UTILISATEURS DE LA VERSION BETA : 
+
+Les cookies sont stockées pour une durée de 1 semaines dans le navigateur. Cependant, comme un FAKEDao est utilisé pour le stockage des cookies côté serveur, ceux-ci sont supprimés à chaque lancement de l'API.
+Ainsi le cookie stocké dans le navigateur n'a plus d'équivalent côté serveur.
+Pour le bon fonctionnement du site, il est donc nécessaire de supprimer le cookie du navigateur en faisant : clic droit sur la page --> inspecter --> stockage --> clic droit sur le cookie "PanierToken" --> supprimer
+
+Ceci sera corrigé dans les versions ultérieures lors de l'intégration de la base de données.
 
 
 ## Auteurs
