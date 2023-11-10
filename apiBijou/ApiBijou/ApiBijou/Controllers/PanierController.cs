@@ -31,14 +31,19 @@ namespace API_SAE.Controllers
         /// <param name="token">token unique de l'utilisateur</param>
         /// <returns>réussite ou non de la requête</returns>
         [HttpPost("AjouterAuPanier")]
-        public IActionResult AjouterAuPanier(string token, [FromBody] Bijou bijou)
+        public IActionResult AjouterAuPanier()
         {
-            if (bijou != null)
+            IActionResult result = BadRequest("Problème lors de l'ajout");
+            string token = Request.Headers["token"];
+            var id = Request.Headers["id"];
+            Bijou bijou = BijouManager.Instance.GetBijouById(Convert.ToInt32(id));  
+            if (bijou != null && token != null)
             {
                 panierManager.AjouterBijouAuPanier(token, bijou);
-                return Ok("Article ajouté au panier !");
+                result = Ok("Article ajouté au panier !");
             }
-            return BadRequest("Erreur lors de l'ajout au panier.");
+            
+            return result;
         }
 
         /// <summary>
@@ -95,10 +100,6 @@ namespace API_SAE.Controllers
             result = Ok(ct);
             return result;
         }
-
-
-
-
 
     }
 }

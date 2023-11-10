@@ -100,26 +100,17 @@ async function ajouterAuPanier(bijou) {
         if(panierTokenValue === ""){ //Le token n'est pas définie
             panierTokenValue = await setPanierToken();
         }
-    const apiUrl = `https://localhost:7252/Panier/AjouterAuPanier?token=${panierTokenValue}`; // URL du contrôleur
+    const apiUrl = `https://localhost:7252/Panier/AjouterAuPanier`; // URL du contrôleur
     try {
         // Requête vers l'API avec la méthode POST
         const response = await fetch(apiUrl, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                NbPhotos: bijou.nbPhotos,
-                Id: bijou.idBijou,
-                Name: bijou.nomBijou,
-                Description: bijou.descriptionBijou,
-                Price: bijou.prixBijou,
-                Quantity: bijou.stockBijou,
-                DatePublication: bijou.datepublication,
-                Type: bijou.type,
-                DossierPhoto: bijou.dossierPhoto
-            }) // Convertit les données du bijou en chaîne JSON
-        });
+                'Content-Type': 'application/json',
+                'token': panierTokenValue,
+                'id': bijou.idBijou
+            }
+        })
 
         if (!response.ok) {
             throw new Error('Réponse réseau non ok');
@@ -128,11 +119,12 @@ async function ajouterAuPanier(bijou) {
         // Gére la réponse du serveur
         const responseData = await response.text();
         console.log(responseData);
-
         updatePanierCount();
+        
     } catch (error) {
         console.error("Erreur de requête:", error);
     }
+    
 }
 document.addEventListener('DOMContentLoaded', function () {
     var btnPanier = document.getElementById('btnPanier');
