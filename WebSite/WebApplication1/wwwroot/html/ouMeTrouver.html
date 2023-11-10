@@ -62,19 +62,26 @@
     </div>
     <br><br><br>
     <!-- Question de client en form -->
-    <div id="question">
-        <h2 id="h2">Avez-vous une question ?</h2>
-        <form>
-            <div id="mail">
-                <label for="email" id="label_mail">E-mail :</label>
-                <input type="text" id="email" name="Email" required placeholder="Entrer votre adresse mail ">
+            <div id="question">
+                <h2 id="h2">Avez-vous une question ?</h2>
+                <form>
+                    <div id="mail">
+                        <label for="email" id="label_mail">E-mail :</label>
+                        <input type="text" id="email" name="Email" required placeholder="Entrer votre adresse mail ">
+                    </div>
+                    <textarea id="message" name="Message" placeholder=" Veuillez saisir votre message" rows="9" cols="60"></textarea>
+                    <div id="envoyer">
+                        <input id="valid" type="submit" value="Envoyer" class="bouton">
+                    </div>
+                </form>
+                <div id="popup" class="popup">
+                    <div class="popup-content">
+                        <span class="close-popup" id="closePopupBtn">&times;</span>
+                        <p>Merci pour votre demande ! Je vous recontacterai dans les plus bref délais.</p>
+                        <!-- Ajoutez ici le contenu que vous souhaitez afficher dans le pop-up -->
+                    </div>
+                </div>
             </div>
-            <textarea id="message" name="Message" placeholder=" Veuillez saisir votre message" rows="9" cols="60"></textarea>
-            <div id="envoyer">
-                <input id="valid" type="submit" value="Envoyer" class="bouton">
-            </div>
-        </form>
-    </div>
     <!-- Question de client  -->
     <!-- affichage generale -->
     <footer>

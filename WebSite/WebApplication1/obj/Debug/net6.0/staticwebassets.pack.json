@@ -1,6 +1,7 @@
 {
   "Files": [
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\ms292435\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\css\\bijoux.css",
       "PackagePath": "staticwebassets\\css\\bijoux.css"
     },
@@ -1302,6 +1303,1309 @@
     },
     {
       "Id": "C:\\Users\\ms292435\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+=======
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\css\\bijoux.css",
+      "PackagePath": "staticwebassets\\css\\bijoux.css"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\css\\bijouxpresentation.css",
+      "PackagePath": "staticwebassets\\css\\bijouxpresentation.css"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\css\\commun.css",
+      "PackagePath": "staticwebassets\\css\\commun.css"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\css\\index.css",
+      "PackagePath": "staticwebassets\\css\\index.css"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\css\\meTrouver.css",
+      "PackagePath": "staticwebassets\\css\\meTrouver.css"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\css\\panier.css",
+      "PackagePath": "staticwebassets\\css\\panier.css"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\css\\savoirfaire.css",
+      "PackagePath": "staticwebassets\\css\\savoirfaire.css"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\css\\surMesure.css",
+      "PackagePath": "staticwebassets\\css\\surMesure.css"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\font\\Caveat-Regular.ttf",
+      "PackagePath": "staticwebassets\\font\\Caveat-Regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\html\\bijoux.html",
+      "PackagePath": "staticwebassets\\html\\bijoux.html"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\html\\bijouxpresentation.html",
+      "PackagePath": "staticwebassets\\html\\bijouxpresentation.html"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\html\\index.html",
+      "PackagePath": "staticwebassets\\html\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\html\\ouMeTrouver.html",
+      "PackagePath": "staticwebassets\\html\\ouMeTrouver.html"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\html\\panier.html",
+      "PackagePath": "staticwebassets\\html\\panier.html"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\html\\savoirFaire.html",
+      "PackagePath": "staticwebassets\\html\\savoirFaire.html"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\html\\surMesure.html",
+      "PackagePath": "staticwebassets\\html\\surMesure.html"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\html\\test.html",
+      "PackagePath": "staticwebassets\\html\\test.html"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\DSC00071.JPG",
+      "PackagePath": "staticwebassets\\images\\DSC00071.JPG"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra39\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra39\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra39\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra39\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra39\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra39\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra39\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra39\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra39\\5.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra39\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra42\\20220817_094759.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra42\\20220817_094759.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra42\\20230911_105528.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra42\\20230911_105528.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra42\\20230911_105544.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra42\\20230911_105544.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra42\\20230911_105609.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra42\\20230911_105609.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra52\\20230911_105736.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra52\\20230911_105736.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra52\\20230911_105741.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra52\\20230911_105741.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra62\\20230519_161706.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra62\\20230519_161706.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra62\\20230911_104757.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra62\\20230911_104757.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra62\\20230911_105412.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra62\\20230911_105412.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra67\\20230519_162315.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra67\\20230519_162315.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra67\\20230911_105631.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra67\\20230911_105631.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra67\\20230911_105638.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra67\\20230911_105638.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra67\\20230911_105656.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra67\\20230911_105656.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra71\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra71\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra71\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra71\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra71\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra71\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra71\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra71\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra72\\20230823_104738.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra72\\20230823_104738.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra72\\20230911_104603.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra72\\20230911_104603.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra72\\20230911_105020.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra72\\20230911_105020.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra73\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra73\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra73\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra73\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra73\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra73\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra73\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra73\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra73\\5.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra73\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra74\\20230823_105248.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra74\\20230823_105248.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra74\\20230911_104855.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra74\\20230911_104855.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra74\\20230911_104907.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra74\\20230911_104907.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra75\\20230823_105347.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra75\\20230823_105347.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra75\\20230823_105534.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra75\\20230823_105534.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra75\\20230911_104654.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra75\\20230911_104654.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra75\\20230911_105003.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra75\\20230911_105003.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra76\\20230823_105412.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra76\\20230823_105412.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra76\\20230823_105447.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra76\\20230823_105447.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra76\\20230911_105710.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra76\\20230911_105710.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra76\\20230911_105717.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra76\\20230911_105717.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra77\\20230823_105715.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra77\\20230823_105715.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra77\\20230911_105206.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra77\\20230911_105206.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra77\\20230911_105212.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra77\\20230911_105212.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra78\\20230823_105636.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra78\\20230823_105636.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra78\\20230823_105834.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra78\\20230823_105834.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra78\\20230911_105227.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra78\\20230911_105227.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra78\\20230911_105233.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra78\\20230911_105233.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra9\\20230911_105125.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra9\\20230911_105125.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra9\\20230911_105321.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra9\\20230911_105321.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra9\\20230911_105329.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra9\\20230911_105329.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra9\\20230914_165101.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra9\\20230914_165101.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifBracelets\\Bra9\\Thumbs.db",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifBracelets\\Bra9\\Thumbs.db"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col27\\20211125_185405.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col27\\20211125_185405.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col27\\20230915_143651.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col27\\20230915_143651.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col27\\20230915_143656.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col27\\20230915_143656.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col27\\20230915_143702.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col27\\20230915_143702.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col27\\20230915_155739.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col27\\20230915_155739.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col36\\20230915_151437.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col36\\20230915_151437.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col36\\20230915_151511.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col36\\20230915_151511.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col36\\20230915_160624.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col36\\20230915_160624.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col36\\20230915_160631.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col36\\20230915_160631.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col36\\20230915_160643.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col36\\20230915_160643.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col43\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col43\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col43\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col43\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col43\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col43\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col43\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col43\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col50\\20230915_151335.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col50\\20230915_151335.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col50\\20230915_151340.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col50\\20230915_151340.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col50\\20230915_151357.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col50\\20230915_151357.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col50\\20230915_151404.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col50\\20230915_151404.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col50\\20230915_160454.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col50\\20230915_160454.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col50\\20230915_160458.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col50\\20230915_160458.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col60\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col60\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col60\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col60\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col60\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col60\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col60\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col60\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col60\\5.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col60\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col60\\6.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col60\\6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col60\\7.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col60\\7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col60\\8.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col60\\8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col60\\9.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col60\\9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col61\\20230823_103444.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col61\\20230823_103444.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col61\\20230914_184842.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col61\\20230914_184842.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col61\\20230914_184923.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col61\\20230914_184923.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col61\\20230914_185102.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col61\\20230914_185102.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col61\\20230915_143117.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col61\\20230915_143117.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col61\\20230915_143152.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col61\\20230915_143152.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col61\\20230915_143233.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col61\\20230915_143233.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col61\\20230915_143328.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col61\\20230915_143328.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col62\\20230823_103534.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col62\\20230823_103534.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col62\\20230915_150556.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col62\\20230915_150556.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col62\\20230915_150559.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col62\\20230915_150559.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col62\\20230915_151055.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col62\\20230915_151055.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col62\\20230915_151129.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col62\\20230915_151129.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col62\\20230915_161050.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col62\\20230915_161050.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col63\\20230823_103516.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col63\\20230823_103516.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col63\\20230915_141808.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col63\\20230915_141808.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col63\\20230915_141814.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col63\\20230915_141814.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col63\\20230915_142423.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col63\\20230915_142423.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col63\\20230915_142816.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col63\\20230915_142816.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col63\\20230915_155614.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col63\\20230915_155614.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col64\\20230823_103615.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col64\\20230823_103615.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col64\\20230915_141411.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col64\\20230915_141411.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col64\\20230915_141436.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col64\\20230915_141436.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col64\\20230915_150835.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col64\\20230915_150835.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col66\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col66\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col66\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col66\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col66\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col66\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col66\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col66\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col66\\5.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col66\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col66\\6.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col66\\6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col66\\7.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col66\\7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col67\\20230823_104112.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col67\\20230823_104112.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col67\\20230915_142546.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col67\\20230915_142546.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col67\\20230915_142612.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col67\\20230915_142612.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col67\\20230915_142640.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col67\\20230915_142640.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col67\\20230915_160242.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col67\\20230915_160242.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosDescriptifColliers\\Col67\\20230915_160352.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosDescriptifColliers\\Col67\\20230915_160352.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosFabrication\\dessinfabric.png",
+      "PackagePath": "staticwebassets\\images\\PhotosFabrication\\dessinfabric.png"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosFabrication\\fabric.JPG",
+      "PackagePath": "staticwebassets\\images\\PhotosFabrication\\fabric.JPG"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosFabrication\\plaquage.JPG",
+      "PackagePath": "staticwebassets\\images\\PhotosFabrication\\plaquage.JPG"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosFabrication\\polissage.JPG",
+      "PackagePath": "staticwebassets\\images\\PhotosFabrication\\polissage.JPG"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosFabrication\\savoirfaire.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosFabrication\\savoirfaire.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosFabrication\\savoirfairecover.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosFabrication\\savoirfairecover.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosFabrication\\soudure1.JPG",
+      "PackagePath": "staticwebassets\\images\\PhotosFabrication\\soudure1.JPG"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosFabrication\\soudure2.JPG",
+      "PackagePath": "staticwebassets\\images\\PhotosFabrication\\soudure2.JPG"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosFabrication\\tableau.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosFabrication\\tableau.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague61\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague61\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague61\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague61\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague61\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague61\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague61\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague61\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague62\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague62\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague62\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague62\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague62\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague62\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague63\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague63\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague63\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague63\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague63\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague63\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague63\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague63\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague64\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague64\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague64\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague64\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague64\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague64\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague64\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague64\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague64\\5.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague64\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague65\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague65\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague65\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague65\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague65\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague65\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague65\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague65\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague68\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague68\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague68\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague68\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague68\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague68\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague68\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague68\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague71\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague71\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague71\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague71\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague71\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague71\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague75\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague75\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague75\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague75\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague75\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague75\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague75\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague75\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague76\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague76\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague76\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague76\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague76\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague76\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague78\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague78\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague78\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague78\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague78\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague78\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBagues\\Bague78\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBagues\\Bague78\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo18\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo18\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo18\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo18\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo18\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo18\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo18\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo18\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo24\\20210330_115127.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo24\\20210330_115127.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo24\\20230908_182444.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo24\\20230908_182444.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo24\\20230908_182449.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo24\\20230908_182449.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo24\\20230908_182512.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo24\\20230908_182512.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo24\\bo24_grey.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo24\\bo24_grey.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo43\\20220817_095155.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo43\\20220817_095155.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo43\\20230908_184227.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo43\\20230908_184227.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo43\\20230908_184235.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo43\\20230908_184235.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo51\\20230908_184138.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo51\\20230908_184138.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo51\\20230908_184146.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo51\\20230908_184146.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo51\\20230908_184155.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo51\\20230908_184155.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo59\\20220930_164200.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo59\\20220930_164200.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo59\\20230908_181127.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo59\\20230908_181127.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo59\\20230908_181136.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo59\\20230908_181136.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo59\\20230908_181247.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo59\\20230908_181247.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo61\\20230519_175812.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo61\\20230519_175812.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo61\\20230908_181658.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo61\\20230908_181658.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo61\\20230908_181706.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo61\\20230908_181706.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo62\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo62\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo62\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo62\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo62\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo62\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo62\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo62\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo64\\20230519_175541.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo64\\20230519_175541.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo64\\20230908_182848.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo64\\20230908_182848.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo64\\20230908_182853.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo64\\20230908_182853.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo64\\20230908_184018.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo64\\20230908_184018.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo65\\20230519_175503.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo65\\20230519_175503.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo65\\20230519_175506.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo65\\20230519_175506.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo65\\20230908_181612.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo65\\20230908_181612.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo65\\20230908_181621.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo65\\20230908_181621.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo65\\20230908_181624.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo65\\20230908_181624.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo65\\20230908_181642.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo65\\20230908_181642.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo66\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo66\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo66\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo66\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo66\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo66\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo66\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo66\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo66\\5.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo66\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo67\\20230823_110301.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo67\\20230823_110301.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo67\\20230823_110306.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo67\\20230823_110306.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo67\\20230823_111427.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo67\\20230823_111427.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo67\\20230908_182750.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo67\\20230908_182750.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo68\\20230823_110822.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo68\\20230823_110822.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo68\\20230823_111613.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo68\\20230823_111613.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo68\\20230908_181319.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo68\\20230908_181319.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo68\\20230908_181323.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo68\\20230908_181323.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo68\\20230908_181346.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo68\\20230908_181346.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo68\\20230908_181357.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo68\\20230908_181357.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo69\\20230823_110155.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo69\\20230823_110155.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo69\\20230823_111813.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo69\\20230823_111813.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo69\\20230908_181914.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo69\\20230908_181914.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo69\\20230908_181922.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo69\\20230908_181922.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo70\\20230823_110421.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo70\\20230823_110421.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo70\\20230823_110436.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo70\\20230823_110436.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo70\\20230823_111953.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo70\\20230823_111953.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo70\\20230908_182611.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo70\\20230908_182611.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo70\\20230908_182617.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo70\\20230908_182617.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\PhotosdescriptifBo\\Bo70\\20230908_182646.jpg",
+      "PackagePath": "staticwebassets\\images\\PhotosdescriptifBo\\Bo70\\20230908_182646.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\Thumbs.db",
+      "PackagePath": "staticwebassets\\images\\Thumbs.db"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\logo_elaparaïba.png",
+      "PackagePath": "staticwebassets\\images\\logo_elaparaïba.png"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\surMesure\\20210212_143426.jpg",
+      "PackagePath": "staticwebassets\\images\\surMesure\\20210212_143426.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\surMesure\\bP1 - Copie.jpg",
+      "PackagePath": "staticwebassets\\images\\surMesure\\bP1 - Copie.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\surMesure\\bP1.jpg",
+      "PackagePath": "staticwebassets\\images\\surMesure\\bP1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\surMesure\\bP1_mobile.jpg",
+      "PackagePath": "staticwebassets\\images\\surMesure\\bP1_mobile.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\surMesure\\bP2.jpg",
+      "PackagePath": "staticwebassets\\images\\surMesure\\bP2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\surMesure\\bP3.jpg",
+      "PackagePath": "staticwebassets\\images\\surMesure\\bP3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\surMesure\\bP4.jpg",
+      "PackagePath": "staticwebassets\\images\\surMesure\\bP4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\surMesure\\bP5.jpg",
+      "PackagePath": "staticwebassets\\images\\surMesure\\bP5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\surMesure\\bP6.jpg",
+      "PackagePath": "staticwebassets\\images\\surMesure\\bP6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\surMesure\\bP7.jpg",
+      "PackagePath": "staticwebassets\\images\\surMesure\\bP7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\test.jpg",
+      "PackagePath": "staticwebassets\\images\\test.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\js\\bijou.js",
+      "PackagePath": "staticwebassets\\js\\bijou.js"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\js\\bijoupresentation.js",
+      "PackagePath": "staticwebassets\\js\\bijoupresentation.js"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\js\\commun.js",
+      "PackagePath": "staticwebassets\\js\\commun.js"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\js\\cookieTest.js",
+      "PackagePath": "staticwebassets\\js\\cookieTest.js"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\js\\cookies.js",
+      "PackagePath": "staticwebassets\\js\\cookies.js"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\js\\index.js",
+      "PackagePath": "staticwebassets\\js\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\js\\ouMeTrouver.js",
+      "PackagePath": "staticwebassets\\js\\ouMeTrouver.js"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\js\\panier.js",
+      "PackagePath": "staticwebassets\\js\\panier.js"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\js\\surMesure.js",
+      "PackagePath": "staticwebassets\\js\\surMesure.js"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+>>>>>>> a54938d5864eecdd2d8fbf0bf29f966bc2a33dc3
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
