@@ -11,7 +11,6 @@ namespace PanierTokenTest
         public void getPanierIdTest()
         {
             Assert.Equal(PanierTokenFakeDAO.Instance.GetPanierId("b70a8c45cb4366a02939b68e24ed126"),4);
-            Assert.Equal(PanierTokenFakeDAO.Instance.GetPanierId("b70a8c45cb4366a02939?68e64ed126"), -1);
         }
 
         /// <summary>

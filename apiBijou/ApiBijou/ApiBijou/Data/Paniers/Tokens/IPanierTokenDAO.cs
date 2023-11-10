@@ -10,7 +10,7 @@
         /// Renvoi l'id du Pannier associé au token
         /// </summary>
         /// <param name="token">Token associé au pannier</param>
-        /// <returns></returns>
+        /// <returns>id du panier</returns>
         public int GetPanierId(string token);
 
     }
