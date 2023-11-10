@@ -89,7 +89,7 @@ namespace ApiBijou.Data.Paniers
         {
             string contenuFichier = File.ReadAllText(ObtenirCheminJson(idPanier));
             Panier panier = JsonConvert.DeserializeObject<Panier>(contenuFichier);
-            return panier.Total;
+            return panier.Total();
         }
     }
 }

@@ -82,6 +82,7 @@ async function fetchPanier() {
         console.error("Erreur de requête:", error);
     }
 }
+
 async function supprimerDuPanier(id) {
     var panierTokenValue = getPanierToken("PanierToken");
 
@@ -118,7 +119,14 @@ async function supprimerDuPanier(id) {
         console.error("Erreur de requête:", error);
     }
 }
-
+//Renvoi le cout total du panier
+function CoutPanier() {
+    var coutPanier = 0;
+    bijouxPanier.forEach(item => {
+        coutPanier += item.bijou.prixBijou * item.quantite;
+    });
+    return coutPanier;
+}
 
 //Fonction d'affichage des bijoux
 async function displayPanier(bijoux) {
@@ -158,11 +166,11 @@ async function displayPanier(bijoux) {
         quantiteBijou.classList.add("item-quantity");
         quantiteBijou.textContent = bijou.quantite + ` x `;
 
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        
         //Prix total
-        const prixTotal = document.getElementById("total-price");                  //Faire la méthode qui permet de calculer le prix total
-        prixTotal.textContent = ``; // F
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        const prixTotal = document.getElementById("total-price");
+        prixTotal.textContent = CoutPanier() + `€`; 
+        
 
 
 
@@ -252,5 +260,8 @@ document.addEventListener("DOMContentLoaded", async function () {
     await fetchPanier();
     displayPanier(bijouxPanier);
 });
+
+
+
 
 window.onload = updatePanierCount();
