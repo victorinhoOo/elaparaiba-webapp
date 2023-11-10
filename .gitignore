@@ -445,3 +445,5 @@ WebSite/.vs/Elaparaiba/v17/.suo
 /WebSite/.vs/Elaparaiba/v17/.suo
 /WebSite/WebApplication1/obj/Debug/net6.0/Elaparaiba.assets.cache
 /WebSite/WebApplication1/obj/Debug/net6.0/Elaparaiba.GeneratedMSBuildEditorConfig.editorconfig
+/apiBijou/ApiBijou/ApiBijouxTests/obj/Debug/net6.0/ApiBijouxTests.csproj.AssemblyReference.cache
+/.gitignore
