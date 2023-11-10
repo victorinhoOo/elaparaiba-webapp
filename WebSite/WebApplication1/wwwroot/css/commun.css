@@ -83,6 +83,10 @@ nav {
     position: relative;
 }
 
+    #panier:hover {
+        color: #03889F;
+    }
+
 #panierCount {
     font-size: 15px;
     border-radius: 50%;

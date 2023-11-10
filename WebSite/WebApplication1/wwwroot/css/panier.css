@@ -109,50 +109,54 @@
 .fas.fa-trash:hover{
     color:red;
 }
-
-@media (max-width: 768px) {
-    .logoG{
-        display:none;
-    }
-
-    .shopping-cart {
-        width: 100%; /* Modifier la largeur à 100% pour une adaptation responsive */
-        height: auto;
-        background-color: #f9f9f9;
-        padding: 20px;
-        border: 1px solid #e1e1e1;
-        border-radius: 5px;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .item img {
-
-        width: 130px; /* Ajustement de la largeur de l'image pour remplir la grille */
-        margin-bottom: 10px; /* Ajout de marge en bas de l'image pour l'espacement */
-        object-fit:cover;
-    }
-
-    .item{
-        grid-template-columns:45% 30% 10% auto auto;
-    }
-
-    .item-name,
-    .item-quantity,
-    .item-price,
-    .btn-supprimer-bijou {
-        width: auto; /* Chaque élément prend toute la largeur */
-        margin-bottom: 10px; /* Ajout de marge en bas pour l'espacement */
-    }
-
-    .item-name,
-    .item-quantity,
-    .item-price {
-        flex: 1; /* Les trois premiers éléments (name, quantity, price) prennent une part égale de l'espace disponible */
-    }
-
-    .btn-supprimer-bijou {
-        width: auto; /* Le bouton de suppression prend la largeur nécessaire */
+@media (max-width: 1000px) {
+    .shopping-cart{
+        width:100%;
     }
 }
+
+    @media (max-width: 768px) {
+        .logoG {
+            display: none;
+        }
+
+        .shopping-cart {
+            width: 100%; /* Modifier la largeur à 100% pour une adaptation responsive */
+            height: auto;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #e1e1e1;
+            border-radius: 5px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .item img {
+            width: 130px; /* Ajustement de la largeur de l'image pour remplir la grille */
+            margin-bottom: 10px; /* Ajout de marge en bas de l'image pour l'espacement */
+            object-fit: cover;
+        }
+
+        .item {
+            grid-template-columns: 45% 30% 10% auto auto;
+        }
+
+        .item-name,
+        .item-quantity,
+        .item-price,
+        .btn-supprimer-bijou {
+            width: auto; /* Chaque élément prend toute la largeur */
+            margin-bottom: 10px; /* Ajout de marge en bas pour l'espacement */
+        }
+
+        .item-name,
+        .item-quantity,
+        .item-price {
+            flex: 1; /* Les trois premiers éléments (name, quantity, price) prennent une part égale de l'espace disponible */
+        }
+
+        .btn-supprimer-bijou {
+            width: auto; /* Le bouton de suppression prend la largeur nécessaire */
+        }
+    }

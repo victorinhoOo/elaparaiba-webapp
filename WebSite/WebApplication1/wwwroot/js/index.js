@@ -5,7 +5,6 @@ var controls;
 var num_image = 0;
 
 function main() {
-    updatePanierCount();
     initNewsSlider();
     fetchInstagramPhotos();
     id = setInterval(nextImage, 5000);
@@ -14,7 +13,8 @@ function main() {
         controls[i].onclick = click; //onclick appellera click
        }
     document.getElementById("auto").addEventListener("click", click_cb);
-    
+    updatePanierCount();
+
 }
 
 
