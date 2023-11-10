@@ -12,7 +12,7 @@ body {
 }
 
 .confirmation {
-    font-size: 45px;
+    font-size: 35px;
     border: 3px solid #333;
     padding: 50px;
     padding-top: 30px;
@@ -27,33 +27,17 @@ body {
     position: absolute;
     bottom: 0;
     right: 0;
-    background-color: #3498db;
+    background-color: #03889F;
     color: #fff;
     padding: 10px 20px;
-    border: none;
+    border: 2px solid #03889F;
     border-radius: 5px;
     cursor: pointer;
 }
-
-.bouton {
-    border: solid transparent;
-    margin-top: 10px;
-    border-radius: 5px;
-    border-width: 1px;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    letter-spacing: 1px;
-    font-weight: bold;
-    border-color: #03889f;
-    background-color: white;
-    color: #03889f;
-}
-
-    .bouton:hover {
-        cursor: pointer;
-        background-color: #03889f;
-        color: white;
+    .continuer-btn:hover {
+        background-color: white;
+        color: #03889F;
+        border-color: #03889F;
     }
 
 i.fa-regular.fa-thumbs-up {

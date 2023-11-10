@@ -37,8 +37,54 @@ namespace ApiBijou.Controllers
             {
                 LineItems = new List<SessionLineItemOptions>(),
                 Mode = "payment",
-                SuccessUrl = "https://localhost:7230/",
-                CancelUrl = "https://localhost:7230/"
+                SuccessUrl = "https://localhost:7230/html/paiement_reussi.html",
+                CancelUrl = "https://localhost:7230/html/paiement_echoue.html",
+                ShippingOptions = new List<SessionShippingOptionOptions>
+                {
+                    new SessionShippingOptionOptions // Créé une méthode de livraison (collissimo)
+                    {
+                        ShippingRateData = new SessionShippingOptionShippingRateDataOptions
+                        {
+                            Type = "fixed_amount",
+                            FixedAmount = new SessionShippingOptionShippingRateDataFixedAmountOptions
+                            {
+                                Amount = 495, // Colissimo livraison en centimes
+                                Currency = "eur",
+                            },
+                            DisplayName = "Colissimo - Livraison à domicile entre 2-3 jours ouvrés",
+                            
+                            DeliveryEstimate = new SessionShippingOptionShippingRateDataDeliveryEstimateOptions
+                            {
+                                Minimum = new SessionShippingOptionShippingRateDataDeliveryEstimateMinimumOptions
+                                {
+                                    Unit = "business_day",
+                                    Value = 2,
+                                },
+                                Maximum = new SessionShippingOptionShippingRateDataDeliveryEstimateMaximumOptions
+                                {
+                                    Unit = "business_day",
+                                    Value = 3,
+                                }
+                            }
+                        }
+                    },
+
+                    new SessionShippingOptionOptions // Créé une méthode de livraison (retrait en magasin)
+                    {
+                        ShippingRateData = new SessionShippingOptionShippingRateDataOptions
+                        {
+                            Type = "fixed_amount",
+                            FixedAmount = new SessionShippingOptionShippingRateDataFixedAmountOptions
+                            {
+                                Amount = 0,
+                                Currency = "eur",
+                            },
+                            DisplayName = "Retrait en magasin - Gratuit, 560 route du Bourg, 71500, SAINT USAGE, France",                          
+                        }
+                    },
+
+
+                }
             };
 
             var panier = panierManager.ObtenirPanier(token); // récupère le panier de l'utilisateur
@@ -62,8 +108,6 @@ namespace ApiBijou.Controllers
                 };
                 options.LineItems.Add(sessionListItem); // ajoute l'item stripe aux options de la sessions
             }
-
-
 
             try
             {

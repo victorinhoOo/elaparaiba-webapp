@@ -1,6 +1,14 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\css\\Paiement_réussi.css",
+      "PackagePath": "staticwebassets\\css\\Paiement_réussi.css"
+    },
+    {
+      "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\css\\Paiement_échoué.css",
+      "PackagePath": "staticwebassets\\css\\Paiement_échoué.css"
+    },
+    {
       "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\css\\bijoux.css",
       "PackagePath": "staticwebassets\\css\\bijoux.css"
     },
@@ -59,6 +67,14 @@
     {
       "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\html\\ouMeTrouver.html",
       "PackagePath": "staticwebassets\\html\\ouMeTrouver.html"
+    },
+    {
+      "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\html\\paiement_echoue.html",
+      "PackagePath": "staticwebassets\\html\\paiement_echoue.html"
+    },
+    {
+      "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\html\\paiement_reussi.html",
+      "PackagePath": "staticwebassets\\html\\paiement_reussi.html"
     },
     {
       "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\html\\panier.html",
@@ -993,8 +1009,16 @@
       "PackagePath": "staticwebassets\\images\\Thumbs.db"
     },
     {
+      "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\favicon.ico",
+      "PackagePath": "staticwebassets\\images\\favicon.ico"
+    },
+    {
       "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\logo_elaparaïba.png",
       "PackagePath": "staticwebassets\\images\\logo_elaparaïba.png"
+    },
+    {
+      "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\logo_final_elaparaiba.png",
+      "PackagePath": "staticwebassets\\images\\logo_final_elaparaiba.png"
     },
     {
       "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\surMesure\\20210212_143426.jpg",
