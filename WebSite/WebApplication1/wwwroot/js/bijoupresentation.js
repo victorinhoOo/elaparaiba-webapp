@@ -97,9 +97,9 @@ document.addEventListener("DOMContentLoaded", () => {
 async function ajouterAuPanier(bijou) {
     //Créer un paniertoken si l'utilisateur en a pas
     var panierTokenValue = getPanierToken("PanierToken");
-        if(panierTokenValue === ""){ //Le token n'est pas définie
-            panierTokenValue = await setPanierToken();
-        }
+    if (panierTokenValue === "") { //Le token n'est pas définie
+        panierTokenValue = await setPanierToken();
+    }
     const apiUrl = `https://localhost:7252/Panier/AjouterAuPanier?token=${panierTokenValue}`; // URL du contrôleur
     try {
         // Requête vers l'API avec la méthode POST
@@ -182,3 +182,5 @@ document.addEventListener('DOMContentLoaded', function () {
 function changerImagePrincipale(nouvelleImageSrc) {
     bijouImage.src = nouvelleImageSrc;
 }
+
+export { Bijou };

@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\Paiement_échoué.css"
     },
     {
+      "Id": "C:\\Users\\mateo\\OneDrive\\Bureau\\C2\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\css\\administration.css",
+      "PackagePath": "staticwebassets\\css\\administration.css"
+    },
+    {
       "Id": "C:\\Users\\mateo\\OneDrive\\Bureau\\C2\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\css\\bijoux.css",
       "PackagePath": "staticwebassets\\css\\bijoux.css"
     },
@@ -51,6 +55,10 @@
     {
       "Id": "C:\\Users\\mateo\\OneDrive\\Bureau\\C2\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\font\\Caveat-Regular.ttf",
       "PackagePath": "staticwebassets\\font\\Caveat-Regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\mateo\\OneDrive\\Bureau\\C2\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\html\\administration\\administration.html",
+      "PackagePath": "staticwebassets\\html\\administration\\administration.html"
     },
     {
       "Id": "C:\\Users\\mateo\\OneDrive\\Bureau\\C2\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\html\\bijoux.html",
@@ -1063,6 +1071,10 @@
     {
       "Id": "C:\\Users\\mateo\\OneDrive\\Bureau\\C2\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\test.jpg",
       "PackagePath": "staticwebassets\\images\\test.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mateo\\OneDrive\\Bureau\\C2\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\js\\administration.js",
+      "PackagePath": "staticwebassets\\js\\administration.js"
     },
     {
       "Id": "C:\\Users\\mateo\\OneDrive\\Bureau\\C2\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\js\\bijou.js",

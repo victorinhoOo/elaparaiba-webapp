@@ -1,0 +1,66 @@
+#listBijoux {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* Utilisation de space-between pour un espacement égal entre les éléments */
+    padding: 10px;
+    /* Ajout d'un padding pour un espacement extérieur */
+}
+
+.bijou {
+    border: 1px solid #03889f;
+    margin-bottom: 10px;
+    /* Utilisation de margin-bottom pour un espacement entre les éléments */
+    padding: 10px;
+    margin: 1%;
+    width: 200px;
+}
+
+.photoBijou {
+    height: 200px;
+    border: 2px solid #03889f;
+}
+
+
+.photoBijou img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+.nomBijou,
+.quantiteBijou,
+.prixBijoy,
+.boutonModifier {
+    margin-top: 10px;
+}
+
+.boutonModifier {
+    display: flex;
+    justify-content: center;
+    /* Centre horizontalement les éléments enfants */
+    align-items: center;
+    height: 50px;
+
+}
+
+.boutton {
+    border: solid transparent;
+    border-radius: 5px;
+    border-width: 1px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    border-color: #03889f;
+    background-color: white;
+    color: #03889f;
+}
+
+.boutton:hover {
+    background-color: #025f6d;
+    /* Couleur de fond du bouton au survol */
+    /* Vous pouvez ajuster la couleur au survol selon vos préférences */
+}

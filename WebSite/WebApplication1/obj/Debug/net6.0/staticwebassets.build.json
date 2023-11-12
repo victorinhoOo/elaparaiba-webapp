@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "j4sXje2K8XC4oIkCS5bZk8TN8sCdZEfM4UTaeskDRLk=",
+  "Hash": "15NYtAAOH47t5b9UXIznrKAd2Xr0A2j22WNcF0YYZ8Y=",
   "Source": "Elaparaiba",
   "BasePath": "_content/Elaparaiba",
   "Mode": "Default",
@@ -16,6 +16,23 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\mateo\\OneDrive\\Bureau\\C2\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\css\\administration.css",
+      "SourceId": "Elaparaiba",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mateo\\OneDrive\\Bureau\\C2\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/Elaparaiba",
+      "RelativePath": "css/administration.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\administration.css"
+    },
     {
       "Identity": "C:\\Users\\mateo\\OneDrive\\Bureau\\C2\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\css\\bijoux.css",
       "SourceId": "Elaparaiba",
@@ -236,6 +253,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\font\\Caveat-Regular.ttf"
+    },
+    {
+      "Identity": "C:\\Users\\mateo\\OneDrive\\Bureau\\C2\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\html\\administration\\administration.html",
+      "SourceId": "Elaparaiba",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mateo\\OneDrive\\Bureau\\C2\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/Elaparaiba",
+      "RelativePath": "html/administration/administration.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\html\\administration\\administration.html"
     },
     {
       "Identity": "C:\\Users\\mateo\\OneDrive\\Bureau\\C2\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\html\\bijoux.html",
@@ -4537,6 +4571,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Thumbs.db"
+    },
+    {
+      "Identity": "C:\\Users\\mateo\\OneDrive\\Bureau\\C2\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\js\\administration.js",
+      "SourceId": "Elaparaiba",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mateo\\OneDrive\\Bureau\\C2\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/Elaparaiba",
+      "RelativePath": "js/administration.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\administration.js"
     },
     {
       "Identity": "C:\\Users\\mateo\\OneDrive\\Bureau\\C2\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\js\\bijou.js",
