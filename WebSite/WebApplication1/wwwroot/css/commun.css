@@ -84,6 +84,7 @@ nav {
 }
 
 #panierCount {
+    display:none;
     font-size: 15px;
     border-radius: 50%;
     padding: 8px;
