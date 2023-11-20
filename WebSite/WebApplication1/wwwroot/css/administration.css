@@ -1,3 +1,8 @@
+h1{
+    color: #03889f;
+    text-align: center;
+}
+
 #listBijoux {
     display: flex;
     flex-wrap: wrap;
@@ -50,8 +55,8 @@
     border-radius: 5px;
     border-width: 1px;
     padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     letter-spacing: 1px;
     font-weight: bold;
     border-color: #03889f;
@@ -63,4 +68,9 @@
     background-color: #025f6d;
     /* Couleur de fond du bouton au survol */
     /* Vous pouvez ajuster la couleur au survol selon vos préférences */
+}
+
+h2{
+    margin-left: 2%;
+    color: #03889f;
 }

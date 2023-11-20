@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/modificationBijou.css">
+</head>
+<body>
+    <h1>Modification bijou</h1>
+    <div id="formulaireSurMesure">
+        <form>
+            <fieldset id="informationPersonnel">
+                <legend>Attributs bijou</legend>
+                <div class="form-row nom"> 
+                    <label for="nom">Nom* </label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+                <div class="form-row description"> 
+                    <label for="description">Description* </label>
+                    <input type="text" id="description" name="description" required>
+                </div>      
+                <div class="form-row quantite"> 
+                    <label for="quantite">Quantite* </label>
+                    <input type="text" id="quantite" name="quantite" required>
+                </div>
+                <div class="form-row type"> 
+                    <label for="type">Type* </label>
+                    <select id="type" name="type">
+                        <option value="collier">Collier</option>
+                        <option value="bracelet">Bracelet</option>
+                        <option value="boucles">Boucles d'oreille</option>
+                    </select>
+                </div>
+                <div class="form-row matiere"> 
+                    <label for="matiere">Matiere* </label>
+                    <input type="text" id="matiere" name="matiere" required>
+                </div>
+                <div class="form-row prix"> 
+                    <label for="prix">Prix* </label>
+                    <input type="text" id="prix" name="prix" required>
+                </div>
+                <div class="form-row datePublication"> 
+                    <label for="datePublication">Date de publication* </label>
+                    <input type="date" id="datePublication" name="datePublication" required>
+                </div>
+                <div class="form-row photos"> 
+                    <label for="photos">Photo*</label>
+                    <input type="file" id="photo" name="photo" accept=".pdf,.doc,.docx,.jpg" multiple>
+                </div>
+            </fieldset>
+            <div id="bouton-conteneur">
+                <input type="submit" value="Enregister">
+            </div>
+        </form>
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close-popup" id="closePopupBtn">&times;</span>
+                <p>Merci pour votre demande ! Je vous recontacterai dans les plus bref délais.</p>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

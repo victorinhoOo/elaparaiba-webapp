@@ -79,3 +79,30 @@ C:\Users\mateo\OneDrive\Bureau\C2\C2_Elaparaiba_SAE3\WebSite\WebApplication1\obj
 C:\Users\mateo\OneDrive\Bureau\C2\C2_Elaparaiba_SAE3\WebSite\WebApplication1\obj\Debug\net6.0\Elaparaiba.pdb
 C:\Users\mateo\OneDrive\Bureau\C2\C2_Elaparaiba_SAE3\WebSite\WebApplication1\obj\Debug\net6.0\Elaparaiba.genruntimeconfig.cache
 C:\Users\mateo\OneDrive\Bureau\C2\C2_Elaparaiba_SAE3\WebSite\WebApplication1\obj\Debug\net6.0\ref\Elaparaiba.dll
+C:\Users\mb203509\Desktop\Nouveau dossier\C2_Elaparaiba_SAE3\WebSite\WebApplication1\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\mb203509\Desktop\Nouveau dossier\C2_Elaparaiba_SAE3\WebSite\WebApplication1\bin\Debug\net6.0\appsettings.json
+C:\Users\mb203509\Desktop\Nouveau dossier\C2_Elaparaiba_SAE3\WebSite\WebApplication1\bin\Debug\net6.0\Elaparaiba.staticwebassets.runtime.json
+C:\Users\mb203509\Desktop\Nouveau dossier\C2_Elaparaiba_SAE3\WebSite\WebApplication1\bin\Debug\net6.0\Elaparaiba.exe
+C:\Users\mb203509\Desktop\Nouveau dossier\C2_Elaparaiba_SAE3\WebSite\WebApplication1\bin\Debug\net6.0\Elaparaiba.deps.json
+C:\Users\mb203509\Desktop\Nouveau dossier\C2_Elaparaiba_SAE3\WebSite\WebApplication1\bin\Debug\net6.0\Elaparaiba.runtimeconfig.json
+C:\Users\mb203509\Desktop\Nouveau dossier\C2_Elaparaiba_SAE3\WebSite\WebApplication1\bin\Debug\net6.0\Elaparaiba.dll
+C:\Users\mb203509\Desktop\Nouveau dossier\C2_Elaparaiba_SAE3\WebSite\WebApplication1\bin\Debug\net6.0\Elaparaiba.pdb
+C:\Users\mb203509\Desktop\Nouveau dossier\C2_Elaparaiba_SAE3\WebSite\WebApplication1\obj\Debug\net6.0\Elaparaiba.csproj.AssemblyReference.cache
+C:\Users\mb203509\Desktop\Nouveau dossier\C2_Elaparaiba_SAE3\WebSite\WebApplication1\obj\Debug\net6.0\Elaparaiba.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mb203509\Desktop\Nouveau dossier\C2_Elaparaiba_SAE3\WebSite\WebApplication1\obj\Debug\net6.0\Elaparaiba.AssemblyInfoInputs.cache
+C:\Users\mb203509\Desktop\Nouveau dossier\C2_Elaparaiba_SAE3\WebSite\WebApplication1\obj\Debug\net6.0\Elaparaiba.AssemblyInfo.cs
+C:\Users\mb203509\Desktop\Nouveau dossier\C2_Elaparaiba_SAE3\WebSite\WebApplication1\obj\Debug\net6.0\Elaparaiba.csproj.CoreCompileInputs.cache
+C:\Users\mb203509\Desktop\Nouveau dossier\C2_Elaparaiba_SAE3\WebSite\WebApplication1\obj\Debug\net6.0\Elaparaiba.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\mb203509\Desktop\Nouveau dossier\C2_Elaparaiba_SAE3\WebSite\WebApplication1\obj\Debug\net6.0\staticwebassets\msbuild.Elaparaiba.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\mb203509\Desktop\Nouveau dossier\C2_Elaparaiba_SAE3\WebSite\WebApplication1\obj\Debug\net6.0\staticwebassets\msbuild.build.Elaparaiba.props
+C:\Users\mb203509\Desktop\Nouveau dossier\C2_Elaparaiba_SAE3\WebSite\WebApplication1\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Elaparaiba.props
+C:\Users\mb203509\Desktop\Nouveau dossier\C2_Elaparaiba_SAE3\WebSite\WebApplication1\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Elaparaiba.props
+C:\Users\mb203509\Desktop\Nouveau dossier\C2_Elaparaiba_SAE3\WebSite\WebApplication1\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\mb203509\Desktop\Nouveau dossier\C2_Elaparaiba_SAE3\WebSite\WebApplication1\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\mb203509\Desktop\Nouveau dossier\C2_Elaparaiba_SAE3\WebSite\WebApplication1\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\mb203509\Desktop\Nouveau dossier\C2_Elaparaiba_SAE3\WebSite\WebApplication1\obj\Debug\net6.0\scopedcss\bundle\Elaparaiba.styles.css
+C:\Users\mb203509\Desktop\Nouveau dossier\C2_Elaparaiba_SAE3\WebSite\WebApplication1\obj\Debug\net6.0\Elaparaiba.dll
+C:\Users\mb203509\Desktop\Nouveau dossier\C2_Elaparaiba_SAE3\WebSite\WebApplication1\obj\Debug\net6.0\refint\Elaparaiba.dll
+C:\Users\mb203509\Desktop\Nouveau dossier\C2_Elaparaiba_SAE3\WebSite\WebApplication1\obj\Debug\net6.0\Elaparaiba.pdb
+C:\Users\mb203509\Desktop\Nouveau dossier\C2_Elaparaiba_SAE3\WebSite\WebApplication1\obj\Debug\net6.0\Elaparaiba.genruntimeconfig.cache
+C:\Users\mb203509\Desktop\Nouveau dossier\C2_Elaparaiba_SAE3\WebSite\WebApplication1\obj\Debug\net6.0\ref\Elaparaiba.dll
