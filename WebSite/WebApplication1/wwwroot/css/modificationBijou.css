@@ -1,4 +1,4 @@
-h1{
+h1 {
     color: #03889f;
     text-align: center;
 }
@@ -29,22 +29,22 @@ form {
     margin-bottom: 29px;
 }
 
-    .form-row label {
-        width: 30%;
-        text-align: right;
-        display: inline-block;
-        vertical-align: middle;
-    }
+.form-row label {
+    width: 30%;
+    text-align: right;
+    display: inline-block;
+    vertical-align: middle;
+}
 
-    .form-row input,
-    .form-row select,
-    .form-row textarea {
-        width: 60%;
-        padding: 4px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        vertical-align: top;
-    }
+.form-row input,
+.form-row select,
+.form-row textarea {
+    width: 60%;
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    vertical-align: top;
+}
 
 form legend {
     margin-bottom: 20px;
@@ -66,11 +66,11 @@ input[type="submit"] {
 }
 
 
-    input[type="submit"]:hover {
-        cursor: pointer;
-        background-color: #03889f;
-        color: white;
-    }
+input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: #03889f;
+    color: white;
+}
 
 #bouton-conteneur {
     display: flex;
@@ -79,8 +79,10 @@ input[type="submit"] {
 }
 
 .file-description {
-    color: #777; /* Couleur du texte explicatif */
-    font-size: 14px; /* Taille de la police du texte explicatif */
+    color: #777;
+    /* Couleur du texte explicatif */
+    font-size: 14px;
+    /* Taille de la police du texte explicatif */
     margin-left: 17%;
     margin-top: 1%;
 }
@@ -113,7 +115,7 @@ input[type="submit"] {
     left: 10%;
 }
 
-.popup-content p{
+.popup-content p {
     color: #03889f;
 }
 
