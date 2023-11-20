@@ -79,6 +79,12 @@ function displayBijou() {
         bouton.textContent = "Modifier";
         bouton.classList.add("boutton");
         boutonDiv.appendChild(bouton);
+        
+
+        //Création d'un événement pour rédiriger vers la page de modification du bijou
+        bouton.addEventListener("click", function(){
+            redirectToBijouModification(bijou.idBijou);
+        })
 
 
         //Ajout des sous div dans la div du bijou
@@ -96,6 +102,8 @@ function displayBijou() {
 document.addEventListener("DOMContentLoaded", async function () {
     await fetchAllBijou();
     displayBijou();
-
-
 });
+
+function redirectToBijouModification(bijouId){
+    window.location.href = "modificationBijou.html?bijouId=" + bijouId;
+}

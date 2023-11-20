@@ -33,6 +33,10 @@
       "PackagePath": "staticwebassets\\css\\meTrouver.css"
     },
     {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\css\\modificationBijou.css",
+      "PackagePath": "staticwebassets\\css\\modificationBijou.css"
+    },
+    {
       "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\css\\panier.css",
       "PackagePath": "staticwebassets\\css\\panier.css"
     },
@@ -59,6 +63,10 @@
     {
       "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\html\\administration\\administration.html",
       "PackagePath": "staticwebassets\\html\\administration\\administration.html"
+    },
+    {
+      "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\html\\administration\\modificationBijou.html",
+      "PackagePath": "staticwebassets\\html\\administration\\modificationBijou.html"
     },
     {
       "Id": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\html\\bijoux.html",
