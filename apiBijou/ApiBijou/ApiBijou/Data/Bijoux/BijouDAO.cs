@@ -92,6 +92,27 @@ namespace ApiBijou.Data.Bijoux
             }
         }
 
+        public bool DecreaseStock(int id, int quantity)
+        {
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                var command = connection.CreateCommand();
+                command.CommandText = @"
+                UPDATE bijoux
+                SET quantity = quantity - @quantity
+                WHERE id = @id AND quantity >= @quantity;";
+
+                command.Parameters.AddWithValue("@id", id);
+                command.Parameters.AddWithValue("@quantity", quantity);
+
+                int rowsAffected = command.ExecuteNonQuery();
+
+                return rowsAffected > 0;
+            }
+        }
+
         /// <summary>
         /// Ferme une connexion à la bdd MySql
         /// </summary>
@@ -114,9 +135,6 @@ namespace ApiBijou.Data.Bijoux
             }
         }
 
-        public bool DecreaseStock(int id, int quantity)
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }

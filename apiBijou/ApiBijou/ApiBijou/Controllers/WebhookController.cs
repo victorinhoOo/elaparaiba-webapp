@@ -44,13 +44,13 @@ namespace ApiBijou.Controllers
 
             try
             {
-                var stripeEvent = EventUtility.ConstructEvent(
+                var stripeEvent = EventUtility.ConstructEvent( //Vérifie que le message provient bien de Stripe
                     json,
                     Request.Headers["Stripe-Signature"],
                     endpointSecret
                 );
 
-                if (stripeEvent.Type == Events.CheckoutSessionCompleted)
+                if (stripeEvent.Type == Events.CheckoutSessionCompleted) // Récupère les bijoux de la session puis lance fullfillorder
                 {
                     var session = stripeEvent.Data.Object as Stripe.Checkout.Session;
                     var options = new SessionGetOptions
@@ -75,7 +75,7 @@ namespace ApiBijou.Controllers
 
 
         /// <summary>
-        /// Met à jour la base de données lorsqu'une commande est validée par Stripe en diminuant le stock des bijoux achetés en fonction de la quantité achetée
+        /// Met à jour la base de données lorsqu'une commande est validée par Stripe en diminuant le stock des bijoux en fonction de la quantité achetée
         /// </summary>
         /// <param name="lineItems">Bijoux achetés</param>
         private void FulfillOrder(StripeList<LineItem> lineItems)
@@ -99,8 +99,6 @@ namespace ApiBijou.Controllers
                 }
             }
         }
-
-
 
 
 
