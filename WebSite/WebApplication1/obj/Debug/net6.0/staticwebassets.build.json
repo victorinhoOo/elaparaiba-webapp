@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vCcTUtjNaz6tfASuMTNlixThZdN3d2tvfHcfiInE9po=",
+  "Hash": "V7JajFwG7Ok2GpTvE0lJ1Q973/CWZ2Dpa8VE05S+T54=",
   "Source": "Elaparaiba",
   "BasePath": "_content/Elaparaiba",
   "Mode": "Default",
@@ -4556,6 +4556,23 @@
       "OriginalItemSpec": "wwwroot\\js\\bijou.js"
     },
     {
+      "Identity": "C:\\Users\\ms292435\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\js\\bijouDAO.js",
+      "SourceId": "Elaparaiba",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ms292435\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/Elaparaiba",
+      "RelativePath": "js/bijouDAO.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\bijouDAO.js"
+    },
+    {
       "Identity": "C:\\Users\\ms292435\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\js\\bijoupresentation.js",
       "SourceId": "Elaparaiba",
       "SourceType": "Discovered",
@@ -4675,6 +4692,23 @@
       "OriginalItemSpec": "wwwroot\\js\\panier.js"
     },
     {
+      "Identity": "C:\\Users\\ms292435\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\js\\panierDAO.js",
+      "SourceId": "Elaparaiba",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ms292435\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/Elaparaiba",
+      "RelativePath": "js/panierDAO.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\panierDAO.js"
+    },
+    {
       "Identity": "C:\\Users\\ms292435\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\js\\surMesure.js",
       "SourceId": "Elaparaiba",
       "SourceType": "Discovered",
@@ -4690,6 +4724,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\surMesure.js"
+    },
+    {
+      "Identity": "C:\\Users\\ms292435\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\js\\tokenDAO.js",
+      "SourceId": "Elaparaiba",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ms292435\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/Elaparaiba",
+      "RelativePath": "js/tokenDAO.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\tokenDAO.js"
     },
     {
       "Identity": "C:\\Users\\ms292435\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

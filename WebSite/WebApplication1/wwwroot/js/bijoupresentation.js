@@ -1,5 +1,5 @@
 ﻿import { getPanierToken, setPanierToken } from "../js/cookies.js";
-import { updatePanierCount } from "../js/panierDAO.js";
+import { updatePanierCount, ajouterAuPanier } from "../js/panierDAO.js";
 import { Bijou } from "../js/bijouDAO.js";
 
 

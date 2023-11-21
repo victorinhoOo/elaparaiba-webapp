@@ -1,6 +1,7 @@
 import { getPanierToken, setPanierToken } from "../js/cookies.js";
 import { PanierItemFromJson, displayPanier } from "../js/panier.js";
 import { bijoux } from "./bijouDAO.js";
+import { Bijou } from "../js/bijou.js";
 
 
 //Liste des bijoux du panier
