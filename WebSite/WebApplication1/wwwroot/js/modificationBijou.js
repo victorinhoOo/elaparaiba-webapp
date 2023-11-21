@@ -32,7 +32,7 @@ async function sendBijouModified(form, bijouId) {
     const formData = new FormData(form);
     formData.append('IdBijou', bijouId);
     //Communication avec l'api
-    var success = False;
+    let success = false;
     try {
         const response = await fetch('https://localhost:7252/Administration/ModifierBijou', {
             method: 'POST',
@@ -40,7 +40,7 @@ async function sendBijouModified(form, bijouId) {
         });
         if (response.ok) {//Modification réussi
             console.log('Réponse réussie :', response);
-            success = False;
+            success = true;
         } else {//Erreur coté serveur
             console.error('Réponse en échec :', response.status, response.statusText);
             console.error(await response.text()); // Affichez le corps de la réponse dans la console
@@ -85,7 +85,9 @@ document.addEventListener("DOMContentLoaded", async function () {
         var bijou = await fetchBijouDetails(bijouId);
         displayBijouDetails(bijou);
     }
+    
     var form = document.getElementById("bijouForm")
+    
     form.addEventListener("submit", async function (event) {
         event.preventDefault(); // Empêche l'envoi du formulaire par défaut
         if(bijouId != -1){ //On modifie un bijoue existant
@@ -93,13 +95,20 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
     });
 
+    // Ajout d'un gestionnaire d'événements pour fermer le pop-up
+    const closePopupBtn = document.getElementById('closePopupBtn');
+    closePopupBtn.addEventListener('click', function () {
+        closePopup('.popup');
+        form.reset();
+    });
+
 });
 
 // Fonction pour afficher le pop-up
-function showPopup() {
+function showPopup(success) {
     var popup = document.getElementById("popup");
-    
     popup.style.display = "block";
+
 }
 
 // Fonction pour fermer le pop-up
