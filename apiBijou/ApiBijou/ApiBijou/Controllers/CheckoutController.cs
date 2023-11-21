@@ -1,6 +1,7 @@
 ﻿using ApiBijou.Model.Panier;
 using ApiBijou.Model.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Options;
 using Stripe;
 using Stripe.Checkout;
@@ -13,6 +14,7 @@ namespace ApiBijou.Controllers
     /// <summary>
     /// Controlleur pour le paiement via Stripe
     /// </summary>
+    [ApiController]
     public class CheckoutController : ControllerBase
     {
         private readonly IConfiguration _configuration;
@@ -33,12 +35,14 @@ namespace ApiBijou.Controllers
         [HttpPost("CreateCheckoutSession")]
         public IActionResult CreateCheckoutSession(string token)
         {
+            IActionResult result = null;
             var options = new SessionCreateOptions // initialise les options de la session stripe
             {
                 LineItems = new List<SessionLineItemOptions>(),
                 Mode = "payment",
-                SuccessUrl = "https://localhost:7230/html/paiement_reussi.html",
+                SuccessUrl = "https://localhost:7252/order/success?session_id={CHECKOUT_SESSION_ID}",
                 CancelUrl = "https://localhost:7230/html/paiement_echoue.html",
+                CustomerCreation = "always",
                 ShippingOptions = new List<SessionShippingOptionOptions>
                 {
                     new SessionShippingOptionOptions // Créé une méthode de livraison (collissimo)
@@ -101,10 +105,14 @@ namespace ApiBijou.Controllers
                             Name = item.Bijou.Name,
                             Description = item.Bijou.Description,
 
+                            Metadata = new Dictionary<string, string>
+                            {
+                                { "bijouId", item.Bijou.Id.ToString() } // Stocke l'ID du bijou dans les métadonnées
+                            }
                         }
-
                     },
-                    Quantity = item.Quantite
+                    Quantity = item.Quantite,
+
                 };
                 options.LineItems.Add(sessionListItem); // ajoute l'item stripe aux options de la sessions
             }
@@ -113,12 +121,19 @@ namespace ApiBijou.Controllers
             {
                 var service = new SessionService();
                 Session session = service.Create(options); // créer la session avec les options sélectionnés
-                return Ok(session.Url);
+
+                /* Vérification du prix du panier, 
+                if(session.LineItems.)*/
+
+                result = Ok(session.Url);
             }
             catch (StripeException e)
             {
-                return BadRequest(new { error = e.StripeError.Message });
+                result = BadRequest(new { error = e.StripeError.Message });
             }
+
+            return result;
         }
+
     }
 }

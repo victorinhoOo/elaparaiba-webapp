@@ -15,7 +15,7 @@ namespace ApiBijou.Model.Paniers
         }
 
         /// <summary>
-        /// Apelle le DAO pour créer un token
+        /// Appelle le DAO pour créer un token
         /// </summary>
         /// <returns>token créé</returns>
         public string CreerPanierToken()

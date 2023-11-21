@@ -113,5 +113,10 @@ namespace ApiBijou.Data.Bijoux
                 }
             }
         }
+
+        public bool DecreaseStock(int id, int quantity)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
