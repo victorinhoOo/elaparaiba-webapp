@@ -77,7 +77,7 @@ namespace ApiBijou.Model.Bijoux
             return bijouDAO.DeleteBijouById(id);
         }
 
-        public bool modifierBijou(FormulaireBijouModified formulaireBijouModified)
+        public bool ModifierBijou(FormulaireBijouModified formulaireBijouModified)
         {
             bool res = false;
             try

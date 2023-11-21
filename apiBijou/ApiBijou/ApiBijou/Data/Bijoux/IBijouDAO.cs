@@ -44,5 +44,14 @@ namespace ApiBijou.Data.Bijoux
         /// <returns>vrai si la diminution du stock a réussi</returns>
         public bool DecreaseStock(int id, int quantity);
 
+        /// <summary>
+        /// Modifier un bijou
+        /// </summary>
+        /// <param name="idBijou">id du bijou à modifé</param>
+        /// <param name="bijou">bijou contenant les modifications</param>
+        /// <returns></returns>
+        public bool ModifierBijou(int idBijou, Bijou bijou);
+
+
     }
 }

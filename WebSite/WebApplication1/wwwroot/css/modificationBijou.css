@@ -92,7 +92,7 @@ input[type="submit"]:hover {
 }
 
 /* Ajoutez ces styles pour le pop-up */
-.popup {
+.popup, .popupL {
     display: none;
     position: fixed;
     top: 0;
@@ -102,7 +102,7 @@ input[type="submit"]:hover {
     background-color: rgba(0, 0, 0, 0.267);
 }
 
-.popup-content {
+.popup-content, .popup-contentL {
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -115,11 +115,11 @@ input[type="submit"]:hover {
     left: 10%;
 }
 
-.popup-content p {
+.popup-content p, .popup-contentL p {
     color: #03889f;
 }
 
-.close-popup {
+.close-popup, .close-popupL {
     position: absolute;
     top: 10px;
     right: 10px;

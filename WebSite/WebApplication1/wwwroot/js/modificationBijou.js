@@ -40,14 +40,13 @@ async function sendBijouModified(form, bijouId) {
         });
         if (response.ok) {//Modification réussi
             console.log('Réponse réussie :', response);
-            success = true;
+            showPopup();
         } else {//Erreur coté serveur
-            console.error('Réponse en échec :', response.status, response.statusText);
-            console.error(await response.text()); // Affichez le corps de la réponse dans la console
+            showPopupL();
         }
-        showPopup(success);
-    } catch (error) {
+    } catch (error) { //Erreur de commmunication avec le serveur
         console.error('Erreur : Communication impossible avec le serveur', error);
+        showPopupL();
     }
 }
 
@@ -95,35 +94,42 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
     });
 
-    // Ajout d'un gestionnaire d'événements pour fermer le pop-up
+    // Ajout d'un gestionnaire d'événements pour fermer le pop-up de succès
     const closePopupBtn = document.getElementById('closePopupBtn');
     closePopupBtn.addEventListener('click', function () {
         closePopup('.popup');
         form.reset();
     });
+    // Ajout d'un gestionnaire d'événements pour le pop up d'échec
+    const closePopupBtnL = document.getElementById('closePopupBtnL');
+    closePopupBtnL.addEventListener('click', function () {
+        closePopupL('.popupL');
+    });
 
 });
 
-// Fonction pour afficher le pop-up
-function showPopup(success) {
-    var popupContent = document.getElementById("popup-content");
-    const textPopUp = document.createElement('p');
-    //Ajout du text en fonction du résultat de la requête
-    if(success){
-        textPopUp.textContent = "Bijou crée avec succès !";
-    }
-    else{
-        textPopUp.textContent = "Echec de la requête.";
-    }
-    //Ajout du texte du pop
-    popupContent.appendChild(textPopUp);
+
+
+// Fonction pour afficher le pop-up de réussite
+function showPopup() {
     var popup = document.getElementById("popup");
-    popup.appendChild(popupContent);
-    popup.style.display = "block";  
+    popup.style.display = "block";
+}
+
+// Fonction pour afficher le pop-up d'échec
+function showPopupL() {
+    var popup = document.getElementById("popupL");
+    popup.style.display = "block";
 }
 
 // Fonction pour fermer le pop-up
 function closePopup() {
     var popup = document.getElementById("popup");
+    popup.style.display = "none";
+}
+
+// Fonction pour fermer le pop-up en cas d'échec
+function closePopupL() {
+    var popup = document.getElementById("popupL");
     popup.style.display = "none";
 }
