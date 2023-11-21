@@ -106,9 +106,20 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 // Fonction pour afficher le pop-up
 function showPopup(success) {
+    var popupContent = document.getElementById("popup-content");
+    const textPopUp = document.createElement('p');
+    //Ajout du text en fonction du résultat de la requête
+    if(success){
+        textPopUp.textContent = "Bijou crée avec succès !";
+    }
+    else{
+        textPopUp.textContent = "Echec de la requête.";
+    }
+    //Ajout du texte du pop
+    popupContent.appendChild(textPopUp);
     var popup = document.getElementById("popup");
-    popup.style.display = "block";
-
+    popup.appendChild(popupContent);
+    popup.style.display = "block";  
 }
 
 // Fonction pour fermer le pop-up
