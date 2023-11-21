@@ -26,16 +26,31 @@ async function fetchBijouDetails(bijouId) {
     }
 }
 
-async function sendBijouModified() {
-    var bijouModified;
-    const form = document.querySelector('form');
+//Envoi le bijou modifé au serveur
+async function sendBijouModified(form, bijouId) {
+    // Récupération des données du form
     const formData = new FormData(form);
-    formData.forEach((value, key) => {
-        if (key != "photos[]") {
-            bijouModified.key = value;
+    formData.append('IdBijou', bijouId);
+    //Communication avec l'api
+    var success = False;
+    try {
+        const response = await fetch('https://localhost:7252/Administration/ModifierBijou', {
+            method: 'POST',
+            body: formData,
+        });
+        if (response.ok) {//Modification réussi
+            console.log('Réponse réussie :', response);
+            success = False;
+        } else {//Erreur coté serveur
+            console.error('Réponse en échec :', response.status, response.statusText);
+            console.error(await response.text()); // Affichez le corps de la réponse dans la console
         }
-    });
+        showPopup(success);
+    } catch (error) {
+        console.error('Erreur : Communication impossible avec le serveur', error);
+    }
 }
+
 
 
 //Hydrate les attributs du bijou dans le formulaire
@@ -55,6 +70,8 @@ function displayBijouDetails(bijou) {
     // Construire la date au format ISO (aaaa-mm-jj) 
     var isoDate = year + "-" + month + "-" + day;
     document.getElementById('datePublication').value = isoDate;
+
+    //Gérer les images
 }
 
 document.addEventListener("DOMContentLoaded", async function () {
@@ -62,15 +79,31 @@ document.addEventListener("DOMContentLoaded", async function () {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const bijouId = urlParams.get('bijouId');
+    
     //On modifie un bijou existant
     if (bijouId != -1) {
         var bijou = await fetchBijouDetails(bijouId);
-        console.log(bijou);
         displayBijouDetails(bijou);
     }
     var form = document.getElementById("bijouForm")
     form.addEventListener("submit", async function (event) {
-        sendBijouModified();
+        event.preventDefault(); // Empêche l'envoi du formulaire par défaut
+        if(bijouId != -1){ //On modifie un bijoue existant
+            sendBijouModified(form, bijouId);
+        }
     });
 
 });
+
+// Fonction pour afficher le pop-up
+function showPopup() {
+    var popup = document.getElementById("popup");
+    
+    popup.style.display = "block";
+}
+
+// Fonction pour fermer le pop-up
+function closePopup() {
+    var popup = document.getElementById("popup");
+    popup.style.display = "none";
+}

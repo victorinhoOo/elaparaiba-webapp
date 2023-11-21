@@ -1,5 +1,6 @@
 ﻿using System.Net.Mail;
 using System.Text;
+using ApiBijou.Model.formModel;
 
 namespace ApiBijou.Model.Mail
 {

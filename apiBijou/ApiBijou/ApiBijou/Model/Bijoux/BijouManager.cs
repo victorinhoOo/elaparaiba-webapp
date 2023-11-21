@@ -1,5 +1,6 @@
 ﻿using System;
 using ApiBijou.Data.Bijoux;
+using ApiBijou.Model.formModel;
 
 namespace ApiBijou.Model.Bijoux
 {
@@ -63,6 +64,24 @@ namespace ApiBijou.Model.Bijoux
         public bool DeleteBijouById(int id)
         {
             return bijouDAO.DeleteBijouById(id);
+        }
+
+        public bool modifierBijou(FormulaireBijouModified formulaireBijouModified)
+        {
+            bool res = false;
+            try
+            {
+                Bijou bijou = bijouDAO.getById(Convert.ToInt32(formulaireBijouModified.IdBijou));
+                //On modifie le bijou
+                bijou = Bijou.ModifierBijou(bijou, formulaireBijouModified);
+                //Chagement dans les data
+                res = bijouDAO.ModifierBijou(Convert.ToInt32(formulaireBijouModified.IdBijou), bijou);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());   
+            }
+            return res;
         }
     }
 }

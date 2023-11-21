@@ -113,5 +113,10 @@ namespace ApiBijou.Data.Bijoux
                 }
             }
         }
+
+        public bool ModifierBijou(int idBijou, Bijou bijou)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

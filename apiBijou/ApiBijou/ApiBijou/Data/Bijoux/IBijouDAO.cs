@@ -1,5 +1,6 @@
 ﻿
 using ApiBijou.Model.Bijoux;
+using System.Diagnostics.Eventing.Reader;
 
 namespace ApiBijou.Data.Bijoux
 {
@@ -35,6 +36,13 @@ namespace ApiBijou.Data.Bijoux
         /// <returns>vrai si la suppresion a réussi</returns>
         public bool DeleteBijouById(int id);
 
+        /// <summary>
+        /// Modifie le bijou dans le DAO
+        /// </summary>
+        /// <param name="idBijou">bijou à modifier</param>
+        /// <param name="bijou">bijou à attribuer</param>
+        /// <returns></returns>
+        public bool ModifierBijou(int idBijou, Bijou bijou);
 
     }
 }

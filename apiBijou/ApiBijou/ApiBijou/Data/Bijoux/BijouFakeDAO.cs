@@ -81,5 +81,16 @@ namespace ApiBijou.Data.Bijoux
             }
             return bijou;
         }
+
+        public bool ModifierBijou(int idBijou, Bijou bijou)
+        {
+            bool res = false;
+            if (bijoux.ContainsKey(idBijou))
+            {
+                bijoux[idBijou] = bijou;
+                res = true;
+            }
+            return res;
+        }
     }
 }

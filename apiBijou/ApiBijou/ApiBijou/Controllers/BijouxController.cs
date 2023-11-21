@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Cors;
 using ApiBijou.Model.Bijoux;
 using ApiBijou.Model.Mail;
 using Newtonsoft.Json;
+using ApiBijou.Model.formModel;
 
 namespace API_SAE.Controllers
 {

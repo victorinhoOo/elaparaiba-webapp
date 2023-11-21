@@ -1,4 +1,6 @@
-﻿namespace ApiBijou.Model.Bijoux
+﻿using ApiBijou.Model.formModel;
+
+namespace ApiBijou.Model.Bijoux
 {
     /// <summary>
     /// Gère les caractéristiques des bijoux
@@ -78,6 +80,31 @@
                    datepublication == bijou.datepublication &&
                    type == bijou.type &&
                    dossierPhoto == bijou.dossierPhoto;
+        }
+
+        /// <summary>
+        /// Modifie un bijou
+        /// </summary>
+        /// <param name="formulaireBijouModified">Nouveaux attributs à hydrater</param>
+        /// <returns></returns>
+        /// <exception cref="Exception">Un des élèments du formulaire n'est pas au bon format</exception>
+        public static Bijou ModifierBijou(Bijou bijou, FormulaireBijouModified formulaireBijouModified)
+        {
+            try 
+            {
+                bijou.Price = formulaireBijouModified.Prix;
+                bijou.Quantity = formulaireBijouModified.Quantity;
+                bijou.Description = formulaireBijouModified.Description;
+                bijou.Type = formulaireBijouModified.Type;
+                //Ajouter la matiere
+                bijou.Datepublication = Convert.ToString(formulaireBijouModified.DatePublication);
+                bijou.Name = formulaireBijouModified.Name;
+            }
+            catch(Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+            return bijou;
         }
     }
 }
