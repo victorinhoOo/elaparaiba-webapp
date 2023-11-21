@@ -37,12 +37,12 @@ namespace ApiBijou.Data.Bijoux
         public bool DeleteBijouById(int id);
 
         /// <summary>
-        /// Modifie le bijou dans le DAO
+        /// Diminue la quantitié d'un bijou
         /// </summary>
-        /// <param name="idBijou">bijou à modifier</param>
-        /// <param name="bijou">bijou à attribuer</param>
-        /// <returns></returns>
-        public bool ModifierBijou(int idBijou, Bijou bijou);
+        /// <param name="id">id du bijou</param>
+        /// <param name="quantity">quantité à diminuer</param>
+        /// <returns>vrai si la diminution du stock a réussi</returns>
+        public bool DecreaseStock(int id, int quantity);
 
     }
 }
