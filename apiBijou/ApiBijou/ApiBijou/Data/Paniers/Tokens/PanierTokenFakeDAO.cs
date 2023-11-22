@@ -40,7 +40,8 @@ namespace ApiBijou.Data.Paniers.Tokens
             { 4, new TokenDate("b70a8c45cb4366a02939b68e24ed126", new DateTime()) }, //On, attribue une variable arbitraire pour nos test
             { 5, new TokenDate(Token.GenerateToken(), new DateTime()) },
             { 6, new TokenDate(Token.GenerateToken(), new DateTime()) },
-            { 7, new TokenDate(Token.GenerateToken(), new DateTime()) }
+            { 7, new TokenDate(Token.GenerateToken(), new DateTime()) },
+            { 8, new TokenDate("7adfb95552bcfee48c44d9e7d129d3d1", new DateTime()) }
         };
         }
 

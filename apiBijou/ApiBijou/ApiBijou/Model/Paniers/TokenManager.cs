@@ -32,7 +32,5 @@ namespace ApiBijou.Model.Paniers
         {
             return panierTokenDAO.GetPanierId(token);
         }
-
-
     }
 }

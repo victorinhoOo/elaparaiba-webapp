@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ApiBijou.Controllers
 {
+    /// <summary>
+    /// Controller de la page administration
+    /// </summary>
     [ApiController]
     [Route("Administration")]
     public class AdministrationController : ControllerBase
@@ -52,20 +55,14 @@ namespace ApiBijou.Controllers
         /// <param name="password">mot de passe</param>
         /// <returns>Ok si la connexion a réussi</returns>
         [HttpPost("login")]
-        public IActionResult Login(string login, string password)
+        public IActionResult Login([FromForm] Utilisateur utilisateur)
         {
-
-            string tokenPanier  = panierManager.CreerPanierToken();
-
-            bool isAdmin = utilisateursManager.ConnectAsAdmin(tokenPanier, login, password);
-            if (isAdmin)
+            IActionResult result = Unauthorized(new { Message = "L'utilisateur n'est pas un administrateur" });
+            if (utilisateursManager.ConnectAsAdmin(utilisateur.TokenPanier, utilisateur.Login, utilisateur.Mdp))
             {
-                return Ok(new { Message = "Connexion réussie", Token = tokenPanier });
+                result = Ok(new { Message = "L'utilisateur est connecté en tant qu'administrateur" });
             }
-            else
-            {
-                return Unauthorized(new { Message = "Échec de l'authentification" });
-            }
+            return result;
         }
 
         /// <summary>
@@ -73,20 +70,16 @@ namespace ApiBijou.Controllers
         /// </summary>
         /// <param name="tokenPanier"></param>
         /// <returns></returns>
-        [HttpGet("isadmin")]
+        [HttpGet("isAdmin")]
         public IActionResult IsAdmin(string tokenPanier)
         {
+            IActionResult result = Unauthorized(new { Message = "L'utilisateur n'est pas un administrateur" });
             bool isAdmin = utilisateursManager.IsAdmin(tokenPanier);
             if (isAdmin)
             {
-                return Ok(new { Message = "L'utilisateur est un administrateur" });
+                result = Ok(new { Message = "L'utilisateur est un administrateur" });
             }
-            else
-            {
-                return Unauthorized(new { Message = "L'utilisateur n'est pas un administrateur" });
-            }
+            return result;
         }
-
-
     }
 }

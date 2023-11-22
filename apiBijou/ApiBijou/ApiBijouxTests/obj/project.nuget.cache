@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "J90iRkAkOUMbJdQG1FftxQXogh0LfkZuLm+wVRTK60Y14LX41JyFp4AFKLLKTTIufZ3SFjDj4qazFguPZLsBrg==",
+  "dgSpecHash": "VSduC4IN24Lu0y7fym55jRWhxZqadtTmMzAwyVXt45y6k/g4cum+gRQv58P5cFO1hrbj/oD1Ffj+FY6U8gBu+w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mb203509\\Desktop\\C2\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\ApiBijouxTests.csproj",
+  "projectFilePath": "C:\\Users\\mb203509\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\ApiBijouxTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mb203509\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",
     "C:\\Users\\mb203509\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
