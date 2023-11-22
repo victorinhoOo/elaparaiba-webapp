@@ -1,6 +1,4 @@
-﻿namespace Elaparaiba.wwwroot.js
-{
-    public class zazeaze
-    {
-    }
+﻿function onSubmit(token) {
+    document.getElementById("login-form").submit(); // Id 'login-form' à ajouter sur le formulaire
 }
+
