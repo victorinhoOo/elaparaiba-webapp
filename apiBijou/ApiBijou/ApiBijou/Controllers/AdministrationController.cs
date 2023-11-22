@@ -19,7 +19,7 @@ namespace ApiBijou.Controllers
             ActionResult result = BadRequest("Erreur lors de la modification");
             try
             {
-                bool bijModifier = BijouManager.Instance.modifierBijou(formulaire);
+                bool bijModifier = BijouManager.Instance.ModifierBijou(formulaire);
                 if (bijModifier)
                 {
                     result = Ok();

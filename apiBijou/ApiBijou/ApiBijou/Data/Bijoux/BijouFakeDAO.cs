@@ -35,8 +35,8 @@ namespace ApiBijou.Data.Bijoux
 
             bijoux = new Dictionary<int, Bijou>
         {
-            { 0, new Bijou { Id = 0, Name = "Boucles d'oreille collection 'Géométrie abstraite'",Description = "Description du bijou 1", Price = 69, Quantity=2, Type="Bo", DossierPhoto="Bo18", NbPhotos=4, Datepublication="01/01/1000"} },
-            { 1, new Bijou { Id = 1, Name = "Bracelet, Manchette", Description = "Description du bijou 2", Price = 96, Quantity=3, Type="Bracelets", DossierPhoto="Bra39", NbPhotos=5, Datepublication="01/01/1000"} },
+            { 0, new Bijou { Id = 0, Name = "Boucles d'oreille collection 'Géométrie abstraite'",Description = "Description du bijou 1", Price = 69, Quantity=5, Type="Bo", DossierPhoto="Bo18", NbPhotos=4, Datepublication="01/01/1000"} },
+            { 1, new Bijou { Id = 1, Name = "Bracelet, Manchette", Description = "Description du bijou 2", Price = 96, Quantity=5, Type="Bracelets", DossierPhoto="Bra39", NbPhotos=5, Datepublication="01/01/1000"} },
             { 2, new Bijou { Id = 2, Name = "Collier, collection 'Élégance'", Description = "Description du bijou 3", Price = 49, Type="Colliers", DossierPhoto="Col43", NbPhotos=4, Datepublication="01/01/1000"} },
             { 3, new Bijou { Id = 3, Name = "Bague, collection 'Élégance'", Description = "Description du bijou 4", Price = 78, Type="Bagues", DossierPhoto="Bague62", NbPhotos=3, Datepublication = "01/01/1000"} },
             { 4, new Bijou { Id = 4, Name = "Bracelet, collection 'Nature et Botanique'", Description = "Description du bijou 5", Price = 52, Type="Bracelets", DossierPhoto="Bra73", NbPhotos=5 , Datepublication = "01/01/1000"} },
@@ -80,6 +80,16 @@ namespace ApiBijou.Data.Bijoux
                 bijou = bijoux[id];
             }
             return bijou;
+        }
+
+        public bool DecreaseStock(int id, int quantity)
+        {
+            if (bijoux.ContainsKey(id) && bijoux[id].Quantity >= quantity)
+            {
+                bijoux[id].Quantity -= quantity; // Diminue la quantité du bijou
+                return true; // Retourne vrai si le stock a été diminué avec succès
+            }
+            return false; // Retourne faux si le bijou n'existe pas ou s'il n'y a pas assez de stock
         }
 
         public bool ModifierBijou(int idBijou, Bijou bijou)

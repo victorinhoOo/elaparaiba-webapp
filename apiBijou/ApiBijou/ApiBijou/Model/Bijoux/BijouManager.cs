@@ -56,6 +56,17 @@ namespace ApiBijou.Model.Bijoux
             return bijouDAO.GetAllBijoux();
         }
 
+        /// <summary>
+        /// Diminue le stock d'un bijou spécifié par ID
+        /// </summary>
+        /// <param name="id">ID du bijou</param>
+        /// <returns>Vrai si la mise à jour a réussi, sinon faux</returns>
+        public bool DecreaseStockById(int id, int quantite)
+        {
+            return bijouDAO.DecreaseStock(id, quantite);
+        }
+
+
         public bool AddBijou(Bijou? user)
         {
             return bijouDAO.AddBijou(user);
@@ -66,7 +77,7 @@ namespace ApiBijou.Model.Bijoux
             return bijouDAO.DeleteBijouById(id);
         }
 
-        public bool modifierBijou(FormulaireBijouModified formulaireBijouModified)
+        public bool ModifierBijou(FormulaireBijouModified formulaireBijouModified)
         {
             bool res = false;
             try
