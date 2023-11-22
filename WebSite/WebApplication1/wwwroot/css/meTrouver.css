@@ -14,14 +14,14 @@ h2 {
 .conteneur {
     width: 100%;
     height: 400px;
-    background-image: url("../images/PhotosFabrication/tableau.jpg");
+    background-image: url("http://images.elaparaibatest.fr/PhotosFabrication/tableau.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
 }
 

@@ -147,7 +147,7 @@ async function displayPanier(bijoux) {
         //Mise en page du bijoux
 
         //Image du bijou
-        const imagePath = `../images/PhotosDescriptif${bijou.bijou.type}/${bijou.bijou.dossierPhoto}/1.jpg`;
+        const imagePath = `http://images.elaparaibatest.fr/PhotosDescriptif${bijou.bijou.type}/${bijou.bijou.dossierPhoto}/1.jpg`;
         const imageElement = document.createElement("img");
         imageElement.src = imagePath;
         imageElement.alt = bijou.nomBijou;

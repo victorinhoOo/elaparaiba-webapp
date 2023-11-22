@@ -43,7 +43,7 @@ function displayBijou() {
         bijouElement.classList.add("bijou");
 
         //Image bijou
-        const imagePath = `../../images/Photosdescriptif${bijou.type}/${bijou.dossierPhoto}/1.jpg`;
+        const imagePath = `http://images.elaparaibatest.fr/Photosdescriptif${bijou.type}/${bijou.dossierPhoto}/1.jpg`;
         const imgBijouDiv = document.createElement("div");
         imgBijouDiv.classList.add("photoBijou");
         const imageBijou = document.createElement("img");

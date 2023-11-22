@@ -159,7 +159,7 @@ function displayBijoux(bijoux) {
         //Image du bijou
         const totalImages = 3;
         const randomImageNumber = Math.floor(Math.random() * totalImages) + 1;
-        const imagePath = `../images/Photosdescriptif${bijou.type}/${bijou.dossierPhoto}/1.jpg`;
+        const imagePath = `http://images.elaparaibatest.fr/Photosdescriptif${bijou.type}/${bijou.dossierPhoto}/1.jpg`;
         const imageElement = document.createElement("img");
         imageElement.src = imagePath;
         imageElement.alt = bijou.nomBijou;

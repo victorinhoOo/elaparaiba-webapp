@@ -36,13 +36,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Affiche les différentes informations du bijou en complétant les Id de la page HTML
     function afficherDetailsBijou(bijou) {
-        bijouImage.src = `../images/Photosdescriptif${bijou.type}/${bijou.dossierPhoto}/1.jpg`;
+        bijouImage.src = `http://images.elaparaibatest.fr/Photosdescriptif${bijou.type}/${bijou.dossierPhoto}/1.jpg`;
         bijouName.textContent = bijou.nomBijou;
         bijouPrice.textContent = bijou.prixBijou;
         bijouQuantite.textContent = bijou.stockBijou;
         bijouCategorie.textContent = `Catégorie: ${bijou.type}`;
         bijouDescription.textContent = `Description: ${bijou.descriptionBijou}`;
-        bijouImageA.src = `../images/Photosdescriptif${bijou.type}/${bijou.dossierPhoto}/1.jpg`;
+        bijouImageA.src = `http://images.elaparaibatest.fr/Photosdescriptif${bijou.type}/${bijou.dossierPhoto}/1.jpg`;
 
 
 
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const miniaturesContainer = document.getElementById('miniatures');
         for (let i = 1; i <= bijou.nbPhotos; i++) {
             const miniature = document.createElement('img');
-            miniature.src = `../images/Photosdescriptif${bijou.type}/${bijou.dossierPhoto}/${i}.jpg`;
+            miniature.src = `http://images.elaparaibatest.fr/Photosdescriptif${bijou.type}/${bijou.dossierPhoto}/${i}.jpg`;
             miniature.alt = `Miniature ${i}`;
             miniature.addEventListener('click', () => changerImagePrincipale(miniature.src));
             miniaturesContainer.appendChild(miniature);
