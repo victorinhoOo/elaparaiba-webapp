@@ -1,3 +1,5 @@
+import { fetchTokenPanier } from "../js/tokenDAO.js";
+
 async function setPanierToken() {
     // Définition du temps de vie du cookie
     const value = await fetchTokenPanier();
@@ -31,19 +33,6 @@ function eraseCookie(name) {
 }
 
 
-// Fonction qui permet de créer un nouveau Token
-async function fetchTokenPanier() {
-    var tokenPanier = "";
-    const apiUrl = `https://localhost:7252/Panier/CreerPanierToken`;
-    try {
-        const response = await fetch(apiUrl);
 
-        tokenPanier = await response.text();
-    }
-    catch (error) {
-        console.error("Erreur de requete:", error);
-    }
-    return tokenPanier;
-}	
 
 export{ setPanierToken, getPanierToken };

@@ -1,27 +1,13 @@
 ﻿import { getPanierToken, setPanierToken } from "../js/cookies.js";
-import { updatePanierCount } from "../js/commun.js";
-class Bijou {
-    constructor(idBijou, nomBijou, descriptionBijou, prixBijou, stockBijou, type, dossierPhoto, nbPhotos, datepublication) {
-        this.idBijou = idBijou;
-        this.nomBijou = nomBijou;
-        this.descriptionBijou = descriptionBijou;
-        this.stockBijou = stockBijou;
-        this.prixBijou = prixBijou;
-        this.type = type;
-        this.dossierPhoto = dossierPhoto;
-        this.nbPhotos = nbPhotos;
-        this.datepublication = datepublication;
-    }
-
-}
-
+import { updatePanierCount, ajouterAuPanier } from "../js/panierDAO.js";
+import { Bijou } from "../js/bijouDAO.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Récupérer l'ID du bijou depuis l'URL
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const bijouId = urlParams.get('bijouId');
+        // Récupérer l'ID du bijou depuis l'URL
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const bijouId = urlParams.get('bijouId');
 
     // Associe des constantes aux éléments contenant l'ID correspondant dans l'HTML
     const bijouImage = document.getElementById('bijouImage');
@@ -56,8 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
             miniaturesContainer.appendChild(miniature);
         }
     }
-
-
     // Fonction de requête pour récupérer les détails du bijou
     async function fetchBijouDetails() {
         const apiUrl = `https://localhost:7252/Bijoux/GetBijouWithId?id=${bijouId}`;
@@ -87,53 +71,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    
+
     // Appeler la fonction de requête pour récupérer les détails du bijou
     fetchBijouDetails();
 
     updatePanierCount();
 });
 
-// Fonction pour ajouter le bijou au panier
-async function ajouterAuPanier(bijou) {
-    //Créer un paniertoken si l'utilisateur en a pas
-    var panierTokenValue = getPanierToken("PanierToken");
-    if (panierTokenValue === "") { //Le token n'est pas définie
-        panierTokenValue = await setPanierToken();
-    }
-    const apiUrl = `https://localhost:7252/Panier/AjouterAuPanier?token=${panierTokenValue}`; // URL du contrôleur
-    try {
-        // Requête vers l'API avec la méthode POST
-        const response = await fetch(apiUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                NbPhotos: bijou.nbPhotos,
-                Id: bijou.idBijou,
-                Name: bijou.nomBijou,
-                Description: bijou.descriptionBijou,
-                Price: bijou.prixBijou,
-                Quantity: bijou.stockBijou,
-                DatePublication: bijou.datepublication,
-                Type: bijou.type,
-                DossierPhoto: bijou.dossierPhoto
-            }) // Convertit les données du bijou en chaîne JSON
-        });
-
-        if (!response.ok) {
-            throw new Error('Réponse réseau non ok');
-        }
-
-        // Gére la réponse du serveur
-        const responseData = await response.text();
-        console.log(responseData);
-
-        updatePanierCount();
-    } catch (error) {
-        console.error("Erreur de requête:", error);
-    }
-}
 document.addEventListener('DOMContentLoaded', function () {
     var btnPanier = document.getElementById('btnPanier');
     var bijouImage = document.getElementById('bijouImage');
@@ -182,5 +127,3 @@ document.addEventListener('DOMContentLoaded', function () {
 function changerImagePrincipale(nouvelleImageSrc) {
     bijouImage.src = nouvelleImageSrc;
 }
-
-export { Bijou };

@@ -1,10 +1,12 @@
-import { updatePanierCount } from "../js/commun.js";
+import { updatePanierCount } from "../js/panierDAO.js";
+import { setPanierToken } from "./cookies.js";
 
 var id;
 var controls;
 var num_image = 0;
 
 function main() {
+    setPanierToken();   
     updatePanierCount();
     initNewsSlider();
     fetchInstagramPhotos();
@@ -43,7 +45,7 @@ function nextImage(){
     print(num_image);
 }
 
-
+// Slider des nouveautées
 const initNewsSlider = () => {
     const imageList = document.querySelector(".slider-news-wrapper .image-list");
     const slideButtons = document.querySelectorAll(".slider-news-wrapper .slide-button");
@@ -107,6 +109,7 @@ const initNewsSlider = () => {
     });
 }
 
+// Fonction qui permet de récupérer les posts instagrams et les affichers
 async function fetchInstagramPhotos() {
     const response = await fetch(`https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink&access_token=IGQWRNeHBPRDNHZAFl6WU1KTlBYX3JrRVZAyZA3dkUXduUDcwUEN2WEh1SnJDTlhsamFkQlZAQSUpIcVJpTU8xazRaUTlpS0VlZAFdjTkhGZAExKaUF1ZAVRhdTNoTjFjTFpQY3VuYWlUWjRGM2pua0xNamNNU24tV0VBUnMZD&limit=5`);
     const data = await response.json();
