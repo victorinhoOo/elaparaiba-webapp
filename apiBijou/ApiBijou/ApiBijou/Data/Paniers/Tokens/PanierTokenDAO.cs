@@ -14,21 +14,28 @@ namespace ApiBijou.Data.Paniers.Tokens
         /// <returns>token créé</returns>
         public string CreerPanierToken()
         {
+            string result = string.Empty;
             string token = Token.GenerateToken();
-            using (var conn = new MySqlConnection(connectionString))
-            { // Ouvre une connection SQL et effectue une requête paramètrée pour insérer le token dans la table panier_tokens
-                conn.Open();
-                var sql = "INSERT INTO panier_tokens (token, date) VALUES (@token, NOW());";
-                using (var cmd = new MySqlCommand(sql, conn))
-                {
-                    cmd.Parameters.AddWithValue("@token", token);
-                    cmd.ExecuteNonQuery();
-                    // Récupère l'ID du nouveau token inséré
-                    var id = cmd.LastInsertedId;
-                    return token;
-                }
+            MySqlConnection conn = OpenConnection();
+
+            try
+            {
+                var sql = "INSERT INTO tokenPanier (token, dateToken) VALUES (@token, NOW());";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@token", token);
+                cmd.ExecuteNonQuery();
+                result = token;
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                result = ex.Message;
+            }
+
+            CloseConnection(conn);
+            return result;
         }
+
 
         /// <summary>
         /// Récupère l'ID du panier en utilisant le token
@@ -37,25 +44,72 @@ namespace ApiBijou.Data.Paniers.Tokens
         /// <returns>id du panier</returns>
         public int GetPanierId(string token)
         {
-            using (var conn = new MySqlConnection(connectionString))
-            { // Ouvre une connection SQL et effectue une requête paramètrée pour afficher l'id du panier correspondant au token saisi
-                conn.Open();
-                var sql = "SELECT id FROM panier_tokens WHERE token = @token;";
-                using (var cmd = new MySqlCommand(sql, conn))
+            int result = -1;
+            MySqlConnection conn = OpenConnection();
+
+            try
+            {
+                var sql = "SELECT idToken FROM tokenPanier WHERE token = @token;";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@token", token);
+
+                using (MySqlDataReader reader = cmd.ExecuteReader())
                 {
-                    cmd.Parameters.AddWithValue("@token", token);
-                    using (var reader = cmd.ExecuteReader())
+                    if (reader.Read())
                     {
-                        if (reader.Read())
-                        {
-                            return reader.GetInt32("id");
-                        }
-                        else
-                        {
-                            return -1; // Le token n'existe pas
-                        }
+                        result = reader.GetInt32("idToken");
                     }
                 }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            CloseConnection(conn);
+            return result;
+        }
+
+
+        /// <summary>
+        /// Ouvre une connexion à la BDD mySQL
+        /// </summary>
+        /// <returns></returns>
+        public MySqlConnection OpenConnection()
+        {
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            try
+            {
+                connection.Open();
+                return connection;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Ferme une connexion à la bdd MySql
+        /// </summary>
+        /// <param name="connection"></param>
+        public void CloseConnection(MySqlConnection connection)
+        {
+            if (connection != null)
+            {
+                try
+                {
+                    if (connection.State != System.Data.ConnectionState.Closed)
+                    {
+                        connection.Close();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+
             }
         }
     }

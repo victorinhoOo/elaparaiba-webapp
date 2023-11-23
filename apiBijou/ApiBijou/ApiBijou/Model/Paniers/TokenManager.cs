@@ -1,4 +1,5 @@
-﻿using ApiBijou.Data.Paniers.Tokens;
+﻿using ApiBijou.Data.Paniers;
+using ApiBijou.Data.Paniers.Tokens;
 
 namespace ApiBijou.Model.Paniers
 {
@@ -11,7 +12,7 @@ namespace ApiBijou.Model.Paniers
 
         public TokenManager()
         {
-            panierTokenDAO = PanierTokenFakeDAO.Instance;
+            panierTokenDAO = new PanierTokenDAO();
         }
 
         /// <summary>

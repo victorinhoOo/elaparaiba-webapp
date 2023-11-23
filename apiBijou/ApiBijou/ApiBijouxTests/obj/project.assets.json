@@ -6965,24 +6965,37 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mb203509\\.nuget\\packages\\": {},
+<<<<<<< HEAD
+    "C:\\Users\\oxort\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\ms292435\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+>>>>>>> origin/JS_DAO
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mb203509\\Desktop\\C2\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\ApiBijouxTests.csproj",
+<<<<<<< HEAD
+      "projectUniqueName": "C:\\Users\\oxort\\Desktop\\Cours\\martin\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\ApiBijouxTests.csproj",
       "projectName": "ApiBijouxTests",
-      "projectPath": "C:\\Users\\mb203509\\Desktop\\C2\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\ApiBijouxTests.csproj",
-      "packagesPath": "C:\\Users\\mb203509\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mb203509\\Desktop\\C2\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\obj\\",
+      "projectPath": "C:\\Users\\oxort\\Desktop\\Cours\\martin\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\ApiBijouxTests.csproj",
+      "packagesPath": "C:\\Users\\oxort\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\oxort\\Desktop\\Cours\\martin\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\ms292435\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\ApiBijouxTests.csproj",
+      "projectName": "ApiBijouxTests",
+      "projectPath": "C:\\Users\\ms292435\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\ApiBijouxTests.csproj",
+      "packagesPath": "C:\\Users\\ms292435\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ms292435\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\obj\\",
+>>>>>>> origin/JS_DAO
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\mb203509\\AppData\\Roaming\\NuGet\\NuGet.Config",
+<<<<<<< HEAD
+        "C:\\Users\\oxort\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+        "C:\\Users\\ms292435\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+>>>>>>> origin/JS_DAO
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6997,8 +7010,13 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\mb203509\\Desktop\\C2\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\ApiBijou.csproj": {
-              "projectPath": "C:\\Users\\mb203509\\Desktop\\C2\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\ApiBijou.csproj"
+<<<<<<< HEAD
+            "C:\\Users\\oxort\\Desktop\\Cours\\martin\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\ApiBijou.csproj": {
+              "projectPath": "C:\\Users\\oxort\\Desktop\\Cours\\martin\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\ApiBijou.csproj"
+=======
+            "C:\\Users\\ms292435\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\ApiBijou.csproj": {
+              "projectPath": "C:\\Users\\ms292435\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\ApiBijou.csproj"
+>>>>>>> origin/JS_DAO
             }
           }
         }
@@ -7054,7 +7072,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

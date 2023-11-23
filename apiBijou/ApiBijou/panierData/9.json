@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 {"bijoux":[],"Total":0.0}
 =======
 {"bijoux":[{"Bijou":{"NbPhotos":5,"Id":1,"Name":"Bracelet, Manchette","Description":"Description du bijou 2","Price":96,"Quantity":3,"Datepublication":"01/01/1000","Type":"Bracelets","DossierPhoto":"Bra39"},"Quantite":1,"Id":0}],"Total":96.0}
 >>>>>>> origin/recap_commande
+=======
+{"bijoux":[],"Total":0.0}
+>>>>>>> origin/JS_DAO

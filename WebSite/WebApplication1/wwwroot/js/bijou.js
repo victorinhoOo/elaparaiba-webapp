@@ -1,6 +1,42 @@
-﻿import { updatePanierCount } from "../js/commun.js";
+﻿import { bijoux, fetchBijou, initialiserBijoux } from "../js/bijouDAO.js";
 
+class Bijou {
+    constructor(idBijou, nomBijou, descriptionBijou, prixBijou, stockBijou, type, dossierPhoto, nbPhotos, datepublication) {
+        this.idBijou = idBijou;
+        this.nomBijou = nomBijou;
+        this.descriptionBijou = descriptionBijou;
+        this.stockBijou = stockBijou;
+        this.prixBijou = prixBijou;
+        this.type = type;
+        this.dossierPhoto = dossierPhoto;
+        this.nbPhotos = nbPhotos;
+        this.datepublication = datepublication;
+    }
 
+    // Méthode pour créer un bijou à partir d'un objet JSON
+    static createBijouFromJSON(bijouJSON) {
+        try {
+            // Créez une nouvelle instance de la classe Bijou en utilisant les propriétés de l'objet JSON
+            const nouveauBijou = new Bijou(
+                bijouJSON.id,
+                bijouJSON.name,
+                bijouJSON.description,
+                bijouJSON.price,
+                bijouJSON.quantity,
+                bijouJSON.type,
+                bijouJSON.dossierPhoto,
+                bijouJSON.nbPhotos
+            );
+
+            // Retourne le bijou créé
+            return nouveauBijou;
+        } catch (error) {
+            console.error("Erreur lors de la création du bijou:", error);
+            throw error;
+        }
+    }
+}
+/*
 //Fonction pour afficher plus de bijoux sur la page
 function afficherPlus() {
 
@@ -23,56 +59,13 @@ function afficherPlus() {
     if (nombreDeBijouxAffiches >= nombreTotalDeBijoux) {
         boutonVoirPlus.style.display = "none";
     }
-}
-//Classe bijou
-class Bijou {
-    constructor(idBijou, nomBijou, descriptionBijou, prixBijou, stockBijou, type, dossierPhoto) {
-        this.idBijou = idBijou;
-        this.nomBijou = nomBijou;
-        this.descriptionBijou = descriptionBijou;
-        this.stockBijou = stockBijou;
-        this.prixBijou = prixBijou;
-        this.type = type;
-        this.dossierPhoto = dossierPhoto;
-    }
-
-}
-//Fonction communicante avec l'API bijou
-async function fetchBijou(i) {
-    const apiUrl = `https://localhost:7252/Bijoux/GetBijouWithId?id=${i}`;
-    try {
-        //Requête vers l'Api
-        const response = await fetch(apiUrl);
-        //Traduction de la requête en json
-        const data = await response.json();
-
-        //Création du nouveau bijou
-        const nouveauBijou = new Bijou(
-            data.id,
-            data.name,
-            data.description,
-            data.price,
-            data.quantity,
-            data.type,
-            data.dossierPhoto
-        );
-
-        //Ajout du bijou à la liste 
-        bijoux[Object.keys(bijoux).length] = nouveauBijou;
-
-    } catch (error) {
-        console.error("Erreur de requête:", error);
-    }
-}
-
+} */
 
 
 // Nombre initial de bijoux affichés
 let bijouAffiches = 10;
 ///Conteneur des bijoux sur la page html
 const bijouxConteneur = document.getElementById("bijoux-conteneur");
-///Liste des bijoux
-var bijoux = {};
 
 window.onload = initialiserBijoux;
 
@@ -215,13 +208,8 @@ document.addEventListener("DOMContentLoaded", async function () {
 });
 
 
-// Fonction d'initialisation appelée au chargement de la page
-function initialiserBijoux() {
-    tousLesBijoux = document.querySelectorAll(".produit");
-}
-
-
 function redirectToBijouPresentation(bijouId) {
     window.location.href = "bijouxpresentation.html?bijouId=" + bijouId;
 }
 
+export { Bijou };

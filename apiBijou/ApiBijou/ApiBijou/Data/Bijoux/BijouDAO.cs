@@ -31,6 +31,10 @@ namespace ApiBijou.Data.Bijoux
                 bijou.Description = reader["descriptionBijou"].ToString();
                 bijou.Quantity = Convert.ToInt32(reader["stockBijou"]);
                 bijou.Price = Convert.ToInt32(reader["prixBijou"]);
+                bijou.DossierPhoto = reader["dossierPhoto"].ToString();
+                bijou.Datepublication = reader["dateSortie"].ToString();
+                bijou.NbPhotos = Convert.ToInt32(reader["nbPhoto"]);
+                bijou.Type = reader["typeBijou"].ToString();
             }
 
             CloseConnection(conn); // Ferme la connexion à la base de données
@@ -54,6 +58,10 @@ namespace ApiBijou.Data.Bijoux
                 bijou.Description = reader["descriptionBijou"].ToString();
                 bijou.Quantity = Convert.ToInt32(reader["stockBijou"]);
                 bijou.Price = Convert.ToInt32(reader["prixBijou"]);
+                bijou.DossierPhoto = reader["dossierPhoto"].ToString();
+                bijou.Datepublication = reader["dateSortie"].ToString();
+                bijou.NbPhotos = Convert.ToInt32(reader["nbPhoto"]);
+                bijou.Type = reader["typeBijou"].ToString();
 
                 bijoux.Add(bijou); // Ajoute le bijou à la liste
             }
@@ -116,13 +124,76 @@ namespace ApiBijou.Data.Bijoux
 
         public bool DecreaseStock(int id, int quantity)
         {
-            throw new NotImplementedException();
+            MySqlConnection conn = OpenConnection(); // Ouvre une connexion à la base de données
+
+            bool result = false;
+
+            try
+            {
+                // Vérifie d'abord si le stock est suffisant
+                string checkStockSql = "SELECT stockBijou FROM bijoux WHERE idBijou = @id AND stockBijou >= @quantity";
+                MySqlCommand checkStockCmd = new MySqlCommand(checkStockSql, conn);
+                checkStockCmd.Parameters.AddWithValue("@id", id);
+                checkStockCmd.Parameters.AddWithValue("@quantity", quantity);
+
+                object resultstock = checkStockCmd.ExecuteScalar();
+                if (resultstock != null) // Diminue le stock si le stock est suffisant
+                {
+                    
+                    string updateStockSql = "UPDATE bijoux SET stockBijou = stockBijou - @quantity WHERE idBijou = @id";
+                    MySqlCommand updateStockCmd = new MySqlCommand(updateStockSql, conn);
+                    updateStockCmd.Parameters.AddWithValue("@id", id);
+                    updateStockCmd.Parameters.AddWithValue("@quantity", quantity);
+
+                    updateStockCmd.ExecuteNonQuery(); // Exécute la requête SQL
+                    result = true; 
+                }
+
+            }
+            catch (Exception ex)
+            {
+                result= false;
+                Console.WriteLine(ex.Message);
+            }
+            CloseConnection(conn); // Ferme la connexion à la base de données
+            return result;
         }
+
 
         public bool ModifierBijou(int idBijou, Bijou bijou)
         {
-            throw new NotImplementedException();
+            MySqlConnection conn = OpenConnection(); // Ouvre une connexion à la base de données
+
+            bool result = false;
+
+            try
+            {
+                string updateSql = "UPDATE bijoux SET nomBijou = @nom, descriptionBijou = @description, stockBijou = @stock, prixBijou = @prix, dossierPhoto = @dossierPhoto, dateSortie = @dateSortie, nbPhoto = @nbPhoto, typeBijou = @type WHERE idBijou = @id";
+                MySqlCommand cmd = new MySqlCommand(updateSql, conn);
+                cmd.Parameters.AddWithValue("@id", idBijou);
+                cmd.Parameters.AddWithValue("@nom", bijou.Name);
+                cmd.Parameters.AddWithValue("@description", bijou.Description);
+                cmd.Parameters.AddWithValue("@stock", bijou.Quantity);
+                cmd.Parameters.AddWithValue("@prix", bijou.Price);
+                cmd.Parameters.AddWithValue("@dossierPhoto", bijou.DossierPhoto);
+                cmd.Parameters.AddWithValue("@dateSortie", DateTime.Parse(bijou.Datepublication).ToString("yyyy-MM-dd HH:mm:ss")); // Formatage de la date
+                cmd.Parameters.AddWithValue("@nbPhoto", bijou.NbPhotos);
+                cmd.Parameters.AddWithValue("@type", bijou.Type);
+
+                cmd.ExecuteNonQuery(); // Exécute la requête SQL
+
+                result = true; // Retourne vrai si au moins une ligne a été mise à jour
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                result = false;
+            }
+
+            CloseConnection(conn); // Ferme la connexion à la base de données
+            return result;
         }
+
 
     }
 }
