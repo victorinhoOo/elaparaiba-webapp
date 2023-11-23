@@ -24,6 +24,7 @@ namespace ApiBijou.Controllers
 
         private readonly IConfiguration _configuration;
 
+
         public WebhookController(IConfiguration configuration)
         {
             _configuration = configuration;

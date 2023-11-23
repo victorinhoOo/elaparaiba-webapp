@@ -43,6 +43,19 @@ namespace ApiBijou.Controllers
                 SuccessUrl = "https://localhost:7252/order/success?session_id={CHECKOUT_SESSION_ID}",
                 CancelUrl = "https://localhost:7230/html/paiement_echoue.html",
                 CustomerCreation = "always",
+
+                // Configuration de la collecte d'adresse de livraison
+                ShippingAddressCollection = new SessionShippingAddressCollectionOptions
+                {
+                    AllowedCountries = new List<string>{
+                        "FR", 
+                        "GB",
+                        "GR",
+                        "CH",
+                        "BE",
+                    },
+                },
+
                 ShippingOptions = new List<SessionShippingOptionOptions>
                 {
                     new SessionShippingOptionOptions // Créé une méthode de livraison (collissimo)
@@ -70,7 +83,8 @@ namespace ApiBijou.Controllers
                                     Value = 3,
                                 }
                             }
-                        }
+                            
+                        }                      
                     },
 
                     new SessionShippingOptionOptions // Créé une méthode de livraison (retrait en magasin)
@@ -130,6 +144,11 @@ namespace ApiBijou.Controllers
             catch (StripeException e)
             {
                 result = BadRequest(new { error = e.StripeError.Message });
+            }
+
+            foreach(var item in panier) // Supprime les éléments du panier
+            {
+                panierManager.SupprimerBijouDuPanier(token, item.Id);
             }
 
             return result;
