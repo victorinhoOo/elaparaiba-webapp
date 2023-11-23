@@ -4,6 +4,7 @@ using ApiBijou.Model.formModel;
 using ApiBijou.Model.Panier;
 using ApiBijou.Model.Utilisateurs;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json.Linq;
 
 namespace ApiBijou.Controllers
 {
@@ -16,29 +17,41 @@ namespace ApiBijou.Controllers
     {
         private UtilisateursManager utilisateursManager;
 
-        private PanierManager panierManager;
-
         public AdministrationController()
         {
             this.utilisateursManager = new UtilisateursManager();
-            this.panierManager = new PanierManager();
         }
 
         /// <summary>
-        /// Modifie un bijou
+        /// Modifie ou crée un nouveau bijou
         /// </summary>
-        /// <param name="formulaire"></param>
+        /// <param name="formulaire">attributs du nouveau bijou</param>
         /// <returns></returns>
         [HttpPost("ModifierBijou")]
         public IActionResult ModifierBijou([FromForm] FormulaireBijouModified formulaire)
         {
             ActionResult result = BadRequest("Erreur lors de la modification");
+            bool res = false;
             try
             {
-                bool bijModifier = BijouManager.Instance.ModifierBijou(formulaire);
-                if (bijModifier)
+                if (utilisateursManager.IsAdmin(formulaire.UserToken)) //L'utilisateur est admin
                 {
-                    result = Ok();
+                    if(formulaire.IdBijou == -1)//Création d'un nouveau bijou
+                    {
+                        res = BijouManager.Instance.AjouterBijou(formulaire);
+                    }
+                    else //Modification d'un bijou existant
+                    {
+                        res = BijouManager.Instance.ModifierBijou(formulaire);
+                    }
+                    if (res) //Bijou crée ou modifié avec succès
+                    {
+                        result = Ok("Bijou modifié");
+                    }
+                }
+                else //L'utilisateur n'est pas admin
+                {
+                    result = Unauthorized(new { Message = "L'utilisateur n'est pas un administrateur" });
                 }
             }
             catch (Exception ex)
@@ -46,6 +59,32 @@ namespace ApiBijou.Controllers
                 result = BadRequest(ex);
             }
             return result;
+        }
+
+        [HttpPost("SupprimerBijou")]
+        public IActionResult SupprimerBijou([FromBody] ModeleSupprimerBijou modeleSupprimerBijou)
+        {
+            IActionResult result = Unauthorized(new { Message = "L'utilisateur n'est pas un administrateur" });
+            try
+            {
+                if (utilisateursManager.IsAdmin(modeleSupprimerBijou.TokenPanier))
+                {
+                    bool suppression = BijouManager.Instance.DeleteBijouById(Convert.ToInt32(modeleSupprimerBijou.IdBijou));
+                    if (suppression)
+                    {
+                        result = Ok("Bijou supprimé");
+                    }
+                    else
+                    {
+                        result = BadRequest("Erreur lors de la suppression");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                result = BadRequest(ex);
+            }
+            return result;        
         }
 
         /// <summary>
@@ -66,7 +105,7 @@ namespace ApiBijou.Controllers
         }
 
         /// <summary>
-        /// 
+        /// Vérifie si un utilisateur est admin.
         /// </summary>
         /// <param name="tokenPanier"></param>
         /// <returns></returns>
@@ -81,5 +120,7 @@ namespace ApiBijou.Controllers
             }
             return result;
         }
+
+        
     }
 }

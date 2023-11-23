@@ -1,4 +1,7 @@
 import { Bijou } from "./bijoupresentation.js";
+import { IsAdmin } from "./adminDAO.js";
+import { redirectToConnexion } from "./adminRedirection.js";
+import { getPanierToken } from "./cookies.js";
 
 //Liste des bijoux 
 var bijoux = [];
@@ -97,11 +100,21 @@ function displayBijou() {
         conteneurBijoux.appendChild(bijouElement);
 
     })
+    document.getElementById("nouveauBijou");
 }
 
 document.addEventListener("DOMContentLoaded", async function () {
+    if(await IsAdmin(getPanierToken("PanierToken"))){
+    const nouveauBijouButton = document.getElementById('nouveauBijouButton');
+    nouveauBijouButton.addEventListener('click', function() {
+        redirectToBijouModification("-1");
+    });
     await fetchAllBijou();
     displayBijou();
+    }
+    else{
+        redirectToConnexion();
+    }
 });
 
 function redirectToBijouModification(bijouId){

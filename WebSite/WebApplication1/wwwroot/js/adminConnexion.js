@@ -1,10 +1,6 @@
 import { IsAdmin, ConnectAsAdmin } from "./adminDAO.js";
 import { getPanierToken, setPanierToken } from "./cookies.js";
 
-function onSubmit(token) {
-  document.getElementById("demo-form").submit();
-}
-
 function redirectToBijouModification(bijouId){
   window.location.href = "gestion.html";
 }
@@ -78,7 +74,6 @@ function showPopup() {
     hidePopup();
   });
 }
-
 
 function hidePopup() {
   // Masquer le pop-up et l'overlay

@@ -66,23 +66,22 @@ namespace ApiBijou.Model.Bijoux
             return bijouDAO.DecreaseStock(id, quantite);
         }
 
-
-        public bool AddBijou(Bijou? user)
-        {
-            return bijouDAO.AddBijou(user);
-        }
-
         public bool DeleteBijouById(int id)
         {
             return bijouDAO.DeleteBijouById(id);
         }
 
+        /// <summary>
+        /// Modifier un bijou
+        /// </summary>
+        /// <param name="formulaireBijouModified">Attributs modifiés du bijou.</param>
+        /// <returns></returns>
         public bool ModifierBijou(FormulaireBijouModified formulaireBijouModified)
         {
             bool res = false;
             try
             {
-                Bijou bijou = bijouDAO.getById(Convert.ToInt32(formulaireBijouModified.IdBijou));
+                Bijou bijou = bijouDAO.getById(formulaireBijouModified.IdBijou);
                 //On modifie le bijou
                 bijou = Bijou.ModifierBijou(bijou, formulaireBijouModified);
                 //Chagement dans les data
@@ -91,6 +90,28 @@ namespace ApiBijou.Model.Bijoux
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());   
+            }
+            return res;
+        }
+
+        /// <summary>
+        /// Ajouter un nouveau bijou.
+        /// </summary>
+        /// <param name="formulaireBijouModified">Attributs modifiés du bijou.</param>
+        /// <returns></returns>
+        public bool AjouterBijou(FormulaireBijouModified formulaireBijouModified)
+        {
+            bool res = false;
+            try
+            {
+                //Création d'un bijou
+                Bijou bijou = Bijou.NouveauBijou(formulaireBijouModified);
+                res = bijouDAO.AddBijou(bijou);
+
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
             }
             return res;
         }

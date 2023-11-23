@@ -31,9 +31,54 @@ async function ConnectAsAdmin(formData){
     }
     } catch (error){
         console.error('Erreur : Communication impossible avec le serveur',);
-    }
+    } 
     return connexionSucess;
 }
 
 
-export {IsAdmin, ConnectAsAdmin};
+//Envoi le bijou modifé au serveur
+async function sendBijouModified(formData) {
+    //Communication avec l'api
+    let success = false;
+    try {
+        const response = await fetch('https://localhost:7252/Administration/ModifierBijou', {
+            method: 'POST',
+            body: formData,
+        });
+        if (response.ok) {//Modification réussi
+            console.log('Réponse réussie :', response);
+            success = true;
+        }
+    } catch (error) { //Erreur de commmunication avec le serveur
+        console.error('Erreur : Communication impossible avec le serveur', error);
+    } 
+    return success;
+}
+
+async function delBijou(tokenPanier, idBijou){
+    const requestBody = {
+        TokenPanier: tokenPanier,
+        IdBijou: idBijou
+    };
+    //Communication avec l'api
+    let success = false;
+    try {
+        const response = await fetch('https://localhost:7252/Administration/SupprimerBijou', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(requestBody)
+        });
+        if (response.ok) {//Modification réussi
+            console.log('Réponse réussie :', response);
+            success = true;
+        }
+    } catch (error) { //Erreur de commmunication avec le serveur
+        console.error('Erreur : Communication impossible avec le serveur', error);
+    } 
+    return success;
+
+}
+
+export { IsAdmin, ConnectAsAdmin, sendBijouModified, delBijou };

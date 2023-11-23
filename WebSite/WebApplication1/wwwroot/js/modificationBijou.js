@@ -1,5 +1,7 @@
 import { Bijou } from "./bijoupresentation.js";
-
+import { getPanierToken } from "./cookies.js";
+import { sendBijouModified, IsAdmin, delBijou } from "./adminDAO.js";
+import { redirectToConnexion } from "./adminRedirection.js";
 // Fonction de requête pour récupérer les détails du bijou
 async function fetchBijouDetails(bijouId) {
     const apiUrl = `https://localhost:7252/Bijoux/GetBijouWithId?id=${bijouId}`;
@@ -26,32 +28,6 @@ async function fetchBijouDetails(bijouId) {
     }
 }
 
-//Envoi le bijou modifé au serveur
-async function sendBijouModified(form, bijouId) {
-    // Récupération des données du form
-    const formData = new FormData(form);
-    formData.append('IdBijou', bijouId);
-    //Communication avec l'api
-    let success = false;
-    try {
-        const response = await fetch('https://localhost:7252/Administration/ModifierBijou', {
-            method: 'POST',
-            body: formData,
-        });
-        if (response.ok) {//Modification réussi
-            console.log('Réponse réussie :', response);
-            showPopup();
-        } else {//Erreur coté serveur
-            showPopupL();
-        }
-    } catch (error) { //Erreur de commmunication avec le serveur
-        console.error('Erreur : Communication impossible avec le serveur', error);
-        showPopupL();
-    }
-}
-
-
-
 //Hydrate les attributs du bijou dans le formulaire
 function displayBijouDetails(bijou) {
     document.getElementById('name').value = bijou.nomBijou;
@@ -74,62 +50,133 @@ function displayBijouDetails(bijou) {
 }
 
 document.addEventListener("DOMContentLoaded", async function () {
-    // Récupérer l'ID du bijou depuis l'URL
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const bijouId = urlParams.get('bijouId');
-    
-    //On modifie un bijou existant
-    if (bijouId != -1) {
-        var bijou = await fetchBijouDetails(bijouId);
-        displayBijouDetails(bijou);
-    }
-    
-    var form = document.getElementById("bijouForm")
-    
-    form.addEventListener("submit", async function (event) {
-        event.preventDefault(); // Empêche l'envoi du formulaire par défaut
-        if(bijouId != -1){ //On modifie un bijoue existant
-            sendBijouModified(form, bijouId);
+    if(await IsAdmin(getPanierToken("PanierToken"))){ //L'utilisateur est admin
+        // Récupérer l'ID du bijou depuis l'URL
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const bijouId = urlParams.get('bijouId');
+        
+        //On modifie un bijou existant
+        if (bijouId != -1) {
+            await pageModificationBijou(bijouId);
         }
-    });
-
-    // Ajout d'un gestionnaire d'événements pour fermer le pop-up de succès
-    const closePopupBtn = document.getElementById('closePopupBtn');
-    closePopupBtn.addEventListener('click', function () {
-        closePopup('.popup');
-        form.reset();
-    });
-    // Ajout d'un gestionnaire d'événements pour le pop up d'échec
-    const closePopupBtnL = document.getElementById('closePopupBtnL');
-    closePopupBtnL.addEventListener('click', function () {
-        closePopupL('.popupL');
-    });
-
+        
+        var form = document.getElementById("bijouForm");
+        //Evénement pour la modification du bijou
+        form.addEventListener("submit", async function (event) {
+            event.preventDefault(); // Empêche l'envoi du formulaire par défaut
+            // Récupération des données du form
+            const formData = new FormData(form);
+            formData.append('IdBijou', bijouId);
+            let userToken = getPanierToken("PanierToken");
+            formData.append('UserToken', userToken);
+            let popupMessage;
+            if(await sendBijouModified(formData)){
+                popupMessage = "Requête accomplie avec succès.";
+                showPopup(popupMessage);
+            }
+            else{
+                popupMessage = "Echec de la requête.";
+                showPopup(popupMessage);
+            }
+        });
+    }
+    else{ //L'utilisateur n'est pas admin
+        redirectToConnexion();
+    }
 });
 
-
-
-// Fonction pour afficher le pop-up de réussite
-function showPopup() {
-    var popup = document.getElementById("popup");
-    popup.style.display = "block";
+//Affiche les paramètres pour modifier un bijou
+async function pageModificationBijou(bijouId){
+    var bijou = await fetchBijouDetails(bijouId);
+    displayBijouDetails(bijou);
+    displayDeleteBouton(bijouId, getPanierToken("PanierToken"));
+    const monTitreElement = document.getElementById('mainTitle');
+    monTitreElement.textContent = "Modification bijou";
 }
 
-// Fonction pour afficher le pop-up d'échec
-function showPopupL() {
-    var popup = document.getElementById("popupL");
-    popup.style.display = "block";
+//Affiche le pop up
+function showPopup(message) {
+    // Vérifier si la div existe
+    var divASupprimer = document.getElementById('popup');
+
+    if (divASupprimer) {
+    // La div existe, la supprimer
+    divASupprimer.remove();
+    } else {
+    console.log("La div n'existe pas.");
+    }
+
+    const popupDiv = document.createElement('div');
+    popupDiv.id = 'popup';
+  
+    // Création de l'élément p
+    const popupMessage = document.createElement('p');
+    popupMessage.id = 'popupMessage';
+    popupMessage.textContent = message;
+  
+    // Ajout de l'élément p à la classe
+    popupMessage.classList.add('popup-message');
+  
+    // Création de l'élément bouton
+    const popupButton = document.createElement('button');
+    popupButton.id = 'popupButton';
+    popupButton.textContent = 'OK';
+  
+    // Ajout de l'élément bouton à la classe
+    popupButton.classList.add('popup-button');
+    
+    // Création de l'overlay
+    const overlay = document.createElement('div');
+    overlay.id = 'overlay';
+  
+    // Ajout de l'overlay à la classe
+    overlay.classList.add('overlay');
+  
+    // Ajout des éléments créés au corps du document
+    document.body.appendChild(popupDiv);
+    document.body.appendChild(overlay);
+    popupDiv.appendChild(popupMessage);
+    popupDiv.appendChild(popupButton);
+    document.getElementById('popup').style.display = 'flex';
+    document.getElementById('overlay').style.display = 'block';
+  
+    document.getElementById('popupButton').addEventListener('click', async function () {
+      hidePopup();
+    });
 }
 
-// Fonction pour fermer le pop-up
-function closePopup() {
-    var popup = document.getElementById("popup");
-    popup.style.display = "none";
+//Cache le pop up 
+function hidePopup() {
+    // Masquer le pop-up et l'overlay
+    document.getElementById('popup').style.display = 'none';
+    document.getElementById('overlay').style.display = 'none';
 }
 
-// Fonction pour fermer le pop-up en cas d'échec
-function closePopupL() {
-    var popup = document.getElementById("popupL");
-    popup.style.display = "none";
+//Affiche le bouton pour supprimer le bijou
+function displayDeleteBouton(BijouId, PanierToken) {
+    //Création de la div
+    const delDiv = document.createElement('div');
+    delDiv.classList.add('bouton-conteneur')
+    //Id
+    delDiv.id = 'bouton-conteneur';
+    //Création du button
+    const delButton = document.createElement('button');
+    delButton.textContent = 'Supprimer bijou';
+    delButton.id = 'boutonDelete';
+    delButton.type = 'button';
+    //Ajout du bouton dans la div
+    delDiv.appendChild(delButton);
+    document.body.appendChild(delDiv);
+    //Ajout de l'événement
+    document.getElementById('boutonDelete').addEventListener('click', async function () {
+        let message;
+        if(await delBijou(PanierToken, BijouId)){ //Bijou supprimé
+            message = "Bijou supprimé";       
+        }
+        else{
+            message = "Erreur lors de la suppression"//Erreur lors de la supression
+        }
+        showPopup(message);
+    });
 }

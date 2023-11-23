@@ -11,6 +11,8 @@
         private int prix;
         private DateTime datePublication;
         private List<IFormFile>? photos;
+        //Token de l'utilisateur 
+        private string userToken;
 
         public int IdBijou
         {
@@ -63,6 +65,12 @@
         {
             get { return photos; }
             set { photos = value; }
+        }
+
+        public string UserToken
+        {
+            get { return userToken; }
+            set { userToken = value; }
         }
     }
 }
