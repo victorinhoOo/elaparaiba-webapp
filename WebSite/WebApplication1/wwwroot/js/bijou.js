@@ -159,7 +159,7 @@ function displayBijoux(bijoux) {
         //Image du bijou
         const totalImages = 3;
         const randomImageNumber = Math.floor(Math.random() * totalImages) + 1;
-        const imagePath = `../images/Photosdescriptif${bijou.type}/${bijou.dossierPhoto}/1.jpg`;
+        const imagePath = `http://images.elaparaibatest.fr/Photosdescriptif${bijou.type}/${bijou.dossierPhoto}/1.jpg`;
         const imageElement = document.createElement("img");
         imageElement.src = imagePath;
         imageElement.alt = bijou.nomBijou;
@@ -196,7 +196,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     triSelect.addEventListener("change", sortAndDisplayBijoux);
 
     // Récupération de 10 bijoux
-    for (let i = 0; i < bijouAffiches; i++) {
+    for (let i = 1; i < bijouAffiches; i++) {
         await fetchBijou(i);
     }
     displayBijoux(bijoux)
