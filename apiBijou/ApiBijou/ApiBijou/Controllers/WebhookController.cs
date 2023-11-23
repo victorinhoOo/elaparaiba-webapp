@@ -40,6 +40,7 @@ namespace ApiBijou.Controllers
         [HttpPost]
         public async Task<IActionResult> Index()
         {
+            IActionResult result;
             var json = await new StreamReader(HttpContext.Request.Body).ReadToEndAsync();
 
             try
@@ -65,12 +66,13 @@ namespace ApiBijou.Controllers
                     FulfillOrder(lineItems);
                 }
 
-                return Ok();
+                result = Ok();
             }
             catch (StripeException e)
             {
-                return BadRequest();
+                result = BadRequest();
             }
+            return result;
         }
 
 
@@ -112,21 +114,17 @@ namespace ApiBijou.Controllers
         [HttpGet("/order/success")]
         public ActionResult OrderSuccess([FromQuery] string session_id)
         {
+            ActionResult result;
 
             var sessionService = new SessionService();
-            Session session;
+            Session session = new Session();
             try
             {
                 session = sessionService.Get(session_id, new SessionGetOptions { Expand = new List<string> { "line_items" } });
             }
             catch (StripeException e)
             {
-                return BadRequest("Unable to retrieve session from Stripe. " + e.Message);
-            }
-
-            if (session == null || string.IsNullOrEmpty(session.CustomerDetails?.Name))
-            {
-                return BadRequest("Invalid session or customer details.");
+                result = BadRequest("Unable to retrieve session from Stripe. " + e.Message);
             }
 
             var htmlContent = new StringBuilder(@"
@@ -253,7 +251,9 @@ namespace ApiBijou.Controllers
             htmlContent.Append("<a href='https://localhost:7230' class=\"continuer-btn\">Revenir à l'accueil</a>");
 
             htmlContent.Append("</body></html>");
-            return Content(htmlContent.ToString(), "text/html; charset=utf-8");
+            result = Content(htmlContent.ToString(), "text/html; charset=utf-8");
+
+            return result;
         }
 
     }
