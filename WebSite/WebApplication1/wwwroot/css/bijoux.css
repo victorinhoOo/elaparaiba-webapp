@@ -132,10 +132,27 @@ html {
 }
 
 #voir-plus {
-  padding: 10px;
-  font-size: 16px;
-  cursor: pointer;
+    border: solid transparent;
+    margin-top: 10px;
+    border-radius: 5px;
+    border-width: 1px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top:50px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    background-color: #03889f;
+    color: white;
+    font-size:20px;
 }
+    #voir-plus:hover {
+        border: solid;
+        border-width: 1px;
+        cursor: pointer;
+        background-color: white;
+        color: #03889f;
+    }
 
 img.bijou-1 :hover {
   background-image: url("../images/PhotosdescriptifBo/Bo18/20230908_182247.jpg");

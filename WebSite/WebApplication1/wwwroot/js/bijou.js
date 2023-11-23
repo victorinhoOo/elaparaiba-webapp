@@ -36,36 +36,27 @@ class Bijou {
         }
     }
 }
-/*
-//Fonction pour afficher plus de bijoux sur la page
-function afficherPlus() {
 
-    // Exemple : Ajouter 3 bijoux supplémentaires
-    for (let i = 0; i < 3; i++) {
-        const nouveauBijou = document.createElement("div");
-        nouveauBijou.className = "produit";
-        nouveauBijou.innerHTML = `
-            <img src="chemin/vers/nouveau-produit.jpg" alt="Nouveau Bijou">
-            <h3>Nom du nouveau bijou</h3>
-            <p>Description du nouveau bijou.</p>
-        `;
-        bijouxConteneur.appendChild(nouveauBijou);
-    }
 
-    nombreDeBijouxAffiches += 3;
-
-    // Cacher le bouton "Voir Plus" si tous les bijoux sont affichés
-    const boutonVoirPlus = document.getElementById("voir-plus");
-    if (nombreDeBijouxAffiches >= nombreTotalDeBijoux) {
-        boutonVoirPlus.style.display = "none";
-    }
-} */
 
 
 // Nombre initial de bijoux affichés
 let bijouAffiches = 10;
-///Conteneur des bijoux sur la page html
-const bijouxConteneur = document.getElementById("bijoux-conteneur");
+
+//Fonction pour afficher plus de bijoux sur la page
+function afficherPlus() {
+    bijouAffiches += 10; // Augmente le nombre de bijoux affichés de 10
+
+    // Récupération et affichage des bijoux supplémentaires
+    for (let i = bijouAffiches - 10 + 1; i <= bijouAffiches; i++) {
+        fetchBijou(i).then(() => {
+            displayBijoux(bijoux); // Cette fonction devrait gérer l'affichage des bijoux dans la page
+        }).catch(error => {
+            console.error("Erreur lors de la récupération des bijoux supplémentaires :", error);
+        });
+    }
+}
+
 
 window.onload = initialiserBijoux;
 
@@ -143,45 +134,51 @@ function displayBijoux(bijoux) {
         //Récupération de la valeur de la clée
         let bijou = bijoux[keys];
 
-        //Création d'un conteneur pour le bijou
-        const bijouElement = document.createElement("div");
-        bijouElement.classList.add("produit");
+        if (bijou.stockBijou > 0) {
 
-        //Mise en page du bijoux
 
-        //Image du bijou
-        const totalImages = 3;
-        const randomImageNumber = Math.floor(Math.random() * totalImages) + 1;
-        const imagePath = `http://images.elaparaibatest.fr/Photosdescriptif${bijou.type}/${bijou.dossierPhoto}/1.jpg`;
-        const imageElement = document.createElement("img");
-        imageElement.src = imagePath;
-        imageElement.alt = bijou.nomBijou;
-        bijouElement.appendChild(imageElement);
 
-        //Nom du bijou
-        const titreBijou = document.createElement("h3");
-        titreBijou.textContent = `${bijou.nomBijou}`;
-        bijouElement.appendChild(titreBijou);
 
-        //Prix
-        const prixBijou = document.createElement('p');
-        prixBijou.textContent = `${bijou.prixBijou}€`;
-        bijouElement.appendChild(prixBijou);
+            //Création d'un conteneur pour le bijou
+            const bijouElement = document.createElement("div");
+            bijouElement.classList.add("produit");
 
-        //Description
-        const descriptionElement = document.createElement("button");
-        descriptionElement.textContent = "Acheter";
-        descriptionElement.addEventListener("click", function () {
-            redirectToBijouPresentation(bijou.idBijou);
-        });
-        bijouElement.appendChild(descriptionElement);
+            //Mise en page du bijoux
 
-        conteneurBijoux.appendChild(bijouElement);
+            //Image du bijou
+            const totalImages = 3;
+            const randomImageNumber = Math.floor(Math.random() * totalImages) + 1;
+            const imagePath = `http://images.elaparaibatest.fr/Photosdescriptif${bijou.type}/${bijou.dossierPhoto}/1.jpg`;
+            const imageElement = document.createElement("img");
+            imageElement.src = imagePath;
+            imageElement.alt = bijou.nomBijou;
+            bijouElement.appendChild(imageElement);
+
+            //Nom du bijou
+            const titreBijou = document.createElement("h3");
+            titreBijou.textContent = `${bijou.nomBijou}`;
+            bijouElement.appendChild(titreBijou);
+
+            //Prix
+            const prixBijou = document.createElement('p');
+            prixBijou.textContent = `${bijou.prixBijou}€`;
+            bijouElement.appendChild(prixBijou);
+
+            //Description
+            const descriptionElement = document.createElement("button");
+            descriptionElement.textContent = "Acheter";
+            descriptionElement.addEventListener("click", function () {
+                redirectToBijouPresentation(bijou.idBijou);
+            });
+            bijouElement.appendChild(descriptionElement);
+
+            conteneurBijoux.appendChild(bijouElement);
+        }
     });
 }
-//Fonction lancer au chargement des élèments html
+// Fonction lancée au chargement des éléments HTML
 document.addEventListener("DOMContentLoaded", async function () {
-    //Ajout d'évènement pour lancer la fonction de tri
+    // Ajout d'événements pour lancer la fonction de tri
     const categorieSelect = document.getElementById("categorie-select");
     const triSelect = document.getElementById("tri-select");
 
@@ -192,7 +189,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     for (let i = 1; i < bijouAffiches; i++) {
         await fetchBijou(i);
     }
-    displayBijoux(bijoux)
+    displayBijoux(bijoux);
     console.log(bijoux);
 
     // Récupération de la catégorie à partir du paramètre d'URL
@@ -202,10 +199,15 @@ document.addEventListener("DOMContentLoaded", async function () {
     // Si une catégorie est spécifiée, sélectionnez cette option dans le menu déroulant
     if (categorie) {
         categorieSelect.value = categorie;
-        // Appel de la fonction pour trier et afficher les bijoux en fonction de la catégorie sélectionnée
         sortAndDisplayBijoux();
     }
+
+    // Ajout d'un event listener au bouton "Voir Plus"
+    const voirPlusButton = document.getElementById("voir-plus");
+    voirPlusButton.addEventListener("click", afficherPlus);
 });
+
+
 
 
 function redirectToBijouPresentation(bijouId) {

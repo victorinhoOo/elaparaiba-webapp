@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "y+QM3W5GTqElUc0AwRAPvu5OVOzohIzhua6U4+tfqckmX8TVlDwKEsitqdyEkwrBMVcOi+L9Xac3jwSg+CFzDw==",
   "success": true,
   "projectFilePath": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\Elaparaiba.csproj",
-=======
-  "dgSpecHash": "Vcio6jZisB9WnrPjrKpAMDljslCg6XAUAh0B+7q0+iSZn1DoHte/zGdBnx/Xw3rxusvpuKfIRJZLy3My2WTdQA==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\ms292435\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\Elaparaiba.csproj",
->>>>>>> origin/JS_DAO
   "expectedPackageFiles": [],
   "logs": []
 }

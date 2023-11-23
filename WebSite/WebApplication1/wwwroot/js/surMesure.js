@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const formData = new FormData(form); // Création d'un objet FormData pour le formulaire
 
         try {
-            const response = await fetch('https://localhost:7252/Bijoux/EnvoyerFormulaireSurMesure', {
+            const response = await fetch('https://elaparaibatest.fr/EnvoyerFormulaireSurMesure', {
                 method: 'POST',
                 body: formData // Envoyer le formulaire avec le fichier
             });

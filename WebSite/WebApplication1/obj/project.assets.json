@@ -8,37 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\oxort\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\ms292435\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
->>>>>>> origin/JS_DAO
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\Elaparaiba.csproj",
       "projectName": "Elaparaiba",
       "projectPath": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\Elaparaiba.csproj",
       "packagesPath": "C:\\Users\\oxort\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\ms292435\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\Elaparaiba.csproj",
-      "projectName": "Elaparaiba",
-      "projectPath": "C:\\Users\\ms292435\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\Elaparaiba.csproj",
-      "packagesPath": "C:\\Users\\ms292435\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ms292435\\Desktop\\Nouveau dossier\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\obj\\",
->>>>>>> origin/JS_DAO
       "projectStyle": "PackageReference",
       "configFilePaths": [
-<<<<<<< HEAD
         "C:\\Users\\oxort\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-        "C:\\Users\\ms292435\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
->>>>>>> origin/JS_DAO
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -46,11 +28,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-<<<<<<< HEAD
-=======
-        "C:\\Program Files\\dotnet\\library-packs": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
->>>>>>> origin/JS_DAO
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
