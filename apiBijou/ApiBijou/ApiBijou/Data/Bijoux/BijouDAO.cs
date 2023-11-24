@@ -71,14 +71,58 @@ namespace ApiBijou.Data.Bijoux
         }
 
 
-        public bool AddBijou(Bijou? bijou)
+        public bool AddBijou(Bijou bijou)
         {
-            throw new NotImplementedException();
+            MySqlConnection conn = OpenConnection();
+            bool res;
+            try
+            {
+                string insertSql = "INSERT INTO bijoux (nomBijou, descriptionBijou, stockBijou, prixBijou, dossierPhoto, dateSortie, nbPhoto, typeBijou) VALUES (@nom, @description, @stock, @prix, @dossierPhoto, @dateSortie, @nbPhoto, @type)";
+                MySqlCommand cmd = new MySqlCommand(insertSql, conn);
+                cmd.Parameters.AddWithValue("@nom", bijou.Name);
+                cmd.Parameters.AddWithValue("@description", bijou.Description);
+                cmd.Parameters.AddWithValue("@stock", bijou.Quantity);
+                cmd.Parameters.AddWithValue("@prix", bijou.Price);
+                cmd.Parameters.AddWithValue("@dossierPhoto", bijou.DossierPhoto);
+                cmd.Parameters.AddWithValue("@dateSortie", bijou.Datepublication);
+                cmd.Parameters.AddWithValue("@nbPhoto", bijou.NbPhotos);
+                cmd.Parameters.AddWithValue("@type", bijou.Type);
+
+                cmd.ExecuteNonQuery(); // Exécute la requête SQL
+                res = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                res = false; 
+            }
+
+            CloseConnection(conn); // Ferme la connexion à la base de données
+            return res;
         }
+
 
         public bool DeleteBijouById(int id)
         {
-            throw new NotImplementedException();
+            MySqlConnection conn = OpenConnection();
+            bool res;
+            try
+            {
+                string deleteSql = "DELETE FROM bijoux WHERE idBijou = @id";
+                MySqlCommand cmd = new MySqlCommand(deleteSql, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+
+                cmd.ExecuteNonQuery(); // Exécute la requête SQL
+                res = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                res = false;
+            }
+
+            CloseConnection(conn); // Ferme la connexion à la base de données
+            return res;
         }
 
         /// <summary>
