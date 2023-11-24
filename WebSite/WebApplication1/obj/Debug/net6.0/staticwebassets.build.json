@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "C6VyKqBjhVfs6YMG88/Ea/GH3tq+TrFQ92wKM9DOcks=",
+  "Hash": "LnU/tsLpMiAefs0RC1sYvo5+Fzhhg6kkuav9T4/5gSA=",
   "Source": "Elaparaiba",
   "BasePath": "_content/Elaparaiba",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bijouxpresentation.css"
+    },
+    {
+      "Identity": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\css\\cgv.css",
+      "SourceId": "Elaparaiba",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/Elaparaiba",
+      "RelativePath": "css/cgv.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\cgv.css"
     },
     {
       "Identity": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\css\\commun.css",
@@ -357,6 +374,23 @@
       "OriginalItemSpec": "wwwroot\\html\\bijouxpresentation.html"
     },
     {
+      "Identity": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\html\\cgv.html",
+      "SourceId": "Elaparaiba",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/Elaparaiba",
+      "RelativePath": "html/cgv.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\html\\cgv.html"
+    },
+    {
       "Identity": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\html\\index.html",
       "SourceId": "Elaparaiba",
       "SourceType": "Discovered",
@@ -372,6 +406,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\html\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\html\\mentions_Legales.html",
+      "SourceId": "Elaparaiba",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/Elaparaiba",
+      "RelativePath": "html/mentions_Legales.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\html\\mentions_Legales.html"
     },
     {
       "Identity": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\html\\ouMeTrouver.html",
@@ -474,6 +525,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\html\\test.html"
+    },
+    {
+      "Identity": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\html\\vie_Privee_Cookies.html",
+      "SourceId": "Elaparaiba",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/Elaparaiba",
+      "RelativePath": "html/vie_Privee_Cookies.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\html\\vie_Privee_Cookies.html"
+    },
+    {
+      "Identity": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\cgv.jpg",
+      "SourceId": "Elaparaiba",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/Elaparaiba",
+      "RelativePath": "images/cgv.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\cgv.jpg"
     },
     {
       "Identity": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\DSC00071.JPG",
