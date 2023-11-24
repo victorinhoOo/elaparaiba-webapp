@@ -47,6 +47,8 @@ namespace ApiBijou.Controllers
                     if (res) //Bijou crée ou modifié avec succès
                     {
                         result = Ok("Bijou modifié");
+                        //Modification
+
                     }
                 }
                 else //L'utilisateur n'est pas admin

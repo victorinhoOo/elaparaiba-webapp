@@ -96,6 +96,10 @@ async function pageModificationBijou(bijouId){
     displayDeleteBouton(bijouId, getPanierToken("PanierToken"));
     const monTitreElement = document.getElementById('mainTitle');
     monTitreElement.textContent = "Modification bijou";
+    //Le bijjou n'est pas modifiable
+    var selectElement = document.getElementById('type');
+    selectElement.disabled = true;
+    selectElement.readOnly = true;
 }
 
 //Affiche le pop up

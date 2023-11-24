@@ -6,7 +6,7 @@
         private string name;
         private string description;
         private int quantity;
-        private string type;
+        private string? type;
         private string matiere;
         private int prix;
         private DateTime datePublication;
@@ -37,7 +37,7 @@
             set { quantity = value; }
         }
 
-        public string Type
+        public string? Type
         {
             get { return type; }
             set { type = value; }
