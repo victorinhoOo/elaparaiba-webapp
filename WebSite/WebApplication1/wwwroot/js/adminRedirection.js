@@ -3,4 +3,8 @@ function redirectToConnexion(){
     window.location.href = "adminConnexion.html";
 }
 
-export { redirectToConnexion };
+function redirectToGestion(){
+    window.location.href = "gestion.html";
+}
+
+export { redirectToConnexion, redirectToGestion };

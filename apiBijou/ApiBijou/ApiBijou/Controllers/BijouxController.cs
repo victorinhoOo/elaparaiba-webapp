@@ -37,11 +37,11 @@ namespace API_SAE.Controllers
             {
                 result = NotFound();
 
-                Bijou? user = BijouManager.Instance.GetBijouById(id.Value);
+                Bijou? bijou = BijouManager.Instance.GetBijouById(id.Value);
 
-                if (user != null)
+                if (bijou != null)
                 {
-                    result = Ok(user); // Si le bijou existe, change la réponse en Ok avec le bijou
+                    result = Ok(bijou); // Si le bijou existe, change la réponse en Ok avec le bijou
                 }
             }
 

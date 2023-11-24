@@ -1,7 +1,7 @@
 import { Bijou } from "./bijoupresentation.js";
 import { getPanierToken } from "./cookies.js";
 import { sendBijouModified, IsAdmin, delBijou } from "./adminDAO.js";
-import { redirectToConnexion } from "./adminRedirection.js";
+import { redirectToConnexion, redirectToGestion } from "./adminRedirection.js";
 // Fonction de requête pour récupérer les détails du bijou
 async function fetchBijouDetails(bijouId) {
     const apiUrl = `https://localhost:7252/Bijoux/GetBijouWithId?id=${bijouId}`;
@@ -41,7 +41,10 @@ function displayBijouDetails(bijou) {
     // Récupérer les parties de la date
     var day = partsDate[0];
     var month = partsDate[1];
-    var year = partsDate[2];
+    // var year = partsDate[2];
+    //Séparation de l'heure et de la date
+    let yearHourArray = partsDate[2].split(' ');
+    var year = yearHourArray[0];
     // Construire la date au format ISO (aaaa-mm-jj) 
     var isoDate = year + "-" + month + "-" + day;
     document.getElementById('datePublication').value = isoDate;
@@ -140,9 +143,11 @@ function showPopup(message) {
     popupDiv.appendChild(popupButton);
     document.getElementById('popup').style.display = 'flex';
     document.getElementById('overlay').style.display = 'block';
-  
-    document.getElementById('popupButton').addEventListener('click', async function () {
+    document.getElementById('popupButton').addEventListener('click', function () {
       hidePopup();
+      if(message == "Bijou supprimé." || message == "Requête accomplie avec succès."){ //Requête accomplie avec succès
+        redirectToGestion(); //Retour à la page de gestion
+      }
     });
 }
 
@@ -172,10 +177,10 @@ function displayDeleteBouton(BijouId, PanierToken) {
     document.getElementById('boutonDelete').addEventListener('click', async function () {
         let message;
         if(await delBijou(PanierToken, BijouId)){ //Bijou supprimé
-            message = "Bijou supprimé";       
+            message = "Bijou supprimé.";       
         }
         else{
-            message = "Erreur lors de la suppression"//Erreur lors de la supression
+            message = "Erreur lors de la suppression."//Erreur lors de la supression
         }
         showPopup(message);
     });

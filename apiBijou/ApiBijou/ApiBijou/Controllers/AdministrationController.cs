@@ -61,13 +61,18 @@ namespace ApiBijou.Controllers
             return result;
         }
 
+        /// <summary>
+        /// Suppression d'un bijou.
+        /// </summary>
+        /// <param name="modeleSupprimerBijou">Mode de données transmis par le client</param>
+        /// <returns></returns>
         [HttpPost("SupprimerBijou")]
         public IActionResult SupprimerBijou([FromBody] ModeleSupprimerBijou modeleSupprimerBijou)
         {
             IActionResult result = Unauthorized(new { Message = "L'utilisateur n'est pas un administrateur" });
             try
             {
-                if (utilisateursManager.IsAdmin(modeleSupprimerBijou.TokenPanier))
+                if (utilisateursManager.IsAdmin(modeleSupprimerBijou.TokenPanier)) //Vérification des droits de l'utilisateur
                 {
                     bool suppression = BijouManager.Instance.DeleteBijouById(Convert.ToInt32(modeleSupprimerBijou.IdBijou));
                     if (suppression)

@@ -58,6 +58,7 @@ namespace ApiBijou.Data.Bijoux
             {
                 if (!bijoux.ContainsKey(bijoux.Count))
                 {
+                    bijou.Id = bijoux.Count;
                     bijoux[bijoux.Count] = bijou;
                     res = true;
                 }
@@ -74,7 +75,7 @@ namespace ApiBijou.Data.Bijoux
             bool res = false;
             if(bijoux.ContainsKey(id))
             {
-                bijoux[id] = null;
+                bijoux.Remove(id);
                 res = true;
             }
             return res;
