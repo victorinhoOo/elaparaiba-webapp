@@ -51,20 +51,34 @@ namespace ApiBijou.Data.Bijoux
 
         }
 
-        public bool AddBijou(Bijou? bijou)
+        public bool AddBijou(Bijou bijou)
         {
-            bool result = false;
-            if (!bijoux.ContainsKey(bijou.Id))
+            bool res = false;
+            try
             {
-                bijoux[bijoux.Count] = bijou;
-                result = true;
+                if (!bijoux.ContainsKey(bijoux.Count))
+                {
+                    bijou.Id = bijoux.Count;
+                    bijoux[bijoux.Count] = bijou;
+                    res = true;
+                }
             }
-            return result;
+            catch (Exception ex) 
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            return res;
         }
 
         public bool DeleteBijouById(int id)
         {
-            throw new NotImplementedException();
+            bool res = false;
+            if(bijoux.ContainsKey(id))
+            {
+                bijoux.Remove(id);
+                res = true;
+            }
+            return res;
         }
 
         public IEnumerable<Bijou> GetAllBijoux()
@@ -102,5 +116,6 @@ namespace ApiBijou.Data.Bijoux
             }
             return res;
         }
+
     }
 }
