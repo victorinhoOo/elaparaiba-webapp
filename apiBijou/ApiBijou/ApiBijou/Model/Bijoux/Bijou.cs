@@ -83,7 +83,7 @@ namespace ApiBijou.Model.Bijoux
         }
 
         /// <summary>
-        /// Modifie un bijou
+        /// Modifier un bijou.
         /// </summary>
         /// <param name="formulaireBijouModified">Nouveaux attributs à hydrater</param>
         /// <returns></returns>
@@ -91,6 +91,31 @@ namespace ApiBijou.Model.Bijoux
         public static Bijou ModifierBijou(Bijou bijou, FormulaireBijouModified formulaireBijouModified)
         {
             try 
+            {
+                bijou.Price = formulaireBijouModified.Prix;
+                bijou.Quantity = formulaireBijouModified.Quantity;
+                bijou.Description = formulaireBijouModified.Description;
+                bijou.Type = formulaireBijouModified.Type;
+                //Ajouter la matiere
+                bijou.Datepublication = Convert.ToString(formulaireBijouModified.DatePublication);
+                bijou.Name = formulaireBijouModified.Name;
+            }
+            catch(Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+            return bijou;
+        }
+
+        /// <summary>
+        /// Ajouter un nouveau bijou.
+        /// </summary>
+        /// <param name="formulaireBijouModified"></param>
+        /// <returns></returns>
+        public static Bijou NouveauBijou(FormulaireBijouModified formulaireBijouModified)
+        {
+            Bijou bijou = new Bijou();
+            try
             {
                 bijou.Price = formulaireBijouModified.Prix;
                 bijou.Quantity = formulaireBijouModified.Quantity;

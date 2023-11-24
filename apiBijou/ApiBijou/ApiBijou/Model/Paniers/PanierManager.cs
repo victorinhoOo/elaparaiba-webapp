@@ -63,5 +63,11 @@ namespace ApiBijou.Model.Panier
         {
             return panierDAO.CoutTotalPanier(tokenManager.GetPanierId(token));
         }
+
+        //COnstructeur pour les tests 
+        public PanierManager()
+        {
+            CreerPanier(8);
+        }
     }
 }

@@ -6,11 +6,11 @@ namespace ApiBijou.Data.Utilisateurs
 {
     public class UserFakeDAO : IUserDAO
     {
-        private UserFakeDAO instance;
+        private static UserFakeDAO instance;
         /// <summary>
         /// Instance public du singleton
         /// </summary>
-        public UserFakeDAO Instance
+        public static UserFakeDAO Instance
         {
             get
             {
@@ -25,8 +25,19 @@ namespace ApiBijou.Data.Utilisateurs
         //Liste des utilisateurs ayant le droit admin
         private Dictionary<int, Utilisateur> utilsateurs = new Dictionary<int, Utilisateur>
         {
-            { 0, new Utilisateur { Login = "root", Mdp="0da651f3a757364a4a6ce8730990afa46fe8d62e95f26172c47ca2fde814c6f7", TokenPanier = "efefefdfefdfefdfedfdfdf" } }
+            { 0, new Utilisateur { Login = "root", Mdp="0da651f3a757364a4a6ce8730990afa46fe8d62e95f26172c47ca2fde814c6f7", TokenPanier = "7adfb95552bcfee48c44d9e7d129d3d1" } }
         };
+
+        /// <summary>
+        /// Renvoi la liste des utilisateurs administrateurs
+        /// </summary>
+        public List<Utilisateur> Utilisateur
+        {
+            get
+            {
+                return utilsateurs.Values.ToList();
+            }
+        }
 
         public bool IsAdmin(string tokenPanier)
         {
@@ -65,5 +76,7 @@ namespace ApiBijou.Data.Utilisateurs
             }
             return res;
         }
+
+        private UserFakeDAO() { }
     }
 }
