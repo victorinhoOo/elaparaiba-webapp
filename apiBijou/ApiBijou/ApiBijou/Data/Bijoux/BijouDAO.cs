@@ -84,7 +84,7 @@ namespace ApiBijou.Data.Bijoux
                 cmd.Parameters.AddWithValue("@stock", bijou.Quantity);
                 cmd.Parameters.AddWithValue("@prix", bijou.Price);
                 cmd.Parameters.AddWithValue("@dossierPhoto", bijou.DossierPhoto);
-                cmd.Parameters.AddWithValue("@dateSortie", bijou.Datepublication);
+                cmd.Parameters.AddWithValue("@dateSortie", DateTime.Parse(bijou.Datepublication).ToString("yyyy-MM-dd HH:mm:ss"));
                 cmd.Parameters.AddWithValue("@nbPhoto", bijou.NbPhotos);
                 cmd.Parameters.AddWithValue("@type", bijou.Type);
 

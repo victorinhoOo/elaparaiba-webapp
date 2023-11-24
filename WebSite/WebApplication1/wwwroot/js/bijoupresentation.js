@@ -1,5 +1,4 @@
-﻿import { getPanierToken, setPanierToken } from "../js/cookies.js";
-import { updatePanierCount, ajouterAuPanier } from "../js/panierDAO.js";
+﻿import { updatePanierCount, ajouterAuPanier } from "../js/panierDAO.js";
 import { Bijou } from "../js/bijou.js";
 
 
@@ -26,6 +25,10 @@ document.addEventListener("DOMContentLoaded", () => {
         bijouName.textContent = bijou.nomBijou;
         bijouPrice.textContent = bijou.prixBijou;
         bijouQuantite.textContent = bijou.stockBijou;
+        if (bijou.stockBijou == 0) {
+            const quantiteVide = "Ce bijou n'est plus disponible";
+            bijouQuantite.textContent = quantiteVide;
+        }
         bijouCategorie.textContent = `Catégorie: ${bijou.type}`;
         bijouDescription.textContent = `Description: ${bijou.descriptionBijou}`;
         bijouImageA.src = `../images/Photosdescriptif${bijou.type}/${bijou.dossierPhoto}/1.jpg`;
@@ -36,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const miniaturesContainer = document.getElementById('miniatures');
         for (let i = 1; i <= bijou.nbPhotos; i++) {
             const miniature = document.createElement('img');
-            miniature.src = `http://images.elaparaibatest.fr/Photosdescriptif${bijou.type}/${bijou.dossierPhoto}/${i}.jpg`;
+            miniature.src = `https://images.elaparaibatest.fr/Photosdescriptif${bijou.type}/${bijou.dossierPhoto}/${i}.jpg`;
             miniature.alt = `Miniature ${i}`;
             miniature.addEventListener('click', () => changerImagePrincipale(miniature.src));
             miniaturesContainer.appendChild(miniature);

@@ -14,7 +14,7 @@ namespace ApiBijou.Model.Utilisateurs
     public class UtilisateursManager
     {
         
-        private IUserDAO userDAO = UserFakeDAO.Instance;
+        private IUserDAO userDAO = new UserDAO();
         
         /// <summary>
         /// Hash le password

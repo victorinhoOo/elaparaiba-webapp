@@ -2,6 +2,7 @@ import { fetchTokenPanier } from "../js/tokenDAO.js";
 
 async function setPanierToken() {
     // Définition du temps de vie du cookie
+
     const value = await fetchTokenPanier();
     const name = "PanierToken";
     const oneWeekInMilliseconds = 7 * 24 * 60 * 60 * 1000; // Durée d'une semaine en millisecondes

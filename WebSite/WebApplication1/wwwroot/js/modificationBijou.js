@@ -1,4 +1,4 @@
-import { Bijou } from "./bijoupresentation.js";
+import { Bijou } from "./bijou.js";
 import { getPanierToken } from "./cookies.js";
 import { sendBijouModified, IsAdmin, delBijou } from "./adminDAO.js";
 import { redirectToConnexion, redirectToGestion } from "./adminRedirection.js";

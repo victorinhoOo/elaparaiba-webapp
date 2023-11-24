@@ -148,7 +148,7 @@ function displayBijoux(bijoux) {
             //Image du bijou
             const totalImages = 3;
             const randomImageNumber = Math.floor(Math.random() * totalImages) + 1;
-            const imagePath = `http://images.elaparaibatest.fr/Photosdescriptif${bijou.type}/${bijou.dossierPhoto}/1.jpg`;
+            const imagePath = `https://images.elaparaibatest.fr/Photosdescriptif${bijou.type}/${bijou.dossierPhoto}/1.jpg`;
             const imageElement = document.createElement("img");
             imageElement.src = imagePath;
             imageElement.alt = bijou.nomBijou;
@@ -211,7 +211,8 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 
 function redirectToBijouPresentation(bijouId) {
-    window.location.href = "bijouxpresentation.html?bijouId=" + bijouId;
+    window.location.href = "/html/bijouxpresentation.html?bijouId=" + bijouId;
 }
 
 export { Bijou };
+export { redirectToBijouPresentation };
