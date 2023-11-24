@@ -45,7 +45,6 @@ html {
 
     #content-container h2 {
         text-transform: uppercase; /* Met tous les h2 en majuscules */
-        margin-bottom: 10px; /* Ajoute une marge en bas pour l'espacement entre les h2 et les paragraphes */
     }
 
     #content-container p {
@@ -53,5 +52,26 @@ html {
         line-height: 1.5; /* Espacement des lignes pour une meilleure lisibilité */
     }
 
+.titre_deux {
+    color: #03889F;
+    font-size: 50px;
+    text-align: center;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+}
 
+div {
+    white-space: pre-line;
+}
 
+.espace-cinq {
+    margin-right: 50px;
+}
+u {
+    text-decoration: underline;
+}
+
+.espace-cent {
+    margin-right: 100px;
+}
