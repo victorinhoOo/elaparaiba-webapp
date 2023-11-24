@@ -1,0 +1,77 @@
+﻿body,
+html {
+    margin: 0;
+    padding: 0;
+
+}
+
+
+.conteneur {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-image: url("../images/PhotosFabrication/savoirfairecover.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .conteneur::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+.texteConteneur {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    position: absolute;
+}
+#content-container {
+    max-width: 800px;
+    margin: 20px auto; /* Ajout de marges pour l'espacement et centrage horizontal */
+    padding: 20px;
+    box-sizing: border-box; /* Inclure les bordures et le padding dans la largeur totale */
+}
+
+    #content-container h2 {
+        text-transform: uppercase; /* Met tous les h2 en majuscules */
+    }
+
+    #content-container p {
+        margin-bottom: 40px; /* Ajoute une marge en bas pour l'espacement entre les paragraphes */
+        line-height: 1.5; /* Espacement des lignes pour une meilleure lisibilité */
+    }
+
+.titre_deux {
+    color: #03889F;
+    font-size: 50px;
+    text-align: center;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+div {
+    white-space: pre-line;
+}
+
+.espace-cinq {
+    margin-right: 50px;
+}
+u {
+    text-decoration: underline;
+}
+
+.espace-cent {
+    margin-right: 100px;
+}
