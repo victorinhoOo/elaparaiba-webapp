@@ -225,6 +225,7 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     margin-top: 5%;
+    white-space: normal;
 }
 
 footer h2{
@@ -234,14 +235,15 @@ footer h2{
     text-align:unset;
 }
 
-footer p{
-    font-size:unset;
-}
+    footer p {
+        font-size: unset;
+    }
 .footer-content {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; 
-    margin-bottom: 20px; 
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+
 }
 
 .footer-section1.footer-section2 {
@@ -276,6 +278,7 @@ ul {
     color: #333;
     margin-bottom: 10px;
     display: block;
+    white-space: normal;
 }
 
 .buttonF:hover {

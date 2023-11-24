@@ -41,6 +41,7 @@ html {
     margin: 20px auto; /* Ajout de marges pour l'espacement et centrage horizontal */
     padding: 20px;
     box-sizing: border-box; /* Inclure les bordures et le padding dans la largeur totale */
+    white-space: pre-line;
 }
 
     #content-container h2 {
@@ -61,9 +62,6 @@ html {
     justify-content: center;
 }
 
-div {
-    white-space: pre-line;
-}
 
 .espace-cinq {
     margin-right: 50px;

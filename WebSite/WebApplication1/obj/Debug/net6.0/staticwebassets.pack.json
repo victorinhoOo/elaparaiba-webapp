@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\css\\bijouxpresentation.css"
     },
     {
+      "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\css\\cgv.css",
+      "PackagePath": "staticwebassets\\css\\cgv.css"
+    },
+    {
       "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\css\\commun.css",
       "PackagePath": "staticwebassets\\css\\commun.css"
     },
@@ -81,8 +85,16 @@
       "PackagePath": "staticwebassets\\html\\bijouxpresentation.html"
     },
     {
+      "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\html\\cgv.html",
+      "PackagePath": "staticwebassets\\html\\cgv.html"
+    },
+    {
       "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\html\\index.html",
       "PackagePath": "staticwebassets\\html\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\html\\mentions_Legales.html",
+      "PackagePath": "staticwebassets\\html\\mentions_Legales.html"
     },
     {
       "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\html\\ouMeTrouver.html",
@@ -107,6 +119,10 @@
     {
       "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\html\\test.html",
       "PackagePath": "staticwebassets\\html\\test.html"
+    },
+    {
+      "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\html\\vie_Privee_Cookies.html",
+      "PackagePath": "staticwebassets\\html\\vie_Privee_Cookies.html"
     },
     {
       "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\DSC00071.JPG",
@@ -815,6 +831,10 @@
     {
       "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\Thumbs.db",
       "PackagePath": "staticwebassets\\images\\Thumbs.db"
+    },
+    {
+      "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\cgv.jpg",
+      "PackagePath": "staticwebassets\\images\\cgv.jpg"
     },
     {
       "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\images\\favicon.ico",
