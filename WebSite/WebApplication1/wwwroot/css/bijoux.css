@@ -5,17 +5,17 @@ html {
 }
 
 .conteneur {
-  position: relative;
-  width: 100%;
-  height: 400px;
-  background-image: url("../images/PhotosDescriptifBracelets/Bra71/2.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-image: url("http://images.elaparaibatest.fr/PhotosDescriptifBracelets/Bra71/2.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .conteneur::before {
