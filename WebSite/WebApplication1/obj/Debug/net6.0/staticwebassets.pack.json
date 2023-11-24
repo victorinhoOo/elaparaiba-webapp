@@ -61,12 +61,12 @@
       "PackagePath": "staticwebassets\\font\\Caveat-Regular.ttf"
     },
     {
-      "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\html\\admin.html",
-      "PackagePath": "staticwebassets\\html\\admin.html"
+      "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\html\\administration\\adminConnexion.html",
+      "PackagePath": "staticwebassets\\html\\administration\\adminConnexion.html"
     },
     {
-      "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\html\\administration\\administration.html",
-      "PackagePath": "staticwebassets\\html\\administration\\administration.html"
+      "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\html\\administration\\gestion.html",
+      "PackagePath": "staticwebassets\\html\\administration\\gestion.html"
     },
     {
       "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\html\\administration\\modificationBijou.html",
@@ -873,6 +873,18 @@
       "PackagePath": "staticwebassets\\images\\test.jpg"
     },
     {
+      "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\js\\adminConnexion.js",
+      "PackagePath": "staticwebassets\\js\\adminConnexion.js"
+    },
+    {
+      "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\js\\adminDAO.js",
+      "PackagePath": "staticwebassets\\js\\adminDAO.js"
+    },
+    {
+      "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\js\\adminRedirection.js",
+      "PackagePath": "staticwebassets\\js\\adminRedirection.js"
+    },
+    {
       "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\js\\bijou.js",
       "PackagePath": "staticwebassets\\js\\bijou.js"
     },
@@ -897,8 +909,16 @@
       "PackagePath": "staticwebassets\\js\\cookies.js"
     },
     {
+      "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\js\\gestion.js",
+      "PackagePath": "staticwebassets\\js\\gestion.js"
+    },
+    {
       "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\js\\index.js",
       "PackagePath": "staticwebassets\\js\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\js\\modificationBijou.js",
+      "PackagePath": "staticwebassets\\js\\modificationBijou.js"
     },
     {
       "Id": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\WebSite\\WebApplication1\\wwwroot\\js\\ouMeTrouver.js",

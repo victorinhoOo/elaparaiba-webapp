@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-{"bijoux":[{"Bijou":{"NbPhotos":4,"Id":1,"Name":"Boucles d'oreilles collection \"Nature et Botanique\"","Description":"Poussettes sur tiges \nPlaques de laiton, découpées, mis en formes, et soudées à la main.\nBille de laiton sur chaîne\nFinitions polissage brillant et gravures diamantées.\nSous plaquage palladium, plaqué or 3 microns poinçonné.","Price":56,"Quantity":1,"Datepublication":"05/11/2023 00:00:00","Type":"Bo","DossierPhoto":"Bo64"},"Quantite":1,"Id":0}],"Total":56.0}
-=======
 {"bijoux":[],"Total":0.0}
->>>>>>> origin/JS_DAO

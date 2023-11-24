@@ -37,11 +37,11 @@ namespace API_SAE.Controllers
             {
                 result = NotFound();
 
-                Bijou? user = BijouManager.Instance.GetBijouById(id.Value);
+                Bijou? bijou = BijouManager.Instance.GetBijouById(id.Value);
 
-                if (user != null)
+                if (bijou != null)
                 {
-                    result = Ok(user); // Si le bijou existe, change la réponse en Ok avec le bijou
+                    result = Ok(bijou); // Si le bijou existe, change la réponse en Ok avec le bijou
                 }
             }
 
@@ -60,11 +60,11 @@ namespace API_SAE.Controllers
         {
             ActionResult<IEnumerable<Bijou>> reponse = BadRequest();
 
-            IEnumerable<Bijou> users = BijouManager.Instance.GetAllBijoux();
+            IEnumerable<Bijou> bijoux = BijouManager.Instance.GetAllBijoux();
 
-            if (users != null)
+            if (bijoux != null)
             {
-                reponse = Ok(users); // Si la liste de bijoux est valide, change la réponse en Ok avec la liste
+                reponse = Ok(bijoux); // Si la liste de bijoux est valide, change la réponse en Ok avec la liste
             }
 
             return reponse;

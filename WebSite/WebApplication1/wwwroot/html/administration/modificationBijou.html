@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <h1>Modification bijou</h1>
+    <h1 id="mainTitle">Nouveau bijou</h1>
     <div>
         <form id="bijouForm">
             <fieldset>
@@ -53,22 +53,13 @@
                     <input type="file" id="photos" name="photos" accept=".pdf, .doc, .docx, .jpg" multiple>
                 </div>
             </fieldset>
-            <div id="bouton-conteneur">
+            <div class="bouton-conteneur">
                 <input type="submit" value="Enregister">
             </div>
         </form>
-        <div id="popup" class="popup">
-            <div class="popup-content">
-                <span class="close-popup" id="closePopupBtn">&times;</span>
-                <p>Merci pour votre demande ! Je vous recontacterai dans les plus bref délais.</p>
-            </div>
-        </div>
-        <div id="popupL" class="popupL">
-            <div class="popup-contentL">
-                <span class="close-popupL" id="closePopupBtnL">&times;</span>
-                <p>Erreur lors de la requête.</p>
-            </div>
-        </div>
+        <!-- <div class="bouton-conteneur">
+            <input type="submit" value="Supprimer bijou" id="boutonDelete">
+        </div> -->
     </div>
 </body>
 </html>

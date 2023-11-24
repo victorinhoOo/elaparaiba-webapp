@@ -1,12 +1,12 @@
 import { updatePanierCount } from "../js/panierDAO.js";
 import { setPanierToken } from "./cookies.js";
+import { redirectToBijouPresentation } from "../js/bijou.js";
 
 var id;
 var controls;
 var num_image = 0;
 
 function main() {
-    setPanierToken();   
     updatePanierCount();
     initNewsSlider();
     fetchInstagramPhotos();
@@ -46,68 +46,97 @@ function nextImage(){
 }
 
 // Slider des nouveautées
-const initNewsSlider = () => {
-    const imageList = document.querySelector(".slider-news-wrapper .image-list");
-    const slideButtons = document.querySelectorAll(".slider-news-wrapper .slide-button");
-    const sliderScrollbar = document.querySelector(".slider-news-container .slider-news-scrollbar");
-    const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
-    const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+const initNewsSlider = async () => {
+    try {
+        const apiUrl = "https://localhost:7252/Bijoux/GetAllBijoux";
+        const response = await fetch(apiUrl);
+        const data = await response.json();
 
-    // Handle scrollbar thumb drag
-    scrollbarThumb.addEventListener("mousedown", (e) => {
-        const startX = e.clientX;
-        const thumbPosition = scrollbarThumb.offsetLeft;
+        // Triez les bijoux filtrés par date de publication (du plus récent au moins récent)
+        const sortedData = data.sort((a, b) => new Date(b.datepublication) - new Date(a.datepublication));
 
-        // update thumb position on mouse move
-        const handleMouseMove = (e) => {
-            const deltaX = e.clientX - startX;
-            const newThumbPosition = thumbPosition + deltaX;
-            const maxThumbPosition = sliderScrollbar.getBoundingClientRect().width - scrollbarThumb.offsetWidth;
+        // Sélectionnez la div d'images
+        const imageList = document.querySelector(".slider-news-wrapper .image-list");
 
-            const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
-            scrollbarThumb.style.left = `${boundedPosition}px`;
+        // Effacez les images existantes
+        imageList.innerHTML = "";
 
-            // update image scroll position based on thumb position
-            const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
-            imageList.scrollLeft = scrollPosition;
-        }
-
-        const handleMouseUp = () => {
-            document.removeEventListener("mousemove", handleMouseMove);
-            document.removeEventListener("mouseup", handleMouseUp); 
-        }
-
-        // add event listeners for drag interactions
-        document.addEventListener("mousemove", handleMouseMove);
-        document.addEventListener("mouseup", handleMouseUp);
-    });
-
-    // Slide images according to the slide button clicks
-    slideButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            const direction = button.id === "prev-slide" ? -1 : 1;
-            const scrollAmount = imageList.clientWidth * direction;
-            imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        // Créez des balises img pour chaque bijou dans les 5 premières données
+        sortedData.slice(0, 5).forEach(bijou => {
+            const imgElement = document.createElement("img");
+            imgElement.src = `https://images.elaparaibatest.fr/Photosdescriptif${bijou.type}/${bijou.dossierPhoto}/1.jpg`; // Assurez-vous que le chemin est correct
+            imgElement.alt = bijou.name;
+            imgElement.classList.add("image-item");
+            imageList.appendChild(imgElement);
+            imgElement.addEventListener("click", function () {
+                redirectToBijouPresentation(bijou.id);
+            });
         });
-    });
 
-    const handleSlideButtons = () => {
-        slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "block";
-        slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "block";
+        const slideButtons = document.querySelectorAll(".slider-news-wrapper .slide-button");
+        const sliderScrollbar = document.querySelector(".slider-news-container .slider-news-scrollbar");
+        const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
+        const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+
+        // Handle scrollbar thumb drag
+        scrollbarThumb.addEventListener("mousedown", (e) => {
+            const startX = e.clientX;
+            const thumbPosition = scrollbarThumb.offsetLeft;
+
+            // update thumb position on mouse move
+            const handleMouseMove = (e) => {
+                const deltaX = e.clientX - startX;
+                const newThumbPosition = thumbPosition + deltaX;
+                const maxThumbPosition = sliderScrollbar.getBoundingClientRect().width - scrollbarThumb.offsetWidth;
+
+                const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
+                scrollbarThumb.style.left = `${boundedPosition}px`;
+
+                // update image scroll position based on thumb position
+                const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
+                imageList.scrollLeft = scrollPosition;
+            }
+
+            const handleMouseUp = () => {
+                document.removeEventListener("mousemove", handleMouseMove);
+                document.removeEventListener("mouseup", handleMouseUp);
+            }
+
+            // add event listeners for drag interactions
+            document.addEventListener("mousemove", handleMouseMove);
+            document.addEventListener("mouseup", handleMouseUp);
+        });
+
+        // Slide images according to the slide button clicks
+        slideButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                const direction = button.id === "prev-slide" ? -1 : 1;
+                const scrollAmount = imageList.clientWidth * direction;
+                imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+            });
+        });
+
+        const handleSlideButtons = () => {
+            slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "block";
+            slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "block";
+        }
+
+        // Update scrollbar thumb position based on image scroll
+        const updateScrollThumbPosition = () => {
+            const scrollPosition = imageList.scrollLeft;
+            const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
+            scrollbarThumb.style.left = `${thumbPosition}px`;
+        }
+
+        imageList.addEventListener("scroll", () => {
+            handleSlideButtons();
+            updateScrollThumbPosition();
+        });
+
+    } catch (error) {
+        console.error("Erreur lors de la récupération des images depuis l'API:", error);
     }
-
-    // Update scrollbar thumb position based on image scroll
-    const updateScrollThumbPosition = () => {
-        const scrollPosition = imageList.scrollLeft;
-        const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
-        scrollbarThumb.style.left = `${thumbPosition}px`;
-    }   
-
-    imageList.addEventListener("scroll", () => {
-        handleSlideButtons();
-        updateScrollThumbPosition();
-    });
-}
+};
 
 // Fonction qui permet de récupérer les posts instagrams et les affichers
 async function fetchInstagramPhotos() {

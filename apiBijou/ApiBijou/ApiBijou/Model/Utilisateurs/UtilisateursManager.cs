@@ -1,4 +1,5 @@
-﻿using ApiBijou.Data.Utilisateurs;
+﻿using ApiBijou.Data.Paniers.Tokens;
+using ApiBijou.Data.Utilisateurs;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -13,7 +14,7 @@ namespace ApiBijou.Model.Utilisateurs
     public class UtilisateursManager
     {
         
-        private IUserDAO userDAO = new UserFakeDAO();
+        private IUserDAO userDAO = new UserDAO();
         
         /// <summary>
         /// Hash le password
@@ -85,8 +86,7 @@ namespace ApiBijou.Model.Utilisateurs
             }
             else//L'admin existe pas
             {
-                string pwdHashed = HashPassword(pwd);
-                bool authentification = CheckLoginPwd(login, pwdHashed);
+                bool authentification = CheckLoginPwd(login, pwd);
                 if (authentification) //Authentification validée
                 {
                     GiveAdmin(tokenPanier);

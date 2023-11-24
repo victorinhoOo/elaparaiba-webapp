@@ -4,38 +4,54 @@ using ApiBijou.Model.formModel;
 using ApiBijou.Model.Panier;
 using ApiBijou.Model.Utilisateurs;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json.Linq;
 
 namespace ApiBijou.Controllers
 {
+    /// <summary>
+    /// Controller de la page administration
+    /// </summary>
     [ApiController]
     [Route("Administration")]
     public class AdministrationController : ControllerBase
     {
         private UtilisateursManager utilisateursManager;
 
-        private PanierManager panierManager;
-
         public AdministrationController()
         {
             this.utilisateursManager = new UtilisateursManager();
-            this.panierManager = new PanierManager();
         }
 
         /// <summary>
-        /// Modifie un bijou
+        /// Modifie ou crée un nouveau bijou
         /// </summary>
-        /// <param name="formulaire"></param>
+        /// <param name="formulaire">attributs du nouveau bijou</param>
         /// <returns></returns>
         [HttpPost("ModifierBijou")]
         public IActionResult ModifierBijou([FromForm] FormulaireBijouModified formulaire)
         {
             ActionResult result = BadRequest("Erreur lors de la modification");
+            bool res = false;
             try
             {
-                bool bijModifier = BijouManager.Instance.ModifierBijou(formulaire);
-                if (bijModifier)
+                if (utilisateursManager.IsAdmin(formulaire.UserToken)) //L'utilisateur est admin
                 {
-                    result = Ok();
+                    if(formulaire.IdBijou == -1)//Création d'un nouveau bijou
+                    {
+                        res = BijouManager.Instance.AjouterBijou(formulaire);
+                    }
+                    else //Modification d'un bijou existant
+                    {
+                        res = BijouManager.Instance.ModifierBijou(formulaire);
+                    }
+                    if (res) //Bijou crée ou modifié avec succès
+                    {
+                        result = Ok("Bijou modifié");
+                    }
+                }
+                else //L'utilisateur n'est pas admin
+                {
+                    result = Unauthorized(new { Message = "L'utilisateur n'est pas un administrateur" });
                 }
             }
             catch (Exception ex)
@@ -46,47 +62,70 @@ namespace ApiBijou.Controllers
         }
 
         /// <summary>
+        /// Suppression d'un bijou.
+        /// </summary>
+        /// <param name="modeleSupprimerBijou">Mode de données transmis par le client</param>
+        /// <returns></returns>
+        [HttpPost("SupprimerBijou")]
+        public IActionResult SupprimerBijou([FromBody] ModeleSupprimerBijou modeleSupprimerBijou)
+        {
+            IActionResult result = Unauthorized(new { Message = "L'utilisateur n'est pas un administrateur" });
+            try
+            {
+                if (utilisateursManager.IsAdmin(modeleSupprimerBijou.TokenPanier)) //Vérification des droits de l'utilisateur
+                {
+                    bool suppression = BijouManager.Instance.DeleteBijouById(Convert.ToInt32(modeleSupprimerBijou.IdBijou));
+                    if (suppression)
+                    {
+                        result = Ok("Bijou supprimé");
+                    }
+                    else
+                    {
+                        result = BadRequest("Erreur lors de la suppression");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                result = BadRequest(ex);
+            }
+            return result;        
+        }
+
+        /// <summary>
         /// Gère la connexion de l'administrateur
         /// </summary>
         /// <param name="login">nom d'utilisateur</param>
         /// <param name="password">mot de passe</param>
         /// <returns>Ok si la connexion a réussi</returns>
         [HttpPost("login")]
-        public IActionResult Login(string login, string password)
+        public IActionResult Login([FromForm] Utilisateur utilisateur)
         {
-
-            string tokenPanier  = panierManager.CreerPanierToken();
-
-            bool isAdmin = utilisateursManager.ConnectAsAdmin(tokenPanier, login, password);
-            if (isAdmin)
+            IActionResult result = Unauthorized(new { Message = "L'utilisateur n'est pas un administrateur" });
+            if (utilisateursManager.ConnectAsAdmin(utilisateur.TokenPanier, utilisateur.Login, utilisateur.Mdp))
             {
-                return Ok(new { Message = "Connexion réussie", Token = tokenPanier });
+                result = Ok(new { Message = "L'utilisateur est connecté en tant qu'administrateur" });
             }
-            else
-            {
-                return Unauthorized(new { Message = "Échec de l'authentification" });
-            }
+            return result;
         }
 
         /// <summary>
-        /// 
+        /// Vérifie si un utilisateur est admin.
         /// </summary>
         /// <param name="tokenPanier"></param>
         /// <returns></returns>
-        [HttpGet("isadmin")]
+        [HttpGet("isAdmin")]
         public IActionResult IsAdmin(string tokenPanier)
         {
+            IActionResult result = Unauthorized(new { Message = "L'utilisateur n'est pas un administrateur" });
             bool isAdmin = utilisateursManager.IsAdmin(tokenPanier);
             if (isAdmin)
             {
-                return Ok(new { Message = "L'utilisateur est un administrateur" });
+                result = Ok(new { Message = "L'utilisateur est un administrateur" });
             }
-            else
-            {
-                return Unauthorized(new { Message = "L'utilisateur n'est pas un administrateur" });
-            }
+            return result;
         }
 
-
+        
     }
 }
