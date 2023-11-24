@@ -4,19 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/administration.css">
-    <script src="../../js/gestion.js" type="module"></script>
+    <link rel="stylesheet" href="/css/administration.css">
+    <link rel="stylesheet" href="/css/commun.css" />
+    <script src="/js/gestion.js" type="module"></script>
+    <script src="/js/commun.js" type="module"></script>
     <title>Page d'administration</title>
 </head>
 
 <body>
+    <header>
+        <nav>
+            <div class="burger-menu"></div>
+            <a class="logoLien" href='/html/index'>
+                <img class="logo" src="../images/logo_final_elaparaiba.png" alt="logo de l'entreprise Elaparaïba">
+            </a>
+            <div class="mainNav">
+                <a class="buttonH" href='/html/index'>ACCUEIL</a>
+                <a class="buttonH" href='/html/bijoux'>LES BIJOUX</a>
+                <a class="buttonH" href='/html/surMesure'>SUR MESURE</a>
+                <a class="buttonH" href='/html/savoirFaire'>SAVOIR FAIRE</a>
+                <a class="buttonH" href='/html/ouMeTrouver'>OÙ ME TROUVER ?</a>
+            </div>
+            <div class="authNav">
+                <a class="iconH" href='/html/panier'><i id="panier" class="fas fa-shopping-cart fa-2x"><span id="panierCount">0</span></i></a>
+            </div>
+        </nav>
+    </header>
     <h1>Page d'administration</h1>
     <div class="boutonModifier" id="nouveauBijou">
         <input class="boutton " id="nouveauBijouButton" type="submit" value="Nouveau bijou">
     </div>
     <h2>Bijoux disponibles</h2>
     <div id="listBijoux">
-    </div>
     </div>
 </body>
 </html>
