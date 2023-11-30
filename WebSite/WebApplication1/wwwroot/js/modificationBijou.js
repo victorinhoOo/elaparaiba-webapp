@@ -73,6 +73,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             formData.append('IdBijou', bijouId);
             let userToken = getPanierToken("PanierToken");
             formData.append('UserToken', userToken);
+            formData.append("type",document.getElementById('type').value);
             let popupMessage;
             if(await sendBijouModified(formData)){
                 popupMessage = "Requête accomplie avec succès.";

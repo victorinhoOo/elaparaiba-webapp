@@ -30,7 +30,7 @@ namespace ApiBijou.Controllers
         [HttpPost("ModifierBijou")]
         public IActionResult ModifierBijou([FromForm] FormulaireBijouModified formulaire)
         {
-            ActionResult result = BadRequest("Erreur lors de la modification");
+            IActionResult result = BadRequest("Erreur lors de la modification");
             bool res = false;
             try
             {
