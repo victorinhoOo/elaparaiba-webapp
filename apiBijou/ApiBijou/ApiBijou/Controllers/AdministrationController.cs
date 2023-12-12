@@ -1,4 +1,5 @@
 ﻿using API_SAE.Controllers;
+using ApiBijou.Image;
 using ApiBijou.Model.Bijoux;
 using ApiBijou.Model.formModel;
 using ApiBijou.Model.Panier;

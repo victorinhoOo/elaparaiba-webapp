@@ -35,7 +35,7 @@ namespace ApiBijou.Model.Bijoux
         /// </summary>
         private BijouManager()
         {
-            bijouDAO = new BijouDAO();
+            bijouDAO = BijouFakeDAO.Instance;
         }
         /// <summary>
         /// Envoi une demande GetBijouxById au DAO

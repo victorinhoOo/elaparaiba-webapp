@@ -8,6 +8,19 @@
           "build/netstandard1.0/coverlet.collector.targets": {}
         }
       },
+      "FluentFTP/48.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/FluentFTP.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/FluentFTP.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Google.Protobuf/3.21.9": {
         "type": "package",
         "compile": {
@@ -421,6 +434,15 @@
             "assetType": "runtime",
             "rid": "win"
           }
+        }
+      },
+      "MimeTypesMap/1.0.8": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/MimeTypesMap.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MimeTypesMap.dll": {}
         }
       },
       "MSTest.TestFramework/3.1.1": {
@@ -2258,6 +2280,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "FluentFTP": "48.0.3",
+          "MimeTypesMap": "1.0.8",
           "MySql.Data": "8.1.0",
           "Newtonsoft.Json": "13.0.1",
           "Stripe.net": "43.1.0",
@@ -2327,6 +2351,31 @@
         "coverlet-icon.png",
         "coverlet.collector.3.2.0.nupkg.sha512",
         "coverlet.collector.nuspec"
+      ]
+    },
+    "FluentFTP/48.0.3": {
+      "sha512": "Fk2G/AvdiPwJscFKizRS0d79D9LoXE3HCGBleKi7PC1mYZGLjVInBYmIm7BmOEfbe2VTQd4dVsDZhvlZ3SSi4w==",
+      "type": "package",
+      "path": "fluentftp/48.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "fluentftp.48.0.3.nupkg.sha512",
+        "fluentftp.nuspec",
+        "lib/net462/FluentFTP.dll",
+        "lib/net462/FluentFTP.xml",
+        "lib/net472/FluentFTP.dll",
+        "lib/net472/FluentFTP.xml",
+        "lib/net5.0/FluentFTP.dll",
+        "lib/net5.0/FluentFTP.xml",
+        "lib/net6.0/FluentFTP.dll",
+        "lib/net6.0/FluentFTP.xml",
+        "lib/netstandard2.0/FluentFTP.dll",
+        "lib/netstandard2.0/FluentFTP.xml",
+        "lib/netstandard2.1/FluentFTP.dll",
+        "lib/netstandard2.1/FluentFTP.xml",
+        "logo-nuget.png"
       ]
     },
     "Google.Protobuf/3.21.9": {
@@ -2814,6 +2863,20 @@
         "runtimes/win/lib/netcoreapp3.1/Microsoft.Win32.SystemEvents.dll",
         "runtimes/win/lib/netcoreapp3.1/Microsoft.Win32.SystemEvents.xml",
         "useSharedDesignerContext.txt"
+      ]
+    },
+    "MimeTypesMap/1.0.8": {
+      "sha512": "iOm6Zar+yVROhlyrGGSJTfThvNoHLUeYeQQND9YD/ot/nA2qsWUp9kP2MHTdF9P7I8afW6eCf8vdELLZjDFdSQ==",
+      "type": "package",
+      "path": "mimetypesmap/1.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/MimeTypesMap.dll",
+        "lib/netstandard1.1/MimeTypesMap.dll",
+        "lib/netstandard2.0/MimeTypesMap.dll",
+        "mimetypesmap.1.0.8.nupkg.sha512",
+        "mimetypesmap.nuspec"
       ]
     },
     "MSTest.TestFramework/3.1.1": {
@@ -6965,19 +7028,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\oxort\\.nuget\\packages\\": {}
+    "C:\\Users\\mateo\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\ApiBijouxTests.csproj",
+      "projectUniqueName": "C:\\Users\\mateo\\OneDrive - Université de Bourgogne\\BUT2\\S3.01SAE\\github\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\ApiBijouxTests.csproj",
       "projectName": "ApiBijouxTests",
-      "projectPath": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\ApiBijouxTests.csproj",
-      "packagesPath": "C:\\Users\\oxort\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\obj\\",
+      "projectPath": "C:\\Users\\mateo\\OneDrive - Université de Bourgogne\\BUT2\\S3.01SAE\\github\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\ApiBijouxTests.csproj",
+      "packagesPath": "C:\\Users\\mateo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mateo\\OneDrive - Université de Bourgogne\\BUT2\\S3.01SAE\\github\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\oxort\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mateo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6991,8 +7059,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\ApiBijou.csproj": {
-              "projectPath": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\ApiBijou.csproj"
+            "C:\\Users\\mateo\\OneDrive - Université de Bourgogne\\BUT2\\S3.01SAE\\github\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\ApiBijou.csproj": {
+              "projectPath": "C:\\Users\\mateo\\OneDrive - Université de Bourgogne\\BUT2\\S3.01SAE\\github\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\ApiBijou.csproj"
             }
           }
         }
@@ -7048,16 +7116,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problème de lecture du fichier cache C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

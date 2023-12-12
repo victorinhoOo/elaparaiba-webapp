@@ -12,7 +12,7 @@ namespace ApiBijou.Model.Paniers
 
         public TokenManager()
         {
-            panierTokenDAO = new PanierTokenDAO();
+            panierTokenDAO = PanierTokenFakeDAO.Instance;
         }
 
         /// <summary>

@@ -5,6 +5,9 @@ using System.Collections.Generic;
 
 namespace ApiBijou.Model.Mail
 {
+    /// <summary>
+    /// Smpt client utilisant le client smtp gmail.
+    /// </summary>
     public class GoogleSmtp : IMailSender
     {
         public void SendMail(string senderMail, string recipientMail, string subject, string body, List<Attachment> attachments)
