@@ -14,10 +14,7 @@ namespace ApiBijou.Model.Bijoux
         /// Singleton bijou manager
         /// </summary>
         private static BijouManager instance;
-        /// <summary>
-        /// Image manager
-        /// </summary>
-        private ImageManager imageManager = new ImageManager();
+
 
         public static BijouManager Instance
         {
@@ -43,7 +40,7 @@ namespace ApiBijou.Model.Bijoux
         private BijouManager()
         {
             bijouDAO = BijouFakeDAO.Instance;
-            imageManager = new ImageManager();
+            this.imageManager = new ImageManager();
         }
         /// <summary>
         /// Envoi une demande GetBijouxById au DAO
