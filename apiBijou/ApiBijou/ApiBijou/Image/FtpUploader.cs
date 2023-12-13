@@ -13,28 +13,17 @@ namespace ApiBijou.Image
         private string ftpUsername = "acc1291933552";
         private string ftpPassword = "imageAdministrationMdpFtp2342--";
 
-        public int? NbOfElementsDirectory(string directoryName)
+        /// <summary>
+        /// Renvoi l'extension du fichier.
+        /// </summary>
+        /// <param name="file">file.</param>
+        /// <returns></returns>
+        public string GetFileType(IFormFile file)
         {
-            try
-            {
-                using (var ftp = new FtpClient(ftpServer, ftpUsername, ftpPassword))
-                {
-                    //Connexion au serveur ftp
-                    ftp.Connect();
-                    //Compter le nombre d'éléments du répertoire
-                    int nbElement = ftp.GetListing(directoryName).Count();
-                    ftp.Disconnect();
-                    return nbElement;
-                }
-            }
-            catch (FtpException ex)
-            {
-                throw new Exception($"Erreur lors de la récupération du nombre d'éléments dans le répertoire : {ex.Message}", ex);
-            }
-
+            return System.IO.Path.GetExtension(file.FileName).ToLower();
         }
 
-        public void UploadFiles(List<IFormFile> files, string destinationDirectory)
+        public string uploadBijouPhotos(List<IFormFile> files, string bijouType)
         {
             try
             {
@@ -42,20 +31,68 @@ namespace ApiBijou.Image
                 {
                     // Connexion au serveur FTP
                     ftp.Connect();
-
-                    
-                    if (!ftp.DirectoryExists(destinationDirectory))//Le répertoire n'existe pas 
-                    {
-                        ftp.CreateDirectory(destinationDirectory);
-                    }
-
-                    int indexFile = 0;
+                    //Compter le nombre de dossier
+                    var Listing = ftp.GetListing("Photosdescriptif" + bijouType);
+                    int nbElement = Listing.Count();
+                    //Création du répertoire
+                    string destinationDirectory = bijouType + Convert.ToString((nbElement + 100));
+                    ftp.CreateDirectory(Path.Combine("Photosdescriptif" + bijouType, destinationDirectory)); 
+                    //Ajout des fichiers
+                    int indexFile = 1;
                     // Parcour chaque fichier 
                     foreach (var file in files)
                     {
-        
+
                         // Construction du chemin
-                        string remoteFilePath = Path.Combine(destinationDirectory, indexFile.ToString() + "." + GetFileType(file));
+                        string remoteFilePath = Path.Combine("Photosdescriptif" + bijouType , destinationDirectory, indexFile.ToString() + GetFileType(file));
+
+                        // Lit le contenu du fichier en tableau d'octet
+                        using (var memoryStream = new MemoryStream())
+                        {
+                            file.CopyTo(memoryStream);
+                            byte[] fileBytes = memoryStream.ToArray();
+
+                            // Téléverse le fichier vers le serveur FTP
+                            ftp.UploadBytes(fileBytes, remoteFilePath, FtpRemoteExists.Overwrite);
+                        }
+                        indexFile++;
+                    }
+                    ftp.Disconnect();
+                    return destinationDirectory;               
+                }
+            }
+            catch (FtpException ex)
+            {
+                throw new Exception($"Erreur lors du téléversement des fichiers sur le serveur FTP : {ex.Message}", ex);
+            }
+        }
+
+        public void ModifieBijouPhotos(List<IFormFile> files, string bijouType, string dossierPhoto)
+        {
+            try
+            {
+                using (var ftp = new FtpClient(ftpServer, ftpUsername, ftpPassword))
+                {
+                    // Connexion au serveur FTP
+                    ftp.Connect();
+                    //Path du répertoire
+                    string directoryPath = Path.Combine("Photosdescriptif" + bijouType, dossierPhoto);
+                    // Obtenez la liste des fichiers dans le répertoire
+                    var filesToDelete = ftp.GetListing(dossierPhoto, FtpListOption.Recursive);
+
+                    // Supprimez chaque fichier dans le répertoire
+                    foreach (var fileToDelete in filesToDelete)
+                    {
+                        ftp.DeleteFile(fileToDelete.FullName);
+                    }
+
+                    //Ajout des fichiers
+                    int indexFile = 1;
+                    // Parcour chaque fichier 
+                    foreach (var file in files)
+                    {
+                        // Construction du chemin
+                        string remoteFilePath = Path.Combine(directoryPath, indexFile.ToString() + "." + GetFileType(file));
 
                         // Lit le contenu du fichier en tableau d'octet
                         using (var memoryStream = new MemoryStream())
@@ -76,16 +113,5 @@ namespace ApiBijou.Image
                 throw new Exception($"Erreur lors du téléversement des fichiers sur le serveur FTP : {ex.Message}", ex);
             }
         }
-
-        /// <summary>
-        /// Renvoi l'extension du fichier.
-        /// </summary>
-        /// <param name="file">file.</param>
-        /// <returns></returns>
-        public string GetFileType(IFormFile file)
-        {
-            return System.IO.Path.GetExtension(file.FileName);
-        }
-
-}
+    }
 }

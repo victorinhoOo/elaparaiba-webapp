@@ -1,5 +1,6 @@
 ﻿using System;
 using ApiBijou.Data.Bijoux;
+using ApiBijou.Image;
 using ApiBijou.Model.formModel;
 
 namespace ApiBijou.Model.Bijoux
@@ -30,12 +31,15 @@ namespace ApiBijou.Model.Bijoux
         /// </summary>
         private IBijouDAO bijouDAO;
 
+        private ImageManager imageManager;
+
         /// <summary>
         /// Constructeur (privé car singleton)
         /// </summary>
         private BijouManager()
         {
             bijouDAO = BijouFakeDAO.Instance;
+            imageManager = new ImageManager();
         }
         /// <summary>
         /// Envoi une demande GetBijouxById au DAO
@@ -84,6 +88,8 @@ namespace ApiBijou.Model.Bijoux
                 Bijou bijou = bijouDAO.getById(formulaireBijouModified.IdBijou);
                 //On modifie le bijou
                 bijou = Bijou.ModifierBijou(bijou, formulaireBijouModified);
+                //Modification des photos
+                imageManager.ModifiePhotoBijou(formulaireBijouModified.Photos, bijou.Type, bijou.DossierPhoto);
                 //Chagement dans les data
                 res = bijouDAO.ModifierBijou(Convert.ToInt32(formulaireBijouModified.IdBijou), bijou);
             }
@@ -106,6 +112,7 @@ namespace ApiBijou.Model.Bijoux
             {
                 //Création d'un bijou
                 Bijou bijou = Bijou.NouveauBijou(formulaireBijouModified);
+                bijou.DossierPhoto = imageManager.UploadPhotoBijou(formulaireBijouModified.Photos, bijou.Type);
                 res = bijouDAO.AddBijou(bijou);
 
             }

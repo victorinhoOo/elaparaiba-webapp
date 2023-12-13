@@ -1,4 +1,6 @@
-﻿namespace ApiBijou.Image
+﻿using ApiBijou.Model.Bijoux;
+
+namespace ApiBijou.Image
 {
     /// <summary>
     /// Interface to upload a File on the servor.
@@ -6,19 +8,20 @@
     public interface IFileUploader
     {
         /// <summary>
-        /// Publier des fichiers.
+        /// Publie les photos d'un nouveau bijou
         /// </summary>
-        /// <param name="files">Fichiers à publier</param>
-        /// <param name="destinationDirectory">Dossier de destination</param>
-        /// <param name="imageType">Type du bijou de l'image</param>
+        /// <param name="files">Photos du bijou</param>
+        /// <param name="bijouType">Type du bijou</param>
         /// <returns></returns>
-        public void UploadFiles(List<IFormFile> files, string destinationDirectory);
+        public string uploadBijouPhotos(List<IFormFile> files, string bijouType);
 
         /// <summary>
-        /// Renvoi le nombre d'éléments dans un Dossier.
+        /// 
         /// </summary>
-        /// <param name="directoryName">Nom du Dossier</param>
+        /// <param name="files">Photos du bijou</param>
+        /// <param name="bijouTtype">Type du bijou</param>
+        /// <param name="dossierPhoto">Dossier photo du bijou</param>
         /// <returns></returns>
-        public int? NbOfElementsDirectory(string directoryName);
+        public void ModifieBijouPhotos(List<IFormFile> files, string bijouType, string dossierPhoto);
     }
 }

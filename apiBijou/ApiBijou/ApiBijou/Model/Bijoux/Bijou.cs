@@ -117,13 +117,14 @@ namespace ApiBijou.Model.Bijoux
             Bijou bijou = new Bijou();
             try
             {
+                //On hydrate le nouveau bijou à partir des données du formulaire
                 bijou.Price = formulaireBijouModified.Prix;
                 bijou.Quantity = formulaireBijouModified.Quantity;
                 bijou.Description = formulaireBijouModified.Description;
                 bijou.Type = formulaireBijouModified.Type;
-                //Ajouter la matiere
                 bijou.Datepublication = Convert.ToString(formulaireBijouModified.DatePublication);
                 bijou.Name = formulaireBijouModified.Name;
+                bijou.NbPhotos = formulaireBijouModified.Photos.Count();
             }
             catch(Exception ex)
             {
