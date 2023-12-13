@@ -14,6 +14,10 @@ namespace ApiBijou.Model.Bijoux
         /// Singleton bijou manager
         /// </summary>
         private static BijouManager instance;
+        /// <summary>
+        /// Image manager
+        /// </summary>
+        private ImageManager imageManager = new ImageManager();
 
         public static BijouManager Instance
         {
