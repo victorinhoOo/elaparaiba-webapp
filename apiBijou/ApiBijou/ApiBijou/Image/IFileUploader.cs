@@ -6,7 +6,7 @@
     public interface IFileUploader
     {
         /// <summary>
-        /// Publier des fichiers.
+        /// Publie des fichiers
         /// </summary>
         /// <param name="files">Fichiers à publier</param>
         /// <param name="destinationDirectory">Dossier de destination</param>
@@ -15,10 +15,16 @@
         public void UploadFiles(List<IFormFile> files, string destinationDirectory);
 
         /// <summary>
-        /// Renvoi le nombre d'éléments dans un Dossier.
+        /// Renvoi le nombre d'éléments dans un Dossier
         /// </summary>
         /// <param name="directoryName">Nom du Dossier</param>
         /// <returns></returns>
         public int? NbOfElementsDirectory(string directoryName);
+
+        /// <summary>
+        /// Supprime un répertoire
+        /// </summary>
+        /// <param name="directoryName">Repertoire à supprimer</param>
+        public void SupprimerRepertoire(string directoryName);
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using ApiBijou.Data.Bijoux;
+using ApiBijou.Image;
 using ApiBijou.Model.formModel;
 
 namespace ApiBijou.Model.Bijoux
@@ -13,6 +14,10 @@ namespace ApiBijou.Model.Bijoux
         /// Singleton bijou manager
         /// </summary>
         private static BijouManager instance;
+        /// <summary>
+        /// Image manager
+        /// </summary>
+        private ImageManager imageManager = new ImageManager();
 
         public static BijouManager Instance
         {

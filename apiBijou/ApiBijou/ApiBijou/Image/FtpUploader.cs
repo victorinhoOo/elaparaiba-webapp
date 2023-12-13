@@ -1,6 +1,8 @@
 ﻿using FluentFTP;
 using FluentFTP.Exceptions;
 using HeyRed.Mime;
+using System.IO;
+using static System.Net.WebRequestMethods;
 
 namespace ApiBijou.Image
 {
@@ -82,10 +84,31 @@ namespace ApiBijou.Image
         /// </summary>
         /// <param name="file">file.</param>
         /// <returns></returns>
-        public string GetFileType(IFormFile file)
+        private string GetFileType(IFormFile file)
         {
             return System.IO.Path.GetExtension(file.FileName);
         }
 
-}
+        public void SupprimerRepertoire(string directoryName)
+        {
+            try
+            {
+                using (var ftp = new FtpClient(ftpServer, ftpUsername, ftpPassword))
+                {
+                    // Connexion au serveur FTP
+                    ftp.Connect();
+                    if (ftp.DirectoryExists(directoryName))//Le répertoire n'existe pas 
+                    {
+                        ftp.DeleteDirectory(directoryName, FtpListOption.Recursive);
+                        Console.WriteLine($"Le dossier {directoryName} a été supprimé avec succès.");
+                    }
+                    ftp.Disconnect();
+                }
+            }
+            catch (FtpException ex)
+            {
+                throw new Exception($"Erreur lors du téléversement des fichiers sur le serveur FTP : {ex.Message}", ex);
+            }
+        }
+    }
 }
