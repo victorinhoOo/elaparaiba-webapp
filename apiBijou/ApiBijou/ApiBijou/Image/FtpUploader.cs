@@ -78,7 +78,7 @@ namespace ApiBijou.Image
                     //Path du répertoire
                     string directoryPath = Path.Combine("Photosdescriptif" + bijouType, dossierPhoto);
                     // Obtenez la liste des fichiers dans le répertoire
-                    var filesToDelete = ftp.GetListing(dossierPhoto, FtpListOption.Recursive);
+                    var filesToDelete = ftp.GetListing(directoryPath);
 
                     // Supprimez chaque fichier dans le répertoire
                     foreach (var fileToDelete in filesToDelete)
@@ -92,7 +92,7 @@ namespace ApiBijou.Image
                     foreach (var file in files)
                     {
                         // Construction du chemin
-                        string remoteFilePath = Path.Combine(directoryPath, indexFile.ToString() + "." + GetFileType(file));
+                        string remoteFilePath = Path.Combine(directoryPath, indexFile.ToString() + GetFileType(file));
 
                         // Lit le contenu du fichier en tableau d'octet
                         using (var memoryStream = new MemoryStream())
