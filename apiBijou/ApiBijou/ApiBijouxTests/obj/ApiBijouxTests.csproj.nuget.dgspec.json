@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mateo\\OneDrive - Université de Bourgogne\\BUT2\\S3.01SAE\\github\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\ApiBijouxTests.csproj": {}
+    "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\ApiBijouxTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mateo\\OneDrive - Université de Bourgogne\\BUT2\\S3.01SAE\\github\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\ApiBijouxTests.csproj": {
+    "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\ApiBijouxTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mateo\\OneDrive - Université de Bourgogne\\BUT2\\S3.01SAE\\github\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\ApiBijouxTests.csproj",
+        "projectUniqueName": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\ApiBijouxTests.csproj",
         "projectName": "ApiBijouxTests",
-        "projectPath": "C:\\Users\\mateo\\OneDrive - Université de Bourgogne\\BUT2\\S3.01SAE\\github\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\ApiBijouxTests.csproj",
-        "packagesPath": "C:\\Users\\mateo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mateo\\OneDrive - Université de Bourgogne\\BUT2\\S3.01SAE\\github\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\obj\\",
+        "projectPath": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\ApiBijouxTests.csproj",
+        "packagesPath": "C:\\Users\\oxort\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijouxTests\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\mateo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\oxort\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\mateo\\OneDrive - Université de Bourgogne\\BUT2\\S3.01SAE\\github\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\ApiBijou.csproj": {
-                "projectPath": "C:\\Users\\mateo\\OneDrive - Université de Bourgogne\\BUT2\\S3.01SAE\\github\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\ApiBijou.csproj"
+              "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\ApiBijou.csproj": {
+                "projectPath": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\ApiBijou.csproj"
               }
             }
           }
@@ -89,25 +85,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\mateo\\OneDrive - Université de Bourgogne\\BUT2\\S3.01SAE\\github\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\ApiBijou.csproj": {
+    "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\ApiBijou.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mateo\\OneDrive - Université de Bourgogne\\BUT2\\S3.01SAE\\github\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\ApiBijou.csproj",
+        "projectUniqueName": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\ApiBijou.csproj",
         "projectName": "ApiBijou",
-        "projectPath": "C:\\Users\\mateo\\OneDrive - Université de Bourgogne\\BUT2\\S3.01SAE\\github\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\ApiBijou.csproj",
-        "packagesPath": "C:\\Users\\mateo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mateo\\OneDrive - Université de Bourgogne\\BUT2\\S3.01SAE\\github\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\obj\\",
+        "projectPath": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\ApiBijou.csproj",
+        "packagesPath": "C:\\Users\\oxort\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\oxort\\Desktop\\Cours\\SAE3\\C2_Elaparaiba_SAE3\\apiBijou\\ApiBijou\\ApiBijou\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\mateo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\oxort\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -115,7 +107,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -178,7 +169,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -140,7 +140,7 @@ const initNewsSlider = async () => {
 
 // Fonction qui permet de récupérer les posts instagrams et les affichers
 async function fetchInstagramPhotos() {
-    const response = await fetch(`https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink&access_token=IGQWRNeHBPRDNHZAFl6WU1KTlBYX3JrRVZAyZA3dkUXduUDcwUEN2WEh1SnJDTlhsamFkQlZAQSUpIcVJpTU8xazRaUTlpS0VlZAFdjTkhGZAExKaUF1ZAVRhdTNoTjFjTFpQY3VuYWlUWjRGM2pua0xNamNNU24tV0VBUnMZD&limit=5`);
+    const response = await fetch(`https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink&access_token=IGQWROMDJOVnV1aWdvOTJfZAUYtYUljZAFZAEQldzeXR5a2pKQXZA2WHRaeG1NVlpxZAEdCelR6LVk1OFhzZAXlHSHl6YmpEdzFtVktzaHp5LVVTZAzFuV1ducU1saTFKcTNjZAy15ZAllBZAk4wd0JXbl9oaUk3SDVsVV9KOEUZD&limit=5`);
     const data = await response.json();
     const items = data.data;
     const nonReels = items.filter(item => {

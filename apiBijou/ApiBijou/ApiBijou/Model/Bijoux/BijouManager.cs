@@ -39,7 +39,7 @@ namespace ApiBijou.Model.Bijoux
         /// </summary>
         private BijouManager()
         {
-            bijouDAO = BijouFakeDAO.Instance;
+            bijouDAO = new BijouDAO();
             this.imageManager = new ImageManager();
         }
         /// <summary>
