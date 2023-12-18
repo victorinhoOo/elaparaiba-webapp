@@ -91,6 +91,10 @@ html {
   transition: content 0.3s ease-in-out;
 }
 
+.produit img:hover{
+    cursor: pointer;
+}
+
 .produit h3 {
   margin-top: 10px;
   font-size: 18px;

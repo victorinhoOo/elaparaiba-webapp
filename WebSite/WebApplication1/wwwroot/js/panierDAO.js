@@ -55,9 +55,7 @@ async function updatePanierCount() {
 async function ajouterAuPanier(bijou) {
     //Créer un paniertoken si l'utilisateur en a pas
     var panierTokenValue = getPanierToken("PanierToken");
-    if (panierTokenValue === "") { //Le token n'est pas définie
-        panierTokenValue = await setPanierToken();
-    }
+ 
     const apiUrl = `https://localhost:7252/Panier/AjouterAuPanier?token=${panierTokenValue}`; // URL du contrôleur
     try {
         // Requête vers l'API avec la méthode POST
@@ -80,14 +78,40 @@ async function ajouterAuPanier(bijou) {
         });
 
         if (!response.ok) {
-            throw new Error('Réponse réseau non ok');
+            // La réponse n'est pas OK, appeler setPanierToken pour obtenir un nouveau token
+            panierTokenValue = await setPanierToken();
+            // Mettre à jour l'URL avec le nouveau token
+            const newApiUrl = `https://localhost:7252/Panier/AjouterAuPanier?token=${panierTokenValue}`;
+            // Refaire la requête avec le nouveau token
+            const newResponse = await fetch(newApiUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    NbPhotos: bijou.nbPhotos,
+                    Id: bijou.idBijou,
+                    Name: bijou.nomBijou,
+                    Description: bijou.descriptionBijou,
+                    Price: bijou.prixBijou,
+                    Quantity: bijou.stockBijou,
+                    DatePublication: bijou.datepublication,
+                    Type: bijou.type,
+                    DossierPhoto: bijou.dossierPhoto
+                })
+            });
+
+            if (!newResponse.ok) {
+                throw new Error('Réponse réseau non OK même après avoir renouvelé le token.');
+            }
+
+            console.log("Requête réussie après renouvellement du token.");
+        } else {
+            // La réponse est OK
+            const responseData = await response.text();
+            console.log(responseData);
+            updatePanierCount();
         }
-
-        // Gére la réponse du serveur
-        const responseData = await response.text();
-        console.log(responseData);
-
-        updatePanierCount();
     } catch (error) {
         console.error("Erreur de requête:", error);
     }

@@ -99,8 +99,11 @@ namespace ApiBijou.Model.Bijoux
                 //Ajouter la matiere
                 bijou.Datepublication = Convert.ToString(formulaireBijouModified.DatePublication);
                 bijou.Name = formulaireBijouModified.Name;
-                //Modifier le nombre de photo
-                bijou.nbPhotos = formulaireBijouModified.Photos.Count();
+                if(formulaireBijouModified.Photos != null)
+                {
+                    //Modifier le nombre de photo
+                    bijou.nbPhotos = formulaireBijouModified.Photos.Count();
+                }
             }
             catch(Exception ex)
             {

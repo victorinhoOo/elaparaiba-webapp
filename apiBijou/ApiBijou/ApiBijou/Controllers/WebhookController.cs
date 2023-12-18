@@ -85,7 +85,7 @@ namespace ApiBijou.Controllers
         {
             foreach (var lineItem in lineItems.Data)
             {
-                var metadata = lineItem.Price.Product.Metadata; // Assuming metadata is attached to the product
+                var metadata = lineItem.Price.Product.Metadata;
 
                 if (metadata != null && metadata.TryGetValue("bijouId", out var bijouIdStr) && int.TryParse(bijouIdStr, out int bijouId))
                 {
@@ -127,7 +127,8 @@ namespace ApiBijou.Controllers
             {
                 result = BadRequest("Unable to retrieve session from Stripe. " + e.Message);
             }
-
+            #region
+            // Code peu académique, nécessaire pour générer la page de récapitulatif avec du css sans qu'elle soit hébergée
             var htmlContent = new StringBuilder(@"
                 <html>
                 <head>
@@ -221,6 +222,8 @@ namespace ApiBijou.Controllers
                         <h1>Merci pour votre commande " + session.CustomerDetails.Name + @" !</h1>");
 
             htmlContent.Append("<h3>Un récapitulatif vous a été envoyé à l'adresse mail suivante : " + session.CustomerDetails.Email + @"</h3>");
+
+            #endregion
 
             double? total = 0;
 

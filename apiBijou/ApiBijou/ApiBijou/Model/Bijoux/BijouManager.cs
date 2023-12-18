@@ -89,8 +89,12 @@ namespace ApiBijou.Model.Bijoux
                 Bijou bijou = bijouDAO.getById(formulaireBijouModified.IdBijou);
                 //On modifie le bijou
                 bijou = Bijou.ModifierBijou(bijou, formulaireBijouModified);
-                //Modification des photos
-                imageManager.ModifiePhotoBijou(formulaireBijouModified.Photos, bijou.Type, bijou.DossierPhoto);
+
+                if(formulaireBijouModified.Photos != null)
+                {
+                    //Modification des photos
+                    imageManager.ModifiePhotoBijou(formulaireBijouModified.Photos, bijou.Type, bijou.DossierPhoto);
+                }
                 //Chagement dans les data
                 res = bijouDAO.ModifierBijou(Convert.ToInt32(formulaireBijouModified.IdBijou), bijou);
             }

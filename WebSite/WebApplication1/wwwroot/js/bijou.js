@@ -173,6 +173,10 @@ function displayBijoux(bijoux) {
             bijouElement.appendChild(descriptionElement);
 
             conteneurBijoux.appendChild(bijouElement);
+
+            imageElement.addEventListener("click", function () {
+                redirectToBijouPresentation(bijou.idBijou);
+            });
         }
     });
 }
