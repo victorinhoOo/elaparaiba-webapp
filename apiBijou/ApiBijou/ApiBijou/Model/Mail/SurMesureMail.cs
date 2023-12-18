@@ -25,7 +25,7 @@ namespace ApiBijou.Model.Mail
 
             List<Attachment> attachments = GenerateAttachments(formulaireSurMesureModel.Modeles);
 
-            mailSender.SendMail("mateobigearddasen21@gmail.com", formulaireSurMesureModel.Email, "Demande de bijoux Sur Mesure", body.ToString(), attachments);
+            mailSender.SendMail("mateobigearddasen21@gmail.com", "elaparaiba@outlook.com", "Demande de bijoux Sur Mesure", body.ToString(), attachments);
         }
         /// <summary>
         /// Génére le body du mail sur mesure

@@ -20,7 +20,7 @@ namespace ApiBijou.Model.Mail
         {
             body = new StringBuilder();
             GenerateBody(formulaireOuMeTrouverData);
-            mailSender.SendMail("mateobigearddasen21@gmail.com", formulaireOuMeTrouverData.Email, "Question d'un client", body.ToString(), new List<Attachment>());
+            mailSender.SendMail("mateobigearddasen21@gmail.com", "elaparaiba@outlook.com", "Question d'un client", body.ToString(), new List<Attachment>());
         }
         /// <summary>
         /// Génére le body du mail sur mesure
