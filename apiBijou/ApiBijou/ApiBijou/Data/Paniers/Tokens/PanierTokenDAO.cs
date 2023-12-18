@@ -6,7 +6,7 @@ namespace ApiBijou.Data.Paniers.Tokens
     public class PanierTokenDAO : IPanierTokenDAO
     {
 
-        private string connectionString = "Server=localhost;Port=3306;Database=elaparaiba;Uid=root;Pwd=rootroot;";
+        private string connectionString = "Server=db5014804958.hosting-data.io ;Port=3306;Database=elaparaiba;Uid=dbu5413477 ;Pwd=Iutbourgogne.dvpm21;";
 
         /// <summary>
         /// Créé un token dans la base de données

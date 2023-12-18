@@ -9,7 +9,7 @@ namespace ApiBijou.Data.Utilisateurs
         /// <summary>
         /// String de connexion au serveur
         /// </summary>
-        private string connectionString = "Server=localhost;Port=3306;Database=elaparaiba;Uid=root;Pwd=rootroot;";
+        private string connectionString = "Server=db5014804958.hosting-data.io ;Port=3306;Database=elaparaiba;Uid=dbu5413477 ;Pwd=Iutbourgogne.dvpm21;";
 
         public bool CheckLoginPwd(string login, string pwd)
         {
