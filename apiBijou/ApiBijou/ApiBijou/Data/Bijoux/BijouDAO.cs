@@ -11,7 +11,7 @@ namespace ApiBijou.Data.Bijoux
         /// <summary>
         /// String de connexion au serveur
         /// </summary>
-        private string connectionString = "Server=db5014804958.hosting-data.io ;Port=3306;Database=elaparaiba;Uid=dbu5413477 ;Pwd=Iutbourgogne.dvpm21;";
+        private string connectionString = "Server=db5014804958.hosting-data.io ;Port=3306;Database=dbs12300266;Uid=dbu5413477 ;Pwd=Iutbourgogne.dvpl21;";
 
 
         public Bijou? getById(int id)
