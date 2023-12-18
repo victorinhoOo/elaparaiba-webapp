@@ -1,7 +1,7 @@
 // Fonction qui permet de créer un nouveau Token
 async function fetchTokenPanier() {
     var tokenPanier = "";
-    const apiUrl = `https://localhost:7252/Panier/CreerPanierToken`;
+    const apiUrl = `https://elaparaibatest.fr/Panier/CreerPanierToken`;
     try {
         const response = await fetch(apiUrl);
 

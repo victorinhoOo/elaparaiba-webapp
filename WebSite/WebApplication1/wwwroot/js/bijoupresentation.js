@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     // Fonction de requête pour récupérer les détails du bijou
     async function fetchBijouDetails() {
-        const apiUrl = `https://localhost:7252/Bijoux/GetBijouWithId?id=${bijouId}`;
+        const apiUrl = `https://elaparaibatest.fr/Bijoux/GetBijouWithId?id=${bijouId}`;
         try {
             const response = await fetch(apiUrl);
             const data = await response.json();

@@ -1,7 +1,7 @@
 //Demande à l'API les droits d'un utilisateur
 async function IsAdmin(tokenPanier){
     let isAdmin = false;
-    const apiUrl = `https://localhost:7252/Administration/isadmin?tokenPanier=${tokenPanier}`;
+    const apiUrl = `https://elaparaibatest.fr/Administration/isadmin?tokenPanier=${tokenPanier}`;
     try{
         let response = await fetch(apiUrl); 
         if (response.ok){
@@ -19,7 +19,7 @@ async function IsAdmin(tokenPanier){
 async function ConnectAsAdmin(formData){
     let connexionSucess = false;
     try {
-        const response = await fetch('https://localhost:7252/Administration/login', {
+        const response = await fetch('https://elaparaibatest.fr/Administration/login', {
             method: 'POST',
             body: formData // Envoyer le formulaire avec le fichier
         });
@@ -41,7 +41,7 @@ async function sendBijouModified(formData) {
     //Communication avec l'api
     let success = false;
     try {
-        const response = await fetch('https://localhost:7252/Administration/ModifierBijou', {
+        const response = await fetch('https://elaparaibatest.fr/Administration/ModifierBijou', {
             method: 'POST',
             body: formData,
         });
@@ -63,7 +63,7 @@ async function delBijou(tokenPanier, idBijou){
     //Communication avec l'api
     let success = false;
     try {
-        const response = await fetch('https://localhost:7252/Administration/SupprimerBijou', {
+        const response = await fetch('https://elaparaibatest.fr/Administration/SupprimerBijou', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

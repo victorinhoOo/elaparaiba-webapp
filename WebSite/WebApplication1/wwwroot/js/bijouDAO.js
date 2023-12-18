@@ -6,7 +6,7 @@ var bijoux = {};
 
 //Fonction communicante avec l'API bijou
 async function fetchBijou(i) {
-    const apiUrl = `https://localhost:7252/Bijoux/GetBijouWithId?id=${i}`;
+    const apiUrl = `https://elaparaibatest.fr/Bijoux/GetBijouWithId?id=${i}`;
     try {
         //Requête vers l'Api
         const response = await fetch(apiUrl);

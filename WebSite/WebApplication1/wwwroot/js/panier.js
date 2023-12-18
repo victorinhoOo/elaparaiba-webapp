@@ -101,7 +101,7 @@ async function displayPanier(bijoux) {
 
 // Créé une session stripe en envoyant le tokenPanier de l'utilisateur
 async function createStripeCheckoutSession() {
-    const apiurl = `https://localhost:7252/CreateCheckoutSession?token=${getPanierToken("PanierToken")}`;
+    const apiurl = `https://elaparaibatest.fr/CreateCheckoutSession?token=${getPanierToken("PanierToken")}`;
     try {
         // Requête vers l'API
         const response = await fetch(apiurl, {

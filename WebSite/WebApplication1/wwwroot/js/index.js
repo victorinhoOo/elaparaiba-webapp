@@ -48,7 +48,7 @@ function nextImage(){
 // Slider des nouveautées
 const initNewsSlider = async () => {
     try {
-        const apiUrl = "https://localhost:7252/Bijoux/GetAllBijoux";
+        const apiUrl = `https://elaparaibatest.fr/Bijoux/GetAllBijoux`;
         const response = await fetch(apiUrl);
         const data = await response.json();
 

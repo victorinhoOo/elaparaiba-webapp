@@ -4,7 +4,7 @@ import { sendBijouModified, IsAdmin, delBijou } from "./adminDAO.js";
 import { redirectToConnexion, redirectToGestion } from "./adminRedirection.js";
 // Fonction de requête pour récupérer les détails du bijou
 async function fetchBijouDetails(bijouId) {
-    const apiUrl = `https://localhost:7252/Bijoux/GetBijouWithId?id=${bijouId}`;
+    const apiUrl = `https://elaparaibatest.fr/Bijoux/GetBijouWithId?id=${bijouId}`;
     try {
         const response = await fetch(apiUrl);
         const data = await response.json();

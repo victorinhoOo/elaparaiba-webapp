@@ -6,7 +6,7 @@ import { PanierItemFromJson, displayPanier } from "../js/panier.js";
 var bijouxPanier = [];
 
 async function fetchPanier() {
-    const apiUrl = `https://localhost:7252/Panier/ObtenirPanier?token=${getPanierToken("PanierToken")}`;
+    const apiUrl = `https://elaparaibatest.fr/Panier/ObtenirPanier?token=${getPanierToken("PanierToken")}`;
     try {
         //Requête vers l'Api
         const response = await fetch(apiUrl);
@@ -26,7 +26,7 @@ async function fetchPanier() {
 }
 
 async function updatePanierCount() {
-    const apiUrl = `https://localhost:7252/Panier/ObtenirPanier?token=${getPanierToken("PanierToken")}`;
+    const apiUrl = `https://elaparaibatest.fr/Panier/ObtenirPanier?token=${getPanierToken("PanierToken")}`;
 
     // Récupère l'élément HTML représentant le nombre d'articles dans le panier
     const panierCountElement = document.getElementById('panierCount'); // L'élément HTML où afficher le nombre d'articles
@@ -56,7 +56,7 @@ async function ajouterAuPanier(bijou) {
     //Créer un paniertoken si l'utilisateur en a pas
     var panierTokenValue = getPanierToken("PanierToken");
  
-    const apiUrl = `https://localhost:7252/Panier/AjouterAuPanier?token=${panierTokenValue}`; // URL du contrôleur
+    const apiUrl = `https://elaparaibatest.fr/Panier/AjouterAuPanier?token=${panierTokenValue}`; // URL du contrôleur
     try {
         // Requête vers l'API avec la méthode POST
         const response = await fetch(apiUrl, {
@@ -81,7 +81,7 @@ async function ajouterAuPanier(bijou) {
             // La réponse n'est pas OK, appeler setPanierToken pour obtenir un nouveau token
             panierTokenValue = await setPanierToken();
             // Mettre à jour l'URL avec le nouveau token
-            const newApiUrl = `https://localhost:7252/Panier/AjouterAuPanier?token=${panierTokenValue}`;
+            const newApiUrl = `https://elaparaibatest.fr/Panier/AjouterAuPanier?token=${panierTokenValue}`;
             // Refaire la requête avec le nouveau token
             const newResponse = await fetch(newApiUrl, {
                 method: 'POST',
@@ -121,7 +121,7 @@ async function ajouterAuPanier(bijou) {
 async function supprimerDuPanier(id) {
     var panierTokenValue = getPanierToken("PanierToken");
 
-    const apiUrl = `https://localhost:7252/Panier/SupprimerDuPanier?token=${panierTokenValue}&id=${id}`;
+    const apiUrl = `https://elaparaibatest.fr/Panier/SupprimerDuPanier?token=${panierTokenValue}&id=${id}`;
 
     try {
         const response = await fetch(apiUrl, {
