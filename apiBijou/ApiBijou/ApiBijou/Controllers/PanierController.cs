@@ -5,6 +5,7 @@ using ApiBijou.Model.Panier;
 using System.Text.Json;
 using Newtonsoft.Json;
 using ApiBijou.Model.Bijoux;
+using ApiBijou.Model.formModel;
 
 namespace API_SAE.Controllers
 {

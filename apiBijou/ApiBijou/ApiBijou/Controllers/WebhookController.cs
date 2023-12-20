@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 namespace ApiBijou.Controllers
 {
     /// <summary>
-    /// Controlleur pour le paiement via Stripe
+    /// Controlleur pour la gestion des paiements réussis via Stripe
     /// </summary>
     [Route("webhook")]
     [ApiController]
@@ -127,7 +127,7 @@ namespace ApiBijou.Controllers
             {
                 result = BadRequest("Unable to retrieve session from Stripe. " + e.Message);
             }
-            #region
+            #region InjectionCSS
             // Code peu académique, nécessaire pour générer la page de récapitulatif avec du css sans qu'elle soit hébergée
             var htmlContent = new StringBuilder(@"
                 <html>
@@ -226,7 +226,6 @@ namespace ApiBijou.Controllers
             #endregion
 
             double? total = 0;
-
 
             if (session.LineItems != null && session.LineItems.Data != null) // On affiche les différents bijoux
             {

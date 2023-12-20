@@ -59,6 +59,11 @@ namespace ApiBijou.Model.Panier
             panierDAO.CreerPanier(id);
         }
 
+        /// <summary>
+        /// Calcul le coût total du panier
+        /// </summary>
+        /// <param name="token">token du panier à calculer</param>
+        /// <returns>coût total</returns>
         public double CoutTotalPanier(string token)
         {
             return panierDAO.CoutTotalPanier(tokenManager.GetPanierId(token));

@@ -140,6 +140,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 //Fonction lancer au chargement des élèments html
 document.addEventListener("DOMContentLoaded", async function () {
+
     await fetchPanier();
     displayPanier(bijouxPanier);
 });
