@@ -35,8 +35,8 @@ L'administrateur peut également modifier les bijoux, en ajouter de nouveaux et 
 1) Cloner le github dans un dossier spécifique  
    
 2) Créer une base de données mysql sur votre PC (MySQL Workbench est recommandé) avec les identitifiants suivants :  
-   nom d'utilisateur : root
-   mot de passe : rootroot
+   nom d'utilisateur : root  
+   mot de passe : rootroot  
 
 3) Exécuter ce script SQL dans la base de données : https://pastebin.com/vcg35HAe  
    
