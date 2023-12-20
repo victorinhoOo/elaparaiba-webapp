@@ -1,5 +1,8 @@
 ﻿namespace ApiBijou.Model.formModel
 {
+    /// <summary>
+    /// Modèle de données envoyé par le front-end pour modifié un bijou.
+    /// </summary>
     public class FormulaireBijouModified
     {
         private int idBijou;

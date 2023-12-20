@@ -78,27 +78,5 @@ namespace ApiBijou.Data.Paniers.Tokens
             }
             return res;
         }
-
-
-        class TokenDate
-        {
-            private string token;
-            private DateTime date;
-            public string Token
-            {
-                get { return token; }
-                set { token = value; }
-            }
-            public DateTime Panier
-            {
-                get { return date; }
-            }
-
-            public TokenDate(string token, DateTime date)
-            {
-                this.token = token;
-                this.date = date;
-            }
-        }
     }
 }
