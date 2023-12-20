@@ -46,6 +46,8 @@ L'administrateur peut également modifier les bijoux, en ajouter de nouveaux et 
 5) Si l'API plante, cliquez simplement sur "continuer".  
 
 6) Bravo ! vous pouvez désormais naviguer dans l'application et tester les différentes fonctionnalités !  
+
+Bonus :  Pour accéder à la page d'administration : https://localhost:7230/html/administration/gestion.html  
   
 
 ## Auteurs
