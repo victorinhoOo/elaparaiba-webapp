@@ -66,6 +66,7 @@ https://localhost:7230/html/administration/gestion.html
 Nom d'utilisateur : leaparaiba  
 Mot de passe : J1293zp30*  
 
+:warning: Si vous tentez d'ajouter un bijou depuis le réseau de l'IUT, cela ne fonctionnera pas car le transfert d'images par FTP est bloqué par le réseau de l'IUT
 
 ## Captures d'écrans
 ![accueil 1](https://github.com/dept-info-iut-dijon/C2_Elaparaiba_SAE3/assets/116215966/c75a755a-b336-4e00-b63e-3690332ace28)
