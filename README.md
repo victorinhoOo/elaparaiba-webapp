@@ -20,12 +20,13 @@ L'administrateur peut également modifier les bijoux, en ajouter de nouveaux et 
 
 ## Comment faire tourner l'application Elaparaïba en local ?  
 
+  
 
 **OPTION 1 : Avec une base de données MYSQL**
 
 1) Cloner le github dans un dossier spécifique.
    
-2) Créer une base de données mysql sur votre PC (MySQL Workbench est recommandé) avec les identitifiants suivants :  
+2) Créer une base de données mysql sur votre PC (MySQL Workbench est recommandé) avec les identifiants suivants :  
    nom d'utilisateur : root  
    mot de passe : rootroot  
 
@@ -36,6 +37,7 @@ L'administrateur peut également modifier les bijoux, en ajouter de nouveaux et 
    
 5) Si l'API plante, cliquez simplement sur "continuer".  
 
+  
 
 **OPTION 2 : Avec les FAKEDAO**
 
@@ -56,8 +58,10 @@ L'administrateur peut également modifier les bijoux, en ajouter de nouveaux et 
 
 Bravo ! vous pouvez désormais naviguer dans l'application et tester les différentes fonctionnalités !  
 
+  
 
 **Pour se connecter à la page d'administration :**  
+  
 https://localhost:7230/html/administration/gestion.html  
 Nom d'utilisateur : leaparaiba  
 Mot de passe : J1293zp30*  
