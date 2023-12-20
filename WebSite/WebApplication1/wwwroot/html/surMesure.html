@@ -38,117 +38,119 @@
             <p>Créez votre propre bijou selon vos envies et vos idées.</p>
         </div>
     </div>
-        <h2>Anciennes réalisations</h2>
-        <p class="message">Voici des exemples de bijoux sur mesure que j’ai réalisé par le passé.</p>
-        <div class="slider" id="slider_1">
-            <div class="slider-panel active"></div>
-            <div class="slider-panel"></div>
-            <div class="slider-panel"></div>
-            <div class="slider-panel"></div>
-            <div class="slider-panel"></div>
-            <div class="slider-panel"></div>
-            <div class="slider-controls">
-                <div class="slider-control active"></div>
-                <div class="slider-control"></div>
-                <div class="slider-control"></div>
-                <div class="slider-control"></div>
-                <div class="slider-control"></div>
-                <div class="slider-control"></div>
-            </div>
+    <h2>Anciennes réalisations</h2>
+    <p class="message">Voici des exemples de bijoux sur mesure que j’ai réalisé par le passé.</p>
+    <div class="slider" id="slider_1">
+        <div class="slider-panel active"></div>
+        <div class="slider-panel"></div>
+        <div class="slider-panel"></div>
+        <div class="slider-panel"></div>
+        <div class="slider-panel"></div>
+        <div class="slider-panel"></div>
+        <div class="slider-controls">
+            <div class="slider-control active"></div>
+            <div class="slider-control"></div>
+            <div class="slider-control"></div>
+            <div class="slider-control"></div>
+            <div class="slider-control"></div>
+            <div class="slider-control"></div>
         </div>
-        <h2>Formulez votre demande</h2>
-        <p class="message"> Une fois le formulaire rempli, je vous recontacterai pour vous proposer quelques dessins suivant votre demande, et après validation, je confectionnerai sur mesure votre bijou. </p>
-        <div id="formulaireSurMesure">
-            <form>
-                <fieldset id="informationPersonnel">
-                    <legend>Informations personnelles</legend>
-                    <div class="form-row nom"> 
-                        <label for="nom">Nom* </label>
-                        <input type="text" id="nom" name="nom" required>
-                    </div>
-                    <div class="form-row prenom"> 
-                        <label for="prenom">Prénom* </label>
-                        <input type="text" id="prenom" name="prenom" required>
-                    </div>      
-                    <div class="form-row name"> 
-                        <label for="email">E-mail* </label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                </fieldset>
-                <fieldset id="demandeBijou">
-                    <legend>Consignes de création </legend>
-                    <div class="form-row matiere"> 
-                        <label for="matiere">Matière* </label>
-                        <select id="matiere" name="matiere">
-                            <option value="collier">Or</option>
-                            <option value="bracelet">Diamand</option>
-                            <option value="boucles">Bronze</option>
-                        </select>
-                    </div>
-                    <div class="form-row type"> 
-                        <label for="type">Type* </label>
-                        <select id="type" name="type">
-                            <option value="collier">Collier</option>
-                            <option value="bracelet">Bracelet</option>
-                            <option value="boucles">Boucles d'oreille</option>
-                        </select>
-                    </div>
-                            
-                    <div class="form-row description"> 
-                        <label for="description">Description*</label>
-                        <textarea id="description" name="description" placeholder="Détaillez votre demande (forme, consigne particulière, date de réalisation souhaitée…)" required></textarea>
-                    </div>
-        
-                    <div class="form-row modeles"> 
-                        <label for="modeles">Modèles*</label>
-                        <input type="file" id="modeles" name="modeles" accept=".pdf,.doc,.docx,.jpg" multiple>
-                        <p class="file-description">Transmettez moi vos idées sous forme d'images (dessins, photo...).</p>
-                    </div>
-                </fieldset>
-                <div id="bouton-conteneur">
-                    <input type="submit" value="Envoyer">
+    </div>
+    <h2>Formulez votre demande</h2>
+    <p class="message"> Une fois le formulaire rempli, je vous recontacterai pour vous proposer quelques dessins suivant votre demande, et après validation, je confectionnerai sur mesure votre bijou. </p>
+    <div id="formulaireSurMesure">
+        <form>
+            <fieldset id="informationPersonnel">
+                <legend>Informations personnelles</legend>
+                <div class="form-row nom">
+                    <label for="nom">Nom* </label>
+                    <input type="text" id="nom" name="nom" required>
                 </div>
-            </form>
-            <div id="popup" class="popup">
-                <div class="popup-content">
-                    <span class="close-popup" id="closePopupBtn">&times;</span>
-                    <p>Merci pour votre demande ! Je vous recontacterai dans les plus bref délais.</p>
+                <div class="form-row prenom">
+                    <label for="prenom">Prénom* </label>
+                    <input type="text" id="prenom" name="prenom" required>
                 </div>
-            </div>
-            
-        </div>
-        <footer>
-            <div class="footer-content">
-                <div class="footer-section1">
-                    <h2>À propos</h2>
-                    <a href="#" class="buttonF">Me contacter</a>
-                    <div class="social-icons">
-                        <a href="https://www.instagram.com/elaparaiba/" class="social-icon" aria-label="Instagram"><i
-                                class="fab fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/elaparaiba/" class="social-icon" aria-label="Facebook"><i
-                                class="fab fa-facebook-f"></i></a>
-                    </div>
+                <div class="form-row name">
+                    <label for="email">E-mail* </label>
+                    <input type="email" id="email" name="email" required>
                 </div>
-    
-                <div class="footer-section2">
-                    <h2>Informations légales</h2>
-                    <ul>
-                        <li><a href="#" class="buttonF">Mentions légales</a></li>
-                        <li><a href="#" class="buttonF">Vie privée et Cookies</a></li>
-                        <li><a href="#" class="buttonF">Conditions générales de vente et d'utilisation</a></li>
-    
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>Copyright © 2023 Elaparaïba</p>
-                <div class="lang-selector">
-                    <select>
-                        <option value="fr">Français</option>
-                        <option value="en">English</option>
+            </fieldset>
+            <fieldset id="demandeBijou">
+                <legend>Consignes de création </legend>
+                <div class="form-row matiere">
+                    <label for="matiere">Matière* </label>
+                    <select id="matiere" name="matiere">
+                        <option value="collier">Or</option>
+                        <option value="bracelet">Diamand</option>
+                        <option value="boucles">Bronze</option>
                     </select>
                 </div>
+                <div class="form-row type">
+                    <label for="type">Type* </label>
+                    <select id="type" name="type">
+                        <option value="collier">Collier</option>
+                        <option value="bracelet">Bracelet</option>
+                        <option value="boucles">Boucles d'oreille</option>
+                    </select>
+                </div>
+
+                <div class="form-row description">
+                    <label for="description">Description*</label>
+                    <textarea id="description" name="description" placeholder="Détaillez votre demande (forme, consigne particulière, date de réalisation souhaitée…)" required></textarea>
+                </div>
+
+                <div class="form-row modeles">
+                    <label for="modeles">Modèles*</label>
+                    <input type="file" id="modeles" name="modeles" accept=".pdf,.doc,.docx,.jpg" multiple>
+                    <p class="file-description">Transmettez moi vos idées sous forme d'images (dessins, photo...).</p>
+                </div>
+            </fieldset>
+            <div id="bouton-conteneur">
+                <input type="submit" value="Envoyer">
             </div>
-        </footer>
+        </form>
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close-popup" id="closePopupBtn">&times;</span>
+                <p>Merci pour votre demande ! Je vous recontacterai dans les plus bref délais.</p>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section1">
+                <h2>À propos</h2>
+                <a href="#" class="buttonF">Me contacter</a>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/elaparaiba/" class="social-icon" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/elaparaiba/" class="social-icon" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section2">
+                <h2>Informations légales</h2>
+                <ul>
+                    <li><a href="/html/mentions_Legales.html" class="buttonF">Mentions légales</a></li>
+                    <li><a href="/html/vie_Privee_Cookies.html" class="buttonF">Vie privée et Cookies</a></li>
+                    <li><a href="/html/cgv.html" class="buttonF">Conditions générales de vente et d'utilisation</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2023 Elaparaïba</p>
+            <div class="lang-selector">
+                <select>
+                    <option value="fr">Français</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
