@@ -6,9 +6,13 @@ var id;
 var controls;
 var num_image = 0;
 
+//Fonction appelé au lancement de la fenêtre
 function main() {
+    //Met à jour le nombre d'objets dans le panier
     updatePanierCount();
+    //Affiche le slider des nouveautés
     initNewsSlider();
+    //Affiche les publications instagram
     fetchInstagramPhotos();
     id = setInterval(nextImage, 5000);
     controls = document.querySelectorAll(".slider-control");
@@ -138,7 +142,7 @@ const initNewsSlider = async () => {
     }
 };
 
-// Fonction qui permet de récupérer les posts instagrams et les affichers
+// Fonction qui permet de récupérer les posts instagrams et les afficher
 async function fetchInstagramPhotos() {
     const response = await fetch(`https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink&access_token=IGQWROMDJOVnV1aWdvOTJfZAUYtYUljZAFZAEQldzeXR5a2pKQXZA2WHRaeG1NVlpxZAEdCelR6LVk1OFhzZAXlHSHl6YmpEdzFtVktzaHp5LVVTZAzFuV1ducU1saTFKcTNjZAy15ZAllBZAk4wd0JXbl9oaUk3SDVsVV9KOEUZD&limit=5`);
     const data = await response.json();

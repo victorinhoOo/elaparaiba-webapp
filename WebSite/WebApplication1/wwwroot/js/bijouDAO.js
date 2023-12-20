@@ -32,7 +32,6 @@ async function fetchBijou(i) {
     }
 }
 
-//Permet 
 function initialiserBijoux() {
     tousLesBijoux = document.querySelectorAll(".produit");
 }

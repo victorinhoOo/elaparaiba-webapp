@@ -104,19 +104,23 @@ function displayBijou() {
 }
 
 document.addEventListener("DOMContentLoaded", async function () {
-    if(await IsAdmin(getPanierToken("PanierToken"))){
-    const nouveauBijouButton = document.getElementById('nouveauBijouButton');
-    nouveauBijouButton.addEventListener('click', function() {
+    // On vérifie que l'utilisateur est bien l'admin
+    if (await IsAdmin(getPanierToken("PanierToken"))) {
+        //On récupère l'élément avec l'id nouveauBijouButton
+        const nouveauBijouButton = document.getElementById('nouveauBijouButton');
+        // On ajoute un addEventListener sur l'élement qui va déclencher une méthode au clique
+        nouveauBijouButton.addEventListener('click', function() {
         redirectToBijouModification("-1");
-    });
-    await fetchAllBijou();
-    displayBijou();
+        });
+        await fetchAllBijou();
+        displayBijou();
     }
     else{
         redirectToConnexion();
     }
 });
 
+//Fonction qui permet d'ouvrir une page de présentation pour chaque bijoux
 function redirectToBijouModification(bijouId){
     window.location.href = "modificationBijou.html?bijouId=" + bijouId;
 }

@@ -127,6 +127,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 600);
     });
 });
+
+//Fonction qui permet de remplacer l'image affichée par une autre
 function changerImagePrincipale(nouvelleImageSrc) {
     bijouImage.src = nouvelleImageSrc;
 }

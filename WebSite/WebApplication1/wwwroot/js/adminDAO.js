@@ -55,6 +55,7 @@ async function sendBijouModified(formData) {
     return success;
 }
 
+//Permet de supprimer un bijou de la base de donnée
 async function delBijou(tokenPanier, idBijou){
     const requestBody = {
         TokenPanier: tokenPanier,

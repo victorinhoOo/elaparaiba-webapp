@@ -60,7 +60,7 @@ function afficherPlus() {
 
 window.onload = initialiserBijoux;
 
-
+//Permet de trier et d'afficher les bijoux
 function sortAndDisplayBijoux() {
     const categorieSelect = document.getElementById("categorie-select");
     const triSelect = document.getElementById("tri-select");
