@@ -15,7 +15,7 @@ L'administrateur peut également modifier les bijoux, en ajouter de nouveaux et 
 
 **Front-end** : HTML/CSS/JS
 
-**Back-end** : ASP.NET Core 
+**Back-end** : ASP.NET Core / MySQL
 
 
 ## Comment faire tourner l'application Elaparaïba en local ?  
