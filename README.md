@@ -25,7 +25,6 @@ Administrators have access to a management page where they can modify, add, or d
 ![Custom Orders](https://github.com/dept-info-iut-dijon/C2_Elaparaiba_SAE3/assets/116215966/16e7492e-bd1a-412a-bc62-12b1aa762891)  
 ![Craftsmanship](https://github.com/dept-info-iut-dijon/C2_Elaparaiba_SAE3/assets/116215966/887eef95-fa67-4d9b-a29d-52a6bdecd7b3)  
 ![Location](https://github.com/dept-info-iut-dijon/C2_Elaparaiba_SAE3/assets/116215966/bbaa648f-1f93-4bfc-94dc-6c79e84cabf9)  
-![Admin Login](https://github.com/dept-info-iut-dijon/C2_Elaparaiba_SAE3/assets/115616225/6c038b63-667d-4ca3-b71c-9b1c80a11a28)  
 ![Admin Panel](https://github.com/dept-info-iut-dijon/C2_Elaparaiba_SAE3/assets/115616225/81066519-f76b-4990-8f0e-c26e7d301a03)  
 
 
